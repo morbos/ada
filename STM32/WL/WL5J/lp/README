@@ -1,0 +1,10 @@
+x/x 0
+set pagination off
+set logging overwrite on
+set logging file radio.log
+set logging redirect on
+set logging on
+x/2048b 0x20000af8
+set logging off
+
+ruby ~/ruby/loralog2.rb radio.log >radio.txt

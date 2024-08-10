@@ -1,0 +1,71 @@
+Peripherals
+-----------
+
+Lets see what extra bits are in RCC first
+
+AHB
+Setting 0x40021014 = 0xFFFFFFFF
+read back:
+0x557
+
+3322_2222_2222_1111_1111_1100_0000_0000
+1098_7654_3210_9876_5432_1098_7654_3210
+0000_0000_0000_0000_0000_0101_0101_0111
+
+APB2
+Setting 0x40021018 = 0xFFFFFFFF
+read back:
+0x0038fffd
+
+3322_2222_2222_1111_1111_1100_0000_0000
+1098_7654_3210_9876_5432_1098_7654_3210
+0000_0000_0011_1000_1111_1111_1111_1101
+
+APB1
+Setting 0x4002101C = 0xFFFFFFFF
+read back:
+0x3afec9ff
+
+3322_2222_2222_1111_1111_1100_0000_0000
+1098_7654_3210_9876_5432_1098_7654_3210
+0011_1010_1111_1110_1100_1001_1111_1111
+
+40016c00..40016d00 magic reg block.
+ 40016c00 is the unlock reg (wo)
+ 40016c18 is top of sram
+ 40016c1c is top of flash
+
+40022000 has extensions (FLASH)
+50060800 is the crypto base
+ Needs some magic to enable:
+    is
+      Magic_Reg1 : UInt32 with Volatile, Address => System'To_Address (16#400210F0#);
+      Magic_Reg2 : UInt32 with Volatile, Address => System'To_Address (16#40016C00#);
+      Magic_Reg3 : UInt32 with Volatile, Address => System'To_Address (16#40016CCC#);
+   begin
+      Magic_Reg1 := 1;
+      Magic_Reg2 := 16#CDED3526#;
+      Magic_Reg3 := 7;
+
+Then a 32bit pseudo random# can be pulled:
+   is
+      PRand : UInt32 with Volatile, Address => System'To_Address (16#50060810#);
+   begin
+      return PRand;
+
+Lets see if any reserved periphs have initial values off of 0
+40002400 - all zeros
+40003400 -  "   "
+40004000 -  "   "
+40007800 -  "   "
+40014000 -  "   "
+40015800 -  "   "
+40016c00 mapped
+40018400 -  "   "
+40020800 -  "   "
+40021400 -  "   "
+40023400 -  "   "
+40030000 -  "   "
+
+
+a0000000 FSMC seems present

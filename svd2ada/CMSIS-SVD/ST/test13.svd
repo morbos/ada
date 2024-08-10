@@ -1,0 +1,2475 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<device schemaVersion="1.1"
+xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+  <name>STM32L562</name>
+  <version>1.1</version>
+  <description>STM32L562</description>
+  <!--Bus Interface Properties-->
+  <!--Cortex-M3 is byte addressable-->
+  <addressUnitBits>8</addressUnitBits>
+  <!--the maximum data bit width accessible within a single transfer-->
+  <width>32</width>
+  <!--Register Default Properties-->
+  <size>0x20</size>
+  <resetValue>0x0</resetValue>
+  <resetMask>0xFFFFFFFF</resetMask>
+  <peripherals>
+    <peripheral>
+      <name>EXTI</name>
+      <description>External interrupt/event
+      controller</description>
+      <groupName>EXTI</groupName>
+      <baseAddress>0x4002F400</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>PVD_PVM</name>
+        <description>PVD/PVM1/PVM2/PVM3/PVM4 through
+        EXTI</description>
+        <value>001</value>
+      </interrupt>
+      <interrupt>
+        <name>TAMP</name>
+        <description>TAMPTamper global interrupt (EXTI line
+        19)</description>
+        <value>004</value>
+      </interrupt>
+      <interrupt>
+        <name>TAMP_S</name>
+        <description>Tamper secure global interrupt (EXTI line
+        20)</description>
+        <value>005</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI0</name>
+        <description>EXTI line0 interrupt</description>
+        <value>011</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI1</name>
+        <description>EXTI line1 interrupt</description>
+        <value>012</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI2</name>
+        <description>EXTI line2 interrupt</description>
+        <value>013</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI3</name>
+        <description>EXTI line3 interrupt</description>
+        <value>014</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI4</name>
+        <description>EXTI line4 interrupt</description>
+        <value>015</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI5</name>
+        <description>EXTI line5 interrupt</description>
+        <value>016</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI6</name>
+        <description>EXTI line6 interrupt</description>
+        <value>017</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI7</name>
+        <description>EXTI line7 interrupt</description>
+        <value>018</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI8</name>
+        <description>EXTI line8 interrupt</description>
+        <value>019</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI9</name>
+        <description>EXTI line9 interrupt</description>
+        <value>020</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI10</name>
+        <description>EXTI line10 interrupt</description>
+        <value>021</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI11</name>
+        <description>EXTI line11 interrupt</description>
+        <value>022</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI12</name>
+        <description>EXTI line12 interrupt</description>
+        <value>023</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI13</name>
+        <description>EXTI line13 interrupt</description>
+        <value>024</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI14</name>
+        <description>EXTI line14 interrupt</description>
+        <value>025</value>
+      </interrupt>
+      <interrupt>
+        <name>EXTI15</name>
+        <description>EXTI line15 interrupt</description>
+        <value>026</value>
+      </interrupt>
+      <registers>
+        <register>
+          <name>RTSR1</name>
+          <displayName>RTSR1</displayName>
+          <description>EXTI rising trigger selection
+          register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RT0</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT1</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT2</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT3</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT4</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT5</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT6</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT7</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT8</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT9</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT10</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT11</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT12</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT13</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT14</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT15</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT16</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT21</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT22</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FTSR1</name>
+          <displayName>FTSR1</displayName>
+          <description>EXTI falling trigger selection
+          register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>FT0</name>
+              <description>Falling trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT1</name>
+              <description>Falling trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT2</name>
+              <description>Falling trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT3</name>
+              <description>Falling trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT4</name>
+              <description>Falling trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT5</name>
+              <description>Falling trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT6</name>
+              <description>Falling trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT7</name>
+              <description>Falling trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT8</name>
+              <description>Falling trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT9</name>
+              <description>Falling trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT10</name>
+              <description>Falling trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT11</name>
+              <description>Falling trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT12</name>
+              <description>Falling trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT13</name>
+              <description>Falling trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT14</name>
+              <description>Falling trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT15</name>
+              <description>Falling trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT16</name>
+              <description>Falling trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT21</name>
+              <description>Falling trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT22</name>
+              <description>Falling trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SWIER1</name>
+          <displayName>SWIER1</displayName>
+          <description>EXTI software interrupt event
+          register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SWI0</name>
+              <description>Software interrupt on event
+              x</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI1</name>
+              <description>Software interrupt on event
+              x</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI2</name>
+              <description>Software interrupt on event
+              x</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI3</name>
+              <description>Software interrupt on event
+              x</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI4</name>
+              <description>Software interrupt on event
+              x</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI5</name>
+              <description>Software interrupt on event
+              x</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI6</name>
+              <description>Software interrupt on event
+              x</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI7</name>
+              <description>Software interrupt on event
+              x</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI8</name>
+              <description>Software interrupt on event
+              x</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI9</name>
+              <description>Software interrupt on event
+              x</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI10</name>
+              <description>Software interrupt on event
+              x</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI11</name>
+              <description>Software interrupt on event
+              x</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI12</name>
+              <description>Software interrupt on event
+              x</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI13</name>
+              <description>Software interrupt on event
+              x</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI14</name>
+              <description>Software interrupt on event
+              x</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI15</name>
+              <description>Software interrupt on event
+              x</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI16</name>
+              <description>Software interrupt on event
+              x</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI21</name>
+              <description>Software interrupt on event
+              x</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI22</name>
+              <description>Software interrupt on event
+              x</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RPR1</name>
+          <displayName>RPR1</displayName>
+          <description>EXTI rising edge pending
+          register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RPIF0</name>
+              <description>configurable event inputs x rising edge
+              pending bit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF1</name>
+              <description>configurable event inputs x rising edge
+              pending bit</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF2</name>
+              <description>configurable event inputs x rising edge
+              pending bit</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF3</name>
+              <description>configurable event inputs x rising edge
+              pending bit</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF4</name>
+              <description>configurable event inputs x rising edge
+              pending bit</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF5</name>
+              <description>configurable event inputs x rising edge
+              pending bit</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF6</name>
+              <description>configurable event inputs x rising edge
+              pending bit</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF7</name>
+              <description>configurable event inputs x rising edge
+              pending bit</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF8</name>
+              <description>configurable event inputs x rising edge
+              pending bit</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF9</name>
+              <description>configurable event inputs x rising edge
+              pending bit</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF10</name>
+              <description>configurable event inputs x rising edge
+              pending bit</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF11</name>
+              <description>configurable event inputs x rising edge
+              pending bit</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF12</name>
+              <description>configurable event inputs x rising edge
+              pending bit</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF13</name>
+              <description>configurable event inputs x rising edge
+              pending bit</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF14</name>
+              <description>configurable event inputs x rising edge
+              pending bit</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF15</name>
+              <description>configurable event inputs x rising edge
+              pending bit</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF16</name>
+              <description>configurable event inputs x rising edge
+              pending bit</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF21</name>
+              <description>configurable event inputs x rising edge
+              pending bit</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF22</name>
+              <description>configurable event inputs x rising edge
+              pending bit</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FPR1</name>
+          <displayName>FPR1</displayName>
+          <description>EXTI falling edge pending
+          register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>FPIF0</name>
+              <description>configurable event inputs x falling edge
+              pending bit.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF1</name>
+              <description>configurable event inputs x falling edge
+              pending bit.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF2</name>
+              <description>configurable event inputs x falling edge
+              pending bit.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF3</name>
+              <description>configurable event inputs x falling edge
+              pending bit.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF4</name>
+              <description>configurable event inputs x falling edge
+              pending bit.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF5</name>
+              <description>configurable event inputs x falling edge
+              pending bit.</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF6</name>
+              <description>configurable event inputs x falling edge
+              pending bit.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF7</name>
+              <description>configurable event inputs x falling edge
+              pending bit.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF8</name>
+              <description>configurable event inputs x falling edge
+              pending bit.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF9</name>
+              <description>configurable event inputs x falling edge
+              pending bit.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF10</name>
+              <description>configurable event inputs x falling edge
+              pending bit.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF11</name>
+              <description>configurable event inputs x falling edge
+              pending bit.</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF12</name>
+              <description>configurable event inputs x falling edge
+              pending bit.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF13</name>
+              <description>configurable event inputs x falling edge
+              pending bit.</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF14</name>
+              <description>configurable event inputs x falling edge
+              pending bit.</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF15</name>
+              <description>configurable event inputs x falling edge
+              pending bit.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF16</name>
+              <description>configurable event inputs x falling edge
+              pending bit.</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF21</name>
+              <description>configurable event inputs x falling edge
+              pending bit.</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF22</name>
+              <description>configurable event inputs x falling edge
+              pending bit.</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SECCFGR1</name>
+          <displayName>SECCFGR1</displayName>
+          <description>EXTI security configuration
+          register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SEC0</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC1</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC2</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC3</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC4</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC5</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC6</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC7</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC8</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC9</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC10</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC11</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC12</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC13</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC14</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC15</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC16</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC17</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC18</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC19</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC20</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC21</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC22</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC23</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC24</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC25</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC26</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC27</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC28</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC29</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC30</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC31</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PRIVCFGR1</name>
+          <displayName>PRIVCFGR1</displayName>
+          <description>EXTI privilege configuration
+          register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PRIV0</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV1</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV2</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV3</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV4</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV5</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV6</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV7</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV8</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV9</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV10</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV11</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV12</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV13</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV14</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV15</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV16</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV17</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV18</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV19</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV20</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV21</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV22</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV23</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV24</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV25</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV26</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV27</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV28</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV29</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV30</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV31</name>
+              <description>Security enable on event input
+              x</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RTSR2</name>
+          <displayName>RTSR2</displayName>
+          <description>EXTI rising trigger selection
+          register</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RT35</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT36</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT37</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RT38</name>
+              <description>Rising trigger event configuration bit
+              of configurable event input x</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FTSR2</name>
+          <displayName>FTSR2</displayName>
+          <description>EXTI falling trigger selection
+          register</description>
+          <addressOffset>0x24</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>FT35</name>
+              <description>FT35</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT36</name>
+              <description>FT36</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT37</name>
+              <description>FT37</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FT38</name>
+              <description>FT38</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SWIER2</name>
+          <displayName>SWIER2</displayName>
+          <description>EXTI software interrupt event
+          register</description>
+          <addressOffset>0x28</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SWI35</name>
+              <description>SWI35</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI36</name>
+              <description>SWI36</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI37</name>
+              <description>SWI37</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SWI38</name>
+              <description>SWI38</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RPR2</name>
+          <displayName>RPR2</displayName>
+          <description>EXTI rising edge pending
+          register</description>
+          <addressOffset>0x2C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>RPIF35</name>
+              <description>RPIF35</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF36</name>
+              <description>RPIF36</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF37</name>
+              <description>RPIF37</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RPIF38</name>
+              <description>RPIF38</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FPR2</name>
+          <displayName>FPR2</displayName>
+          <description>EXTI falling edge pending
+          register</description>
+          <addressOffset>0x30</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>FPIF35</name>
+              <description>FPIF35</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF36</name>
+              <description>FPIF36</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF37</name>
+              <description>FPIF37</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FPIF38</name>
+              <description>FPIF38</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SECCFGR2</name>
+          <displayName>SECCFGR2</displayName>
+          <description>EXTI security enable register</description>
+          <addressOffset>0x38</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SEC32</name>
+              <description>SEC32</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC33</name>
+              <description>SEC33</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC34</name>
+              <description>SEC34</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC35</name>
+              <description>SEC35</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC36</name>
+              <description>SEC36</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC37</name>
+              <description>SEC37</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC38</name>
+              <description>SEC38</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC39</name>
+              <description>SEC39</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC40</name>
+              <description>SEC40</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC41</name>
+              <description>SEC41</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SEC42</name>
+              <description>SEC42</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PRIVCFGR2</name>
+          <displayName>PRIVCFGR2</displayName>
+          <description>EXTI security enable register</description>
+          <addressOffset>0x34</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>PRIV32</name>
+              <description>PRIV32</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV33</name>
+              <description>PRIV33</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV34</name>
+              <description>PRIV34</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV35</name>
+              <description>PRIV35</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV36</name>
+              <description>PRIV36</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV37</name>
+              <description>PRIV37</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV38</name>
+              <description>PRIV38</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV39</name>
+              <description>PRIV39</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV40</name>
+              <description>PRIV40</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV41</name>
+              <description>PRIV41</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PRIV42</name>
+              <description>PRIV42</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EXTICR1</name>
+          <displayName>EXTICR1</displayName>
+          <description>EXTI external interrupt selection
+          register</description>
+          <addressOffset>0x60</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EXTI0_7</name>
+              <description>EXTIm GPIO port selection</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>EXTI8_15</name>
+              <description>EXTIm+1 GPIO port
+              selection</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>EXTI16_23</name>
+              <description>EXTIm+2 GPIO port
+              selection</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>EXTI24_31</name>
+              <description>EXTIm+3 GPIO port
+              selection</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EXTICR2</name>
+          <displayName>EXTICR2</displayName>
+          <description>EXTI external interrupt selection
+          register</description>
+          <addressOffset>0x64</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EXTI0_7</name>
+              <description>EXTIm GPIO port selection</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>EXTI8_15</name>
+              <description>EXTIm+1 GPIO port
+              selection</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>EXTI16_23</name>
+              <description>EXTIm+2 GPIO port
+              selection</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>EXTI24_31</name>
+              <description>EXTIm+3 GPIO port
+              selection</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EXTICR3</name>
+          <displayName>EXTICR3</displayName>
+          <description>EXTI external interrupt selection
+          register</description>
+          <addressOffset>0x68</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EXTI0_7</name>
+              <description>EXTIm GPIO port selection</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>EXTI8_15</name>
+              <description>EXTIm+1 GPIO port
+              selection</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>EXTI16_23</name>
+              <description>EXTIm+2 GPIO port
+              selection</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>EXTI24_31</name>
+              <description>EXTIm+3 GPIO port
+              selection</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EXTICR4</name>
+          <displayName>EXTICR4</displayName>
+          <description>EXTI external interrupt selection
+          register</description>
+          <addressOffset>0x6C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EXTI0_7</name>
+              <description>EXTIm GPIO port selection</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>EXTI8_15</name>
+              <description>EXTIm+1 GPIO port
+              selection</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>EXTI16_23</name>
+              <description>EXTIm+2 GPIO port
+              selection</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+            <field>
+              <name>EXTI24_31</name>
+              <description>EXTIm+3 GPIO port
+              selection</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>LOCKRG</name>
+          <displayName>LOCKRG</displayName>
+          <description>EXTI lock register</description>
+          <addressOffset>0x70</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>LOCK</name>
+              <description>LOCK</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IMR1</name>
+          <displayName>IMR1</displayName>
+          <description>EXTI CPU wakeup with interrupt mask
+          register</description>
+          <addressOffset>0x80</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0xFF9E0000</resetValue>
+          <fields>
+            <field>
+              <name>IM0</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM1</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM2</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM3</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM4</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM5</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM6</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM7</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM8</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM9</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM10</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM11</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM12</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM13</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM14</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM15</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM16</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM17</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM18</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM19</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM20</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM21</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM22</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM23</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM24</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM25</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM26</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM27</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM28</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM29</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM30</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM31</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EMR1</name>
+          <displayName>EMR1</displayName>
+          <description>EXTI CPU wakeup with event mask
+          register</description>
+          <addressOffset>0x84</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EM0</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM1</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM2</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM3</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM4</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM5</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM6</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM7</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM8</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM9</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM10</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM11</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM12</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM13</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM14</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM15</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM16</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM17</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM18</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM19</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM20</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM21</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM22</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM23</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM24</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM25</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM26</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM27</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM28</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM29</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM30</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM31</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IMR2</name>
+          <displayName>IMR2</displayName>
+          <description>EXTI CPUm wakeup with interrupt mask
+          register</description>
+          <addressOffset>0x90</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000787</resetValue>
+          <fields>
+            <field>
+              <name>IM32</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM33</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM34</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM35</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM36</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM37</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM38</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM40</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM41</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>IM42</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EMR2</name>
+          <displayName>EMR2</displayName>
+          <description>EXTI CPU wakeup with event mask
+          register</description>
+          <addressOffset>0x94</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EM32</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM33</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM34</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM35</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM36</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM37</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM38</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM40</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM41</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EM42</name>
+              <description>CPU wakeup with interrupt mask on event
+              input</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+  </peripherals>
+</device>

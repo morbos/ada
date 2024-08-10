@@ -1,0 +1,9 @@
+#define REG32(x) ((*(volatile u32 *)(x)))
+void
+led_init()
+{
+    REG32(0x50842770) = 3;
+    REG32(0x50842774) = 3;
+    REG32(0x50842778) = 3;
+    REG32(0x5084277c) = 3;
+}

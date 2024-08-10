@@ -1,0 +1,10 @@
+with HAL;             use HAL;
+
+package MH_Lib is
+
+
+   procedure MH_Init;
+
+   function MH_PRand return UInt32;
+
+end MH_Lib;

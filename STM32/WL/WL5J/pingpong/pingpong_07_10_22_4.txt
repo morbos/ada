@@ -1,0 +1,165 @@
+cmd 80 00002
+"Set_Standby()"
+[0]
+cmd 97 00010
+"Set_TcxoMode()"
+[1, 0, 2, 128]
+cmd 0d 00024
+"Write_Register()"
+[9, 17, 0]
+cmd 89 00036
+"Calibrate()"
+[127]
+cmd 8a 00044
+"Set_PacketType()"
+[1]
+cmd 0d 00052
+"Write_Register()"
+[7, 64, 20]
+cmd 0d 00064
+"Write_Register()"
+[7, 65, 36]
+cmd 96 00076
+"Set_RegulatorMode()"
+[0]
+cmd 8f 00084
+"Set_BufferBaseAddress()"
+[0, 0]
+cmd 95 00094
+"Set_PaConfig()"
+[4, 0, 1, 1]
+cmd 0d 00108
+"Write_Register()"
+[8, 231, 24]
+cmd 8e 00120
+"Set_TxParams()"
+[0, 4]
+cmd 08 00130
+"Cfg_DioIrq()"
+[255, 255, 255, 255, 0, 0, 0, 0]
+cmd 84 00152
+"Set_Sleep()"
+[4]
+cmd 80 00158
+"Set_Standby()"
+[0]
+cmd 8a 00166
+"Set_PacketType()"
+[1]
+cmd 8b 00174
+"Set_ModulationParams()"
+[7, 4, 1, 0]
+cmd 8c 00188
+"Set_PacketParams()"
+[0, 8, 0, 255, 1, 0]
+cmd 1d 00206
+"Read_Register()"
+[8, 137]
+[0]
+[37]
+cmd 0d 00220
+"Write_Register()"
+[8, 137, 37]
+cmd 95 00232
+"Set_PaConfig()"
+[4, 0, 1, 1]
+cmd 0d 00246
+"Write_Register()"
+[8, 231, 24]
+cmd 8e 00258
+"Set_TxParams()"
+[14, 2]
+cmd 9f 00268
+"Set_StopRxTimerOnPreamble()"
+[0]
+cmd 80 00274
+"Set_Standby()"
+[0]
+cmd 8a 00282
+"Set_PacketType()"
+[1]
+cmd 8b 00290
+"Set_ModulationParams()"
+[7, 4, 1, 0]
+cmd 8c 00304
+"Set_PacketParams()"
+[0, 8, 0, 255, 1, 0]
+cmd a0 00322
+"Set_LoRaSymbTimeout()"
+[0]
+cmd 1d 00330
+"Read_Register()"
+[7, 54]
+[0]
+[13]
+cmd 0d 00344
+"Write_Register()"
+[7, 54, 13]
+cmd 8c 00356
+"Set_PacketParams()"
+[0, 8, 0, 64, 1, 0]
+cmd 98 00374
+"CalibrateImage()"
+[225, 233]
+cmd 86 00384
+"Set_RfFrequency()"
+[57, 48, 0, 0]
+cmd 82 00398
+"Set_Rx()"
+[1, 244, 0]
+cmd 12 00408
+"Get_IrqStatus()"
+[166, 2, 0]
+"irq"
+[2, 0]
+cmd 02 00421
+"Clr_IrqStatus()"
+[2, 0]
+cmd 86 00431
+"Set_RfFrequency()"
+[57, 48, 0, 0]
+cmd 08 00445
+"Cfg_DioIrq()"
+[2, 1, 2, 1, 0, 0, 0, 0]
+cmd 8c 00467
+"Set_PacketParams()"
+[0, 8, 0, 64, 1, 0]
+cmd 0e 00483
+"Write_Buffer()"
+[0]
+[80, 73, 78, 71, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]
+cmd 83 00619
+"Set_Tx()"
+[0, 0, 0]
+cmd 12 00629
+"Get_IrqStatus()"
+[172, 0, 1]
+"irq"
+[0, 1]
+cmd 02 00642
+"Clr_IrqStatus()"
+[0, 1]
+cmd 80 00650
+"Set_Standby()"
+[0]
+cmd 84 00658
+"Set_Sleep()"
+[4]
+cmd 86 00666
+"Set_RfFrequency()"
+[57, 48, 0, 0]
+cmd 82 00680
+"Set_Rx()"
+[1, 244, 0]
+cmd 12 00690
+"Get_IrqStatus()"
+[166, 2, 0]
+"irq"
+[2, 0]
+cmd 02 00703
+"Clr_IrqStatus()"
+[2, 0]
+"lost"
+:out_cmd
+0
+709

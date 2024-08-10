@@ -1,0 +1,7 @@
+set pagination off
+set logging overwrite on
+set logging file radio.log
+set logging redirect on
+set logging on
+x/1024b 0x20000af0
+set logging off

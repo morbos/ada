@@ -1,0 +1,192 @@
+r0             0x10280000          271056896
+r1             0x1                 1
+r2             0x0                 0
+r3             0x1
+0x1fffe97c:	push	{r4, r5, r6, lr}
+   0x1fffe97e:	mov	r6, r1
+   0x1fffe980:	mov	r1, r0
+   0x1fffe982:	sub	sp, #24
+   0x1fffe984:	mov	r4, r3
+   0x1fffe986:	mov	r5, r2
+   0x1fffe988:	movs	r0, #0
+   0x1fffe98a:	bl	0x1fffe12c
+; read 0x40021004 (reads 0)
+        0x1fffe12c:	ldr	r3, [pc, #12]	; (0x1fffe13c)
+        0x1fffe12e:	ldr	r2, [r3, #4]
+; or in the PLLMUL
+        0x1fffe130:	orrs	r0, r1
+; clear PLLMUL field
+        0x1fffe132:	bic.w	r2, r2, #4128768	; 0x3f0000
+; or in prior contents(why?)
+        0x1fffe136:	orrs	r0, r2
+; final PLLMUL	(0x10280000) (thats +16 and 10 mult (27 * 8 = 216)
+        0x1fffe138:	str	r0, [r3, #4]
+        0x1fffe13a:	bx	lr
+   0x1fffe98e:	movs	r0, #0
+   0x1fffe990:	bl	0x1fffe0d8
+   ; read 0x40021004
+        0x1fffe0d8:	ldr	r2, [pc, #12]	; (0x1fffe0e8)
+; reads old val 0x10280000
+        0x1fffe0da:	ldr	r1, [r2, #4]
+; wipe HPRE
+        0x1fffe0dc:	bic.w	r1, r1, #240	; 0xf0
+; or in wanted val (in this case 0)
+        0x1fffe0e0:	orrs	r1, r0
+; no change to HPRE
+        0x1fffe0e2:	str	r1, [r2, #4]
+        0x1fffe0e4:	bx	lr
+   0x1fffe994:	mov.w	r0, #1024	; 0x400
+   0x1fffe998:	bl	0x1fffe0f8
+        0x1fffe0f8:	ldr	r2, [pc, #12]	; (0x1fffe108)
+        0x1fffe0fa:	ldr	r1, [r2, #4]
+; Now PPRE1	(set to the 0x4 of r0's arg of 0x400)
+        0x1fffe0fc:	bic.w	r1, r1, #1792	; 0x700
+        0x1fffe100:	orrs	r1, r0
+        0x1fffe102:	str	r1, [r2, #4]
+;(gdb) x/x 0x40021004
+;0x40021004:	0x10280400
+        0x1fffe104:	bx	lr
+   0x1fffe99c:	movs	r0, #0
+   0x1fffe99e:	bl	0x1fffe10c
+; we arrive with r0=0
+        0x1fffe10c:	ldr	r2, [pc, #12]	; (0x1fffe11c)
+        0x1fffe10e:	ldr	r1, [r2, #4]
+; once again 0x40021004
+; PPRE2
+        0x1fffe110:	bic.w	r1, r1, #14336	; 0x3800
+        0x1fffe114:	orr.w	r0, r1, r0, lsl #3
+        0x1fffe118:	str	r0, [r2, #4]
+; 0x10280400
+        0x1fffe11a:	bx	lr
+   0x1fffe9a2:	mov	r0, sp
+;(gdb) x/16x $r0
+;0x20000fd8:	0x00000000	0x00000000	0x00000000	0x00000000
+;0x20000fe8:	0x00000000	0x00000000	0x00010000	0x10280000
+;0x20000ff8:	0x00000001	0x0800136d	0x200183ff	0x08001464
+;0x20001008:	0x08001464	0x00000000	0x00000000	0x080002dd
+   0x1fffe9a4:	bl	0x1fffe004
+        0x1fffe004:	push	{r4, r5, lr}
+        0x1fffe006:	ldr	r2, [pc, #144]	; (0x1fffe098)
+        0x1fffe008:	ldr	r1, [r2, #4]
+; once again 0x40021004	= 0x40021004
+        0x1fffe00a:	ldr	r3, [pc, #144]	; (0x1fffe09c)
+; r3=0x7a1200
+; SWS masked off (0xC)
+        0x1fffe00c:	ands.w	r1, r1, #12
+; vvv taken since after masking, r1 == 0
+        0x1fffe010:	beq.n	0x1fffe01a
+        0x1fffe012:	cmp	r1, #4
+        0x1fffe014:	beq.n	0x1fffe01a
+        0x1fffe016:	cmp	r1, #8
+        0x1fffe018:	beq.n	0x1fffe01e
+; Save r3 on the stack
+        0x1fffe01a:	str	r3, [r0, #0]
+;(gdb) x/x $r0
+;0x20000fd8:	0x007a1200
+        0x1fffe01c:	b.n	0x1fffe054
+        0x1fffe01e:	ldr	r1, [r2, #4]
+        0x1fffe020:	ldr	r3, [r2, #4]
+        0x1fffe022:	and.w	r1, r1, #3932160	; 0x3c0000
+        0x1fffe026:	ldr	r4, [r2, #4]
+        0x1fffe028:	and.w	r3, r3, #65536	; 0x10000
+        0x1fffe02c:	lsrs	r4, r4, #27
+        0x1fffe02e:	lsls	r4, r4, #31
+        0x1fffe030:	beq.n	0x1fffe03c
+        0x1fffe032:	movs	r4, #16
+        0x1fffe034:	orr.w	r1, r4, r1, lsr #18
+        0x1fffe038:	adds	r1, r1, #1
+        0x1fffe03a:	b.n	0x1fffe042
+        0x1fffe03c:	movs	r4, #2
+        0x1fffe03e:	add.w	r1, r4, r1, lsr #18
+        0x1fffe042:	cbz	r3, 0x1fffe04a
+        0x1fffe044:	ldr	r3, [r2, #4]
+        0x1fffe046:	lsls	r3, r3, #14
+        0x1fffe048:	bpl.n	0x1fffe04e
+        0x1fffe04a:	ldr	r3, [pc, #84]	; (0x1fffe0a0)
+        0x1fffe04c:	b.n	0x1fffe050
+        0x1fffe04e:	ldr	r3, [pc, #76]	; (0x1fffe09c)
+        0x1fffe050:	muls	r1, r3
+        0x1fffe052:	str	r1, [r0, #0]
+; ^^^ from 0x1c above
+; ld 0x40021004 again...
+        0x1fffe054:	ldr	r1, [r2, #4]
+        0x1fffe056:	movs	r3, #15
+;??? why
+        0x1fffe058:	and.w	r1, r3, r1, lsr #4
+; HPRE now in r1 (r1 >> 4) & 0xF
+        0x1fffe05c:	ldr	r3, [pc, #68]	; (0x1fffe0a4)
+; r3=0x20018050 (the secret memory)
+; some sort of byte table indexed by r1
+        0x1fffe05e:	ldrb	r4, [r3, r1]
+; reads 0
+        0x1fffe060:	ldr	r1, [r0, #0]
+; read back tos (0x7a1200)
+; this is a shift by 0 (r4 == 0)
+        0x1fffe062:	lsrs	r1, r4
+; write back tos+4 same 0 shifted# 0x7a1200
+        0x1fffe064:	str	r1, [r0, #4]
+; read 	0x40021004 again...
+        0x1fffe066:	ldr	r4, [r2, #4]
+        0x1fffe068:	movs	r5, #7
+; get 10:8 into r4 (was 0x400 -> PPRE1=4)
+        0x1fffe06a:	and.w	r4, r5, r4, lsr #8
+; this reads 0x20018054[7:0] = 1
+        0x1fffe06e:	ldrb	r4, [r3, r4]
+; now shift 7a1200 by... 4?
+        0x1fffe070:	lsr.w	r4, r1, r4
+; r4 0x3d0900
+; 0x20000fd8:	0x007a1200	0x007a1200	0x003d0900	0x00000000
+        0x1fffe074:	str	r4, [r0, #8]
+; still 0x40021004 == 0x10280400
+        0x1fffe076:	ldr	r4, [r2, #4]
+; read PPRE2
+        0x1fffe078:	and.w	r4, r5, r4, lsr #11
+; r4=0, read is 0
+        0x1fffe07c:	ldrb	r3, [r3, r4]
+; r1=0x7a1200 << 0, unchanged
+        0x1fffe07e:	lsrs	r1, r3
+; after this str
+; (gdb) x/8 $r0
+; 0x20000fd8:	0x007a1200	0x007a1200	0x003d0900	0x007a1200
+        0x1fffe080:	str	r1, [r0, #12]
+; CFGR again...
+        0x1fffe082:	ldr	r2, [r2, #4]
+; ADCPRE
+        0x1fffe084:	movs	r3, #3
+; ADCPRE was 0
+        0x1fffe086:	and.w	r2, r3, r2, lsr #14
+        0x1fffe08a:	ldr	r3, [pc, #24]	; (0x1fffe0a4)
+; backup magic ram to 0x2001804c...btw 0x4c = 0x08060402
+        0x1fffe08c:	subs	r3, r3, #4
+; r2=0 this should read 2
+        0x1fffe08e:	ldrb	r2, [r3, r2]
+; r2=2	div 8mhz by 2
+        0x1fffe090:	udiv	r1, r1, r2
+; r1 == 4mhz (0x3d0900)
+        0x1fffe094:	str	r1, [r0, #16]
+0x20000fd8:	0x007a1200	0x007a1200	0x003d0900	0x007a1200
+0x20000fe8:	0x003d0900	0x00000000	0x00010000	0x10280000
+        0x1fffe096:	pop	{r4, r5, pc}
+; 0x40022000 secret peripheral
+   0x1fffe9a8:	ldr	r0, [pc, #40]	; (0x1fffe9d4)
+; read 0x40022214 (== 0x00034069)
+   0x1fffe9aa:	ldr.w	r1, [r0, #532]	; 0x214
+   0x1fffe9ae:	movw	r2, #49159	; 0xc007
+; r1 now becomes 0x30068
+   0x1fffe9b2:	bics	r1, r2
+; r6 (==1) arg save from entry
+   0x1fffe9b4:	and.w	r2, r6, #7
+; r2 is now 1
+; which makes r1=0x30069
+   0x1fffe9b8:	orrs	r1, r2
+; r4 was 1 so this is 1
+   0x1fffe9ba:	and.w	r2, r4, #1
+; r1=0x30069
+   0x1fffe9be:	orr.w	r1, r1, r2, lsl #14
+; now 0x34069  r2=0 after the and
+   0x1fffe9c2:	and.w	r2, r5, #1
+; making r1 unchanged (0x34069)
+   0x1fffe9c6:	orr.w	r1, r1, r2, lsl #15
+   0x1fffe9ca:	str.w	r1, [r0, #532]	; 0x214
+   0x1fffe9ce:	add	sp, #24
+   0x1fffe9d0:	pop	{r4, r5, r6, pc}

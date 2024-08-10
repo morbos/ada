@@ -1,0 +1,272 @@
+periph OTFDEC1:
+"process"
+CR 00000000
+R1CFGR 00000020
+{:x=>[[nil, 0, 48], [nil, 1, 2]]}
+R1STARTADDR 00000024
+{:x=>[[nil, 0, 48], [nil, 1, 2]]}
+R1ENDADDR 00000028
+{:x=>[[nil, 0, 48], [nil, 1, 2]]}
+R1NONCER0 0000002c
+{:x=>[[nil, 0, 48], [nil, 1, 2]], :y=>[[nil, 0, 4], [nil, 0, 1]]}
+R1NONCER1 00000030
+{:x=>[[nil, 0, 48], [nil, 1, 2]], :y=>[[-4, 0, nil], [0, 1, nil]]}
+R1KEYR0 00000034
+{:x=>[[nil, 0, 48], [nil, 1, 2]], :y=>[[nil, 0, 4], [nil, 0, 1]]}
+R1KEYR1 00000038
+{:x=>[[nil, 0, 48], [nil, 1, 2]], :y=>[[-4, 0, 4], [0, 1, 2]]}
+R1KEYR2 0000003c
+{:x=>[[nil, 0, 48], [nil, 1, 2]], :y=>[[-4, 0, 4], [1, 2, 3]]}
+R1KEYR3 00000040
+{:x=>[[nil, 0, 48], [nil, 1, 2]], :y=>[[-4, 0, nil], [2, 3, nil]]}
+R2CFGR 00000050
+{:x=>[[-48, 0, 48], [1, 2, 3]]}
+R2STARTADDR 00000054
+{:x=>[[-48, 0, 48], [1, 2, 3]]}
+R2ENDADDR 00000058
+{:x=>[[-48, 0, 48], [1, 2, 3]]}
+R2NONCER0 0000005c
+{:x=>[[-48, 0, 48], [1, 2, 3]], :y=>[[nil, 0, 4], [nil, 0, 1]]}
+R2NONCER1 00000060
+{:x=>[[-48, 0, 48], [1, 2, 3]], :y=>[[-4, 0, nil], [0, 1, nil]]}
+R2KEYR0 00000064
+{:x=>[[-48, 0, 48], [1, 2, 3]], :y=>[[nil, 0, 4], [nil, 0, 1]]}
+R2KEYR1 00000068
+{:x=>[[-48, 0, 48], [1, 2, 3]], :y=>[[-4, 0, 4], [0, 1, 2]]}
+R2KEYR2 0000006c
+{:x=>[[-48, 0, 48], [1, 2, 3]], :y=>[[-4, 0, 4], [1, 2, 3]]}
+R2KEYR3 00000070
+{:x=>[[-48, 0, 48], [1, 2, 3]], :y=>[[-4, 0, nil], [2, 3, nil]]}
+R3CFGR 00000080
+{:x=>[[-48, 0, 48], [2, 3, 4]]}
+R3STARTADDR 00000084
+{:x=>[[-48, 0, 48], [2, 3, 4]]}
+R3ENDADDR 00000088
+{:x=>[[-48, 0, 48], [2, 3, 4]]}
+R3NONCER0 0000008c
+{:x=>[[-48, 0, 48], [2, 3, 4]], :y=>[[nil, 0, 4], [nil, 0, 1]]}
+R3NONCER1 00000090
+{:x=>[[-48, 0, 48], [2, 3, 4]], :y=>[[-4, 0, nil], [0, 1, nil]]}
+R3KEYR0 00000094
+{:x=>[[-48, 0, 48], [2, 3, 4]], :y=>[[nil, 0, 4], [nil, 0, 1]]}
+R3KEYR1 00000098
+{:x=>[[-48, 0, 48], [2, 3, 4]], :y=>[[-4, 0, 4], [0, 1, 2]]}
+R3KEYR2 0000009c
+{:x=>[[-48, 0, 48], [2, 3, 4]], :y=>[[-4, 0, 4], [1, 2, 3]]}
+R3KEYR3 000000a0
+{:x=>[[-48, 0, 48], [2, 3, 4]], :y=>[[-4, 0, nil], [2, 3, nil]]}
+R4CFGR 000000b0
+{:x=>[[-48, 0, nil], [3, 4, nil]]}
+R4STARTADDR 000000b4
+{:x=>[[-48, 0, nil], [3, 4, nil]]}
+R4ENDADDR 000000b8
+{:x=>[[-48, 0, nil], [3, 4, nil]]}
+R4NONCER0 000000bc
+{:x=>[[-48, 0, nil], [3, 4, nil]], :y=>[[nil, 0, 4], [nil, 0, 1]]}
+R4NONCER1 000000c0
+{:x=>[[-48, 0, nil], [3, 4, nil]], :y=>[[-4, 0, nil], [0, 1, nil]]}
+R4KEYR0 000000c4
+{:x=>[[-48, 0, nil], [3, 4, nil]], :y=>[[nil, 0, 4], [nil, 0, 1]]}
+R4KEYR1 000000c8
+{:x=>[[-48, 0, nil], [3, 4, nil]], :y=>[[-4, 0, 4], [0, 1, 2]]}
+R4KEYR2 000000cc
+{:x=>[[-48, 0, nil], [3, 4, nil]], :y=>[[-4, 0, 4], [1, 2, 3]]}
+R4KEYR3 000000d0
+{:x=>[[-48, 0, nil], [3, 4, nil]], :y=>[[-4, 0, nil], [2, 3, nil]]}
+ISR 00000300
+ICR 00000304
+IER 00000308
+"process coll"
+"s"
+#<Set: {1}>
+1
+"s"
+#<Set: {1}>
+1
+"s"
+#<Set: {1}>
+1
+"s"
+#<Set: {1}>
+1
+"s"
+#<Set: {0}>
+0
+"s"
+#<Set: {1}>
+1
+"s"
+#<Set: {0, 1}>
+1
+"s"
+#<Set: {1}>
+1
+"s"
+#<Set: {0, 1}>
+0
+"s"
+#<Set: {1}>
+1
+"s"
+#<Set: {0, 1}>
+1
+"s"
+#<Set: {1}>
+1
+"s"
+#<Set: {0, 1, 2}>
+2
+"s"
+#<Set: {1}>
+1
+"s"
+#<Set: {0, 1, 2, 3}>
+3
+"s"
+#<Set: {1, 2}>
+2
+"s"
+#<Set: {1, 2}>
+2
+"s"
+#<Set: {1, 2}>
+2
+"s"
+#<Set: {1, 2}>
+2
+"s"
+#<Set: {0, 1, 2, 3}>
+0
+"s"
+#<Set: {1, 2}>
+2
+"s"
+#<Set: {0, 1, 2, 3}>
+1
+"s"
+#<Set: {1, 2}>
+2
+"s"
+#<Set: {0, 1, 2, 3}>
+0
+"s"
+#<Set: {1, 2}>
+2
+"s"
+#<Set: {0, 1, 2, 3}>
+1
+"s"
+#<Set: {1, 2}>
+2
+"s"
+#<Set: {0, 1, 2, 3}>
+2
+"s"
+#<Set: {1, 2}>
+2
+"s"
+#<Set: {0, 1, 2, 3}>
+3
+"s"
+#<Set: {1, 2, 3}>
+3
+"s"
+#<Set: {1, 2, 3}>
+3
+"s"
+#<Set: {1, 2, 3}>
+3
+"s"
+#<Set: {1, 2, 3}>
+3
+"s"
+#<Set: {0, 1, 2, 3}>
+0
+"s"
+#<Set: {1, 2, 3}>
+3
+"s"
+#<Set: {0, 1, 2, 3}>
+1
+"s"
+#<Set: {1, 2, 3}>
+3
+"s"
+#<Set: {0, 1, 2, 3}>
+0
+"s"
+#<Set: {1, 2, 3}>
+3
+"s"
+#<Set: {0, 1, 2, 3}>
+1
+"s"
+#<Set: {1, 2, 3}>
+3
+"s"
+#<Set: {0, 1, 2, 3}>
+2
+"s"
+#<Set: {1, 2, 3}>
+3
+"s"
+#<Set: {0, 1, 2, 3}>
+3
+"s"
+#<Set: {1, 2, 3, 4}>
+4
+"s"
+#<Set: {1, 2, 3, 4}>
+4
+"s"
+#<Set: {1, 2, 3, 4}>
+4
+"s"
+#<Set: {1, 2, 3, 4}>
+4
+"s"
+#<Set: {0, 1, 2, 3}>
+0
+"s"
+#<Set: {1, 2, 3, 4}>
+4
+"s"
+#<Set: {0, 1, 2, 3}>
+1
+"s"
+#<Set: {1, 2, 3, 4}>
+4
+"s"
+#<Set: {0, 1, 2, 3}>
+0
+"s"
+#<Set: {1, 2, 3, 4}>
+4
+"s"
+#<Set: {0, 1, 2, 3}>
+1
+"s"
+#<Set: {1, 2, 3, 4}>
+4
+"s"
+#<Set: {0, 1, 2, 3}>
+2
+"s"
+#<Set: {1, 2, 3, 4}>
+4
+"s"
+#<Set: {0, 1, 2, 3}>
+3
+[]
+[#<Collection:0x000000022e3310 @elem={["R", :x, "CFGR"]=>#<Reg:0x00000002333860 @name="R4CFGR", @addr=176, @desc="OTFDEC region x configuration\n          register", @size=4, @fields=#<Fields:0x000000023480a8 @elems=[#<Field:0x0000000233d6a8 @name="REG_EN", @bitOffset=0, @bitWidth=1>, #<Field:0x00000002339e40 @name="CONFIGLOCK", @bitOffset=1, @bitWidth=1>, #<Field:0x00000002337500 @name="KEYLOCK", @bitOffset=2, @bitWidth=1>, #<Field:0x00000002335d68 @name="MODE", @bitOffset=4, @bitWidth=2>, #<Field:0x00000002334968 @name="KEYCRC", @bitOffset=8, @bitWidth=8>, #<Field:0x00000002333900 @name="REGx_VERSION", @bitOffset=16, @bitWidth=16>], @field_hash={"REG_EN"=>[0, 1], "CONFIGLOCK"=>[1, 1], "KEYLOCK"=>[2, 1], "MODE"=>[4, 2], "KEYCRC"=>[8, 8], "REGx_VERSION"=>[16, 16]}, @num_fields=6>, @periph="OTFDEC1", @splita=["R", "4", "CFGR"], @splitn=["R", 4, "CFGR"], @splitv=["R", "x", "CFGR"], @splits=["R", :x, "CFGR"], @splitc=["R", "4", "CFGR"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "STARTADDR"]=>#<Reg:0x000000022d9cc0 @name="R4STARTADDR", @addr=180, @desc="OTFDEC region x start address\n          register", @size=4, @fields=#<Fields:0x000000022e0980 @elems=[#<Field:0x000000022d9d60 @name="REGx_START_ADDR", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_START_ADDR"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "STARTADDR"], @splitn=["R", 4, "STARTADDR"], @splitv=["R", "x", "STARTADDR"], @splits=["R", :x, "STARTADDR"], @splitc=["R", "4", "STARTADDR"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "ENDADDR"]=>#<Reg:0x000000022b26c0 @name="R4ENDADDR", @addr=184, @desc="OTFDEC region x end address\n          register", @size=4, @fields=#<Fields:0x000000022b43a8 @elems=[#<Field:0x000000022b2788 @name="REGx_END_ADDR", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_END_ADDR"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "ENDADDR"], @splitn=["R", 4, "ENDADDR"], @splitv=["R", "x", "ENDADDR"], @splits=["R", :x, "ENDADDR"], @splitc=["R", "4", "ENDADDR"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "NONCER", :y]=>#<Reg:0x000000020aab20 @name="R4NONCER1", @addr=192, @desc="OTFDEC region x nonce register\n          1", @size=4, @fields=#<Fields:0x00000002124cb8 @elems=[#<Field:0x000000020aabc0 @name="REGx_NONCE", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_NONCE"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "NONCER", "1"], @splitn=["R", 4, "NONCER", 1], @splitv=["R", "x", "NONCER", "y"], @splits=["R", :x, "NONCER", :y], @splitc=["R", "4", "NONCER", "1"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]], :y=>[[-4, 0, nil], [0, 1, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "KEYR", :y]=>#<Reg:0x000000023ce860 @name="R4KEYR3", @addr=208, @desc="OTFDEC region x key register 3", @size=4, @fields=#<Fields:0x000000023d4800 @elems=[#<Field:0x000000023ce950 @name="REGx_KEY", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_KEY"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "KEYR", "3"], @splitn=["R", 4, "KEYR", 3], @splitv=["R", "x", "KEYR", "y"], @splits=["R", :x, "KEYR", :y], @splitc=["R", "4", "KEYR", "3"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]], :y=>[[-4, 0, nil], [2, 3, nil]]}, @seen=false, @grpname={}, @idx={}>}, @idx=#<Set: {1, 2, 3, 4}>, @key=:x>]
+
+[#<Collection:0x000000022e3310 @elem={["R", :x, "CFGR"]=>#<Reg:0x00000002333860 @name="R4CFGR", @addr=176, @desc="OTFDEC region x configuration\n          register", @size=4, @fields=#<Fields:0x000000023480a8 @elems=[#<Field:0x0000000233d6a8 @name="REG_EN", @bitOffset=0, @bitWidth=1>, #<Field:0x00000002339e40 @name="CONFIGLOCK", @bitOffset=1, @bitWidth=1>, #<Field:0x00000002337500 @name="KEYLOCK", @bitOffset=2, @bitWidth=1>, #<Field:0x00000002335d68 @name="MODE", @bitOffset=4, @bitWidth=2>, #<Field:0x00000002334968 @name="KEYCRC", @bitOffset=8, @bitWidth=8>, #<Field:0x00000002333900 @name="REGx_VERSION", @bitOffset=16, @bitWidth=16>], @field_hash={"REG_EN"=>[0, 1], "CONFIGLOCK"=>[1, 1], "KEYLOCK"=>[2, 1], "MODE"=>[4, 2], "KEYCRC"=>[8, 8], "REGx_VERSION"=>[16, 16]}, @num_fields=6>, @periph="OTFDEC1", @splita=["R", "4", "CFGR"], @splitn=["R", 4, "CFGR"], @splitv=["R", "x", "CFGR"], @splits=["R", :x, "CFGR"], @splitc=["R", "4", "CFGR"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "STARTADDR"]=>#<Reg:0x000000022d9cc0 @name="R4STARTADDR", @addr=180, @desc="OTFDEC region x start address\n          register", @size=4, @fields=#<Fields:0x000000022e0980 @elems=[#<Field:0x000000022d9d60 @name="REGx_START_ADDR", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_START_ADDR"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "STARTADDR"], @splitn=["R", 4, "STARTADDR"], @splitv=["R", "x", "STARTADDR"], @splits=["R", :x, "STARTADDR"], @splitc=["R", "4", "STARTADDR"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "ENDADDR"]=>#<Reg:0x000000022b26c0 @name="R4ENDADDR", @addr=184, @desc="OTFDEC region x end address\n          register", @size=4, @fields=#<Fields:0x000000022b43a8 @elems=[#<Field:0x000000022b2788 @name="REGx_END_ADDR", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_END_ADDR"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "ENDADDR"], @splitn=["R", 4, "ENDADDR"], @splitv=["R", "x", "ENDADDR"], @splits=["R", :x, "ENDADDR"], @splitc=["R", "4", "ENDADDR"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "NONCER", :y]=>#<Reg:0x000000020aab20 @name="R4NONCER1", @addr=192, @desc="OTFDEC region x nonce register\n          1", @size=4, @fields=#<Fields:0x00000002124cb8 @elems=[#<Field:0x000000020aabc0 @name="REGx_NONCE", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_NONCE"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "NONCER", "1"], @splitn=["R", 4, "NONCER", 1], @splitv=["R", "x", "NONCER", "y"], @splits=["R", :x, "NONCER", :y], @splitc=["R", "4", "NONCER", "1"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]], :y=>[[-4, 0, nil], [0, 1, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "KEYR", :y]=>#<Reg:0x000000023ce860 @name="R4KEYR3", @addr=208, @desc="OTFDEC region x key register 3", @size=4, @fields=#<Fields:0x000000023d4800 @elems=[#<Field:0x000000023ce950 @name="REGx_KEY", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_KEY"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "KEYR", "3"], @splitn=["R", 4, "KEYR", 3], @splitv=["R", "x", "KEYR", "y"], @splits=["R", :x, "KEYR", :y], @splitc=["R", "4", "KEYR", "3"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]], :y=>[[-4, 0, nil], [2, 3, nil]]}, @seen=false, @grpname={}, @idx={}>}, @idx=#<Set: {1, 2, 3, 4}>, @key=:x>]
+
+[#<Collection:0x000000022e3310 @elem={["R", :x, "CFGR"]=>#<Reg:0x00000002333860 @name="R4CFGR", @addr=176, @desc="OTFDEC region x configuration\n          register", @size=4, @fields=#<Fields:0x000000023480a8 @elems=[#<Field:0x0000000233d6a8 @name="REG_EN", @bitOffset=0, @bitWidth=1>, #<Field:0x00000002339e40 @name="CONFIGLOCK", @bitOffset=1, @bitWidth=1>, #<Field:0x00000002337500 @name="KEYLOCK", @bitOffset=2, @bitWidth=1>, #<Field:0x00000002335d68 @name="MODE", @bitOffset=4, @bitWidth=2>, #<Field:0x00000002334968 @name="KEYCRC", @bitOffset=8, @bitWidth=8>, #<Field:0x00000002333900 @name="REGx_VERSION", @bitOffset=16, @bitWidth=16>], @field_hash={"REG_EN"=>[0, 1], "CONFIGLOCK"=>[1, 1], "KEYLOCK"=>[2, 1], "MODE"=>[4, 2], "KEYCRC"=>[8, 8], "REGx_VERSION"=>[16, 16]}, @num_fields=6>, @periph="OTFDEC1", @splita=["R", "4", "CFGR"], @splitn=["R", 4, "CFGR"], @splitv=["R", "x", "CFGR"], @splits=["R", :x, "CFGR"], @splitc=["R", "4", "CFGR"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "STARTADDR"]=>#<Reg:0x000000022d9cc0 @name="R4STARTADDR", @addr=180, @desc="OTFDEC region x start address\n          register", @size=4, @fields=#<Fields:0x000000022e0980 @elems=[#<Field:0x000000022d9d60 @name="REGx_START_ADDR", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_START_ADDR"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "STARTADDR"], @splitn=["R", 4, "STARTADDR"], @splitv=["R", "x", "STARTADDR"], @splits=["R", :x, "STARTADDR"], @splitc=["R", "4", "STARTADDR"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "ENDADDR"]=>#<Reg:0x000000022b26c0 @name="R4ENDADDR", @addr=184, @desc="OTFDEC region x end address\n          register", @size=4, @fields=#<Fields:0x000000022b43a8 @elems=[#<Field:0x000000022b2788 @name="REGx_END_ADDR", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_END_ADDR"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "ENDADDR"], @splitn=["R", 4, "ENDADDR"], @splitv=["R", "x", "ENDADDR"], @splits=["R", :x, "ENDADDR"], @splitc=["R", "4", "ENDADDR"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "NONCER", :y]=>#<Reg:0x000000020aab20 @name="R4NONCER1", @addr=192, @desc="OTFDEC region x nonce register\n          1", @size=4, @fields=#<Fields:0x00000002124cb8 @elems=[#<Field:0x000000020aabc0 @name="REGx_NONCE", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_NONCE"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "NONCER", "1"], @splitn=["R", 4, "NONCER", 1], @splitv=["R", "x", "NONCER", "y"], @splits=["R", :x, "NONCER", :y], @splitc=["R", "4", "NONCER", "1"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]], :y=>[[-4, 0, nil], [0, 1, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "KEYR", :y]=>#<Reg:0x000000023ce860 @name="R4KEYR3", @addr=208, @desc="OTFDEC region x key register 3", @size=4, @fields=#<Fields:0x000000023d4800 @elems=[#<Field:0x000000023ce950 @name="REGx_KEY", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_KEY"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "KEYR", "3"], @splitn=["R", 4, "KEYR", 3], @splitv=["R", "x", "KEYR", "y"], @splits=["R", :x, "KEYR", :y], @splitc=["R", "4", "KEYR", "3"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]], :y=>[[-4, 0, nil], [2, 3, nil]]}, @seen=false, @grpname={}, @idx={}>}, @idx=#<Set: {1, 2, 3, 4}>, @key=:x>]
+
+[#<Collection:0x000000022e3310 @elem={["R", :x, "CFGR"]=>#<Reg:0x00000002333860 @name="R4CFGR", @addr=176, @desc="OTFDEC region x configuration\n          register", @size=4, @fields=#<Fields:0x000000023480a8 @elems=[#<Field:0x0000000233d6a8 @name="REG_EN", @bitOffset=0, @bitWidth=1>, #<Field:0x00000002339e40 @name="CONFIGLOCK", @bitOffset=1, @bitWidth=1>, #<Field:0x00000002337500 @name="KEYLOCK", @bitOffset=2, @bitWidth=1>, #<Field:0x00000002335d68 @name="MODE", @bitOffset=4, @bitWidth=2>, #<Field:0x00000002334968 @name="KEYCRC", @bitOffset=8, @bitWidth=8>, #<Field:0x00000002333900 @name="REGx_VERSION", @bitOffset=16, @bitWidth=16>], @field_hash={"REG_EN"=>[0, 1], "CONFIGLOCK"=>[1, 1], "KEYLOCK"=>[2, 1], "MODE"=>[4, 2], "KEYCRC"=>[8, 8], "REGx_VERSION"=>[16, 16]}, @num_fields=6>, @periph="OTFDEC1", @splita=["R", "4", "CFGR"], @splitn=["R", 4, "CFGR"], @splitv=["R", "x", "CFGR"], @splits=["R", :x, "CFGR"], @splitc=["R", "4", "CFGR"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "STARTADDR"]=>#<Reg:0x000000022d9cc0 @name="R4STARTADDR", @addr=180, @desc="OTFDEC region x start address\n          register", @size=4, @fields=#<Fields:0x000000022e0980 @elems=[#<Field:0x000000022d9d60 @name="REGx_START_ADDR", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_START_ADDR"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "STARTADDR"], @splitn=["R", 4, "STARTADDR"], @splitv=["R", "x", "STARTADDR"], @splits=["R", :x, "STARTADDR"], @splitc=["R", "4", "STARTADDR"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "ENDADDR"]=>#<Reg:0x000000022b26c0 @name="R4ENDADDR", @addr=184, @desc="OTFDEC region x end address\n          register", @size=4, @fields=#<Fields:0x000000022b43a8 @elems=[#<Field:0x000000022b2788 @name="REGx_END_ADDR", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_END_ADDR"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "ENDADDR"], @splitn=["R", 4, "ENDADDR"], @splitv=["R", "x", "ENDADDR"], @splits=["R", :x, "ENDADDR"], @splitc=["R", "4", "ENDADDR"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "NONCER", :y]=>#<Reg:0x000000020aab20 @name="R4NONCER1", @addr=192, @desc="OTFDEC region x nonce register\n          1", @size=4, @fields=#<Fields:0x00000002124cb8 @elems=[#<Field:0x000000020aabc0 @name="REGx_NONCE", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_NONCE"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "NONCER", "1"], @splitn=["R", 4, "NONCER", 1], @splitv=["R", "x", "NONCER", "y"], @splits=["R", :x, "NONCER", :y], @splitc=["R", "4", "NONCER", "1"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]], :y=>[[-4, 0, nil], [0, 1, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "KEYR", :y]=>#<Reg:0x000000023ce860 @name="R4KEYR3", @addr=208, @desc="OTFDEC region x key register 3", @size=4, @fields=#<Fields:0x000000023d4800 @elems=[#<Field:0x000000023ce950 @name="REGx_KEY", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_KEY"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "KEYR", "3"], @splitn=["R", 4, "KEYR", 3], @splitv=["R", "x", "KEYR", "y"], @splits=["R", :x, "KEYR", :y], @splitc=["R", "4", "KEYR", "3"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]], :y=>[[-4, 0, nil], [2, 3, nil]]}, @seen=false, @grpname={}, @idx={}>}, @idx=#<Set: {1, 2, 3, 4}>, @key=:x>, #<Collection:0x000000022e1290 @elem={["R", :x, "NONCER", :y]=>#<Reg:0x000000020aab20 @name="R4NONCER1", @addr=192, @desc="OTFDEC region x nonce register\n          1", @size=4, @fields=#<Fields:0x00000002124cb8 @elems=[#<Field:0x000000020aabc0 @name="REGx_NONCE", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_NONCE"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "NONCER", "1"], @splitn=["R", 4, "NONCER", 1], @splitv=["R", "x", "NONCER", "y"], @splits=["R", :x, "NONCER", :y], @splitc=["R", "4", "NONCER", "1"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]], :y=>[[-4, 0, nil], [0, 1, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "KEYR", :y]=>#<Reg:0x000000023ce860 @name="R4KEYR3", @addr=208, @desc="OTFDEC region x key register 3", @size=4, @fields=#<Fields:0x000000023d4800 @elems=[#<Field:0x000000023ce950 @name="REGx_KEY", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_KEY"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "KEYR", "3"], @splitn=["R", 4, "KEYR", 3], @splitv=["R", "x", "KEYR", "y"], @splits=["R", :x, "KEYR", :y], @splitc=["R", "4", "KEYR", "3"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]], :y=>[[-4, 0, nil], [2, 3, nil]]}, @seen=false, @grpname={}, @idx={}>}, @idx=#<Set: {0, 1, 2, 3}>, @key=:y>]
+
+[#<Collection:0x000000022e3310 @elem={["R", :x, "CFGR"]=>#<Reg:0x00000002333860 @name="R4CFGR", @addr=176, @desc="OTFDEC region x configuration\n          register", @size=4, @fields=#<Fields:0x000000023480a8 @elems=[#<Field:0x0000000233d6a8 @name="REG_EN", @bitOffset=0, @bitWidth=1>, #<Field:0x00000002339e40 @name="CONFIGLOCK", @bitOffset=1, @bitWidth=1>, #<Field:0x00000002337500 @name="KEYLOCK", @bitOffset=2, @bitWidth=1>, #<Field:0x00000002335d68 @name="MODE", @bitOffset=4, @bitWidth=2>, #<Field:0x00000002334968 @name="KEYCRC", @bitOffset=8, @bitWidth=8>, #<Field:0x00000002333900 @name="REGx_VERSION", @bitOffset=16, @bitWidth=16>], @field_hash={"REG_EN"=>[0, 1], "CONFIGLOCK"=>[1, 1], "KEYLOCK"=>[2, 1], "MODE"=>[4, 2], "KEYCRC"=>[8, 8], "REGx_VERSION"=>[16, 16]}, @num_fields=6>, @periph="OTFDEC1", @splita=["R", "4", "CFGR"], @splitn=["R", 4, "CFGR"], @splitv=["R", "x", "CFGR"], @splits=["R", :x, "CFGR"], @splitc=["R", "4", "CFGR"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "STARTADDR"]=>#<Reg:0x000000022d9cc0 @name="R4STARTADDR", @addr=180, @desc="OTFDEC region x start address\n          register", @size=4, @fields=#<Fields:0x000000022e0980 @elems=[#<Field:0x000000022d9d60 @name="REGx_START_ADDR", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_START_ADDR"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "STARTADDR"], @splitn=["R", 4, "STARTADDR"], @splitv=["R", "x", "STARTADDR"], @splits=["R", :x, "STARTADDR"], @splitc=["R", "4", "STARTADDR"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "ENDADDR"]=>#<Reg:0x000000022b26c0 @name="R4ENDADDR", @addr=184, @desc="OTFDEC region x end address\n          register", @size=4, @fields=#<Fields:0x000000022b43a8 @elems=[#<Field:0x000000022b2788 @name="REGx_END_ADDR", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_END_ADDR"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "ENDADDR"], @splitn=["R", 4, "ENDADDR"], @splitv=["R", "x", "ENDADDR"], @splits=["R", :x, "ENDADDR"], @splitc=["R", "4", "ENDADDR"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "NONCER", :y]=>#<Reg:0x000000020aab20 @name="R4NONCER1", @addr=192, @desc="OTFDEC region x nonce register\n          1", @size=4, @fields=#<Fields:0x00000002124cb8 @elems=[#<Field:0x000000020aabc0 @name="REGx_NONCE", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_NONCE"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "NONCER", "1"], @splitn=["R", 4, "NONCER", 1], @splitv=["R", "x", "NONCER", "y"], @splits=["R", :x, "NONCER", :y], @splitc=["R", "4", "NONCER", "1"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]], :y=>[[-4, 0, nil], [0, 1, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "KEYR", :y]=>#<Reg:0x000000023ce860 @name="R4KEYR3", @addr=208, @desc="OTFDEC region x key register 3", @size=4, @fields=#<Fields:0x000000023d4800 @elems=[#<Field:0x000000023ce950 @name="REGx_KEY", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_KEY"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "KEYR", "3"], @splitn=["R", 4, "KEYR", 3], @splitv=["R", "x", "KEYR", "y"], @splits=["R", :x, "KEYR", :y], @splitc=["R", "4", "KEYR", "3"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]], :y=>[[-4, 0, nil], [2, 3, nil]]}, @seen=false, @grpname={}, @idx={}>}, @idx=#<Set: {1, 2, 3, 4}>, @key=:x>, #<Collection:0x000000022e1290 @elem={["R", :x, "NONCER", :y]=>#<Reg:0x000000020aab20 @name="R4NONCER1", @addr=192, @desc="OTFDEC region x nonce register\n          1", @size=4, @fields=#<Fields:0x00000002124cb8 @elems=[#<Field:0x000000020aabc0 @name="REGx_NONCE", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_NONCE"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "NONCER", "1"], @splitn=["R", 4, "NONCER", 1], @splitv=["R", "x", "NONCER", "y"], @splits=["R", :x, "NONCER", :y], @splitc=["R", "4", "NONCER", "1"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]], :y=>[[-4, 0, nil], [0, 1, nil]]}, @seen=false, @grpname={}, @idx={}>, ["R", :x, "KEYR", :y]=>#<Reg:0x000000023ce860 @name="R4KEYR3", @addr=208, @desc="OTFDEC region x key register 3", @size=4, @fields=#<Fields:0x000000023d4800 @elems=[#<Field:0x000000023ce950 @name="REGx_KEY", @bitOffset=0, @bitWidth=32>], @field_hash={"REGx_KEY"=>[0, 32]}, @num_fields=1>, @periph="OTFDEC1", @splita=["R", "4", "KEYR", "3"], @splitn=["R", 4, "KEYR", 3], @splitv=["R", "x", "KEYR", "y"], @splits=["R", :x, "KEYR", :y], @splitc=["R", "4", "KEYR", "3"], @off=0, @type={:x=>[[-48, 0, nil], [3, 4, nil]], :y=>[[-4, 0, nil], [2, 3, nil]]}, @seen=false, @grpname={}, @idx={}>}, @idx=#<Set: {0, 1, 2, 3}>, @key=:y>]
+[]
+[]
+[]

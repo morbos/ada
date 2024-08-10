@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<device schemaVersion="1.1"
+xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+  <name>STM32L562</name>
+  <version>1.1</version>
+  <description>STM32L562</description>
+  <!--Bus Interface Properties-->
+  <!--Cortex-M3 is byte addressable-->
+  <addressUnitBits>8</addressUnitBits>
+  <!--the maximum data bit width accessible within a single transfer-->
+  <width>32</width>
+  <!--Register Default Properties-->
+  <size>0x20</size>
+  <resetValue>0x0</resetValue>
+  <resetMask>0xFFFFFFFF</resetMask>
+  <peripherals>
+    <peripheral>
+      <name>OTFDEC1</name>
+      <description>On-The-Fly Decryption engine</description>
+      <groupName>OTFDEC</groupName>
+      <baseAddress>0x420C5000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>OTFDEC1</name>
+        <description>OTFDEC1 secure global interrupt</description>
+        <value>108</value>
+      </interrupt>
+      <registers>
+        <register>
+          <name>CR</name>
+          <displayName>CR</displayName>
+          <description>OTFDEC control register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ENC</name>
+              <description>Encryption mode bit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R1CFGR</name>
+          <displayName>R1CFGR</displayName>
+          <description>OTFDEC region x configuration
+          register</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REG_EN</name>
+              <description>region on-the-fly decryption
+              enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CONFIGLOCK</name>
+              <description>region config lock</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>KEYLOCK</name>
+              <description>region key lock</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODE</name>
+              <description>operating mode</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>KEYCRC</name>
+              <description>region key 8-bit CRC</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>REGx_VERSION</name>
+              <description>region firmware version</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R2CFGR</name>
+          <displayName>R2CFGR</displayName>
+          <description>OTFDEC region x configuration
+          register</description>
+          <addressOffset>0x50</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REG_EN</name>
+              <description>region on-the-fly decryption
+              enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CONFIGLOCK</name>
+              <description>region config lock</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>KEYLOCK</name>
+              <description>region key lock</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODE</name>
+              <description>operating mode</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>KEYCRC</name>
+              <description>region key 8-bit CRC</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>REGx_VERSION</name>
+              <description>region firmware version</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R3CFGR</name>
+          <displayName>R3CFGR</displayName>
+          <description>OTFDEC region x configuration
+          register</description>
+          <addressOffset>0x80</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REG_EN</name>
+              <description>region on-the-fly decryption
+              enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CONFIGLOCK</name>
+              <description>region config lock</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>KEYLOCK</name>
+              <description>region key lock</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODE</name>
+              <description>operating mode</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>KEYCRC</name>
+              <description>region key 8-bit CRC</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>REGx_VERSION</name>
+              <description>region firmware version</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R4CFGR</name>
+          <displayName>R4CFGR</displayName>
+          <description>OTFDEC region x configuration
+          register</description>
+          <addressOffset>0xB0</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REG_EN</name>
+              <description>region on-the-fly decryption
+              enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CONFIGLOCK</name>
+              <description>region config lock</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>KEYLOCK</name>
+              <description>region key lock</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODE</name>
+              <description>operating mode</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>KEYCRC</name>
+              <description>region key 8-bit CRC</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>REGx_VERSION</name>
+              <description>region firmware version</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R1STARTADDR</name>
+          <displayName>R1STARTADDR</displayName>
+          <description>OTFDEC region x start address
+          register</description>
+          <addressOffset>0x24</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_START_ADDR</name>
+              <description>Region AXI start address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R2STARTADDR</name>
+          <displayName>R2STARTADDR</displayName>
+          <description>OTFDEC region x start address
+          register</description>
+          <addressOffset>0x54</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_START_ADDR</name>
+              <description>Region AXI start address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R3STARTADDR</name>
+          <displayName>R3STARTADDR</displayName>
+          <description>OTFDEC region x start address
+          register</description>
+          <addressOffset>0x84</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_START_ADDR</name>
+              <description>Region AXI start address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R4STARTADDR</name>
+          <displayName>R4STARTADDR</displayName>
+          <description>OTFDEC region x start address
+          register</description>
+          <addressOffset>0xB4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_START_ADDR</name>
+              <description>Region AXI start address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R1ENDADDR</name>
+          <displayName>R1ENDADDR</displayName>
+          <description>OTFDEC region x end address
+          register</description>
+          <addressOffset>0x28</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000FFF</resetValue>
+          <fields>
+            <field>
+              <name>REGx_END_ADDR</name>
+              <description>Region AXI end address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R2ENDADDR</name>
+          <displayName>R2ENDADDR</displayName>
+          <description>OTFDEC region x end address
+          register</description>
+          <addressOffset>0x58</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000FFF</resetValue>
+          <fields>
+            <field>
+              <name>REGx_END_ADDR</name>
+              <description>Region AXI end address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R3ENDADDR</name>
+          <displayName>R3ENDADDR</displayName>
+          <description>OTFDEC region x end address
+          register</description>
+          <addressOffset>0x88</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000FFF</resetValue>
+          <fields>
+            <field>
+              <name>REGx_END_ADDR</name>
+              <description>Region AXI end address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R4ENDADDR</name>
+          <displayName>R4ENDADDR</displayName>
+          <description>OTFDEC region x end address
+          register</description>
+          <addressOffset>0xB8</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000FFF</resetValue>
+          <fields>
+            <field>
+              <name>REGx_END_ADDR</name>
+              <description>Region AXI end address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R1NONCER0</name>
+          <displayName>R1NONCER0</displayName>
+          <description>OTFDEC region x nonce register
+          0</description>
+          <addressOffset>0x2C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_NONCE</name>
+              <description>REGx_NONCE</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R2NONCER0</name>
+          <displayName>R2NONCER0</displayName>
+          <description>OTFDEC region x nonce register
+          0</description>
+          <addressOffset>0x5C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_NONCE</name>
+              <description>REGx_NONCE</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R3NONCER0</name>
+          <displayName>R3NONCER0</displayName>
+          <description>OTFDEC region x nonce register
+          0</description>
+          <alternateRegister>R4ENDADDR</alternateRegister>
+          <addressOffset>0x8C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_NONCE</name>
+              <description>REGx_NONCE</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R4NONCER0</name>
+          <displayName>R4NONCER0</displayName>
+          <description>OTFDEC region x nonce register
+          0</description>
+          <addressOffset>0xBC</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_NONCE</name>
+              <description>REGx_NONCE</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R1NONCER1</name>
+          <displayName>R1NONCER1</displayName>
+          <description>OTFDEC region x nonce register
+          1</description>
+          <addressOffset>0x30</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_NONCE</name>
+              <description>Region nonce</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R2NONCER1</name>
+          <displayName>R2NONCER1</displayName>
+          <description>OTFDEC region x nonce register
+          1</description>
+          <addressOffset>0x60</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_NONCE</name>
+              <description>Region nonce, bits
+              [63:32]REGx_NONCE[63:32]</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R3NONCER1</name>
+          <displayName>R3NONCER1</displayName>
+          <description>OTFDEC region x nonce register
+          1</description>
+          <addressOffset>0x90</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_NONCE</name>
+              <description>REGx_NONCE</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R4NONCER1</name>
+          <displayName>R4NONCER1</displayName>
+          <description>OTFDEC region x nonce register
+          1</description>
+          <addressOffset>0xC0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_NONCE</name>
+              <description>REGx_NONCE</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R1KEYR0</name>
+          <displayName>R1KEYR0</displayName>
+          <description>OTFDEC region x key register 0</description>
+          <addressOffset>0x34</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_KEY</name>
+              <description>REGx_KEY</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R2KEYR0</name>
+          <displayName>R2KEYR0</displayName>
+          <description>OTFDEC region x key register 0</description>
+          <addressOffset>0x64</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_KEY</name>
+              <description>REGx_KEY</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R3KEYR0</name>
+          <displayName>R3KEYR0</displayName>
+          <description>OTFDEC region x key register 0</description>
+          <addressOffset>0x94</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_KEY</name>
+              <description>REGx_KEY</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R4KEYR0</name>
+          <displayName>R4KEYR0</displayName>
+          <description>OTFDEC region x key register 0</description>
+          <addressOffset>0xC4</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_KEY</name>
+              <description>REGx_KEY</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R1KEYR1</name>
+          <displayName>R1KEYR1</displayName>
+          <description>OTFDEC region x key register 1</description>
+          <addressOffset>0x38</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_KEY</name>
+              <description>REGx_KEY</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R2KEYR1</name>
+          <displayName>R2KEYR1</displayName>
+          <description>OTFDEC region x key register 1</description>
+          <addressOffset>0x68</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_KEY</name>
+              <description>REGx_KEY</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R3KEYR1</name>
+          <displayName>R3KEYR1</displayName>
+          <description>OTFDEC region x key register 1</description>
+          <addressOffset>0x98</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_KEY</name>
+              <description>REGx_KEY</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R4KEYR1</name>
+          <displayName>R4KEYR1</displayName>
+          <description>OTFDEC region x key register 1</description>
+          <addressOffset>0xC8</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_KEY</name>
+              <description>REGx_KEY</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R1KEYR2</name>
+          <displayName>R1KEYR2</displayName>
+          <description>OTFDEC region x key register 2</description>
+          <addressOffset>0x3C</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_KEY</name>
+              <description>REGx_KEY</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R2KEYR2</name>
+          <displayName>R2KEYR2</displayName>
+          <description>OTFDEC region x key register 2</description>
+          <addressOffset>0x6C</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_KEY</name>
+              <description>REGx_KEY</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R3KEYR2</name>
+          <displayName>R3KEYR2</displayName>
+          <description>OTFDEC region x key register 2</description>
+          <addressOffset>0x9C</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_KEY</name>
+              <description>REGx_KEY</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R4KEYR2</name>
+          <displayName>R4KEYR2</displayName>
+          <description>OTFDEC region x key register 2</description>
+          <addressOffset>0xCC</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_KEY</name>
+              <description>REGx_KEY</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R1KEYR3</name>
+          <displayName>R1KEYR3</displayName>
+          <description>OTFDEC region x key register 3</description>
+          <addressOffset>0x40</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_KEY</name>
+              <description>REGx_KEY</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R2KEYR3</name>
+          <displayName>R2KEYR3</displayName>
+          <description>OTFDEC region x key register 3</description>
+          <addressOffset>0x70</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_KEY</name>
+              <description>REGx_KEY</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R3KEYR3</name>
+          <displayName>R3KEYR3</displayName>
+          <description>OTFDEC region x key register 3</description>
+          <addressOffset>0xA0</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_KEY</name>
+              <description>REGx_KEY</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>R4KEYR3</name>
+          <displayName>R4KEYR3</displayName>
+          <description>OTFDEC region x key register 3</description>
+          <addressOffset>0xD0</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REGx_KEY</name>
+              <description>REGx_KEY</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ISR</name>
+          <displayName>ISR</displayName>
+          <description>OTFDEC interrupt status
+          register</description>
+          <addressOffset>0x300</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SEIF</name>
+              <description>Security Error Interrupt Flag
+              status</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XONEIF</name>
+              <description>Execute-only execute-Never Error
+              Interrupt Flag status</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>KEIF</name>
+              <description>Key Error Interrupt Flag
+              status</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ICR</name>
+          <displayName>ICR</displayName>
+          <description>OTFDEC interrupt clear
+          register</description>
+          <addressOffset>0x304</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SEIF</name>
+              <description>SEIF</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XONEIF</name>
+              <description>Execute-only execute-Never Error
+              Interrupt Flag clear</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>KEIF</name>
+              <description>KEIF</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IER</name>
+          <displayName>IER</displayName>
+          <description>OTFDEC interrupt enable
+          register</description>
+          <addressOffset>0x308</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>SEIE</name>
+              <description>Security Error Interrupt
+              Enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>XONEIE</name>
+              <description>XONEIE</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>KEIE</name>
+              <description>KEIE</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+  </peripherals>
+</device>

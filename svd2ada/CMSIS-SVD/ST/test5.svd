@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<device schemaVersion="1.1"
+xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+  <name>STM32L562</name>
+  <version>1.1</version>
+  <description>STM32L562</description>
+  <!--Bus Interface Properties-->
+  <!--Cortex-M3 is byte addressable-->
+  <addressUnitBits>8</addressUnitBits>
+  <!--the maximum data bit width accessible within a single transfer-->
+  <width>32</width>
+  <!--Register Default Properties-->
+  <size>0x20</size>
+  <resetValue>0x0</resetValue>
+  <resetMask>0xFFFFFFFF</resetMask>
+  <peripherals>
+    <peripheral>
+      <name>SEC_GTZC_MPCBB1</name>
+      <description>SEC_GTZC_MPCBB1</description>
+      <groupName>SEC_GTZC</groupName>
+	  <disableCondition>DCB-&gt;DSCSR-&gt;CDS == 0 </disableCondition>
+      <baseAddress>0x50032C00</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>MPCBB1_CR</name>
+          <displayName>MPCBB1_CR</displayName>
+          <description>MPCBB control register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>LCK</name>
+              <description>LCK</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>INVSECSTATE</name>
+              <description>INVSECSTATE</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>SRWILADIS</name>
+              <description>SRWILADIS</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MPCBB1_LCKVTR1</name>
+          <displayName>MPCBB1_LCKVTR1</displayName>
+          <description>MPCBB control register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>LCKSB0</name>
+              <description>LCKSB0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB1</name>
+              <description>LCKSB1</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB2</name>
+              <description>LCKSB2</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB3</name>
+              <description>LCKSB3</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB4</name>
+              <description>LCKSB4</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB5</name>
+              <description>LCKSB5</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB6</name>
+              <description>LCKSB6</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB7</name>
+              <description>LCKSB7</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB8</name>
+              <description>LCKSB8</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB9</name>
+              <description>LCKSB9</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB10</name>
+              <description>LCKSB10</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB11</name>
+              <description>LCKSB11</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB12</name>
+              <description>LCKSB12</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB13</name>
+              <description>LCKSB13</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB14</name>
+              <description>LCKSB14</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB15</name>
+              <description>LCKSB15</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB16</name>
+              <description>LCKSB16</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB17</name>
+              <description>LCKSB17</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB18</name>
+              <description>LCKSB18</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB19</name>
+              <description>LCKSB19</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB20</name>
+              <description>LCKSB20</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB21</name>
+              <description>LCKSB21</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB22</name>
+              <description>LCKSB22</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB23</name>
+              <description>LCKSB23</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB24</name>
+              <description>LCKSB24</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB25</name>
+              <description>LCKSB25</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB26</name>
+              <description>LCKSB26</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB27</name>
+              <description>LCKSB27</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB28</name>
+              <description>LCKSB28</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB29</name>
+              <description>LCKSB29</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB30</name>
+              <description>LCKSB30</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB31</name>
+              <description>LCKSB31</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MPCBB1_LCKVTR2</name>
+          <displayName>MPCBB1_LCKVTR2</displayName>
+          <description>MPCBB control register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>LCKSB32</name>
+              <description>LCKSB32</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB33</name>
+              <description>LCKSB33</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB34</name>
+              <description>LCKSB34</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB35</name>
+              <description>LCKSB35</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB36</name>
+              <description>LCKSB36</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB37</name>
+              <description>LCKSB37</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB38</name>
+              <description>LCKSB38</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB39</name>
+              <description>LCKSB39</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB40</name>
+              <description>LCKSB40</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB41</name>
+              <description>LCKSB41</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB42</name>
+              <description>LCKSB42</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB43</name>
+              <description>LCKSB43</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB44</name>
+              <description>LCKSB44</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB45</name>
+              <description>LCKSB45</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB46</name>
+              <description>LCKSB46</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB47</name>
+              <description>LCKSB47</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB48</name>
+              <description>LCKSB48</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB49</name>
+              <description>LCKSB49</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB50</name>
+              <description>LCKSB50</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB51</name>
+              <description>LCKSB51</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB52</name>
+              <description>LCKSB52</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB53</name>
+              <description>LCKSB53</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB54</name>
+              <description>LCKSB54</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB55</name>
+              <description>LCKSB55</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB56</name>
+              <description>LCKSB56</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB57</name>
+              <description>LCKSB57</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB58</name>
+              <description>LCKSB58</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB59</name>
+              <description>LCKSB59</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB60</name>
+              <description>LCKSB60</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB61</name>
+              <description>LCKSB61</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB62</name>
+              <description>LCKSB62</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>LCKSB63</name>
+              <description>LCKSB63</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <register>
+<dim>64</dim>
+<dimIncrement>4</dimIncrement>
+<name>MPCBB1_VCTRx[%s]</name>
+<addressOffset>0x100</addressOffset>
+<size>0x20</size>
+<access>read-write</access>
+<resetValue>0x00000000</resetValue>
+<fields><field>
+              <name>B0</name>
+              <description>B0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B1</name>
+              <description>B1</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B2</name>
+              <description>B2</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B3</name>
+              <description>B3</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B4</name>
+              <description>B4</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B5</name>
+              <description>B5</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B6</name>
+              <description>B6</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B7</name>
+              <description>B7</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B8</name>
+              <description>B8</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B9</name>
+              <description>B9</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B10</name>
+              <description>B10</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B11</name>
+              <description>B11</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B12</name>
+              <description>B12</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B13</name>
+              <description>B13</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B14</name>
+              <description>B14</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B15</name>
+              <description>B15</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B16</name>
+              <description>B16</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B17</name>
+              <description>B17</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B18</name>
+              <description>B18</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B19</name>
+              <description>B19</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B20</name>
+              <description>B20</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B21</name>
+              <description>B21</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B22</name>
+              <description>B22</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B23</name>
+              <description>B23</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B24</name>
+              <description>B24</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B25</name>
+              <description>B25</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B26</name>
+              <description>B26</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B27</name>
+              <description>B27</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B28</name>
+              <description>B28</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B29</name>
+              <description>B29</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B30</name>
+              <description>B30</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field><field>
+              <name>B31</name>
+              <description>B31</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field></fields>
+</register></registers>
+    </peripheral>
+  </peripherals>
+</device>

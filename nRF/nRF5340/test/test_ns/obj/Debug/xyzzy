@@ -1,0 +1,1401 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+                              test_ns.o (ada__real_time__Oadd)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-retide.o)
+                              test_ns.o (ada__real_time__delays__delay_until)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o) (system__bb__board_support__time__read_clock)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o) (system__bb__cpu_primitives__install_trap_handler)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o) (system__bb__interrupts__interrupt_wrapper)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o) (system__bb__threads__queues__change_priority)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-retide.o) (system__bb__time__delay_until)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bcpcst.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o) (system__bb__cpu_primitives__context_switch_trigger__initialize_context_switch)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o) (system__tasking__initialize)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbprot.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o) (system__bb__protection__leave_kernel)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o) (system__bb__threads__initialize)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o) (system__bb__timing_events__execute_expired_timing_events)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o) (system__task_primitives__operations(int, double, long,...))
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-tasdeb.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o) (system__tasking__debug__last_task)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(a-elchha.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o) (__gnat_last_chance_handler)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(a-elchha.o) (gnat__io__put__2)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(handler.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o) (__vectors)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-macres.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(a-elchha.o) (system__machine_reset__stop)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memcop.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o) (memcpy)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memset.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o) (memset)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o) (system__parameters__adjust_storage_size)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+                              b__test_ns.o (system__secondary_stack__ss_stackIP)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o) (system__text_io__initialize)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(start-common.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bcpcst.o) (is_secure)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(start-ram.o)
+                              (_start_ram)
+/home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(setup_pll.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(start-ram.o) (_ada_setup_pll)
+/opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_ldivmod.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o) (__aeabi_ldivmod)
+/opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
+                              /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o) (__aeabi_uldivmod)
+/opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+                              /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_ldivmod.o) (__udivmoddi4)
+/opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
+                              /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_ldivmod.o) (__aeabi_ldiv0)
+
+Discarded input sections
+
+ .data          0x0000000000000000        0x0 test_ns.o
+ .bss           0x0000000000000000        0x0 test_ns.o
+ .data          0x0000000000000000        0x2 b__test_ns.o
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text.ada__real_time__Oadd__2
+                0x0000000000000000       0x14 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text.ada__real_time__Omultiply
+                0x0000000000000000       0xac /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text.ada__real_time__Omultiply__2
+                0x0000000000000000       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text.ada__real_time__Oadd__3
+                0x0000000000000000       0x30 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text.ada__real_time__Osubtract
+                0x0000000000000000       0x6c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text.ada__real_time__Osubtract__2
+                0x0000000000000000       0x48 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text.ada__real_time__Osubtract__3
+                0x0000000000000000       0x30 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text.ada__real_time__Osubtract__4
+                0x0000000000000000       0x24 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text.ada__real_time__Odivide
+                0x0000000000000000       0x44 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text.ada__real_time__Odivide__2
+                0x0000000000000000       0x34 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text.ada__real_time__microseconds
+                0x0000000000000000       0x44 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text.ada__real_time__minutes
+                0x0000000000000000       0x48 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text.ada__real_time__mul_div
+                0x0000000000000000      0x11c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text.ada__real_time__nanoseconds
+                0x0000000000000000       0x6c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text.ada__real_time__rounded_div
+                0x0000000000000000       0x48 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text.ada__real_time__seconds
+                0x0000000000000000        0xc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text.ada__real_time__split
+                0x0000000000000000       0xa0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text.ada__real_time__time_of
+                0x0000000000000000      0x1b0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text.ada__real_time__to_duration
+                0x0000000000000000       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text.ada__real_time__to_time_span
+                0x0000000000000000       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .rodata.ada__real_time__duration_units
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .rodata.ada__real_time__tick
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .rodata.ada__real_time__time_first
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .rodata.ada__real_time__time_last
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .rodata.ada__real_time__time_span_first
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .rodata.ada__real_time__time_span_last
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .rodata.ada__real_time__time_span_unit
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .rodata.ada__real_time__time_span_zero
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-retide.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-retide.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-retide.o)
+ .text.ada__real_time__delays__to_duration
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-retide.o)
+ .data.ada__real_time__delays_E
+                0x0000000000000000        0x2 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-retide.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .text.system__bb__board_support__time__max_timer_interval
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .text.system__bb__board_support__time__clear_alarm_interrupt
+                0x0000000000000000       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .text.system__bb__board_support__multiprocessors__number_of_cpus
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .text.system__bb__board_support__multiprocessors__current_cpu
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .text.system__bb__board_support__multiprocessors__poke_cpu
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .text.system__bb__board_support__multiprocessors__start_all_cpus
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .text.system__bb__board_support__interrupts__install_interrupt_handler
+                0x0000000000000000       0x5c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .text.system__bb__board_support__interrupts__priority_of_interrupt
+                0x0000000000000000       0x20 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .text.system__bb__board_support__interrupts__power_down
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .text.system__bb__board_support__interrupts__set_current_priority
+                0x0000000000000000       0x18 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .text.system__bb__board_support__sys_tick_registersIP
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .text.system__bb__board_support__TipBIP
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .text.system__bb__board_support__enable_interrupt_request
+                0x0000000000000000       0x40 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .text.system__bb__board_support__to_pri
+                0x0000000000000000       0x14 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .text.system__bb__board_support__to_priority
+                0x0000000000000000       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .rodata.system__bb__board_support__alarm_interrupt_id
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .rodata.system__bb__board_support__interrupt_request_vector
+                0x0000000000000000        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .rodata.system__bb__board_support__nvic_iser0
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .rodata.system__bb__board_support__sys_tick_vector
+                0x0000000000000000        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .rodata.system__bb__board_support__tick_period
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .text.system__bb__cpu_primitives__Tcontext_bufferBIP
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .text.system__bb__cpu_primitives__hardware_contextIP
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .text.primask  0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .text.system__bb__cpu_primitives__initialize_cpu
+                0x0000000000000000       0x84 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .text.system__bb__cpu_primitives__context_switch
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .text.system__bb__cpu_primitives__get_context
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .text.system__bb__cpu_primitives__set_context
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .text.system__bb__cpu_primitives__initialize_context
+                0x0000000000000000       0x50 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .text.system__bb__cpu_primitives__install_error_handlers
+                0x0000000000000000       0x1c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .text.system__bb__cpu_primitives__disable_interrupts
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .text.system__bb__cpu_primitives__enable_interrupts
+                0x0000000000000000       0x24 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .rodata.system__bb__cpu_primitives__bus_fault_vector
+                0x0000000000000000        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .rodata.system__bb__cpu_primitives__hard_fault_vector
+                0x0000000000000000        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .rodata.system__bb__cpu_primitives__has_os_extensions
+                0x0000000000000000        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .rodata.system__bb__cpu_primitives__has_vtor
+                0x0000000000000000        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .rodata.system__bb__cpu_primitives__interrupt_request_vector
+                0x0000000000000000        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .rodata.system__bb__cpu_primitives__is_armv6m
+                0x0000000000000000        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .rodata.system__bb__cpu_primitives__nl
+                0x0000000000000000        0x2 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .rodata.system__bb__cpu_primitives__nmi_vector
+                0x0000000000000000        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .rodata.system__bb__cpu_primitives__pend_sv_vector
+                0x0000000000000000        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .rodata.system__bb__cpu_primitives__reset_vector
+                0x0000000000000000        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .rodata.system__bb__cpu_primitives__sp_process
+                0x0000000000000000        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .rodata.system__bb__cpu_primitives__sv_call_vector
+                0x0000000000000000        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .rodata.system__bb__cpu_primitives__sys_tick_vector
+                0x0000000000000000        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .rodata.system__bb__cpu_primitives__usage_fault_vector
+                0x0000000000000000        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+ .text.system__bb__interrupts__Tinterrupt_stacksBIP
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+ .text.system__bb__interrupts__Tinterrupt_stack_tableBIP
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+ .text.system__bb__interrupts__attach_handler
+                0x0000000000000000       0x1c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+ .text.system__bb__interrupts__current_interrupt
+                0x0000000000000000       0x1c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+ .text.system__bb__interrupts__within_interrupt_stack
+                0x0000000000000000       0x40 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+ .rodata.system__bb__interrupts__no_interrupt
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+ .text.__gnat_context_switch_needed
+                0x0000000000000000       0x18 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+ .text.system__bb__threads__queues__current_priority
+                0x0000000000000000       0x20 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+ .text.system__bb__threads__queues__extract
+                0x0000000000000000       0x28 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+ .text.system__bb__threads__queues__extract_first_alarm
+                0x0000000000000000       0x24 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+ .text.system__bb__threads__queues__first_thread
+                0x0000000000000000        0xc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+ .text.system__bb__threads__queues__get_next_alarm_time
+                0x0000000000000000       0x24 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+ .text.system__bb__threads__queues__insert
+                0x0000000000000000       0x88 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+ .text.system__bb__threads__queues__running_thread
+                0x0000000000000000        0xc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .text.system__bb__time__composite_execution_timeIP
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .text.system__bb__time__composite_timeIP
+                0x0000000000000000        0xc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .text.system__bb__time__clock
+                0x0000000000000000       0x5c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .text.system__bb__time__epoch
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .text.system__bb__time__get_next_timeout
+                0x0000000000000000       0x40 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .text.system__bb__time__Oconcat
+                0x0000000000000000       0x18 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .data.system__bb__time__alarm_lock
+                0x0000000000000000        0x2 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .rodata.system__bb__time__initial_composite_execution_time
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .rodata.system__bb__time__periods_in_epoch
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .rodata.system__bb__time__update_in_progress
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bcpcst.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bcpcst.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bcpcst.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .text.system__tasking__E5sIP
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .text.system__tasking__activation_chainIP
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .text.__gnat_get_secondary_stack
+                0x0000000000000000       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .text.system__tasking__self
+                0x0000000000000000        0xc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .text.system__tasking__storage_size
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .rodata.system__tasking__idle_priority
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .rodata.system__tasking__library_task_level
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .rodata.system__tasking__null_task
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .rodata.system__tasking__task_statesN
+                0x0000000000000000       0x22 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .rodata.system__tasking__task_statesS
+                0x0000000000000000      0x130 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbprot.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbprot.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbprot.o)
+ .text.system__bb__protection__enter_kernel
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbprot.o)
+ .data.system__bb__protection__wakeup_served_entry_callback
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbprot.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .text.system__bb__threads__thread_descriptorIP
+                0x0000000000000000        0xc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .text.system__bb__threads__get_affinity
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .text.system__bb__threads__get_cpu
+                0x0000000000000000        0xc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .text.system__bb__threads__get_atcb
+                0x0000000000000000        0xc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .text.system__bb__threads__get_priority
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .text.system__bb__threads__initialize_slave
+                0x0000000000000000       0xa0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .text.system__bb__threads__set_atcb
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .text.system__bb__threads__set_priority
+                0x0000000000000000       0x1c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .text.system__bb__threads__sleep
+                0x0000000000000000       0x48 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .text.system__bb__threads__thread_self
+                0x0000000000000000        0xc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .text.system__bb__threads__wakeup
+                0x0000000000000000       0xa4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .data.system__bb__threads__wake
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .rodata.system__bb__threads__null_thread_id
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .rodata.system__bb__threads__thread_statesN
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .rodata.system__bb__threads__thread_statesS
+                0x0000000000000000       0x18 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .text.system__bb__timing_events___size
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .text.system__bb__timing_events__time_of_event
+                0x0000000000000000       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .text.system__bb__timing_events__set_handler
+                0x0000000000000000       0xa4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .text.system__bb__timing_events__cancel_handler
+                0x0000000000000000       0x5c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .text.system__bb__timing_events__timing_eventIP
+                0x0000000000000000       0x1c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .text.system__bb__timing_events__get_next_timeout
+                0x0000000000000000       0x24 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .data.system__bb__timing_events_E
+                0x0000000000000000        0x2 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .rodata.system__bb__timing_events__timing_eventB10s
+                0x0000000000000000       0x1c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .rodata.system__bb__timing_events__timing_eventE6s
+                0x0000000000000000       0x25 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .rodata.system__bb__timing_events__timing_eventP
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .rodata.system__bb__timing_events__timing_eventR8s
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .rodata.system__bb__timing_events__timing_eventR8s___UNC
+                0x0000000000000000        0xc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .rodata.system__bb__timing_events__timing_eventT
+                0x0000000000000000       0x1c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .rodata.system__bb__timing_events__timing_eventY
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .text.system__task_primitives__operations__Tidle_stacksBIP
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .text.system__task_primitives__operations__Tidle_stacks_tableBIP
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .text.system__task_primitives__operations__Tidle_tasksBIP
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .text.system__task_primitives__operations__self
+                0x0000000000000000        0xc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .text.system__task_primitives__operations__sleep
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .text.system__task_primitives__operations__delay_until
+                0x0000000000000000       0x1c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .text.system__task_primitives__operations__monotonic_clock
+                0x0000000000000000       0x60 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .text.system__task_primitives__operations__wakeup
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .text.system__task_primitives__operations__set_priority
+                0x0000000000000000       0x18 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .text.system__task_primitives__operations__get_priority
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .text.system__task_primitives__operations__get_affinity
+                0x0000000000000000        0xc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .text.system__task_primitives__operations__get_cpu
+                0x0000000000000000       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .text.system__task_primitives__operations__get_thread_id
+                0x0000000000000000        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .text.system__task_primitives__operations__initialize_tcb
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .text.system__task_primitives__operations__create_task
+                0x0000000000000000       0x34 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .text.__gnat_initialize_slave
+                0x0000000000000000       0x34 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .text.system__task_primitives__operations__initialize
+                0x0000000000000000       0xac /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .text.system__task_primitives__operations__is_task_context
+                0x0000000000000000       0x14 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .rodata.system__task_primitives__operations__idle_stack_size
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-tasdeb.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-tasdeb.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-tasdeb.o)
+ .text.system__tasking__debug__add_task_id
+                0x0000000000000000       0x3c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-tasdeb.o)
+ .data.system__tasking__debug_E
+                0x0000000000000000        0x2 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-tasdeb.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(a-elchha.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(a-elchha.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(a-elchha.o)
+ .data.ada__exceptions__last_chance_handler_E
+                0x0000000000000000        0x2 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(a-elchha.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o)
+ .data.gnat__io_E
+                0x0000000000000000        0x2 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(handler.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(handler.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-macres.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-macres.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-macres.o)
+ .text.abort    0x0000000000000000       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-macres.o)
+ .data.system__machine_reset_E
+                0x0000000000000000        0x2 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-macres.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memcop.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memcop.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memcop.o)
+ .data.system__memory_copy_E
+                0x0000000000000000        0x2 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memcop.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memset.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memset.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memset.o)
+ .data.system__memory_set_E
+                0x0000000000000000        0x2 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memset.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .data.system__parameters_E
+                0x0000000000000000        0x2 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .rodata.system__parameters__c_malloc_linkname
+                0x0000000000000000        0xd /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .rodata.system__parameters__default_stack_size
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .rodata.system__parameters__garbage_collected
+                0x0000000000000000        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .rodata.system__parameters__minimum_stack_size
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .rodata.system__parameters__no_abort
+                0x0000000000000000        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .rodata.system__parameters__runtime_default_sec_stack_size
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .rodata.system__parameters__single_lock
+                0x0000000000000000        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .rodata.system__parameters__stack_grows_down
+                0x0000000000000000        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .rodata.system__parameters__unspecified_size
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+ .text.system__secondary_stack__memoryIP
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+ .text.system__secondary_stack__ss_allocate
+                0x0000000000000000       0x60 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+ .text.system__secondary_stack__ss_get_max
+                0x0000000000000000       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+ .text.system__secondary_stack__ss_mark
+                0x0000000000000000        0xc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+ .text.system__secondary_stack__ss_release
+                0x0000000000000000        0xc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+ .bss.system__secondary_stack__ss_pool
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+ .data.system__secondary_stack_E
+                0x0000000000000000        0x2 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+ .text.system__text_io__is_rx_ready
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+ .text.system__text_io__get
+                0x0000000000000000        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+ .data.system__text_io_E
+                0x0000000000000000        0x2 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(start-common.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(start-common.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(start-ram.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(start-ram.o)
+ .text          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(setup_pll.o)
+ .data          0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(setup_pll.o)
+ .bss           0x0000000000000000        0x0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(setup_pll.o)
+ .data          0x0000000000000000        0x0 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_ldivmod.o)
+ .bss           0x0000000000000000        0x0 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_ldivmod.o)
+ .text          0x0000000000000000       0x30 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .data          0x0000000000000000        0x0 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x0000000000000000        0x0 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .debug_line    0x0000000000000000       0x67 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .debug_info    0x0000000000000000       0x26 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .debug_abbrev  0x0000000000000000       0x14 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .debug_str     0x0000000000000000       0x94 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x0000000000000000       0x2c /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x0000000000000000       0x22 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .data          0x0000000000000000        0x0 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+ .bss           0x0000000000000000        0x0 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+ .ARM.extab     0x0000000000000000        0x0 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+ .data          0x0000000000000000        0x0 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
+ .bss           0x0000000000000000        0x0 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+flash            0x0000000000000000 0x0000000000100000 xr
+sram             0x0000000020000000 0x0000000000080000 xrw
+sglue            0x0000000020010000 0x000000000000f000 xrw
+nsglue           0x000000002001f000 0x0000000000001000 xrw
+ns               0x0000000020020000 0x0000000000010000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD test_ns.o
+LOAD b__test_ns.o
+LOAD /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/boards/lib/nRF5340_ns/ravenscar-sfp/Debug/libnRF5340_ns.a
+LOAD /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/components/lib/nRF5340_ns/ravenscar-sfp/Debug/libcomponents.a
+LOAD /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/middleware/lib/nRF5340_ns/ravenscar-sfp/Debug/libservices.a
+LOAD /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/arch/ARM/Nordic/lib/nRF5340_ns/ravenscar-sfp/Debug/libnrf53.a
+LOAD /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/arch/ARM/cortex_m/lib/cortex-m4f/nRF5340_ns/ravenscar-sfp/Debug/libcortex-m4f.a
+LOAD /home/hrainnie/ada/Ada_Drivers_Library/hal/lib/nRF5340_ns/ravenscar-sfp/Debug/libHAL.a
+LOAD /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a
+LOAD /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a
+                0x0000000000008000                __stack_size = 0x8000
+LOAD ../../../test_s/obj/Debug/s_bind.o
+LOAD /home/hrainnie/ada/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a
+LOAD /home/hrainnie/ada/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a
+START GROUP
+LOAD /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a
+END GROUP
+                0x0000000000000000                __DYNAMIC = 0x0
+                0x0000000000001000                _DEFAULT_STACK_SIZE = 0x1000
+
+.text           0x0000000020020000     0x1ac8
+ *(.vectors)
+ .vectors       0x0000000020020000       0x14 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(start-ram.o)
+ *(.text .text.* .gnu.linkonce.t*)
+ .text          0x0000000020020014       0x54 test_ns.o
+                0x000000002002004c                _ada_test_ns
+ .text          0x0000000020020068       0xc4 b__test_ns.o
+                0x0000000020020068                ada_main__Tsec_default_sized_stacksBIP
+                0x00000000200200ac                adainit
+                0x00000000200200f4                main
+                0x0000000020020110                ada_main___elabb
+ .text.ada__real_time__Oadd
+                0x000000002002012c       0x68 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+                0x000000002002012c                ada__real_time__Oadd
+ .text.ada__real_time__clock
+                0x0000000020020194       0x60 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+                0x0000000020020194                ada__real_time__clock
+ .text.ada__real_time__milliseconds
+                0x00000000200201f4       0x44 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+                0x00000000200201f4                ada__real_time__milliseconds
+ .text.ada__real_time___elabb
+                0x0000000020020238        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+                0x0000000020020238                ada__real_time___elabb
+ .text.ada__real_time__delays__delay_until
+                0x000000002002023c       0x30 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-retide.o)
+                0x000000002002023c                ada__real_time__delays__delay_until
+ .text.system__bb__board_support__timer_interrupt_handler
+                0x000000002002026c        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+                0x000000002002026c                system__bb__board_support__timer_interrupt_handler
+ .text.system__bb__board_support__interrupt_handler
+                0x0000000020020274        0xc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+                0x0000000020020274                system__bb__board_support__interrupt_handler
+ .text.system__bb__board_support__enable_interrupt_request.part.0
+                0x0000000020020280       0x1c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .text.system__bb__board_support__time__read_clock
+                0x000000002002029c       0x44 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+                0x000000002002029c                system__bb__board_support__time__read_clock
+ .text.system__bb__board_support__time__set_alarm
+                0x00000000200202e0       0x88 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+                0x00000000200202e0                system__bb__board_support__time__set_alarm
+ .text.system__bb__board_support__time__install_alarm_handler
+                0x0000000020020368        0xc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+                0x0000000020020368                system__bb__board_support__time__install_alarm_handler
+ .text.system__bb__board_support__initialize_board
+                0x0000000020020374       0x68 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+                0x0000000020020374                system__bb__board_support__initialize_board
+ .text.system__bb__cpu_primitives__gnat_error_handler
+                0x00000000200203dc      0x1b8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+                0x00000000200203dc                system__bb__cpu_primitives__gnat_error_handler
+ .text.__gnat_irq_trap
+                0x0000000020020594       0x4c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+                0x0000000020020594                __gnat_irq_trap
+ .text.__gnat_sv_call_trap
+                0x00000000200205e0        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+                0x00000000200205e0                __gnat_sv_call_trap
+ .text.__gnat_sys_tick_trap
+                0x00000000200205e8       0x98 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+                0x00000000200205e8                __gnat_sys_tick_trap
+ .text.system__bb__cpu_primitives__install_trap_handler
+                0x0000000020020680        0xc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+                0x0000000020020680                system__bb__cpu_primitives__install_trap_handler
+ .text.system__bb__interrupts__interrupt_wrapper
+                0x000000002002068c       0xf4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+                0x000000002002068c                system__bb__interrupts__interrupt_wrapper
+ .text.system__bb__interrupts__initialize_interrupts
+                0x0000000020020780       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+                0x0000000020020780                system__bb__interrupts__initialize_interrupts
+ .text.system__bb__threads__queues__change_priority
+                0x0000000020020790       0x70 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+                0x0000000020020790                system__bb__threads__queues__change_priority
+ .text.system__bb__threads__queues__insert_alarm
+                0x0000000020020800       0x58 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+                0x0000000020020800                system__bb__threads__queues__insert_alarm
+ .text.system__bb__threads__queues__wakeup_expired_alarms
+                0x0000000020020858       0xf4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+                0x0000000020020858                system__bb__threads__queues__wakeup_expired_alarms
+ .text.system__bb__threads__queues__yield
+                0x000000002002094c       0x50 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+                0x000000002002094c                system__bb__threads__queues__yield
+ .text.system__bb__time__initialize_timers
+                0x000000002002099c       0x94 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+                0x000000002002099c                system__bb__time__initialize_timers
+ .text.system__bb__time__update_alarm
+                0x0000000020020a30       0x98 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+                0x0000000020020a30                system__bb__time__update_alarm
+ .text.system__bb__time__delay_until
+                0x0000000020020ac8       0xe0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+                0x0000000020020ac8                system__bb__time__delay_until
+ .text.system__bb__time__alarm_handler
+                0x0000000020020ba8       0xb8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .text.system__bb__cpu_primitives__context_switch_trigger__initialize_context_switch
+                0x0000000020020c60        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bcpcst.o)
+                0x0000000020020c60                system__bb__cpu_primitives__context_switch_trigger__initialize_context_switch
+ .text.system__bb__cpu_primitives__context_switch_trigger__trigger_context_switch
+                0x0000000020020c64       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bcpcst.o)
+                0x0000000020020c64                system__bb__cpu_primitives__context_switch_trigger__trigger_context_switch
+ .text.__gnat_pend_sv_trap
+                0x0000000020020c74       0x64 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bcpcst.o)
+                0x0000000020020c74                __gnat_pend_sv_trap
+ .text.system__tasking__initialize_atcb
+                0x0000000020020cd8       0x30 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+                0x0000000020020cd8                system__tasking__initialize_atcb
+ .text.system__tasking__initialize
+                0x0000000020020d08      0x174 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+                0x0000000020020d08                system__tasking__initialize
+ .text.system__bb__protection__leave_kernel
+                0x0000000020020e7c       0x4c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbprot.o)
+                0x0000000020020e7c                system__bb__protection__leave_kernel
+ .text.system__bb__threads__initialize
+                0x0000000020020ec8      0x14c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+                0x0000000020020ec8                system__bb__threads__initialize
+ .text.system__bb__threads__thread_create
+                0x0000000020021014      0x100 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+                0x0000000020021014                system__bb__threads__thread_create
+ .text.system__bb__timing_events__execute_expired_timing_events
+                0x0000000020021114       0x78 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+                0x0000000020021114                system__bb__timing_events__execute_expired_timing_events
+ .text.system__task_primitives__operations__enter_task
+                0x000000002002118c       0x3c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+                0x000000002002118c                system__task_primitives__operations__enter_task
+ .text.system__task_primitives__operations__idle
+                0x00000000200211c8       0x14 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+                0x00000000200211c8                system__task_primitives__operations(int, double, long,...)
+ .text.system__task_primitives__operations__initialize_idle
+                0x00000000200211dc       0x60 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+                0x00000000200211dc                system__task_primitives__operations__initialize_idle
+ .text.__gnat_last_chance_handler
+                0x000000002002123c       0x84 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(a-elchha.o)
+                0x000000002002123c                __gnat_last_chance_handler
+ .text.gnat__io__put__2
+                0x00000000200212c0       0x44 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o)
+                0x00000000200212c0                gnat__io__put__2
+ .text.gnat__io__new_line
+                0x0000000020021304       0x14 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o)
+                0x0000000020021304                gnat__io__new_line
+ .text.gnat__io__put__3
+                0x0000000020021318       0x20 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o)
+                0x0000000020021318                gnat__io__put__3
+ .text.gnat__io__put
+                0x0000000020021338       0x70 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o)
+                0x0000000020021338                gnat__io__put
+ .text.gnat__io__put_line
+                0x00000000200213a8       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o)
+                0x00000000200213a8                gnat__io__put_line
+ *fill*         0x00000000200213b8       0x48 
+ .text          0x0000000020021400      0x1ac /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(handler.o)
+                0x0000000020021400                __vectors
+ .text._exit    0x00000000200215ac       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-macres.o)
+                0x00000000200215ac                _exit
+ .text.system__machine_reset__stop
+                0x00000000200215bc       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-macres.o)
+                0x00000000200215bc                system__machine_reset__stop
+ .text.memcpy   0x00000000200215cc       0x48 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memcop.o)
+                0x00000000200215cc                memcpy
+ .text.memset   0x0000000020021614       0x50 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memset.o)
+                0x0000000020021614                memset
+ .text.system__parameters__adjust_storage_size
+                0x0000000020021664        0xc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+                0x0000000020021664                system__parameters__adjust_storage_size
+ .text.system__secondary_stack__ss_stackIP
+                0x0000000020021670        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+                0x0000000020021670                system__secondary_stack__ss_stackIP
+ .text.system__secondary_stack__ss_init
+                0x0000000020021674       0x6c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+                0x0000000020021674                system__secondary_stack__ss_init
+ .text.system__text_io__initialize
+                0x00000000200216e0        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+                0x00000000200216e0                system__text_io__initialize
+ .text.system__text_io__is_tx_ready
+                0x00000000200216e4        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+                0x00000000200216e4                system__text_io__is_tx_ready
+ .text.system__text_io__put
+                0x00000000200216e8        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+                0x00000000200216e8                system__text_io__put
+ .text.system__text_io__use_cr_lf_for_new_line
+                0x00000000200216ec        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+                0x00000000200216ec                system__text_io__use_cr_lf_for_new_line
+ .text          0x00000000200216f0       0x30 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(start-common.o)
+                0x00000000200216f0                _stm32_start_common
+                0x000000002002170a                is_secure
+ .text          0x0000000020021720       0x34 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(start-ram.o)
+                0x0000000020021720                _start_ram
+ .text._ada_setup_pll
+                0x0000000020021754        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(setup_pll.o)
+                0x0000000020021754                _ada_setup_pll
+ .text          0x0000000020021758       0xa0 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_ldivmod.o)
+                0x0000000020021758                __aeabi_ldivmod
+ .text          0x00000000200217f8      0x2cc /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+                0x00000000200217f8                __udivmoddi4
+ .text          0x0000000020021ac4        0x4 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
+                0x0000000020021ac4                __aeabi_ldiv0
+                0x0000000020021ac4                __aeabi_idiv0
+ *(.gnu.warning)
+
+.glue_7         0x0000000020021ac8        0x0
+ .glue_7        0x0000000020021ac8        0x0 linker stubs
+
+.glue_7t        0x0000000020021ac8        0x0
+ .glue_7t       0x0000000020021ac8        0x0 linker stubs
+
+.vfp11_veneer   0x0000000020021ac8        0x0
+ .vfp11_veneer  0x0000000020021ac8        0x0 linker stubs
+
+.v4_bx          0x0000000020021ac8        0x0
+ .v4_bx         0x0000000020021ac8        0x0 linker stubs
+
+.iplt           0x0000000020021ac8        0x0
+ .iplt          0x0000000020021ac8        0x0 test_ns.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                [!provide]                        PROVIDE (__exidx_start = .)
+
+.ARM.exidx      0x0000000020021ac8        0x8
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx     0x0000000020021ac8        0x8 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+                [!provide]                        PROVIDE (__exidx_end = .)
+
+.gnu.sgstubs    0x000000002001f000        0x0
+                0x000000002001f000                . = ALIGN (0x20)
+                0x000000002001f000                _start_sg = .
+ *(.gnu.sgstubs*)
+                0x000000002001f000                . = ALIGN (0x20)
+                0x000000002001f000                _end_sg = .
+
+.rodata         0x0000000020021ad0      0x290
+ *(.lit)
+ *(.rodata .rodata.* .gnu.linkonce.r*)
+ .rodata        0x0000000020021ad0       0x41 b__test_ns.o
+                0x0000000020021ad8                __gnat_version
+                0x0000000020021b04                __gnat_ada_main_program_name
+ *fill*         0x0000000020021b11        0x3 
+ .rodata        0x0000000020021b14        0xd /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ *fill*         0x0000000020021b21        0x3 
+ .rodata        0x0000000020021b24        0xd /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-retide.o)
+ *fill*         0x0000000020021b31        0x3 
+ .rodata.system__bb__cpu_primitives__gnat_error_handler.str1.4
+                0x0000000020021b34      0x16c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .rodata.system__tasking__initialize.str1.4
+                0x0000000020021ca0       0x3a /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ *fill*         0x0000000020021cda        0x2 
+ .rodata        0x0000000020021cdc       0x18 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(a-elchha.o)
+ .rodata.__gnat_last_chance_handler.str1.4
+                0x0000000020021cf4       0x5c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(a-elchha.o)
+                                         0x5a (size before relaxing)
+ .rodata        0x0000000020021d50        0xd /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+                0x0000000020021d60                . = ALIGN (0x4)
+ *fill*         0x0000000020021d5d        0x3 
+
+.rel.dyn        0x0000000020021d60        0x0
+ .rel.iplt      0x0000000020021d60        0x0 test_ns.o
+
+.data           0x0000000020021d60       0x6c
+                0x0000000020021d60                __data_start = .
+ *(.data .data.* .gnu.linkonce.d*)
+ .data.ada__real_time_E
+                0x0000000020021d60        0x2 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+                0x0000000020021d60                ada__real_time_E
+ *fill*         0x0000000020021d62        0x2 
+ .data.system__bb__cpu_primitives__nticks
+                0x0000000020021d64        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+                0x0000000020021d64                system__bb__cpu_primitives__nticks
+ .data.system__bb__interrupts__interrupt_being_handled
+                0x0000000020021d68        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+                0x0000000020021d68                system__bb__interrupts__interrupt_being_handled
+ .data.__gnat_running_thread_table
+                0x0000000020021d6c        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+                0x0000000020021d6c                __gnat_running_thread_table
+ .data.first_thread_table
+                0x0000000020021d70        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+                0x0000000020021d70                first_thread_table
+ .data.system__bb__threads__queues__alarms_table
+                0x0000000020021d74        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+                0x0000000020021d74                system__bb__threads__queues__alarms_table
+ .data.system__bb__threads__queues__global_list
+                0x0000000020021d78        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+                0x0000000020021d78                system__bb__threads__queues__global_list
+ *fill*         0x0000000020021d7c        0x4 
+ .data.system__bb__time__max_sleep
+                0x0000000020021d80        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+                0x0000000020021d80                system__bb__time__max_sleep
+ .data.system__bb__time__pending_alarm
+                0x0000000020021d88        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+                0x0000000020021d88                system__bb__time__pending_alarm
+ .data.system__bb__time__scheduling_event_hook
+                0x0000000020021d90        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+                0x0000000020021d90                system__bb__time__scheduling_event_hook
+ .data.system__bb__time__software_clock
+                0x0000000020021d94        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+                0x0000000020021d94                system__bb__time__software_clock
+ .data.system__bb__cpu_primitives__context_switch_trigger__context_switch
+                0x0000000020021d9c        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bcpcst.o)
+ .data.__gl_main_cpu
+                0x0000000020021da0        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+                0x0000000020021da0                __gl_main_cpu
+ .data.__gl_main_priority
+                0x0000000020021da4        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+                0x0000000020021da4                __gl_main_priority
+ .data.system__tasking__fall_back_handler
+                0x0000000020021da8        0x8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+                0x0000000020021da8                system__tasking__fall_back_handler
+ .data.system__tasking__initialized
+                0x0000000020021db0        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .data.system__bb__threads__initialized
+                0x0000000020021db1        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+                0x0000000020021db1                system__bb__threads__initialized
+ *fill*         0x0000000020021db2        0x2 
+ .data.system__bb__timing_events__events_table
+                0x0000000020021db4        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+                0x0000000020021db4                system__bb__timing_events__events_table
+ .data.system__task_primitives__operations__environment_task
+                0x0000000020021db8        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+                0x0000000020021db8                system__task_primitives__operations__environment_task
+ .data.system__tasking__debug__first_task
+                0x0000000020021dbc        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-tasdeb.o)
+                0x0000000020021dbc                system__tasking__debug__first_task
+ .data.system__tasking__debug__last_task
+                0x0000000020021dc0        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-tasdeb.o)
+                0x0000000020021dc0                system__tasking__debug__last_task
+ .data.system__secondary_stack__num_of_assigned_stacks
+                0x0000000020021dc4        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+                0x0000000020021dc4                system__secondary_stack__num_of_assigned_stacks
+ .data.system__text_io__initialized
+                0x0000000020021dc8        0x1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+                0x0000000020021dc8                system__text_io__initialized
+                0x0000000020021dcc                . = ALIGN (0x4)
+ *fill*         0x0000000020021dc9        0x3 
+                0x0000000020021dcc                __data_end = .
+
+.igot.plt       0x0000000020021dcc        0x0
+ .igot.plt      0x0000000020021dcc        0x0 test_ns.o
+
+.bss            0x0000000020021dd0     0x9568
+                0x0000000020021dd0                . = ALIGN (0x8)
+                0x0000000020021dd0                __bss_start = .
+ *(.bss .bss.*)
+ .bss           0x0000000020021dd0      0x210 b__test_ns.o
+ .bss.__gnat_alarm_time
+                0x0000000020021fe0        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+                0x0000000020021fe0                __gnat_alarm_time
+ .bss.system__bb__board_support__lalarm_time
+                0x0000000020021fe4        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+                0x0000000020021fe4                system__bb__board_support__lalarm_time
+ .bss.system__bb__board_support__lnow
+                0x0000000020021fe8        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+                0x0000000020021fe8                system__bb__board_support__lnow
+ .bss.system__bb__board_support__lres
+                0x0000000020021fec        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+                0x0000000020021fec                system__bb__board_support(long, long double,...)(short)
+ .bss.system__bb__board_support__lticks
+                0x0000000020021ff0        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+                0x0000000020021ff0                system__bb__board_support__lticks
+ .bss.system__bb__board_support__ltil
+                0x0000000020021ff4        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+                0x0000000020021ff4                system__bb__board_support__ltil
+ .bss.system__bb__board_support__next_tick_time
+                0x0000000020021ff8        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+                0x0000000020021ff8                system__bb__board_support__next_tick_time
+ .bss.__gnat_bb_exception_handlers
+                0x0000000020021ffc       0x44 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+                0x0000000020021ffc                __gnat_bb_exception_handlers
+ .bss.system__bb__cpu_primitives__lalarm_time
+                0x0000000020022040        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+                0x0000000020022040                system__bb__cpu_primitives__lalarm_time
+ .bss.system__bb__cpu_primitives__ldiff
+                0x0000000020022044        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+                0x0000000020022044                system__bb__cpu_primitives(long, double, int, float, float)
+ .bss.system__bb__cpu_primitives__lmax_alarm_interval
+                0x0000000020022048        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+                0x0000000020022048                system__bb__cpu_primitives__lmax_alarm_interval
+ .bss.system__bb__cpu_primitives__lnow
+                0x000000002002204c        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+                0x000000002002204c                system__bb__cpu_primitives__lnow
+ .bss.interrupt_stack_table
+                0x0000000020022050        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+                0x0000000020022050                interrupt_stack_table
+ .bss.system__bb__interrupts__interrupt_handlers_table
+                0x0000000020022054      0x158 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+                0x0000000020022054                system__bb__interrupts__interrupt_handlers_table
+ *fill*         0x00000000200221ac        0x4 
+ .bss.system__tasking__environment_task
+                0x00000000200221b0       0xb8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .bss.__gnat_idle_stack_table
+                0x0000000020022268        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+                0x0000000020022268                __gnat_idle_stack_table
+ *fill*         0x000000002002226c        0x4 
+ .bss.system__task_primitives__operations__idle_stacks
+                0x0000000020022270      0x800 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+                0x0000000020022270                system__task_primitives__operations__idle_stacks
+ .bss.system__task_primitives__operations__idle_tasks
+                0x0000000020022a70       0xb8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+                0x0000000020022a70                system__task_primitives__operations__idle_tasks
+ .bss.__gnat_binder_ss_count
+                0x0000000020022b28        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+                0x0000000020022b28                __gnat_binder_ss_count
+ .bss.__gnat_default_ss_pool
+                0x0000000020022b2c        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+                0x0000000020022b2c                __gnat_default_ss_pool
+ .bss.__gnat_default_ss_size
+                0x0000000020022b30        0x4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+                0x0000000020022b30                __gnat_default_ss_size
+ *(COMMON)
+                0x0000000020022b38                . = ALIGN (0x8)
+ *fill*         0x0000000020022b34        0x4 
+                0x0000000020022b38                __bss_end = .
+                0x0000000020022b38                __interrupt_stack_start = .
+ *(.interrupt_stacks)
+ .interrupt_stacks
+                0x0000000020022b38      0x800 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+                0x0000000020022b38                system__bb__interrupts__interrupt_stacks
+                0x0000000020023338                . = ALIGN (0x8)
+                0x0000000020023338                __interrupt_stack_end = .
+                0x0000000020023338                __stack_start = .
+                0x0000000020024338                . = (. + DEFINED (__stack_size)?__stack_size:_DEFAULT_STACK_SIZE)
+ *fill*         0x0000000020023338     0x8000 
+                0x000000002002b338                . = ALIGN (0x8)
+                0x000000002002b338                __stack_end = .
+                0x000000002002b338                _end = .
+                0x000000002002b338                __heap_start = .
+                0x0000000020030000                __heap_end = (ORIGIN (ns_bs) + LENGTH (ns_bs))
+                0x000000000000035a                __bss_words = ((__bss_end - __bss_start) >> 0x2)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x788
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x20 test_ns.o
+ .debug_aranges
+                0x0000000000000020       0x20 b__test_ns.o
+ .debug_aranges
+                0x0000000000000040       0xd8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .debug_aranges
+                0x0000000000000118       0x28 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-retide.o)
+ .debug_aranges
+                0x0000000000000140       0xb0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .debug_aranges
+                0x00000000000001f0       0x88 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .debug_aranges
+                0x0000000000000278       0x40 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+ .debug_aranges
+                0x00000000000002b8       0x78 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+ .debug_aranges
+                0x0000000000000330       0x58 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .debug_aranges
+                0x0000000000000388       0x30 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bcpcst.o)
+ .debug_aranges
+                0x00000000000003b8       0x40 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .debug_aranges
+                0x00000000000003f8       0x28 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbprot.o)
+ .debug_aranges
+                0x0000000000000420       0x78 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .debug_aranges
+                0x0000000000000498       0x40 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .debug_aranges
+                0x00000000000004d8       0xa8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .debug_aranges
+                0x0000000000000580       0x20 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-tasdeb.o)
+ .debug_aranges
+                0x00000000000005a0       0x20 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(a-elchha.o)
+ .debug_aranges
+                0x00000000000005c0       0x40 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o)
+ .debug_aranges
+                0x0000000000000600       0x28 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-macres.o)
+ .debug_aranges
+                0x0000000000000628       0x20 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memcop.o)
+ .debug_aranges
+                0x0000000000000648       0x20 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memset.o)
+ .debug_aranges
+                0x0000000000000668       0x20 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .debug_aranges
+                0x0000000000000688       0x40 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+ .debug_aranges
+                0x00000000000006c8       0x40 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+ .debug_aranges
+                0x0000000000000708       0x20 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(setup_pll.o)
+ .debug_aranges
+                0x0000000000000728       0x20 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_ldivmod.o)
+ .debug_aranges
+                0x0000000000000748       0x20 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+ .debug_aranges
+                0x0000000000000768       0x20 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0xabf1
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000       0xa6 test_ns.o
+ .debug_info    0x00000000000000a6      0x3a7 b__test_ns.o
+ .debug_info    0x000000000000044d     0x1132 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .debug_info    0x000000000000157f      0x7f9 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-retide.o)
+ .debug_info    0x0000000000001d78      0x87c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .debug_info    0x00000000000025f4      0xc06 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .debug_info    0x00000000000031fa      0x742 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+ .debug_info    0x000000000000393c      0x6c6 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+ .debug_info    0x0000000000004002      0xdc1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .debug_info    0x0000000000004dc3       0xc8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bcpcst.o)
+ .debug_info    0x0000000000004e8b      0xdd1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .debug_info    0x0000000000005c5c      0x373 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbprot.o)
+ .debug_info    0x0000000000005fcf      0xbd8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .debug_info    0x0000000000006ba7      0x85e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .debug_info    0x0000000000007405     0x12f1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .debug_info    0x00000000000086f6      0x65b /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-tasdeb.o)
+ .debug_info    0x0000000000008d51      0x2be /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(a-elchha.o)
+ .debug_info    0x000000000000900f      0x31f /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o)
+ .debug_info    0x000000000000932e       0xee /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-macres.o)
+ .debug_info    0x000000000000941c       0xc3 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memcop.o)
+ .debug_info    0x00000000000094df      0x122 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memset.o)
+ .debug_info    0x0000000000009601      0x13d /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .debug_info    0x000000000000973e      0x661 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+ .debug_info    0x0000000000009d9f       0xcc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+ .debug_info    0x0000000000009e6b       0x3b /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(setup_pll.o)
+ .debug_info    0x0000000000009ea6       0x26 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_ldivmod.o)
+ .debug_info    0x0000000000009ecc      0xcff /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+ .debug_info    0x000000000000abcb       0x26 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
+
+.debug_abbrev   0x0000000000000000     0x3fab
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x99 test_ns.o
+ .debug_abbrev  0x0000000000000099      0x202 b__test_ns.o
+ .debug_abbrev  0x000000000000029b      0x34c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .debug_abbrev  0x00000000000005e7      0x36a /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-retide.o)
+ .debug_abbrev  0x0000000000000951      0x3ad /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .debug_abbrev  0x0000000000000cfe      0x422 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .debug_abbrev  0x0000000000001120      0x397 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+ .debug_abbrev  0x00000000000014b7      0x375 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+ .debug_abbrev  0x000000000000182c      0x405 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .debug_abbrev  0x0000000000001c31       0xa8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bcpcst.o)
+ .debug_abbrev  0x0000000000001cd9      0x4f2 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .debug_abbrev  0x00000000000021cb      0x25b /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbprot.o)
+ .debug_abbrev  0x0000000000002426      0x43a /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .debug_abbrev  0x0000000000002860      0x35b /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .debug_abbrev  0x0000000000002bbb      0x5a1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .debug_abbrev  0x000000000000315c      0x232 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-tasdeb.o)
+ .debug_abbrev  0x000000000000338e      0x1a9 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(a-elchha.o)
+ .debug_abbrev  0x0000000000003537      0x1f4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o)
+ .debug_abbrev  0x000000000000372b       0xff /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-macres.o)
+ .debug_abbrev  0x000000000000382a       0x76 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memcop.o)
+ .debug_abbrev  0x00000000000038a0       0xe4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memset.o)
+ .debug_abbrev  0x0000000000003984       0x95 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .debug_abbrev  0x0000000000003a19      0x2e9 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+ .debug_abbrev  0x0000000000003d02       0xbc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+ .debug_abbrev  0x0000000000003dbe       0x2c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(setup_pll.o)
+ .debug_abbrev  0x0000000000003dea       0x14 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_ldivmod.o)
+ .debug_abbrev  0x0000000000003dfe      0x199 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+ .debug_abbrev  0x0000000000003f97       0x14 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
+
+.debug_line     0x0000000000000000     0x3bdd
+ *(.debug_line)
+ .debug_line    0x0000000000000000       0x7a test_ns.o
+ .debug_line    0x000000000000007a      0x111 b__test_ns.o
+ .debug_line    0x000000000000018b      0x4e7 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .debug_line    0x0000000000000672      0x23a /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-retide.o)
+ .debug_line    0x00000000000008ac      0x329 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .debug_line    0x0000000000000bd5      0x3a3 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .debug_line    0x0000000000000f78      0x2ab /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+ .debug_line    0x0000000000001223      0x329 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+ .debug_line    0x000000000000154c      0x4e7 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .debug_line    0x0000000000001a33       0xd5 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bcpcst.o)
+ .debug_line    0x0000000000001b08      0x3ae /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .debug_line    0x0000000000001eb6      0x1b6 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbprot.o)
+ .debug_line    0x000000000000206c      0x551 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .debug_line    0x00000000000025bd      0x2cb /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .debug_line    0x0000000000002888      0x56b /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .debug_line    0x0000000000002df3      0x1b1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-tasdeb.o)
+ .debug_line    0x0000000000002fa4       0xf4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(a-elchha.o)
+ .debug_line    0x0000000000003098      0x178 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o)
+ .debug_line    0x0000000000003210       0xbd /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-macres.o)
+ .debug_line    0x00000000000032cd       0xcc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memcop.o)
+ .debug_line    0x0000000000003399       0xdb /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memset.o)
+ .debug_line    0x0000000000003474       0xba /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .debug_line    0x000000000000352e      0x16d /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+ .debug_line    0x000000000000369b      0x156 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+ .debug_line    0x00000000000037f1       0x99 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(setup_pll.o)
+ .debug_line    0x000000000000388a       0x85 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_ldivmod.o)
+ .debug_line    0x000000000000390f      0x267 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+ .debug_line    0x0000000000003b76       0x67 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
+
+.debug_frame    0x0000000000000000     0x1334
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0x58 test_ns.o
+ .debug_frame   0x0000000000000058       0x9c b__test_ns.o
+ .debug_frame   0x00000000000000f4      0x2bc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .debug_frame   0x00000000000003b0       0x38 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-retide.o)
+ .debug_frame   0x00000000000003e8      0x190 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .debug_frame   0x0000000000000578      0x170 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .debug_frame   0x00000000000006e8       0xa4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+ .debug_frame   0x000000000000078c      0x178 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+ .debug_frame   0x0000000000000904      0x158 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .debug_frame   0x0000000000000a5c       0x40 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bcpcst.o)
+ .debug_frame   0x0000000000000a9c       0xcc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .debug_frame   0x0000000000000b68       0x38 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbprot.o)
+ .debug_frame   0x0000000000000ba0      0x15c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .debug_frame   0x0000000000000cfc       0xd0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .debug_frame   0x0000000000000dcc      0x1ec /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .debug_frame   0x0000000000000fb8       0x38 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-tasdeb.o)
+ .debug_frame   0x0000000000000ff0       0x28 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(a-elchha.o)
+ .debug_frame   0x0000000000001018       0xa8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o)
+ .debug_frame   0x00000000000010c0       0x40 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-macres.o)
+ .debug_frame   0x0000000000001100       0x34 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memcop.o)
+ .debug_frame   0x0000000000001134       0x30 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memset.o)
+ .debug_frame   0x0000000000001164       0x20 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .debug_frame   0x0000000000001184       0xa8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+ .debug_frame   0x000000000000122c       0x70 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+ .debug_frame   0x000000000000129c       0x20 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(setup_pll.o)
+ .debug_frame   0x00000000000012bc       0x44 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_ldivmod.o)
+ .debug_frame   0x0000000000001300       0x34 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+
+.debug_str      0x0000000000000000     0x790a
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x281 test_ns.o
+                                        0x289 (size before relaxing)
+ .debug_str     0x0000000000000281      0x68e b__test_ns.o
+                                        0x70b (size before relaxing)
+ .debug_str     0x000000000000090f      0xadc /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+                                        0xb53 (size before relaxing)
+ .debug_str     0x00000000000013eb      0xaae /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-retide.o)
+                                       0x10a2 (size before relaxing)
+ .debug_str     0x0000000000001e99      0x82d /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+                                        0xbe5 (size before relaxing)
+ .debug_str     0x00000000000026c6      0x95c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+                                       0x115f (size before relaxing)
+ .debug_str     0x0000000000003022      0x3db /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+                                        0xc60 (size before relaxing)
+ .debug_str     0x00000000000033fd      0x3f5 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+                                        0xa5e (size before relaxing)
+ .debug_str     0x00000000000037f2      0x5be /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+                                        0xf3e (size before relaxing)
+ .debug_str     0x0000000000003db0      0x1c8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bcpcst.o)
+                                        0x4b8 (size before relaxing)
+ .debug_str     0x0000000000003f78      0x5d7 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+                                       0x1597 (size before relaxing)
+ .debug_str     0x000000000000454f       0xd1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbprot.o)
+                                        0x87a (size before relaxing)
+ .debug_str     0x0000000000004620      0x1ce /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+                                        0xcfb (size before relaxing)
+ .debug_str     0x00000000000047ee      0x1ad /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+                                        0xa0e (size before relaxing)
+ .debug_str     0x000000000000499b      0x57b /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+                                       0x1adb (size before relaxing)
+ .debug_str     0x0000000000004f16      0x28a /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-tasdeb.o)
+                                        0xe6a (size before relaxing)
+ .debug_str     0x00000000000051a0      0x47c /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(a-elchha.o)
+                                        0x514 (size before relaxing)
+ .debug_str     0x000000000000561c      0x18d /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o)
+                                        0x45b (size before relaxing)
+ .debug_str     0x00000000000057a9       0xc4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-macres.o)
+                                        0x330 (size before relaxing)
+ .debug_str     0x000000000000586d      0x107 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memcop.o)
+                                        0x332 (size before relaxing)
+ .debug_str     0x0000000000005974       0xbb /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memset.o)
+                                        0x37c (size before relaxing)
+ .debug_str     0x0000000000005a2f      0x1f6 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+                                        0x49f (size before relaxing)
+ .debug_str     0x0000000000005c25      0x78d /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+                                        0xdbe (size before relaxing)
+ .debug_str     0x00000000000063b2       0xb7 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+                                        0x353 (size before relaxing)
+ .debug_str     0x0000000000006469       0x78 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(setup_pll.o)
+                                        0x296 (size before relaxing)
+ .debug_str     0x00000000000064e1       0x94 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_ldivmod.o)
+ .debug_str     0x0000000000006575     0x135e /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+                                       0x13f3 (size before relaxing)
+ .debug_str     0x00000000000078d3       0x37 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
+                                         0x98 (size before relaxing)
+
+.debug_loc      0x0000000000000000     0x4bb8
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000      0xd93 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .debug_loc     0x0000000000000d93       0x70 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-retide.o)
+ .debug_loc     0x0000000000000e03      0x3a4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .debug_loc     0x00000000000011a7      0x471 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .debug_loc     0x0000000000001618      0x1a1 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+ .debug_loc     0x00000000000017b9      0x30f /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+ .debug_loc     0x0000000000001ac8      0x58e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .debug_loc     0x0000000000002056      0x286 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .debug_loc     0x00000000000022dc       0x63 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbprot.o)
+ .debug_loc     0x000000000000233f      0x8aa /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .debug_loc     0x0000000000002be9      0x437 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .debug_loc     0x0000000000003020      0x63a /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .debug_loc     0x000000000000365a      0x19b /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(a-elchha.o)
+ .debug_loc     0x00000000000037f5      0x1a4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o)
+ .debug_loc     0x0000000000003999      0x14f /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memcop.o)
+ .debug_loc     0x0000000000003ae8      0x131 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memset.o)
+ .debug_loc     0x0000000000003c19       0x21 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .debug_loc     0x0000000000003c3a      0x1d4 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+ .debug_loc     0x0000000000003e0e      0xdaa /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000     0x1158
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000      0x198 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .debug_ranges  0x0000000000000198       0x60 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-retide.o)
+ .debug_ranges  0x00000000000001f8      0x140 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .debug_ranges  0x0000000000000338       0xd8 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .debug_ranges  0x0000000000000410       0xd0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+ .debug_ranges  0x00000000000004e0      0x180 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+ .debug_ranges  0x0000000000000660      0x208 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .debug_ranges  0x0000000000000868       0x20 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bcpcst.o)
+ .debug_ranges  0x0000000000000888      0x128 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .debug_ranges  0x00000000000009b0       0x60 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbprot.o)
+ .debug_ranges  0x0000000000000a10      0x228 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .debug_ranges  0x0000000000000c38       0xf0 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .debug_ranges  0x0000000000000d28      0x208 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .debug_ranges  0x0000000000000f30       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-tasdeb.o)
+ .debug_ranges  0x0000000000000f40       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(a-elchha.o)
+ .debug_ranges  0x0000000000000f50       0x48 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o)
+ .debug_ranges  0x0000000000000f98       0x18 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-macres.o)
+ .debug_ranges  0x0000000000000fb0       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memcop.o)
+ .debug_ranges  0x0000000000000fc0       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memset.o)
+ .debug_ranges  0x0000000000000fd0       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .debug_ranges  0x0000000000000fe0       0x60 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+ .debug_ranges  0x0000000000001040       0x30 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+ .debug_ranges  0x0000000000001070       0x10 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(setup_pll.o)
+ .debug_ranges  0x0000000000001080       0xd8 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+
+.comment        0x0000000000000000       0x3d
+ .comment       0x0000000000000000       0x3d test_ns.o
+                                         0x3e (size before relaxing)
+ .comment       0x000000000000003d       0x3e b__test_ns.o
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-retide.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bcpcst.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbprot.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-tasdeb.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(a-elchha.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-macres.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memcop.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memset.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+ .comment       0x000000000000003d       0x3e /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(setup_pll.o)
+ .comment       0x000000000000003d       0x3e /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+
+.ARM.attributes
+                0x0000000000000000       0x3a
+ .ARM.attributes
+                0x0000000000000000       0x37 test_ns.o
+ .ARM.attributes
+                0x0000000000000037       0x37 b__test_ns.o
+ .ARM.attributes
+                0x000000000000006e       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-reatim.o)
+ .ARM.attributes
+                0x00000000000000a5       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(a-retide.o)
+ .ARM.attributes
+                0x00000000000000dc       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbbosu.o)
+ .ARM.attributes
+                0x0000000000000113       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbcppr.o)
+ .ARM.attributes
+                0x000000000000014a       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbinte.o)
+ .ARM.attributes
+                0x0000000000000181       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthqu.o)
+ .ARM.attributes
+                0x00000000000001b8       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtime.o)
+ .ARM.attributes
+                0x00000000000001ef       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bcpcst.o)
+ .ARM.attributes
+                0x0000000000000226       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taskin.o)
+ .ARM.attributes
+                0x000000000000025d       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbprot.o)
+ .ARM.attributes
+                0x0000000000000294       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbthre.o)
+ .ARM.attributes
+                0x00000000000002cb       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-bbtiev.o)
+ .ARM.attributes
+                0x0000000000000302       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-taprop.o)
+ .ARM.attributes
+                0x0000000000000339       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnarl.a(s-tasdeb.o)
+ .ARM.attributes
+                0x0000000000000370       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(a-elchha.o)
+ .ARM.attributes
+                0x00000000000003a7       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(g-io.o)
+ .ARM.attributes
+                0x00000000000003de       0x21 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(handler.o)
+ .ARM.attributes
+                0x00000000000003ff       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-macres.o)
+ .ARM.attributes
+                0x0000000000000436       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memcop.o)
+ .ARM.attributes
+                0x000000000000046d       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-memset.o)
+ .ARM.attributes
+                0x00000000000004a4       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-parame.o)
+ .ARM.attributes
+                0x00000000000004db       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-secsta.o)
+ .ARM.attributes
+                0x0000000000000512       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(s-textio.o)
+ .ARM.attributes
+                0x0000000000000549       0x24 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(start-common.o)
+ .ARM.attributes
+                0x000000000000056d       0x21 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(start-ram.o)
+ .ARM.attributes
+                0x000000000000058e       0x37 /home/hrainnie/ada/nRF/nRF5340/test/Ada_Drivers_Library/embedded-runtimes/ravenscar-nRF5340-ns/sfp/adalib/libgnat.a(setup_pll.o)
+ .ARM.attributes
+                0x00000000000005c5       0x22 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_ldivmod.o)
+ .ARM.attributes
+                0x00000000000005e7       0x34 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+ .ARM.attributes
+                0x000000000000061b       0x22 /opt/GNAT/2019-arm-elf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+OUTPUT(test_ns elf32-littlearm)
