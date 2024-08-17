@@ -1,7 +1,0 @@
-with Interfaces.C;   use Interfaces.C;
-package Iface is
-
-   procedure HAL_Delay (Dly : unsigned) with
-     Convention => C,
-     Export => True,
-     External_Name => "HAL_Delay";
