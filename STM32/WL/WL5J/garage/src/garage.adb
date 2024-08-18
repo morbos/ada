@@ -120,7 +120,6 @@ begin
          SendMessage (Message);
          Message := Undefined;
       end if;
-      My_Delay (1_000);
    end loop;
 
 end Garage;
