@@ -14,6 +14,7 @@ with Utils;                        use Utils;
 with Hw;                           use Hw;
 with Peripherals;                  use Peripherals;
 with VL53L0X;                      use VL53L0X;
+with Api;                          use Api;
 
 with STM32.Power_Control;     --  use STM32.Power_Control;
 with Rtc_Wkup_Int;                 use Rtc_Wkup_Int;
@@ -39,11 +40,15 @@ with Ada.Real_Time;                use Ada.Real_Time;
 
 procedure Garage is
 
-   Rs     : VL53L0X_Ranging_Sensor (VL53L0_I2C_Port);
-   Vlf    : VL53L0X_GPIO_Functionality := New_Sample_Ready;
-   Status : Boolean;
-   Rng    : UInt16;
-
+   Rs        : VL53L0X_Ranging_Sensor (VL53L0_I2C_Port);
+   Vlf       : VL53L0X_GPIO_Functionality := New_Sample_Ready;
+   Status    : Boolean;
+   Rng       : UInt16;
+   Message   : DoorStateT;
+   State     : DoorStateT;
+   IsOpen    : Boolean := False;
+   IsClosed  : Boolean := False;
+   OpenTime  : Time;
 begin
    Initialize_Board;
    Initialize_HW;
@@ -56,9 +61,9 @@ begin
    --  We drop the power here vvv to get below 80mA xmit.
    --  80mA at 3.3v is the HV limit of the energy harvester we want to use
    --  AEM10941 (at Power => 10, we measure 77mA).
-   Set_TxParams ((Power => 10,
-                  RampTime => Microsecs_40,
-                  others => <>));
+--   Set_TxParams ((Power => 10,
+--                  RampTime => Microsecs_40,
+--                  others => <>));
 
    Initialize (Rs);
 
@@ -80,15 +85,42 @@ begin
       Set_VCSEL_Pulse_Period_Final_Range (Rs, 14, Status);
    end if;
 
+   OpenTime := Clock;
    loop
       Rng := Read_Range_Single_Millimeters (Rs);
-      if Rng = 4000 then
-         Perform_Ref_Calibration (Rs, Status);
-      elsif Rng > 1000 then
-         null;
-      else
-         null;
+      Message := Undefined;
+      State := DoorState (Rng);
+      case State is
+         when Cal =>
+            Perform_Ref_Calibration (Rs, Status);
+         when Open =>
+            --  Two cases send a message
+            --  1) X => Open where X /= Open
+            --  2) 30mins have gone by
+            --            if OpenTime + Milliseconds (30_000) >= Clock then
+            if Clock >= (OpenTime + Milliseconds (30 * 60_000)) then
+               Message := Open;
+               OpenTime := Clock;
+            elsif not IsOpen then --  This is first time
+               Message := Open;
+               OpenTime := Clock;
+            end if;
+            IsOpen := True;
+            IsClosed := False;
+         when Closed =>
+            if IsOpen or not IsClosed then
+               Message := Closed;
+               IsOpen := False;
+               IsClosed := True;
+            end if;
+         when others =>
+            null;
+      end case;
+      if Message /= Undefined then
+         SendMessage (Message);
+         Message := Undefined;
       end if;
+      My_Delay (1_000);
    end loop;
 
 end Garage;

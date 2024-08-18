@@ -13,7 +13,7 @@ with STM32_SVD.RCC;           use STM32_SVD.RCC;
 
 package body App is
 
-   procedure App_Start
+   procedure SendMessage (Message : DoorStateT)
    is
       Buffer    : SPI_Data_8b (1 .. 4);
       OurId     : UInt8 := 2;
@@ -22,20 +22,14 @@ package body App is
       Gen_Crc8_Table;
       Buffer (1) := 16#00#; -- To the server
       Buffer (2) := OurId;
-      Buffer (3) := 16#00#; -- motion detected
+      Buffer (3) := Message'Enum_Rep;
       Update_Crc8 (Crc, Buffer (1 .. 3));
       Buffer (4) := Crc;
       Set_PktLen (UInt8 (Buffer'Last));
       Write_Buffer (Offset => 0, Buffer => Buffer);
---      Set_CadParams (NSyms => Two, Min => 10, Peak => 22, ExitMode => 1, Timeout => 1);
---      Set_Cad;
       Set_Tx (0);
       --  Wait for TxDone
       Suspend_Until_True (Tx_Go);
---      Set_Sleep ((StartSel => Cold_Startup,
---                  SleepCfg => Disabled,
---                  others => <>));
---      My_Delay (2); --  Semtech has this after sleep
-   end App_Start;
+   end SendMessage;
 
 end App;
