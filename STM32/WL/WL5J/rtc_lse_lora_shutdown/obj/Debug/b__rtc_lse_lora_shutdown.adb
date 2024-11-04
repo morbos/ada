@@ -33,17 +33,18 @@ package body ada_main is
    E178 : Short_Integer; pragma Import (Ada, E178, "stm32__i2c_E");
    E188 : Short_Integer; pragma Import (Ada, E188, "stm32__power_control_E");
    E157 : Short_Integer; pragma Import (Ada, E157, "stm32__rcc_E");
-   E229 : Short_Integer; pragma Import (Ada, E229, "hw_E");
    E185 : Short_Integer; pragma Import (Ada, E185, "stm32__rtc_E");
    E192 : Short_Integer; pragma Import (Ada, E192, "stm32__spi_E");
    E155 : Short_Integer; pragma Import (Ada, E155, "stm32__gpio_E");
    E161 : Short_Integer; pragma Import (Ada, E161, "stm32__syscfg_E");
    E199 : Short_Integer; pragma Import (Ada, E199, "stm32__usarts_E");
    E163 : Short_Integer; pragma Import (Ada, E163, "stm32__device_E");
-   E232 : Short_Integer; pragma Import (Ada, E232, "rtc_wkup_int_E");
    E209 : Short_Integer; pragma Import (Ada, E209, "stm32__subghzphy_E");
    E211 : Short_Integer; pragma Import (Ada, E211, "stm32__subghzrf_E");
+   E229 : Short_Integer; pragma Import (Ada, E229, "hw_E");
    E216 : Short_Integer; pragma Import (Ada, E216, "radio_int_E");
+   E234 : Short_Integer; pragma Import (Ada, E234, "uart_E");
+   E232 : Short_Integer; pragma Import (Ada, E232, "rtc_wkup_int_E");
    E214 : Short_Integer; pragma Import (Ada, E214, "utils_E");
    E134 : Short_Integer; pragma Import (Ada, E134, "app_E");
 
@@ -200,7 +201,6 @@ package body ada_main is
       E178 := E178 + 1;
       E188 := E188 + 1;
       E157 := E157 + 1;
-      E229 := E229 + 1;
       STM32.RTC'ELAB_SPEC;
       STM32.RTC'ELAB_BODY;
       E185 := E185 + 1;
@@ -216,12 +216,14 @@ package body ada_main is
       E161 := E161 + 1;
       STM32.USARTS'ELAB_BODY;
       E199 := E199 + 1;
-      Rtc_Wkup_Int'Elab_Spec;
-      E232 := E232 + 1;
       E209 := E209 + 1;
       E211 := E211 + 1;
+      E229 := E229 + 1;
       Radio_Int'Elab_Spec;
       E216 := E216 + 1;
+      E234 := E234 + 1;
+      Rtc_Wkup_Int'Elab_Spec;
+      E232 := E232 + 1;
       E214 := E214 + 1;
       E134 := E134 + 1;
       Install_Restricted_Handlers_Sequential;
@@ -251,26 +253,27 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   /home/pi/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/crc8.o
-   --   /home/pi/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/hw.o
-   --   /home/pi/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/peripherals.o
-   --   /home/pi/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/rtc_wkup_int.o
-   --   /home/pi/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/radio_int.o
-   --   /home/pi/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/utils.o
-   --   /home/pi/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/app.o
-   --   /home/pi/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/rtc_lse_lora_shutdown.o
-   --   -L/home/pi/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/
-   --   -L/home/pi/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/
-   --   -L/home/pi/ada/STM32/WL/
-   --   -L/home/pi/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/Ada_Drivers_Library/boards/lib/stm32wl5x_nucleo/ravenscar-full/Debug/
-   --   -L/home/pi/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/Ada_Drivers_Library/boards/stm32wl5x_nucleo/lib/stm32wl5x/ravenscar-full/Debug/
-   --   -L/home/pi/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/Ada_Drivers_Library/embedded-runtimes/ravenscar-stm32wl5x/full/adalib/
-   --   -L/home/pi/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/Ada_Drivers_Library/arch/ARM/STM32/lib/stm32wl5x/ravenscar-full/Debug/
-   --   -L/home/pi/ada/Ada_Drivers_Library/hal/lib/stm32wl5x/ravenscar-full/Debug/
-   --   -L/home/pi/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/Ada_Drivers_Library/arch/ARM/cortex_m/lib/cortex-m4/stm32wl5x/ravenscar-full/Debug/
-   --   -L/home/pi/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/Ada_Drivers_Library/components/lib/stm32wl5x/ravenscar-full/Debug/
-   --   -L/home/pi/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/Ada_Drivers_Library/middleware/lib/stm32wl5x/ravenscar-full/Debug/
-   --   -L/home/pi/ada/Ada_Drivers_Library/embedded-runtimes/ravenscar-stm32wl5x/full/adalib/
+   --   /home/hedley/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/crc8.o
+   --   /home/hedley/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/peripherals.o
+   --   /home/hedley/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/hw.o
+   --   /home/hedley/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/radio_int.o
+   --   /home/hedley/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/uart.o
+   --   /home/hedley/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/rtc_wkup_int.o
+   --   /home/hedley/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/utils.o
+   --   /home/hedley/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/app.o
+   --   /home/hedley/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/rtc_lse_lora_shutdown.o
+   --   -L/home/hedley/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/
+   --   -L/home/hedley/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/obj/Debug/
+   --   -L/home/hedley/ada/STM32/WL/
+   --   -L/home/hedley/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/Ada_Drivers_Library/boards/lib/stm32wl5x_nucleo/ravenscar-full/Debug/
+   --   -L/home/hedley/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/Ada_Drivers_Library/boards/stm32wl5x_nucleo/lib/stm32wl5x/ravenscar-full/Debug/
+   --   -L/home/hedley/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/Ada_Drivers_Library/embedded-runtimes/ravenscar-stm32wl5x/full/adalib/
+   --   -L/home/hedley/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/Ada_Drivers_Library/arch/ARM/STM32/lib/stm32wl5x/ravenscar-full/Debug/
+   --   -L/home/hedley/ada/Ada_Drivers_Library/hal/lib/stm32wl5x/ravenscar-full/Debug/
+   --   -L/home/hedley/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/Ada_Drivers_Library/arch/ARM/cortex_m/lib/cortex-m4/stm32wl5x/ravenscar-full/Debug/
+   --   -L/home/hedley/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/Ada_Drivers_Library/components/lib/stm32wl5x/ravenscar-full/Debug/
+   --   -L/home/hedley/ada/STM32/WL/WL5J/rtc_lse_lora_shutdown/Ada_Drivers_Library/middleware/lib/stm32wl5x/ravenscar-full/Debug/
+   --   -L/home/hedley/ada/Ada_Drivers_Library/embedded-runtimes/ravenscar-stm32wl5x/full/adalib/
    --   -static
    --   -lgnarl
    --   -lgnat

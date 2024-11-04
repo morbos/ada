@@ -15,13 +15,13 @@ package body App is
    procedure App_Start
    is
       Buffer    : SPI_Data_8b (1 .. 4);
-      OurId     : UInt8 := 2;
+      OurId     : UInt8 := 255;
       Crc       : UInt8 := 16#FF#;
    begin
       Gen_Crc8_Table;
       Buffer (1) := 16#00#; -- To the server
       Buffer (2) := OurId;
-      Buffer (3) := 16#00#; -- motion detected
+      Buffer (3) := 16#FE#; -- RTC test
       Update_Crc8 (Crc, Buffer (1 .. 3));
       Buffer (4) := Crc;
       Set_PktLen (UInt8 (Buffer'Last));
@@ -31,9 +31,9 @@ package body App is
       Set_Tx (0);
       --  Wait for TxDone
       Suspend_Until_True (Tx_Go);
-      Set_Sleep ((StartSel => Cold_Startup,
-                  SleepCfg => Disabled,
-                  others => <>));
+--      Set_Sleep ((StartSel => Cold_Startup,
+--                  SleepCfg => Disabled,
+--                  others => <>));
    end App_Start;
 
 end App;

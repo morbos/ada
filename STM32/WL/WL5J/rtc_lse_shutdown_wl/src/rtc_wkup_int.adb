@@ -19,8 +19,11 @@ package body Rtc_Wkup_Int is
       procedure RTC_Wkup_Handler
       is
       begin
-         if RTC_AlarmA_Flag then
-            Clear_RTC_AlarmA;
+--         if RTC_AlarmA_Flag then
+--            Clear_RTC_AlarmA;
+         Clear_External_Interrupt (EXTI_Line_20);
+         if RTC_Wakeup_Flag then
+            Clear_RTC_Wakeup;
          else
             raise Program_Error with "Unhandled alarm";
          end if;

@@ -13,6 +13,7 @@ with App;                          use App;
 with Utils;                        use Utils;
 with Hw;                           use Hw;
 with Peripherals;                  use Peripherals;
+with Uart;                         use Uart;
 
 with STM32.Power_Control;     --  use STM32.Power_Control;
 with Rtc_Wkup_Int;                 use Rtc_Wkup_Int;
@@ -37,42 +38,34 @@ with Ada.Real_Time;                use Ada.Real_Time;
 procedure Rtc_Lse_Lora_Shutdown is
    On : constant Cortex_M_SVD.SysTick.CSR_ENABLE_Field := Cortex_M_SVD.SysTick.Enable;
    Off : constant Cortex_M_SVD.SysTick.CSR_ENABLE_Field := Cortex_M_SVD.SysTick.Disable;
-   procedure Enable_GPIO;
-
-   procedure Enable_GPIO
-   is
-      Config       : GPIO_Port_Configuration;
-   begin
-      Enable_Clock (Hold_Pin);
-      Config.Mode        := Mode_In;
-      Config.Output_Type := Push_Pull;
-      Config.Resistors   := Pull_Down;
-      Config.Speed       := Speed_2MHz;
-      Configure_IO (Hold_Pin, Config);
-   end Enable_GPIO;
-
 begin
    Initialize_Board;
-   Enable_GPIO;
-   while not Hold_Pin.Set loop
-      null;
-   end loop;
+   Initialize_Uart;
+   Send_Char ('A');
+   Initialize_GPIO;
    Enable (STM32.Device.RTC);
    STM32.Power_Control.Disable_Backup_Domain_Protection;
-   if TAMP_Periph.BKP1R = 1 then
-      TAMP_Periph.BKP1R := 0;
-      SubGhzPhy_Init;
-      SubGhzRF_Init;
-      App_Start;
-      My_Delay (1_000);
-      RCC_Periph.CSR.RFRST := True;
-      loop
-         exit when RCC_Periph.CSR.RFRSTF;
-      end loop;
-      RCC_Periph.APB3ENR.SUBGHZSPIEN := False;
-      PWR_Periph.CR3.EIWUL := False;
-      PWR_Periph.CR3.EWRFBUSY := False;
-   end if;
+   Set_RADIO_Switch_Ptr (RAK_RF_Switch'Access);  --  In hw.adb, called by subghzrf
+   Send_Char ('B');
+--   if TAMP_Periph.BKP1R = 1 then
+--      TAMP_Periph.BKP1R := 0;
+   SubGhzPhy_Init;
+   SubGhzRF_Init;
+   Send_Char ('C');
+   App_Start;
+   Send_Char ('D');
+   My_Delay (1_000);
+   Send_Char ('E');
+   RCC_Periph.CSR.RFRST := True;
+   Send_Char ('F');
+   loop
+      exit when RCC_Periph.CSR.RFRSTF;
+   end loop;
+   Send_Char ('G');
+   RCC_Periph.APB3ENR.SUBGHZSPIEN := False;
+   PWR_Periph.CR3.EIWUL := False;
+   PWR_Periph.CR3.EWRFBUSY := False;
+--   end if;
 
 --   Set_AlarmA (STM32.Device.RTC, (MSK4 => True, MSK3 => True, MSK2 => True, ST => 3, others => <>));
 
@@ -84,6 +77,7 @@ begin
    PWR_Periph.SCR.CWUF.Val := 16#7#; -- clear all wup sources
 
    PWR_Periph.CR4.WP.Val := 0; --  All rising edge
+   Send_Char ('H');
 
 --   PWR_Periph.CR3.EWUP.Arr (1) := True;
 
@@ -91,19 +85,19 @@ begin
    PWR_Periph.PUCRB.PU.Val := 16#ffff#;
    PWR_Periph.PUCRC.PU.Val := 16#7f#;
    --   PWR_Periph.CR3.APC      := True;
-   PWR_Periph.CR3.APC      := False;
-
+   PWR_Periph.CR3.APC      := True;
+   Send_Char ('I');
    --  Shutdown seq
-   PWR_Periph.CR1.LPMS := 4; --  SHUTDOWN
-   DBGMCU_Periph.CR := (DBG_STOP => False, DBG_STANDBY => False, others => <>);
-   Cortex_M_SVD.SCB.SCB_Periph.SCR.SLEEPDEEP := True;
-   Cortex_M_SVD.SysTick.SysTick_Periph.CSR.ENABLE := Off;
-   TAMP_Periph.BKP1R := 1;
-   loop
-      PWR_Periph.SCR.CWRFBUSYF := True;
-      exit when not PWR_Periph.SR1.WRFBUSYF;
-   end loop;
-   Asm (Template => "wfi", Volatile => True);
+--   PWR_Periph.CR1.LPMS := 4; --  SHUTDOWN
+--   DBGMCU_Periph.CR := (DBG_STOP => False, DBG_STANDBY => False, others => <>);
+--   Cortex_M_SVD.SCB.SCB_Periph.SCR.SLEEPDEEP := True;
+--   Cortex_M_SVD.SysTick.SysTick_Periph.CSR.ENABLE := Off;
+--   TAMP_Periph.BKP1R := 1;
+--   loop
+--      PWR_Periph.SCR.CWRFBUSYF := True;
+--      exit when not PWR_Periph.SR1.WRFBUSYF;
+--   end loop;
+--   Asm (Template => "wfi", Volatile => True);
    loop
       null;
    end loop;

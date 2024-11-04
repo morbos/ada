@@ -16,6 +16,9 @@ package body STM32.SubGhzRF is
    procedure NSS_Assert
    is
    begin
+      if PWR_Periph.SUBGHZSPICR.NSS = False then
+         raise Program_Error with "NSS already asserted";
+      end if;
       Flush_Fifo (SubGhzPhyPort.all);
       PWR_Periph.SUBGHZSPICR.NSS := False;
       Log (16#44#);
@@ -24,6 +27,9 @@ package body STM32.SubGhzRF is
    procedure NSS_Deassert
    is
    begin
+      if PWR_Periph.SUBGHZSPICR.NSS = True then
+         raise Program_Error with "NSS already deasserted";
+      end if;
       PWR_Periph.SUBGHZSPICR.NSS := True;
       Log (16#55#);
    end NSS_Deassert;
@@ -33,6 +39,12 @@ package body STM32.SubGhzRF is
       Mask : Boolean;
    begin
       loop
+         --  after Set_Sleep... this loop will lockup
+         --  we repeatedly toggle NSS which unsticks it (why the earlier one
+         --  in CheckDeviceReady did not suffice is a mystery)
+         NSS_Assert;
+         NSS_Deassert;
+         --  End of workaround
          Mask := PWR_Periph.SR2.RFBUSYMS;
          --  Need a timeout here
          exit when not (Mask and PWR_Periph.SR2.RFBUSYS);
@@ -59,10 +71,11 @@ package body STM32.SubGhzRF is
       RADIO_Mode_Current (RADIO_SWITCH_OFF);
       Msg (1) := Opcode_Set_Standby;
       Msg (2) := Choice'Enum_Rep;
---      CheckDeviceReady;
+      CheckDeviceReady;
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
       Subghz_State := LOWPOWER;
    end Set_Standby;
 
@@ -77,6 +90,7 @@ package body STM32.SubGhzRF is
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
    end Set_RegulatorMode;
 
    procedure Set_TcxoMode (Trim : Set_TcxoMode_Message)
@@ -91,6 +105,7 @@ package body STM32.SubGhzRF is
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
    end Set_TcxoMode;
 
    procedure Write_Register (Reg : Write_Register_Message)
@@ -165,6 +180,7 @@ package body STM32.SubGhzRF is
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
    end Calibrate;
 
    procedure Set_PacketType (PacketType : Set_PacketType_Message)
@@ -179,6 +195,7 @@ package body STM32.SubGhzRF is
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
    end Set_PacketType;
 
    procedure Set_BufferBaseAddress (Bases : Set_BufferBaseAddress_Message)
@@ -193,6 +210,7 @@ package body STM32.SubGhzRF is
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
    end Set_BufferBaseAddress;
 
    procedure Set_PaConfig (PaCfg : Set_PaConfig_Message)
@@ -209,6 +227,7 @@ package body STM32.SubGhzRF is
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
    end Set_PaConfig;
 
    procedure Set_TxParams (TxParams : Set_TxParams_Message)
@@ -228,6 +247,7 @@ package body STM32.SubGhzRF is
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
    end Set_TxParams;
 
    procedure Cfg_DioIrq (Cfg : Cfg_DioIrq_Message)
@@ -242,6 +262,7 @@ package body STM32.SubGhzRF is
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
    end Cfg_DioIrq;
 
    procedure Set_Sleep (Cfg : Set_Sleep_Message)
@@ -253,7 +274,7 @@ package body STM32.SubGhzRF is
    begin
       RADIO_Mode_Current (RADIO_SWITCH_OFF);
       LCfg.Opcode := Opcode_Set_Sleep;
-      CheckDeviceReady;
+--      CheckDeviceReady;
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
@@ -272,6 +293,7 @@ package body STM32.SubGhzRF is
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
    end LoRa_Set_ModulationParams;
 
    procedure Swap16 (X : in out UInt16)
@@ -315,6 +337,7 @@ package body STM32.SubGhzRF is
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
    end LoRa_Set_PacketParams;
 
    procedure Set_StopRxTimerOnPreamble (Choice : Set_StopRxTimerOnPreamble_Selection)
@@ -328,6 +351,7 @@ package body STM32.SubGhzRF is
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
    end Set_StopRxTimerOnPreamble;
 
    procedure Set_LoRaSymbTimeout (NumberOfSymbols : UInt8)
@@ -341,6 +365,7 @@ package body STM32.SubGhzRF is
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
    end Set_LoRaSymbTimeout;
 
    procedure Set_RfFrequency (Freq : Set_RfFrequency_Message)
@@ -359,6 +384,7 @@ package body STM32.SubGhzRF is
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
    end Set_RfFrequency;
 
    procedure CalibrateImage (LowFreq : UInt8; HighFreq : UInt8)
@@ -372,6 +398,7 @@ package body STM32.SubGhzRF is
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
    end CalibrateImage;
    procedure Set_Rx (Timeout : UInt24)
    is
@@ -390,6 +417,7 @@ package body STM32.SubGhzRF is
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
       Subghz_State := RX;
    end Set_Rx;
 
@@ -410,6 +438,7 @@ package body STM32.SubGhzRF is
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
       Subghz_State := TX;
    end Set_Tx;
 
@@ -428,6 +457,7 @@ package body STM32.SubGhzRF is
       Subghz_State := TX;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
       Subghz_State := TX;
    end Set_CadParams;
 
@@ -442,6 +472,7 @@ package body STM32.SubGhzRF is
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
       Subghz_State := CAD;
    end Set_Cad;
 
@@ -464,6 +495,7 @@ package body STM32.SubGhzRF is
       Reply (2) := Reply (3);
       Reply (3) := Tmp;
       NSS_Deassert;
+      WaitOnBusy;
       RFStatus := Reply (1);
 --      return Shift_Left (UInt16 (Reply (2)), 8) or UInt16 (Reply (3));
       return Irqstatus;
@@ -485,6 +517,7 @@ package body STM32.SubGhzRF is
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
    end Clr_IrqStatus;
 
    procedure Get_RxBufferStatus (RFStatus             : out Subghz_Status;
@@ -500,6 +533,7 @@ package body STM32.SubGhzRF is
       Transmit (SubGhzPhyPort.all, Msg, Status);
       Receive (SubGhzPhyPort.all, Reply, Status);
       NSS_Deassert;
+      WaitOnBusy;
       RFStatus             := Reply (1);
       RxPayloadLength      := Reply (2);
       RxStartBufferPointer := Reply (3);
@@ -520,6 +554,7 @@ package body STM32.SubGhzRF is
       Receive (SubGhzPhyPort.all, Reply, Status);
       Receive (SubGhzPhyPort.all, Buffer, Status);
       NSS_Deassert;
+      WaitOnBusy;
       RFStatus := Reply (1);
    end Read_Buffer;
 
@@ -535,6 +570,7 @@ package body STM32.SubGhzRF is
       Transmit (SubGhzPhyPort.all, Msg, Status);
       Transmit (SubGhzPhyPort.all, Buffer, Status);
       NSS_Deassert;
+      WaitOnBusy;
    end Write_Buffer;
 
    procedure LoRa_Get_Stats (RFStatus         : out Subghz_Status;
@@ -551,6 +587,7 @@ package body STM32.SubGhzRF is
       Transmit (SubGhzPhyPort.all, Msg, Status);
       Receive (SubGhzPhyPort.all, Reply, Status);
       NSS_Deassert;
+      WaitOnBusy;
       RFStatus         := Reply (1);
       NbPktReceived    := Shift_Left (UInt16 (Reply (2)), 8) or UInt16 (Reply (3));
       NbPktCrcError    := Shift_Left (UInt16 (Reply (4)), 8) or UInt16 (Reply (5));
@@ -566,6 +603,7 @@ package body STM32.SubGhzRF is
       NSS_Assert;
       Transmit (SubGhzPhyPort.all, Msg, Status);
       NSS_Deassert;
+      WaitOnBusy;
    end Reset_Stats;
 
    procedure Toggle_TxRx

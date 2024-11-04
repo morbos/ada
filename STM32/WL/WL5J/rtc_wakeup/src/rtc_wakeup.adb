@@ -65,7 +65,7 @@ begin
    DBGMCU_Periph.CR := (DBG_STOP => False, DBG_STANDBY => False, others => <>);
    Cortex_M_SVD.SCB.SCB_Periph.SCR.SLEEPDEEP := True;
    Cortex_M_SVD.SysTick.SysTick_Periph.CSR.ENABLE := Off;
-   TAMP_Periph.BKP1R := 1;
+--   TAMP_Periph.BKP1R := 1;
    Send_Char ('E');
    Asm (Template => "wfi", Volatile => True);
    loop

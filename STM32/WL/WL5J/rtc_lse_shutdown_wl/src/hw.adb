@@ -14,4 +14,12 @@ package body Hw is
       Enable_External_Interrupt (Line, Interrupt_Rising_Edge);
    end Enable_EXTI17;
 
+   procedure Enable_EXTI20
+   is
+      Line : constant External_Line_Number := EXTI_Line_20;
+      Index : constant Natural := External_Line_Number'Pos (Line);
+   begin
+      Enable_External_Interrupt (Line, Interrupt_Rising_Edge);
+   end Enable_EXTI20;
+
 end Hw;

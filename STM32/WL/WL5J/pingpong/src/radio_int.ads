@@ -41,9 +41,7 @@ package Radio_Int is
    Tx_Go      : Suspension_Object;
    Timeout_Go : Suspension_Object;
    Cad_Go     : Suspension_Object;
-   X          : UInt16;
    Stat       : Irq_Status;
-   for Stat'Address use X'Address;
 
    protected Handler is
       pragma Interrupt_Priority;

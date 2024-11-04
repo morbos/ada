@@ -7,6 +7,7 @@ with STM32.I2C;     use STM32.I2C;
 with STM32.Board;   use STM32.Board;
 with STM32.RTC;     use STM32.RTC;
 with Hw;            use Hw;
+with Peripherals;   use Peripherals;
 with STM32.Power_Control;     --  use STM32.Power_Control;
 with Rtc_Wkup_Int;  use Rtc_Wkup_Int;
 with STM32_SVD.RTC;  use STM32_SVD.RTC;
@@ -28,6 +29,7 @@ use STM32; -- for GPIO_Alternate_Function
 with Ada.Real_Time; use Ada.Real_Time;
 
 procedure Rtc_Lse_Shutdown_Wl is
+
    procedure My_Delay;
 
    procedure My_Delay is
@@ -40,13 +42,17 @@ procedure Rtc_Lse_Shutdown_Wl is
 begin
    Initialize_Board;
    Enable (STM32.Device.RTC);
+   Enable_GPIO;
    STM32.Power_Control.Disable_Backup_Domain_Protection;
-   Set_AlarmA (STM32.Device.RTC, (MSK4 => True, MSK3 => True, MSK2 => True, ST => 3, others => <>));
+   PWR_Periph.CR3.EIWUL := False;
+   PWR_Periph.CR3.EWRFBUSY := False;
+--   Set_AlarmA (STM32.Device.RTC, (MSK4 => True, MSK3 => True, MSK2 => True, ST => 1, others => <>));
 --   RTC_Periph.RTC_CR.COE := True; -- Clock out, PC13
 
---   Set_WUT_Interrupt (STM32.Device.RTC, 16#ffff#);
+   Set_WUT_Interrupt (STM32.Device.RTC, 10); --  10sec? (1hz clock)
 
-   Enable_EXTI17;
+--   Enable_EXTI17; -- Alarm
+   Enable_EXTI20; --  Wakeup
 
    --  Now off to sleep
    PWR_Periph.CR3.EWUP.Arr (1) := False;

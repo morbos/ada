@@ -8,7 +8,8 @@ package Rtc_Wkup_Int is
    private
 
       procedure RTC_Wkup_Handler;
-      pragma Attach_Handler (RTC_Wkup_Handler, RTC_ALARM_Interrupt);
+--      pragma Attach_Handler (RTC_Wkup_Handler, RTC_ALARM_Interrupt);
+      pragma Attach_Handler (RTC_Wkup_Handler, RTC_WKUP_Interrupt);
 
    end Handler;
 

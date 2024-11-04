@@ -1,0 +1,4 @@
+regs:
+ ~/ada/xml/logs2dump.rb -s ~/ada/xml/STM32WL5x_CM4.svd >idx.txt
+ radio:
+ ruby ~/ruby/loralog2.rb radio.log >radio.txt

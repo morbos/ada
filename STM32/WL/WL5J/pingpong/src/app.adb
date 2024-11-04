@@ -37,11 +37,6 @@ package body App is
       loop
          Suspend_Until_True (Tx_Go);
          if Stat.TxDone then
-            --  ST_WORKAROUND_BEGIN: Reset DBG pin
-            DBG_Line1_Pin.Clear;
-            --  DBG_GPIO_RADIO_TX(RST);
-            --  /* ST_WORKAROUND_END */
---          TimerStop( &TxTimeoutTimer );
             Set_Standby (RC_13_MHz);
             State := TX;
          else

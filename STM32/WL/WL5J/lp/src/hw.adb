@@ -4,7 +4,7 @@ with STM32.Board;      use STM32.Board;
 with STM32.RCC;        use STM32.RCC;
 with STM32.GPIO;       use STM32.GPIO;
 with STM32.EXTI;       use STM32.EXTI;
-with Peripherals;     use Peripherals;
+with Peripherals;      use Peripherals;
 
 with STM32_SVD.RCC;    use STM32_SVD.RCC;
 with STM32_SVD.EXTI;   use STM32_SVD.EXTI;

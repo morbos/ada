@@ -52,33 +52,34 @@ package body Radio_Int is
       procedure Radio_Handler
       is
          RFStatus : Subghz_Status;
-         X        : Irq_Status;
          Y        : UInt16;
-         for X'Address use Y'Address;
-         for X'Alignment use 1;
+         LStat    : Irq_Status; --  Need a local for the overlay
+         for LStat'Address use Y'Address;
+         for LStat'Alignment use 1;
       begin
-         X := Get_IrqStatus (RFStatus);
+         Stat := Get_IrqStatus (RFStatus);
+         LStat := Stat;
          Log2Byte (16#cc#, UInt8 (Shift_Right (Y, 8)), UInt8 (Y and 16#ff#));
-         if X.TxDone then
+         if Stat.TxDone then
             Set_True (Tx_Go);
          end if;
-         if X.Timeout then
+         if Stat.Timeout then
             Set_True (Timeout_Go);
          end if;
          if
-           X.RxDone           or
-           X.PreambleDetected or
-           X.SyncDetected     or
-           X.HeaderValid      or
-           X.HeaderErr        or
-           X.Misc_Err
+           Stat.RxDone           or
+           Stat.PreambleDetected or
+           Stat.SyncDetected     or
+           Stat.HeaderValid      or
+           Stat.HeaderErr        or
+           Stat.Misc_Err
          then
             Set_True (Rx_Go);
          end if;
-         if X.CadDone or X.CadDetected then
+         if Stat.CadDone or Stat.CadDetected then
             Set_True (Cad_Go);
          end if;
-         Clr_IrqStatus (X);
+         Clr_IrqStatus (Stat);
       end Radio_Handler;
 
    end Handler;

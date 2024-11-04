@@ -6,7 +6,8 @@ use STM32;
 
 package Peripherals is
 
-   DBG_Line1_Pin                 : GPIO_Point renames PB12;
-   DBG_Line2_Pin                 : GPIO_Point renames PB13;
+   HF_Pin                 : GPIO_Point renames PB12;
+   RF_SW_Pin1             : GPIO_Point renames PB8;
+   RF_SW_Pin2             : GPIO_Point renames PC13;
 
 end Peripherals;

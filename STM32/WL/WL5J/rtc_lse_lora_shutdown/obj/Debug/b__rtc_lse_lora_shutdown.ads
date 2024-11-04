@@ -226,8 +226,6 @@ package ada_main is
    --  stm32.power_control%b
    --  stm32.rcc%s
    --  stm32.rcc%b
-   --  hw%s
-   --  hw%b
    --  stm32.rtc%s
    --  stm32.rtc%b
    --  stm32.setup%s
@@ -246,14 +244,18 @@ package ada_main is
    --  peripherals%s
    --  stm32.board%s
    --  stm32.board%b
-   --  rtc_wkup_int%s
-   --  rtc_wkup_int%b
    --  stm32.subghzphy%s
    --  stm32.subghzphy%b
    --  stm32.subghzrf%s
    --  stm32.subghzrf%b
+   --  hw%s
+   --  hw%b
    --  radio_int%s
    --  radio_int%b
+   --  uart%s
+   --  uart%b
+   --  rtc_wkup_int%s
+   --  rtc_wkup_int%b
    --  utils%s
    --  utils%b
    --  app%s

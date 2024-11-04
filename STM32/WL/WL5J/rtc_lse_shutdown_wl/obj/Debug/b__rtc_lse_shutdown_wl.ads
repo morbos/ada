@@ -241,6 +241,7 @@ package ada_main is
    --  stm32.device%b
    --  stm32.syscfg%b
    --  stm32.usarts%b
+   --  peripherals%s
    --  stm32.board%s
    --  stm32.board%b
    --  rtc_wkup_int%s

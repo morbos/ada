@@ -25,7 +25,7 @@ procedure PingPong
 is
 begin
    Initialize_Board;
-   Initialize_HW;
+   Initialize_GPIO;
    SubGhzPhy_Init;
    SubGhzRF_Init;
 

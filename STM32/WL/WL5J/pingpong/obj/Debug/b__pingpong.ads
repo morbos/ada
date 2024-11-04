@@ -7,8 +7,11 @@ package ada_main is
 
 
    GNAT_Version : constant String :=
-                    "GNAT Version: Community 2019 (20190517-74)" & ASCII.NUL;
+                    "GNAT Version: 14.1.0" & ASCII.NUL;
    pragma Export (C, GNAT_Version, "__gnat_version");
+
+   GNAT_Version_Address : constant System.Address := GNAT_Version'Address;
+   pragma Export (C, GNAT_Version_Address, "__gnat_version_address");
 
    Ada_Main_Program_Name : constant String := "_ada_pingpong" & ASCII.NUL;
    pragma Export (C, Ada_Main_Program_Name, "__gnat_ada_main_program_name");
@@ -35,8 +38,6 @@ package ada_main is
    --  system.bb.cpu_specific%s
    --  system.exceptions%s
    --  system.exceptions%b
-   --  system.img_bool%s
-   --  system.img_bool%b
    --  system.img_int%s
    --  system.img_int%b
    --  system.machine_code%s
@@ -44,6 +45,7 @@ package ada_main is
    --  system.parameters%b
    --  system.storage_elements%s
    --  system.storage_elements%b
+   --  system.return_stack%s
    --  system.secondary_stack%s
    --  system.secondary_stack%b
    --  gnat.debug_utilities%s
@@ -190,24 +192,17 @@ package ada_main is
    --  stm32_svd.i2c%s
    --  stm32_svd.pwr%s
    --  stm32_svd.rcc%s
+   --  stm32_svd.rtc%s
    --  stm32_svd.spi%s
    --  stm32_svd.syscfg%s
    --  stm32_svd.usart%s
-   --  hal.bitmap%s
-   --  bitmap_color_conversion%s
-   --  bitmap_color_conversion%b
-   --  hal.framebuffer%s
    --  hal.gpio%s
    --  hal.i2c%s
+   --  hal.real_time_clock%s
    --  hal.spi%s
-   --  hal.time%s
    --  hal.uart%s
    --  logcmd%s
    --  logcmd%b
-   --  soft_drawing_bitmap%s
-   --  soft_drawing_bitmap%b
-   --  st7735r%s
-   --  st7735r%b
    --  stm32.adc%s
    --  stm32.adc%b
    --  stm32.crc%s
@@ -218,8 +213,12 @@ package ada_main is
    --  stm32.exti%b
    --  stm32.i2c%s
    --  stm32.i2c%b
+   --  stm32.power_control%s
+   --  stm32.power_control%b
    --  stm32.rcc%s
    --  stm32.rcc%b
+   --  stm32.rtc%s
+   --  stm32.rtc%b
    --  stm32.setup%s
    --  stm32.spi%s
    --  stm32.spi%b
@@ -236,12 +235,12 @@ package ada_main is
    --  peripherals%s
    --  stm32.board%s
    --  stm32.board%b
-   --  hw%s
-   --  hw%b
    --  stm32.subghzphy%s
    --  stm32.subghzphy%b
    --  stm32.subghzrf%s
    --  stm32.subghzrf%b
+   --  hw%s
+   --  hw%b
    --  radio_int%s
    --  radio_int%b
    --  app%s

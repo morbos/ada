@@ -21,25 +21,25 @@ package body ada_main is
    E123 : Short_Integer; pragma Import (Ada, E123, "system__tasking__protected_objects_E");
    E127 : Short_Integer; pragma Import (Ada, E127, "system__tasking__protected_objects__multiprocessors_E");
    E132 : Short_Integer; pragma Import (Ada, E132, "system__tasking__restricted__stages_E");
-   E188 : Short_Integer; pragma Import (Ada, E188, "hal__gpio_E");
-   E194 : Short_Integer; pragma Import (Ada, E194, "hal__i2c_E");
+   E184 : Short_Integer; pragma Import (Ada, E184, "hal__gpio_E");
+   E190 : Short_Integer; pragma Import (Ada, E190, "hal__i2c_E");
    E139 : Short_Integer; pragma Import (Ada, E139, "hal__real_time_clock_E");
-   E207 : Short_Integer; pragma Import (Ada, E207, "hal__spi_E");
-   E213 : Short_Integer; pragma Import (Ada, E213, "hal__uart_E");
-   E205 : Short_Integer; pragma Import (Ada, E205, "logcmd_E");
-   E172 : Short_Integer; pragma Import (Ada, E172, "stm32__adc_E");
+   E203 : Short_Integer; pragma Import (Ada, E203, "hal__spi_E");
+   E209 : Short_Integer; pragma Import (Ada, E209, "hal__uart_E");
+   E201 : Short_Integer; pragma Import (Ada, E201, "logcmd_E");
+   E168 : Short_Integer; pragma Import (Ada, E168, "stm32__adc_E");
    E158 : Short_Integer; pragma Import (Ada, E158, "stm32__exti_E");
-   E193 : Short_Integer; pragma Import (Ada, E193, "stm32__i2c_E");
-   E199 : Short_Integer; pragma Import (Ada, E199, "stm32__power_control_E");
+   E189 : Short_Integer; pragma Import (Ada, E189, "stm32__i2c_E");
+   E195 : Short_Integer; pragma Import (Ada, E195, "stm32__power_control_E");
    E162 : Short_Integer; pragma Import (Ada, E162, "stm32__rcc_E");
    E155 : Short_Integer; pragma Import (Ada, E155, "hw_E");
-   E197 : Short_Integer; pragma Import (Ada, E197, "stm32__rtc_E");
-   E203 : Short_Integer; pragma Import (Ada, E203, "stm32__spi_E");
-   E183 : Short_Integer; pragma Import (Ada, E183, "stm32__gpio_E");
-   E185 : Short_Integer; pragma Import (Ada, E185, "stm32__syscfg_E");
-   E211 : Short_Integer; pragma Import (Ada, E211, "stm32__usarts_E");
-   E170 : Short_Integer; pragma Import (Ada, E170, "stm32__device_E");
-   E165 : Short_Integer; pragma Import (Ada, E165, "rtc_wkup_int_E");
+   E193 : Short_Integer; pragma Import (Ada, E193, "stm32__rtc_E");
+   E199 : Short_Integer; pragma Import (Ada, E199, "stm32__spi_E");
+   E179 : Short_Integer; pragma Import (Ada, E179, "stm32__gpio_E");
+   E181 : Short_Integer; pragma Import (Ada, E181, "stm32__syscfg_E");
+   E207 : Short_Integer; pragma Import (Ada, E207, "stm32__usarts_E");
+   E166 : Short_Integer; pragma Import (Ada, E166, "stm32__device_E");
+   E211 : Short_Integer; pragma Import (Ada, E211, "rtc_wkup_int_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -175,42 +175,42 @@ package body ada_main is
       System.Tasking.Restricted.Stages'Elab_Body;
       E132 := E132 + 1;
       HAL.GPIO'ELAB_SPEC;
-      E188 := E188 + 1;
+      E184 := E184 + 1;
       HAL.I2C'ELAB_SPEC;
-      E194 := E194 + 1;
+      E190 := E190 + 1;
       HAL.REAL_TIME_CLOCK'ELAB_SPEC;
       E139 := E139 + 1;
       HAL.SPI'ELAB_SPEC;
-      E207 := E207 + 1;
+      E203 := E203 + 1;
       HAL.UART'ELAB_SPEC;
-      E213 := E213 + 1;
-      E205 := E205 + 1;
+      E209 := E209 + 1;
+      E201 := E201 + 1;
       STM32.ADC'ELAB_SPEC;
-      E172 := E172 + 1;
+      E168 := E168 + 1;
       E158 := E158 + 1;
       STM32.I2C'ELAB_SPEC;
       STM32.I2C'ELAB_BODY;
-      E193 := E193 + 1;
-      E199 := E199 + 1;
+      E189 := E189 + 1;
+      E195 := E195 + 1;
       E162 := E162 + 1;
       E155 := E155 + 1;
       STM32.RTC'ELAB_SPEC;
       STM32.RTC'ELAB_BODY;
-      E197 := E197 + 1;
+      E193 := E193 + 1;
       STM32.SPI'ELAB_SPEC;
       STM32.SPI'ELAB_BODY;
-      E203 := E203 + 1;
+      E199 := E199 + 1;
       STM32.GPIO'ELAB_SPEC;
       STM32.GPIO'ELAB_BODY;
-      E183 := E183 + 1;
+      E179 := E179 + 1;
       STM32.USARTS'ELAB_SPEC;
       STM32.DEVICE'ELAB_SPEC;
-      E170 := E170 + 1;
-      E185 := E185 + 1;
+      E166 := E166 + 1;
+      E181 := E181 + 1;
       STM32.USARTS'ELAB_BODY;
-      E211 := E211 + 1;
+      E207 := E207 + 1;
       Rtc_Wkup_Int'Elab_Spec;
-      E165 := E165 + 1;
+      E211 := E211 + 1;
       Install_Restricted_Handlers_Sequential;
       Activate_All_Tasks_Sequential;
    end adainit;
@@ -238,21 +238,22 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   /home/pi/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/obj/Debug/hw.o
-   --   /home/pi/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/obj/Debug/rtc_wkup_int.o
-   --   /home/pi/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/obj/Debug/rtc_lse_shutdown_wl.o
-   --   -L/home/pi/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/obj/Debug/
-   --   -L/home/pi/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/obj/Debug/
-   --   -L/home/pi/ada/STM32/WL/
-   --   -L/home/pi/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/Ada_Drivers_Library/boards/lib/stm32wl5x_nucleo/ravenscar-full/Debug/
-   --   -L/home/pi/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/Ada_Drivers_Library/boards/stm32wl5x_nucleo/lib/stm32wl5x/ravenscar-full/Debug/
-   --   -L/home/pi/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/Ada_Drivers_Library/embedded-runtimes/ravenscar-stm32wl5x/full/adalib/
-   --   -L/home/pi/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/Ada_Drivers_Library/arch/ARM/STM32/lib/stm32wl5x/ravenscar-full/Debug/
-   --   -L/home/pi/ada/Ada_Drivers_Library/hal/lib/stm32wl5x/ravenscar-full/Debug/
-   --   -L/home/pi/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/Ada_Drivers_Library/arch/ARM/cortex_m/lib/cortex-m4/stm32wl5x/ravenscar-full/Debug/
-   --   -L/home/pi/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/Ada_Drivers_Library/components/lib/stm32wl5x/ravenscar-full/Debug/
-   --   -L/home/pi/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/Ada_Drivers_Library/middleware/lib/stm32wl5x/ravenscar-full/Debug/
-   --   -L/home/pi/ada/Ada_Drivers_Library/embedded-runtimes/ravenscar-stm32wl5x/full/adalib/
+   --   /home/hedley/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/obj/Debug/hw.o
+   --   /home/hedley/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/obj/Debug/peripherals.o
+   --   /home/hedley/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/obj/Debug/rtc_wkup_int.o
+   --   /home/hedley/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/obj/Debug/rtc_lse_shutdown_wl.o
+   --   -L/home/hedley/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/obj/Debug/
+   --   -L/home/hedley/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/obj/Debug/
+   --   -L/home/hedley/ada/STM32/WL/
+   --   -L/home/hedley/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/Ada_Drivers_Library/boards/lib/stm32wl5x_nucleo/ravenscar-full/Debug/
+   --   -L/home/hedley/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/Ada_Drivers_Library/boards/stm32wl5x_nucleo/lib/stm32wl5x/ravenscar-full/Debug/
+   --   -L/home/hedley/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/Ada_Drivers_Library/embedded-runtimes/ravenscar-stm32wl5x/full/adalib/
+   --   -L/home/hedley/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/Ada_Drivers_Library/arch/ARM/STM32/lib/stm32wl5x/ravenscar-full/Debug/
+   --   -L/home/hedley/ada/Ada_Drivers_Library/hal/lib/stm32wl5x/ravenscar-full/Debug/
+   --   -L/home/hedley/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/Ada_Drivers_Library/arch/ARM/cortex_m/lib/cortex-m4/stm32wl5x/ravenscar-full/Debug/
+   --   -L/home/hedley/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/Ada_Drivers_Library/components/lib/stm32wl5x/ravenscar-full/Debug/
+   --   -L/home/hedley/ada/STM32/WL/WL5J/rtc_lse_shutdown_wl/Ada_Drivers_Library/middleware/lib/stm32wl5x/ravenscar-full/Debug/
+   --   -L/home/hedley/ada/Ada_Drivers_Library/embedded-runtimes/ravenscar-stm32wl5x/full/adalib/
    --   -static
    --   -lgnarl
    --   -lgnat
