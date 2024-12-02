@@ -38,6 +38,8 @@ is
 
    procedure To_UInt8_From_Integer_32 (Result : out Four_UInt8; Value : Integer_32);
 
+   procedure To_UInt8_From_UInt32 (Result : out Four_UInt8; Value : UInt32);
+
    procedure To_UInt16_From_Integer_32 (Result : out Two_UInt16; Value : Integer_32);
 
    procedure To_UInt32_From_UInt8 (Dat : Four_UInt8; Result : out UInt32);
@@ -45,6 +47,10 @@ is
    procedure To_String_From_UInt16 (S : out String; Value : UInt16);
 
    procedure To_UInt16_From_Integer_16 (Result : out UInt16; Value : Integer_16);
+
+   procedure To_UInt32_From_Integer_32 (Result : out UInt32; Value : Integer_32);
+
+   procedure To_Integer_32_From_UInt32 (Result : out Integer_32; Value : UInt32);
 
    procedure My_Delay (Param : Integer);
 

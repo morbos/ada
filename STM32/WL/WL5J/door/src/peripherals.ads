@@ -18,6 +18,11 @@ package Peripherals is
    RF_SW_Pin1             : GPIO_Point renames PB8;
    RF_SW_Pin2             : GPIO_Point renames PC13;
 
+   LED_Pin                : GPIO_Point renames PA4;
+   LED_Gnd_Pin            : GPIO_Point renames PA5;
+
+   LIS3MDL_Pwr_Pin        : GPIO_Point renames PA6;
+
    LIS3MDL_I2C_Port      : constant access I2C_Port := I2C_2'Access;
    LIS3MDL_I2C_Port_AF   : constant GPIO_Alternate_Function := GPIO_AF_I2C2_4;
 

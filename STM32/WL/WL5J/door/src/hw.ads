@@ -8,5 +8,9 @@ package Hw is
    procedure Enable_EXTI20;
    procedure Initialize_HW;
    procedure RAK_RF_Switch (Mode : RADIO_Mode);
+   procedure LED_On;
+   procedure LED_Off;
+   procedure Power_Up_LIS3MDL;
+   procedure Power_Down_LIS3MDL;
 
 end Hw;

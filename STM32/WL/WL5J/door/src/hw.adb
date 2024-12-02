@@ -66,7 +66,32 @@ package body Hw is
          Config.Mode        := Mode_Out;
          Configure_IO (LIS3MDL_Power_Pin, Config);
 
-         Set (LIS3MDL_Power_Pin); --  Start on
+         Clear (LIS3MDL_Power_Pin); --  Start on
+
+         Enable_Clock (LED_Pin);
+         Config.Output_Type := Push_Pull;
+         Config.Resistors   := Floating;
+         Config.Speed       := Low_Speed;
+         Config.Mode        := Mode_Out;
+         Configure_IO (LED_Pin, Config);
+
+         Clear (LED_Pin); --  Start off
+
+         Enable_Clock (LED_Gnd_Pin);
+         Config.Output_Type := Push_Pull;
+         Config.Resistors   := Floating;
+         Config.Speed       := Low_Speed;
+         Config.Mode        := Mode_Out;
+         Configure_IO (LED_Gnd_Pin, Config);
+
+         Clear (LED_Gnd_Pin);
+
+         Enable_Clock (LIS3MDL_Pwr_Pin);
+         Config.Output_Type := Push_Pull;
+         Config.Resistors   := Floating;
+         Config.Speed       := Low_Speed;
+         Config.Mode        := Mode_Out;
+         Configure_IO (LIS3MDL_Pwr_Pin, Config);
 
       end Initialize_GPIO;
 
@@ -123,6 +148,18 @@ package body Hw is
 
    end Initialize_HW;
 
+   procedure LED_On
+   is
+   begin
+      Set (LED_Pin);
+   end LED_On;
+
+   procedure LED_Off
+   is
+   begin
+      Clear (LED_Pin);
+   end LED_Off;
+
    --   Local decision on how this modules radio
    --   pins are used. Each module vendor is free
    --   to reassign so we have a fnptr to the local
@@ -149,5 +186,17 @@ package body Hw is
             null;
       end case;
    end RAK_RF_Switch;
+
+   procedure Power_Up_LIS3MDL
+   is
+   begin
+      Set (LIS3MDL_Pwr_Pin);
+   end Power_Up_LIS3MDL;
+
+   procedure Power_Down_LIS3MDL
+   is
+   begin
+      Clear (LIS3MDL_Pwr_Pin);
+   end Power_Down_LIS3MDL;
 
 end Hw;

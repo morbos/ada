@@ -40,6 +40,14 @@ is
       Result := X.BArr;
    end To_UInt8_From_Integer_32;
 
+   procedure To_UInt8_From_UInt32 (Result : out Four_UInt8; Value : UInt32)
+   is
+      X : Union4;
+   begin
+      X.UVal := Value;
+      Result := X.BArr;
+   end To_UInt8_From_UInt32;
+
    procedure To_UInt16_From_Integer_32 (Result : out Two_UInt16; Value : Integer_32)
    is
       X : Union4;
@@ -81,6 +89,22 @@ is
       X.IArr (1) := Value;
       Result := X.HArr (1);
    end To_UInt16_From_Integer_16;
+
+   procedure To_UInt32_From_Integer_32 (Result : out UInt32; Value : Integer_32)
+   is
+      X : Union4;
+   begin
+      X.Val := Value;
+      Result := X.UVal;
+   end To_UInt32_From_Integer_32;
+
+   procedure To_Integer_32_From_UInt32 (Result : out Integer_32; Value : UInt32)
+   is
+      X : Union4;
+   begin
+      X.UVal := Value;
+      Result := X.Val;
+   end To_Integer_32_From_UInt32;
 
    procedure My_Delay (Param : Integer) is
    begin

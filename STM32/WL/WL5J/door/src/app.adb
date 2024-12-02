@@ -13,16 +13,23 @@ with STM32_SVD.RCC;           use STM32_SVD.RCC;
 
 package body App is
 
-   procedure App_Start
+   procedure App_Start (Stance : Door_Stance)
    is
       Buffer    : SPI_Data_8b (1 .. 4);
-      OurId     : UInt8 := 255;
+      OurId     : UInt8 := 4;
       Crc       : UInt8 := 16#FF#;
+      Msg       : UInt8;
    begin
+      case Stance is
+         when Open_Stance =>
+            Msg := 4;
+         when Closed_Stance =>
+            Msg := 5;
+      end case;
       Gen_Crc8_Table;
       Buffer (1) := 16#00#; -- To the server
       Buffer (2) := OurId;
-      Buffer (3) := 16#FF#; --  Ping pkt
+      Buffer (3) := Msg;
       Update_Crc8 (Crc, Buffer (1 .. 3));
       Buffer (4) := Crc;
       Set_PktLen (UInt8 (Buffer'Last));
@@ -37,5 +44,30 @@ package body App is
                   others => <>));
       My_Delay (2); --  Semtech has this after sleep
    end App_Start;
+
+   procedure App_Start2 (Orig : UInt32; Sensor : Integer_16)
+   is
+      Buffer    : SPI_Data_8b (1 .. 4);
+      Bytes     : Four_UInt8;
+   begin
+      To_UInt8_From_Integer_32 (Result => Bytes, Value => Integer_32 (Sensor));
+      Buffer (1) := Bytes (1);
+      Buffer (2) := Bytes (2);
+      To_UInt8_From_UInt32 (Result => Bytes, Value => Orig);
+      Buffer (3) := Bytes (1);
+      Buffer (4) := Bytes (2);
+
+      Set_PktLen (UInt8 (Buffer'Last));
+      Write_Buffer (Offset => 0, Buffer => Buffer);
+--      Set_CadParams (NSyms => Two, Min => 10, Peak => 22, ExitMode => 1, Timeout => 1);
+--      Set_Cad;
+      Set_Tx (0);
+      --  Wait for TxDone
+      Suspend_Until_True (Tx_Go);
+      Set_Sleep ((StartSel => Cold_Startup,
+                  SleepCfg => Disabled,
+                  others => <>));
+      My_Delay (2); --  Semtech has this after sleep
+   end App_Start2;
 
 end App;

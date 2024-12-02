@@ -105,7 +105,12 @@ package body LIS3MDL is
       X : I2C_Data (1 .. 6);
       Y : Sensor_Data;
       for X'Address use Y'Address;
+      Stat : Status_Reg;
    begin
+      loop
+         Stat := This.Get_Status;
+         exit when Stat.XYZDataAvailable;
+      end loop;
       Read_Buffer (This.Port, LIS3MDL_OUT_X_L, X);
       Data := Y;
    end Read_MAG;
@@ -171,6 +176,7 @@ package body LIS3MDL is
 
    procedure Configure (This : in out LIS3MDL_Sensor)
    is
+      X   : UInt8;
    begin
       This.Soft_Reset;
       if This.Device_Id /= I_Am_LIS3MDL then
@@ -182,6 +188,9 @@ package body LIS3MDL is
       This.Set_XY_Perf (Ultra_Perf);
       This.Set_Z_Perf (Ultra_Perf);
       This.Set_DataRate (Hz_5);
+--      Read (This.Port, 16#1b#, X);
+--      X := X or 1; --  Per a Community post to disable SA1 internal pullup
+--      Write (This.Port, 16#1b#, X);
    end Configure;
 
 end LIS3MDL;
