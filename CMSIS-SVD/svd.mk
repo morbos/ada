@@ -29,7 +29,8 @@ svd:
 #	$(SVD2ADA_DIR)/svd2ada $(SVD2ADA_DIR)/CMSIS-SVD/ST/STM32U5xx.svd --boolean -o $(STM_DIR)/stm32u585 -p STM32_SVD --base-types-package HAL --gen-uint-always
 #	$(SVD2ADA_DIR)/svd2ada $(SVD2ADA_DIR)/CMSIS-SVD/ST/STM32U585.svd --boolean -o $(STM_DIR)/stm32u585 -p STM32_SVD --base-types-package HAL --gen-uint-always
 #	$(SVD2ADA_DIR)/svd2ada $(SVD2ADA_DIR)/CMSIS-SVD/ST/STM32U585_opt.svd --boolean -o $(STM_DIR)/stm32u585 -p STM32_SVD --base-types-package HAL --gen-uint-always
-	$(SVD2ADA_DIR)/svd2ada $(SVD2ADA_DIR)/CMSIS-SVD/ST/STM32U073.svd --boolean -o $(STM_DIR)/stm32u073 -p STM32_SVD --base-types-package HAL --gen-uint-always
+#	$(SVD2ADA_DIR)/svd2ada $(SVD2ADA_DIR)/CMSIS-SVD/ST/STM32U073.svd --boolean -o $(STM_DIR)/stm32u073 -p STM32_SVD --base-types-package HAL --gen-uint-always
+	$(SVD2ADA_DIR)/svd2ada $(SVD2ADA_DIR)/CMSIS-SVD/ST/STM32N657.svd --boolean -o $(STM_DIR)/stm32n657 -p STM32_SVD --base-types-package HAL --gen-uint-always
 #	$(SVD2ADA_DIR)/svd2ada $(SVD2ADA_DIR)/CMSIS-SVD/ST/xyz.svd --boolean -o /tmp/stm32l562 -p STM32_SVD --base-types-package HAL --gen-uint-always
 #	$(SVD2ADA_DIR)/svd2ada $(SVD2ADA_DIR)/CMSIS-SVD/ST/xyz.svd --boolean -o /tmp/stm32l562 -p STM32_SVD --base-types-package HAL --gen-uint-always
 #	$(SVD2ADA_DIR)/svd2ada $(SVD2ADA_DIR)/CMSIS-SVD/NXP/LPC55S6x_mod2.svd --boolean -o $(NXP_DIR)/lpc55s6x -p NXP_SVD --base-types-package HAL --gen-uint-always
@@ -53,7 +54,8 @@ svd:
 #	$(SVD2ADA_DIR)/svd2ada $(SVD2ADA_DIR)/CMSIS-SVD/ST/STM32L562.svd --boolean -o $(STM_INTER_DIR)/stm32l562 -p Interfaces.STM32 --base-types-package Interfaces.Bit_Types
 #	$(SVD2ADA_DIR)/svd2ada $(SVD2ADA_DIR)/CMSIS-SVD/ST/STM32U5xx.svd --boolean -o $(STM_INTER_DIR)/stm32u585 -p Interfaces.STM32 --base-types-package Interfaces.Bit_Types
 #	$(SVD2ADA_DIR)/svd2ada $(SVD2ADA_DIR)/CMSIS-SVD/ST/STM32U585.svd --boolean -o $(STM_INTER_DIR)/stm32u585 -p Interfaces.STM32 --base-types-package Interfaces.Bit_Types
-	$(SVD2ADA_DIR)/svd2ada $(SVD2ADA_DIR)/CMSIS-SVD/ST/STM32U073.svd --boolean -o $(STM_INTER_DIR)/stm32u073 -p Interfaces.STM32 --base-types-package Interfaces.Bit_Types
+#	$(SVD2ADA_DIR)/svd2ada $(SVD2ADA_DIR)/CMSIS-SVD/ST/STM32U073.svd --boolean -o $(STM_INTER_DIR)/stm32u073 -p Interfaces.STM32 --base-types-package Interfaces.Bit_Types
+	$(SVD2ADA_DIR)/svd2ada $(SVD2ADA_DIR)/CMSIS-SVD/ST/STM32N657.svd --boolean -o $(STM_INTER_DIR)/stm32n657 -p Interfaces.STM32 --base-types-package Interfaces.Bit_Types
 #	$(SVD2ADA_DIR)/svd2ada $(SVD2ADA_DIR)/CMSIS-SVD/NXP/LPC55S6x.svd --boolean -o $(NXP_INTER_DIR)/lpc55s6x -p Interfaces.NXP --base-types-package Interfaces.Bit_Types
 #	$(SVD2ADA_DIR)/svd2ada $(SVD2ADA_DIR)/CMSIS-SVD/ST/STM32F40x.svd --boolean -o $(STM_DIR)/stm32f40x -p STM32_SVD --base-types-package HAL --gen-uint-always
 #	$(SVD2ADA_DIR)/svd2ada $(SVD2ADA_DIR)/CMSIS-SVD/ST/STM32F429x.svd --boolean -o $(STM_DIR)/stm32f429x -p STM32_SVD --base-types-package HAL --gen-uint-always

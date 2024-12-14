@@ -1833,6 +1833,7 @@ package body Ada_Gen is
       Result : Ada_Type_Enum;
       Dead   : Ada_Enum_Value;
       Dead2  : constant Ada_Spec := New_Spec ("Standard", "", False);
+      pragma Unreferenced (Dead);
    begin
       Result := (Id      => To_Unbounded_String ("Boolean"),
                  Comment => New_Comment ("", False),
