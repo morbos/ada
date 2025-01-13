@@ -62,7 +62,7 @@ is
    Stance        : Door_Stance;
    Open_Value    : Integer;
    Closed_Value  : Integer;
-   Epsilon       : Integer := 100;
+   Epsilon       : Integer := 500;
    N_Seconds     : UInt32 := 30 * 60;
    Quanta        : UInt32 := 30;
 begin

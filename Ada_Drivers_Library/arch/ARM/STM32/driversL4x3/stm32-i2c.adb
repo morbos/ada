@@ -107,12 +107,20 @@ package body STM32.I2C is
       This.Periph.CR1.PE := False;
 
       --  Reset the timing register to 100_000 Hz
+--      This.Periph.TIMINGR :=
+--        (SCLL   => 50,
+--         SCLH   => 39,
+--         SDADEL => 1,
+--         SCLDEL => 9,
+--         PRESC  => 4,
+--         others => <>);
+
       This.Periph.TIMINGR :=
         (SCLL   => 50,
          SCLH   => 39,
          SDADEL => 1,
          SCLDEL => 9,
-         PRESC  => 4,
+         PRESC  => 8,
          others => <>);
 
       --  I2C Own Address Register configuration
