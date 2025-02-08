@@ -126,6 +126,16 @@ package body LIS3MDL is
       Write (This.Port, LIS3MDL_CTRL_REG2, X);
    end Soft_Reset;
 
+   function Get_Int_Src (This : in out LIS3MDL_Sensor) return INT_SRC_Reg
+   is
+      X   : UInt8;
+      Reg : INT_SRC_Reg;
+      for X'Address use Reg'Address;
+   begin
+      Read (This.Port, LIS3MDL_INT_SR, X);
+      return Reg;
+   end Get_Int_Src;
+
    procedure Set_Int_Src (This : in out LIS3MDL_Sensor; Src : INT_SRC_Reg)
    is
       X   : UInt8;
@@ -164,6 +174,16 @@ package body LIS3MDL is
    function Int_Set (This : in out LIS3MDL_Sensor) return Boolean
    is
       X   : UInt8;
+
+
+
+
+
+
+
+
+
+
       Reg : INT_SRC_Reg;
       for X'Address use Reg'Address;
    begin

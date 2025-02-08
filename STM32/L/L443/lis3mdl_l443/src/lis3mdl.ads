@@ -258,6 +258,7 @@ package LIS3MDL is
    procedure Set_Z_Perf (This : in out LIS3MDL_Sensor; Choice : Perf_Range);
 
    procedure Set_DataRate (This : in out LIS3MDL_Sensor; Choice : Rate_Range);
+   function Get_Int_Src (This : in out LIS3MDL_Sensor) return INT_SRC_Reg;
 
    procedure Set_Int_Src (This : in out LIS3MDL_Sensor; Src : INT_SRC_Reg);
 

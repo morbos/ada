@@ -16,7 +16,7 @@ package Peripherals is
    LIS3MDL_Address       : constant HAL.I2C.I2C_Address := 16#3c#;
    LIS3MDL_I2C_Clock_Pin : GPIO_Point renames PB6;
    LIS3MDL_I2C_Data_Pin  : GPIO_Point renames PB7;
-
+   LIS3MDL_Int_Pin       : GPIO_Point renames PB0;
    Sensor_Port : aliased LIS3MDL_I2C_IO.IO_Port := (LIS3MDL_I2C_Port, LIS3MDL_Address);
 
 end Peripherals;

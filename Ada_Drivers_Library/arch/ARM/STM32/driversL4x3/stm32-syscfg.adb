@@ -65,9 +65,48 @@ package body STM32.SYSCFG is
      (Port : GPIO_Port;
       Pin  : GPIO_Pin_Index)
    is
---      Port_Id  : constant UInt4 := GPIO_Port_Representation (Port);
+      Port_Id  : constant UInt3 := UInt3 (GPIO_Port_Representation (Port));
    begin
-      null;  --  L4 is diff than F4 here...
+
+      --  Finally we assign the port 'number' to the EXTI_n value within the
+      --  control register. We depend upon the Port enumerals' underlying
+      --  numeric representation values matching what the hardware expects,
+      --  that is, the values 0 .. n-1, which we get automatically unless
+      --  overridden.
+      case Pin is
+         when 0 =>
+            SYSCFG_Periph.EXTICR1.EXTI0 := Port_Id;
+         when 1 =>
+            SYSCFG_Periph.EXTICR1.EXTI1 := Port_Id;
+         when 2 =>
+            SYSCFG_Periph.EXTICR1.EXTI2 := Port_Id;
+         when 3 =>
+            SYSCFG_Periph.EXTICR1.EXTI3 := Port_Id;
+         when 4 =>
+            SYSCFG_Periph.EXTICR2.EXTI4 := Port_Id;
+         when 5 =>
+            SYSCFG_Periph.EXTICR2.EXTI5 := Port_Id;
+         when 6 =>
+            SYSCFG_Periph.EXTICR2.EXTI6 := Port_Id;
+         when 7 =>
+            SYSCFG_Periph.EXTICR2.EXTI7 := Port_Id;
+         when 8 =>
+            SYSCFG_Periph.EXTICR3.EXTI8 := Port_Id;
+         when 9 =>
+            SYSCFG_Periph.EXTICR3.EXTI9 := Port_Id;
+         when 10 =>
+            SYSCFG_Periph.EXTICR3.EXTI10 := Port_Id;
+         when 11 =>
+            SYSCFG_Periph.EXTICR3.EXTI11 := Port_Id;
+         when 12 =>
+            SYSCFG_Periph.EXTICR4.EXTI12 := Port_Id;
+         when 13 =>
+            SYSCFG_Periph.EXTICR4.EXTI13 := Port_Id;
+         when 14 =>
+            SYSCFG_Periph.EXTICR4.EXTI14 := Port_Id;
+         when 15 =>
+            SYSCFG_Periph.EXTICR4.EXTI15 := Port_Id;
+      end case;
    end Connect_External_Interrupt;
 
    --------------------------------

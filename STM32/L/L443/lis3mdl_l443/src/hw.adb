@@ -44,7 +44,7 @@ package body Hw is
 
          STM32.Device.Reset (Port.all);
 
-         GPIO_Conf.Speed       := Speed_50Mhz;
+         GPIO_Conf.Speed       := Speed_50MHz;
          GPIO_Conf.Mode        := Mode_AF;
          GPIO_Conf.Output_Type := Open_Drain;
          GPIO_Conf.Resistors   := Pull_Up;
@@ -63,12 +63,26 @@ package body Hw is
              others                   => <>));
 
       end Initialize_I2C_GPIO;
+      procedure Initialize_GPIO;
+      procedure Initialize_GPIO
+      is
+         Config       : GPIO_Port_Configuration;
+      begin
+         Enable_Clock (LIS3MDL_Int_Pin);
+         Config.Mode        := Mode_In;
+         Config.Output_Type := Push_Pull;
+         Config.Resistors   := Floating;
+         Config.Speed       := Speed_50MHz;
+         Configure_IO (LIS3MDL_Int_Pin, Config);
+      end Initialize_GPIO;
+
    begin
       Initialize_I2C_GPIO (Port   => LIS3MDL_I2C_Port,
                            SCL    => LIS3MDL_I2C_Clock_Pin,
                            SDA    => LIS3MDL_I2C_Data_Pin,
                            I2C_AF => LIS3MDL_I2C_Port_AF
                           );
+      Initialize_GPIO;
    end Initialize_HW;
 
 end Hw;
