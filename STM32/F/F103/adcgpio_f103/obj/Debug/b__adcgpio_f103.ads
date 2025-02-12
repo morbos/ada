@@ -8,8 +8,11 @@ package ada_main is
 
 
    GNAT_Version : constant String :=
-                    "GNAT Version: Community 2019 (20190517-74)" & ASCII.NUL;
+                    "GNAT Version: 14.1.0" & ASCII.NUL;
    pragma Export (C, GNAT_Version, "__gnat_version");
+
+   GNAT_Version_Address : constant System.Address := GNAT_Version'Address;
+   pragma Export (C, GNAT_Version_Address, "__gnat_version_address");
 
    Ada_Main_Program_Name : constant String := "_ada_adcgpio_f103" & ASCII.NUL;
    pragma Export (C, Ada_Main_Program_Name, "__gnat_ada_main_program_name");

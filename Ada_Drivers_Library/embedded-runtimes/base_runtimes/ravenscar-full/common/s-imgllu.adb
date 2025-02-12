@@ -6,7 +6,7 @@
 --                                                                          --
 --                                 B o d y                                  --
 --                                                                          --
---          Copyright (C) 1992-2018, Free Software Foundation, Inc.         --
+--          Copyright (C) 1992-2024, Free Software Foundation, Inc.         --
 --                                                                          --
 -- GNAT is free software;  you can  redistribute it  and/or modify it under --
 -- terms of the  GNU General Public License as published  by the Free Soft- --
@@ -15,9 +15,9 @@
 -- OUT ANY WARRANTY;  without even the  implied warranty of MERCHANTABILITY --
 -- or FITNESS FOR A PARTICULAR PURPOSE.                                     --
 --                                                                          --
---                                                                          --
---                                                                          --
---                                                                          --
+-- As a special exception under Section 7 of GPL version 3, you are granted --
+-- additional permissions described in the GCC Runtime Library Exception,   --
+-- version 3.1, as published by the Free Software Foundation.               --
 --                                                                          --
 -- You should have received a copy of the GNU General Public License and    --
 -- a copy of the GCC Runtime Library Exception along with this program;     --
@@ -29,45 +29,8 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-with System.Unsigned_Types; use System.Unsigned_Types;
+--  This package does not require a body, since it is an instantiation. We
+--  provide a dummy file containing a No_Body pragma so that previous versions
+--  of the body (which did exist) will not interfere.
 
-package body System.Img_LLU is
-
-   ------------------------------
-   -- Image_Long_Long_Unsigned --
-   ------------------------------
-
-   procedure Image_Long_Long_Unsigned
-     (V : System.Unsigned_Types.Long_Long_Unsigned;
-      S : in out String;
-      P : out Natural)
-   is
-      pragma Assert (S'First = 1);
-   begin
-      S (1) := ' ';
-      P := 1;
-      Set_Image_Long_Long_Unsigned (V, S, P);
-   end Image_Long_Long_Unsigned;
-
-   ----------------------------------
-   -- Set_Image_Long_Long_Unsigned --
-   ----------------------------------
-
-   procedure Set_Image_Long_Long_Unsigned
-     (V : Long_Long_Unsigned;
-      S : in out String;
-      P : in out Natural)
-   is
-   begin
-      if V >= 10 then
-         Set_Image_Long_Long_Unsigned (V / 10, S, P);
-         P := P + 1;
-         S (P) := Character'Val (48 + (V rem 10));
-
-      else
-         P := P + 1;
-         S (P) := Character'Val (48 + V);
-      end if;
-   end Set_Image_Long_Long_Unsigned;
-
-end System.Img_LLU;
+pragma No_Body;
