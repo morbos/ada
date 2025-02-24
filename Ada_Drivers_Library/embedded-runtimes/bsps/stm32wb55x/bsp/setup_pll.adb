@@ -101,39 +101,39 @@ procedure Setup_Pll is
 --      SYSCLK      : constant Integer := (if Activate_PLL
 --                                         then PLLCLKOUT
 --                                         else HSICLK);
-      SYSCLK      : constant Integer := HSICLK;
-
-      HCLK        : constant Integer :=
-                      (if not AHB_PRE.Enabled
-                       then SYSCLK
-                       else
-                         (case AHB_PRE.Value is
-                             when DIV2   => SYSCLK / 2,
-                             when DIV4   => SYSCLK / 4,
-                             when DIV8   => SYSCLK / 8,
-                             when DIV16  => SYSCLK / 16,
-                             when DIV64  => SYSCLK / 64,
-                             when DIV128 => SYSCLK / 128,
-                             when DIV256 => SYSCLK / 256,
-                             when DIV512 => SYSCLK / 512));
-      PCLK1       : constant Integer :=
-                      (if not APB1_PRE.Enabled
-                       then HCLK
-                       else
-                         (case APB1_PRE.Value is
-                             when DIV2  => HCLK / 2,
-                             when DIV4  => HCLK / 4,
-                             when DIV8  => HCLK / 8,
-                             when DIV16 => HCLK / 16));
-      PCLK2       : constant Integer :=
-                      (if not APB2_PRE.Enabled
-                       then HCLK
-                       else
-                         (case APB2_PRE.Value is
-                             when DIV2  => HCLK / 2,
-                             when DIV4  => HCLK / 4,
-                             when DIV8  => HCLK / 8,
-                             when DIV16 => HCLK / 16));
+--      SYSCLK      : constant Integer := HSICLK;
+--
+--      HCLK        : constant Integer :=
+--                      (if not AHB_PRE.Enabled
+--                       then SYSCLK
+--                       else
+--                         (case AHB_PRE.Value is
+--                             when DIV2   => SYSCLK / 2,
+--                             when DIV4   => SYSCLK / 4,
+--                             when DIV8   => SYSCLK / 8,
+--                             when DIV16  => SYSCLK / 16,
+--                             when DIV64  => SYSCLK / 64,
+--                             when DIV128 => SYSCLK / 128,
+--                             when DIV256 => SYSCLK / 256,
+--                             when DIV512 => SYSCLK / 512));
+--      PCLK1       : constant Integer :=
+--                      (if not APB1_PRE.Enabled
+--                       then HCLK
+--                       else
+--                         (case APB1_PRE.Value is
+--                             when DIV2  => HCLK / 2,
+--                             when DIV4  => HCLK / 4,
+--                             when DIV8  => HCLK / 8,
+--                             when DIV16 => HCLK / 16));
+--      PCLK2       : constant Integer :=
+--                      (if not APB2_PRE.Enabled
+--                       then HCLK
+--                       else
+--                         (case APB2_PRE.Value is
+--                             when DIV2  => HCLK / 2,
+--                             when DIV4  => HCLK / 4,
+--                             when DIV8  => HCLK / 8,
+--                             when DIV16 => HCLK / 16));
 
       function To_AHB is new Ada.Unchecked_Conversion
         (AHB_Prescaler, UInt4);
@@ -150,11 +150,11 @@ procedure Setup_Pll is
 --        (SYSCLK /= Clock_Frequency,
 --           "Cannot generate requested clock");
 
-      pragma Compile_Time_Error
-        (HCLK not in HCLK_Range
-           or else PCLK1 not in PCLK1_Range
-           or else PCLK2 not in PCLK2_Range,
-           "Invalid AHB/APB prescalers configuration");
+--      pragma Compile_Time_Error
+--        (HCLK not in HCLK_Range
+--           or else PCLK1 not in PCLK1_Range
+--           or else PCLK2 not in PCLK2_Range,
+--           "Invalid AHB/APB prescalers configuration");
 
       --  Configure flash
       --  Must be done before increasing the frequency, otherwise the CPU

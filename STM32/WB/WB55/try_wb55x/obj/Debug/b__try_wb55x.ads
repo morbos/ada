@@ -7,8 +7,11 @@ package ada_main is
 
 
    GNAT_Version : constant String :=
-                    "GNAT Version: Community 2019 (20190517-74)" & ASCII.NUL;
+                    "GNAT Version: 14.1.0" & ASCII.NUL;
    pragma Export (C, GNAT_Version, "__gnat_version");
+
+   GNAT_Version_Address : constant System.Address := GNAT_Version'Address;
+   pragma Export (C, GNAT_Version_Address, "__gnat_version_address");
 
    Ada_Main_Program_Name : constant String := "_ada_try_wb55x" & ASCII.NUL;
    pragma Export (C, Ada_Main_Program_Name, "__gnat_ada_main_program_name");
@@ -29,6 +32,9 @@ package ada_main is
    --  interfaces.bit_types%s
    --  system%s
    --  ada.io_exceptions%s
+   --  ada.numerics%s
+   --  ada.numerics.big_numbers%s
+   --  ada.strings%s
    --  interfaces.stm32%s
    --  interfaces.stm32.usart1%s
    --  system.bb%s
@@ -36,15 +42,15 @@ package ada_main is
    --  system.bb.cpu_specific%s
    --  system.exceptions%s
    --  system.exceptions%b
-   --  system.img_bool%s
-   --  system.img_bool%b
-   --  system.img_int%s
-   --  system.img_int%b
    --  system.machine_code%s
    --  system.parameters%s
    --  system.parameters%b
+   --  system.spark%s
+   --  system.spark.cut_operations%s
+   --  system.spark.cut_operations%b
    --  system.storage_elements%s
    --  system.storage_elements%b
+   --  system.return_stack%s
    --  system.secondary_stack%s
    --  system.secondary_stack%b
    --  gnat.debug_utilities%s
@@ -70,8 +76,6 @@ package ada_main is
    --  system.stm32%b
    --  system.text_io%s
    --  system.text_io%b
-   --  system.io%s
-   --  system.io%b
    --  system.wch_con%s
    --  system.wch_con%b
    --  system.wch_jis%s
@@ -82,9 +86,23 @@ package ada_main is
    --  ada.text_io%b
    --  system.address_image%s
    --  system.address_image%b
+   --  system.img_int%s
+   --  system.io%s
+   --  system.io%b
    --  system.traceback%s
    --  system.traceback%b
+   --  ada.strings.utf_encoding%s
+   --  ada.strings.utf_encoding.strings%s
+   --  ada.strings.utf_encoding.strings%b
+   --  ada.strings.utf_encoding.wide_strings%s
+   --  ada.strings.utf_encoding.wide_strings%b
+   --  ada.strings.utf_encoding.wide_wide_strings%s
+   --  ada.strings.utf_encoding.wide_wide_strings%b
    --  ada.tags%s
+   --  ada.strings.text_buffers%s
+   --  ada.strings.text_buffers%b
+   --  ada.strings.text_buffers.utils%s
+   --  ada.strings.text_buffers.utils%b
    --  system.bb.cpu_primitives%s
    --  system.bb.cpu_primitives.context_switch_trigger%s
    --  system.bb.cpu_primitives.context_switch_trigger%b
@@ -97,12 +115,14 @@ package ada_main is
    --  system.bb.threads%s
    --  system.bb.threads.queues%s
    --  system.bb.threads.queues%b
-   --  system.bb.timing_events%s
-   --  system.bb.timing_events%b
    --  system.multiprocessors.spin_locks%s
    --  system.multiprocessors.spin_locks%b
    --  system.multiprocessors.fair_locks%s
    --  system.os_interface%s
+   --  system.put_images%s
+   --  system.put_images%b
+   --  system.bb.timing_events%s
+   --  system.bb.timing_events%b
    --  system.standard_library%s
    --  ada.exceptions%s
    --  system.exceptions.machine%s
@@ -115,15 +135,16 @@ package ada_main is
    --  system.task_primitives.operations%s
    --  system.tasking.debug%s
    --  system.tasking.debug%b
-   --  system.val_uns%s
    --  system.val_util%s
    --  system.val_util%b
+   --  system.val_uns%s
    --  system.wch_stw%s
    --  system.wch_stw%b
    --  ada.exceptions.last_chance_handler%s
    --  ada.exceptions.last_chance_handler%b
    --  ada.exceptions.traceback%s
    --  ada.exceptions.traceback%b
+   --  ada.strings.utf_encoding%b
    --  ada.tags%b
    --  system.bb.cpu_primitives%b
    --  system.bb.interrupts%b
@@ -143,7 +164,6 @@ package ada_main is
    --  system.traceback.symbolic%s
    --  system.traceback.symbolic%b
    --  ada.exceptions%b
-   --  system.val_uns%b
    --  ada.streams%s
    --  ada.streams%b
    --  system.finalization_root%s

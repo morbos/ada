@@ -6,29 +6,30 @@ pragma Suppress (Overflow_Check);
 
 package body ada_main is
 
-   E121 : Short_Integer; pragma Import (Ada, E121, "ada__text_io_E");
-   E099 : Short_Integer; pragma Import (Ada, E099, "ada__tags_E");
-   E113 : Short_Integer; pragma Import (Ada, E113, "system__bb__timing_events_E");
-   E055 : Short_Integer; pragma Import (Ada, E055, "system__soft_links_E");
-   E053 : Short_Integer; pragma Import (Ada, E053, "system__exception_table_E");
-   E154 : Short_Integer; pragma Import (Ada, E154, "ada__streams_E");
-   E163 : Short_Integer; pragma Import (Ada, E163, "system__finalization_root_E");
-   E161 : Short_Integer; pragma Import (Ada, E161, "ada__finalization_E");
-   E165 : Short_Integer; pragma Import (Ada, E165, "system__storage_pools_E");
-   E158 : Short_Integer; pragma Import (Ada, E158, "system__finalization_masters_E");
+   E139 : Short_Integer; pragma Import (Ada, E139, "ada__text_io_E");
+   E115 : Short_Integer; pragma Import (Ada, E115, "ada__tags_E");
+   E104 : Short_Integer; pragma Import (Ada, E104, "ada__strings__text_buffers_E");
+   E102 : Short_Integer; pragma Import (Ada, E102, "system__bb__timing_events_E");
+   E056 : Short_Integer; pragma Import (Ada, E056, "system__soft_links_E");
+   E054 : Short_Integer; pragma Import (Ada, E054, "system__exception_table_E");
+   E172 : Short_Integer; pragma Import (Ada, E172, "ada__streams_E");
+   E179 : Short_Integer; pragma Import (Ada, E179, "system__finalization_root_E");
+   E177 : Short_Integer; pragma Import (Ada, E177, "ada__finalization_E");
+   E181 : Short_Integer; pragma Import (Ada, E181, "system__storage_pools_E");
+   E176 : Short_Integer; pragma Import (Ada, E176, "system__finalization_masters_E");
    E006 : Short_Integer; pragma Import (Ada, E006, "ada__real_time_E");
-   E167 : Short_Integer; pragma Import (Ada, E167, "system__pool_global_E");
-   E156 : Short_Integer; pragma Import (Ada, E156, "hal__gpio_E");
-   E174 : Short_Integer; pragma Import (Ada, E174, "hal__i2c_E");
-   E179 : Short_Integer; pragma Import (Ada, E179, "hal__spi_E");
-   E132 : Short_Integer; pragma Import (Ada, E132, "stm32__adc_E");
-   E149 : Short_Integer; pragma Import (Ada, E149, "stm32__exti_E");
-   E173 : Short_Integer; pragma Import (Ada, E173, "stm32__i2c_E");
-   E145 : Short_Integer; pragma Import (Ada, E145, "stm32__rcc_E");
-   E177 : Short_Integer; pragma Import (Ada, E177, "stm32__spi_E");
-   E143 : Short_Integer; pragma Import (Ada, E143, "stm32__gpio_E");
-   E128 : Short_Integer; pragma Import (Ada, E128, "stm32__device_E");
-   E147 : Short_Integer; pragma Import (Ada, E147, "stm32__syscfg_E");
+   E183 : Short_Integer; pragma Import (Ada, E183, "system__pool_global_E");
+   E174 : Short_Integer; pragma Import (Ada, E174, "hal__gpio_E");
+   E191 : Short_Integer; pragma Import (Ada, E191, "hal__i2c_E");
+   E196 : Short_Integer; pragma Import (Ada, E196, "hal__spi_E");
+   E150 : Short_Integer; pragma Import (Ada, E150, "stm32__adc_E");
+   E167 : Short_Integer; pragma Import (Ada, E167, "stm32__exti_E");
+   E190 : Short_Integer; pragma Import (Ada, E190, "stm32__i2c_E");
+   E163 : Short_Integer; pragma Import (Ada, E163, "stm32__rcc_E");
+   E194 : Short_Integer; pragma Import (Ada, E194, "stm32__spi_E");
+   E161 : Short_Integer; pragma Import (Ada, E161, "stm32__gpio_E");
+   E146 : Short_Integer; pragma Import (Ada, E146, "stm32__device_E");
+   E165 : Short_Integer; pragma Import (Ada, E165, "stm32__syscfg_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -39,7 +40,7 @@ package body ada_main is
 
    procedure adafinal is
       procedure s_stalib_adafinal;
-      pragma Import (C, s_stalib_adafinal, "system__standard_library__adafinal");
+      pragma Import (Ada, s_stalib_adafinal, "system__standard_library__adafinal");
 
       procedure Runtime_Finalize;
       pragma Import (C, Runtime_Finalize, "__gnat_runtime_finalize");
@@ -84,8 +85,6 @@ package body ada_main is
       pragma Import (C, Default_Stack_Size, "__gl_default_stack_size");
       Default_Secondary_Stack_Size : System.Parameters.Size_Type;
       pragma Import (C, Default_Secondary_Stack_Size, "__gnat_default_ss_size");
-      Leap_Seconds_Support : Integer;
-      pragma Import (C, Leap_Seconds_Support, "__gl_leap_seconds_support");
       Bind_Env_Addr : System.Address;
       pragma Import (C, Bind_Env_Addr, "__gl_bind_env_addr");
 
@@ -116,7 +115,6 @@ package body ada_main is
       Unreserve_All_Interrupts := 0;
       Detect_Blocking := 1;
       Default_Stack_Size := -1;
-      Leap_Seconds_Support := 0;
 
       ada_main'Elab_Body;
       Default_Secondary_Stack_Size := System.Parameters.Runtime_Default_Sec_Stack_Size;
@@ -126,52 +124,55 @@ package body ada_main is
       Runtime_Initialize (1);
 
       Ada.Text_Io'Elab_Body;
-      E121 := E121 + 1;
+      E139 := E139 + 1;
+      Ada.Strings.Text_Buffers'Elab_Spec;
+      E104 := E104 + 1;
       System.Bb.Timing_Events'Elab_Spec;
-      E113 := E113 + 1;
+      E102 := E102 + 1;
       System.Soft_Links'Elab_Spec;
       Ada.Tags'Elab_Body;
-      E099 := E099 + 1;
+      E115 := E115 + 1;
       System.Exception_Table'Elab_Body;
-      E053 := E053 + 1;
-      E055 := E055 + 1;
+      E054 := E054 + 1;
+      E056 := E056 + 1;
       Ada.Streams'Elab_Spec;
-      E154 := E154 + 1;
+      E172 := E172 + 1;
       System.Finalization_Root'Elab_Spec;
-      E163 := E163 + 1;
+      E179 := E179 + 1;
       Ada.Finalization'Elab_Spec;
-      E161 := E161 + 1;
+      E177 := E177 + 1;
       System.Storage_Pools'Elab_Spec;
-      E165 := E165 + 1;
+      E181 := E181 + 1;
       System.Finalization_Masters'Elab_Spec;
       System.Finalization_Masters'Elab_Body;
-      E158 := E158 + 1;
+      E176 := E176 + 1;
       Ada.Real_Time'Elab_Body;
       E006 := E006 + 1;
       System.Pool_Global'Elab_Spec;
-      E167 := E167 + 1;
+      System.Pool_Global'Elab_Body;
+      E183 := E183 + 1;
       HAL.GPIO'ELAB_SPEC;
-      E156 := E156 + 1;
-      HAL.I2C'ELAB_SPEC;
       E174 := E174 + 1;
+      HAL.I2C'ELAB_SPEC;
+      E191 := E191 + 1;
       HAL.SPI'ELAB_SPEC;
-      E179 := E179 + 1;
+      E196 := E196 + 1;
       STM32.ADC'ELAB_SPEC;
-      E132 := E132 + 1;
-      E149 := E149 + 1;
+      E150 := E150 + 1;
+      E167 := E167 + 1;
       STM32.I2C'ELAB_SPEC;
       STM32.I2C'ELAB_BODY;
-      E173 := E173 + 1;
-      E145 := E145 + 1;
+      E190 := E190 + 1;
+      E163 := E163 + 1;
       STM32.SPI'ELAB_SPEC;
       STM32.SPI'ELAB_BODY;
-      E177 := E177 + 1;
+      E194 := E194 + 1;
       STM32.GPIO'ELAB_SPEC;
       STM32.DEVICE'ELAB_SPEC;
-      E128 := E128 + 1;
-      E147 := E147 + 1;
+      E146 := E146 + 1;
+      E165 := E165 + 1;
       STM32.GPIO'ELAB_BODY;
-      E143 := E143 + 1;
+      E161 := E161 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
