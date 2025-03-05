@@ -604,7 +604,7 @@ package STM32_SVD.ADC is
 
    --  Analog to digital convertor
    type ADC_Peripheral
-     (Discriminent : ADC_Disc := Val_0)
+--     (Discriminent : ADC_Disc := Val_1)
    is record
       --  ADC interrupt and status register
       ISR     : aliased ISR_Register;
@@ -634,16 +634,17 @@ package STM32_SVD.ADC is
       CALFACT : aliased CALFACT_Register;
       --  ADC common configuration register
       CCR     : aliased CCR_Register;
-      case Discriminent is
-         when Val_0 =>
-            --  channel selection register
-            CHSELR0 : aliased CHSELR0_Register;
-         when Val_1 =>
-            --  channel selection register
-            CHSELR1 : aliased CHSELR1_Register;
-      end case;
+--      case Discriminent is
+--         when Val_0 =>
+--  channel selection register
+--            CHSELR0 : aliased CHSELR0_Register;
+--         when Val_1 =>
+--  channel selection register
+      CHSELR1 : aliased CHSELR1_Register;
+--      end case;
    end record
-     with Unchecked_Union, Volatile;
+     with Volatile;
+--     with Unchecked_Union, Volatile;
 
    for ADC_Peripheral use record
       ISR     at 16#0# range 0 .. 31;
@@ -660,7 +661,7 @@ package STM32_SVD.ADC is
       AWD3CR  at 16#A4# range 0 .. 31;
       CALFACT at 16#B4# range 0 .. 31;
       CCR     at 16#308# range 0 .. 31;
-      CHSELR0 at 16#28# range 0 .. 31;
+--      CHSELR0 at 16#28# range 0 .. 31;
       CHSELR1 at 16#28# range 0 .. 31;
    end record;
 

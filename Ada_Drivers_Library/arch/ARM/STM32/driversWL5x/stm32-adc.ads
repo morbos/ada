@@ -470,6 +470,8 @@ private
    procedure Enable_TemperatureSensor_Connection with
      Post => TemperatureSensor_Enabled;
 
+--   type Analog_To_Digital_Converter is new STM32_SVD.ADC.ADC_Peripheral (STM32_SVD.ADC.Val_1);
    type Analog_To_Digital_Converter is new STM32_SVD.ADC.ADC_Peripheral;
+--   type Analog_To_Digital_Converter_1 is new STM32_SVD.ADC.ADC_Peripheral (STM32_SVD.ADC.Val_1);
 
 end STM32.ADC;

@@ -49,6 +49,10 @@ package body STM32.ADC is
       Rank    : Regular_Channel_Rank)
      with Inline;
 
+   procedure Reset_Sequence_Positions
+     (This    : in out Analog_To_Digital_Converter)
+     with Inline;
+
    function Init (This : in out Analog_To_Digital_Converter) return Boolean is
       Cal : Boolean;
    begin
@@ -183,6 +187,7 @@ package body STM32.ADC is
    begin
       This.IER.EOCIE := Enable_EOC;
       This.CFGR1.CONT := Continuous;
+      This.CFGR1.CHSELRMOD := True;
 --
 --      This.CR1.SCAN := Conversions'Length > 1;
 --
@@ -195,6 +200,7 @@ package body STM32.ADC is
          This.CFGR1.EXTEN := 0;
 --      end if;
 --
+      Reset_Sequence_Positions (This);
       for Rank in Conversions'Range loop
          declare
             Conversion : Regular_Channel_Conversion renames Conversions (Rank);
@@ -592,19 +598,25 @@ package body STM32.ADC is
       end case;
    end Clear_Interrupt_Pending;
 
+
    ---------------------------
    -- Set_Sequence_Position --
    ---------------------------
-
    procedure Set_Sequence_Position
      (This    : in out Analog_To_Digital_Converter;
       Channel : Analog_Input_Channel;
       Rank    : Regular_Channel_Rank)
    is
    begin
---      This.CHSELR1.Arr (Integer (Rank)) := UInt4 (Channel);
-      null;
+      This.CHSELR1.Arr (Integer (Rank)) := UInt4 (Channel);
    end Set_Sequence_Position;
+
+   procedure Reset_Sequence_Positions
+     (This    : in out Analog_To_Digital_Converter)
+   is
+   begin
+      This.CHSELR1.Arr := (1 => UInt4 (16#F#), others => UInt4 (16#F#));
+   end Reset_Sequence_Positions;
 
    procedure Set_Sampling_Choice
      (This        : in out Analog_To_Digital_Converter;
