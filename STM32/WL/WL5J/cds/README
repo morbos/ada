@@ -17,9 +17,11 @@ gcc-14.1.0/gcc/ada/exp_ch4.adb:10858
                   Selector_Name (N));
             end if;
 
-To work around was to comment out that discriminant check.
-CHSELRx are overlays selected by a mode bit. Mode1, CHSELR1 is the mode
-that Adacores lib is set up for so we just remove the choice.
+The work around was to comment out that discriminant code in
+stm32_svd-adc.ads.
+CHSELRx are overlays selected by a mode bit. Mode1, CHSELR1 is the
+mode that Adacores lib is set up for so we just removed the choice
+from the .ads above.
 
 I tried many work arounds, no matter what I did, the Discriminent(sic)
 value below was always Val_0 (even with the default set to
