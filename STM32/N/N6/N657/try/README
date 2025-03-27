@@ -1,0 +1,7 @@
+First pass at an Ada program on the N6. This uses the Nucleo board
+with its on board STLINK. As shipped, the bootstrap is set to
+'development', the upshot of that is, the part drops into your code as
+secure. This is why all the libs and RTL are _s/_S.
+
+There is a tonne, and I mean a tonne of further work to get this
+target into usable shape.

@@ -542,7 +542,7 @@ package body STM32.USARTs is
       Timeout : Natural := 1000)
    is
       Stamp   : Time := Clock;
-      pragma Unreferenced (Status, Timeout);
+      pragma Unreferenced (Status);
    begin
       for Elt of Data loop
          loop

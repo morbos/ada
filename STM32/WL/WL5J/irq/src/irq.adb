@@ -1,3 +1,4 @@
+pragma Ada_2022;
 with HAL;                          use HAL;
 with HAL.Real_Time_Clock;          use HAL.Real_Time_Clock;
 with STM32.Device;                 use STM32.Device;

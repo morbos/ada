@@ -14,7 +14,7 @@ CC - helps to clarify the package used.
 
 So here we have five subdirs:
 
-F & L & U & WB & WL
+F & L & U & WB & WL & N
 
 F handles the first generation STM32 parts. Not too much here other
 than some work I do on the BluePill STM32F103C8 its in STM32/F/F103.
@@ -24,3 +24,5 @@ U is a low-power controller with higher performance than L
 
 WB is the Bluetooth controller.
 WL is the LoRa controller
+
+N is the AI enabled part. This work is new.

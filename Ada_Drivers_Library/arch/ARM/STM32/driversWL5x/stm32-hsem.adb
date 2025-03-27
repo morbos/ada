@@ -36,6 +36,7 @@ package body STM32.HSEM is
         with Address => System'To_Address (16#5800_1400#);
       X : UInt32;
       R : R_Register;
+      pragma Import (Ada, R); --  Dummy import to suppress init warning
       for R'Address use X'Address;
    begin
 --      STM32_SVD.HSEM.HSEM_Periph.R (Idx).LOCK := False;

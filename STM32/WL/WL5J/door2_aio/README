@@ -1,0 +1,14 @@
+This is the door code running on the All in One board (aio).
+It performs these steps: (BKP are the backup registers).
+   --  0) Check if we have calibrated if so goto 6), otherwise mark BKP as initialized
+   --  1) Cal door open
+   --     throw 1st reading away
+   --     in 5sec, read 5 times and take the avg
+   --  2) 10second deadzone (move doorbolt)
+   --  3) Cal door closed
+   --     throw 1st reading away
+   --     in 5sec, read 5 times and take the avg
+   --  4) find which reading has the greatest diff
+   --  5) Mark the BKP rams with a) a magic b) which axis c) open/closed values d) curr stance
+   --  6) Every :30 seconds, power up the mag take a reading, if curr stance != BKP send a pkt
+   --  7) if door stance is open, every :30min send a pkt

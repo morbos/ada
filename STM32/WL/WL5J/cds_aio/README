@@ -1,0 +1,47 @@
+Test of the ADC on the WL. Using the svd2ada svd files from ST's
+SWM32WL5x_CM4.svd file, it produced a variant record for CHSELx as
+that field is selected by a mode bit in another reg.
+
+When building using CHSEL1 as the discriminator choice (Val_1) the
+code gets a compiler error:
+
+In gcc
+gcc-14.1.0/gcc/ada/exp_ch4.adb:10858
+            if not Is_Unchecked_Union
+                    (Implementation_Base_Type (Etype (Prefix (N))))
+              and then not Is_Predefined_Unit (Get_Source_Unit (N))
+            then
+               Error_Msg_N
+---->>          ("sorry - unable to generate discriminant check for" &
+                    " reference to variant component &",
+                  Selector_Name (N));
+            end if;
+
+The work around was to comment out that discriminant code in
+stm32_svd-adc.ads.
+CHSELRx are overlays selected by a mode bit. Mode1, CHSELR1 is the
+mode that Adacores lib is set up for so we just removed the choice
+from the .ads above.
+
+I tried many work arounds, no matter what I did, the Discriminent(sic)
+value below was always Val_0 (even with the default set to
+Val_1). Also, to get the 'sorry' error message to go away I had to
+remove the Unchecked_Union aspect. No clue why that message was
+emitted. Lots I don't understand here.
+
+   --  Analog to digital convertor
+   type ADC_Peripheral
+--     (Discriminent : ADC_Disc := Val_1)
+   is record
+...
+--      case Discriminent is
+--         when Val_0 =>
+--  channel selection register
+--            CHSELR0 : aliased CHSELR0_Register;
+--         when Val_1 =>
+--  channel selection register
+      CHSELR1 : aliased CHSELR1_Register;
+--      end case;
+   end record
+     with Volatile;
+--     with Unchecked_Union, Volatile;

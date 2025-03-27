@@ -14,10 +14,10 @@ package STM32_SVD.I2C is
    -- Registers --
    ---------------
 
-   subtype I2C_CR1_DNF_Field is HAL.UInt4;
+   subtype CR1_DNF_Field is HAL.UInt4;
 
    --  I2C control register 1
-   type I2C_CR1_Register is record
+   type CR1_Register is record
       --  Peripheral enable
       PE             : Boolean := False;
       --  TX Interrupt enable
@@ -35,7 +35,7 @@ package STM32_SVD.I2C is
       --  Error interrupts enable
       ERRIE          : Boolean := False;
       --  Digital noise filter
-      DNF            : I2C_CR1_DNF_Field := 16#0#;
+      DNF            : CR1_DNF_Field := 16#0#;
       --  Analog noise filter OFF
       ANFOFF         : Boolean := False;
       --  unspecified
@@ -72,7 +72,7 @@ package STM32_SVD.I2C is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for I2C_CR1_Register use record
+   for CR1_Register use record
       PE             at 0 range 0 .. 0;
       TXIE           at 0 range 1 .. 1;
       RXIE           at 0 range 2 .. 2;
@@ -100,13 +100,13 @@ package STM32_SVD.I2C is
       STOPFACLR      at 0 range 31 .. 31;
    end record;
 
-   subtype I2C_CR2_SADD_Field is HAL.UInt10;
-   subtype I2C_CR2_NBYTES_Field is HAL.UInt8;
+   subtype CR2_SADD_Field is HAL.UInt10;
+   subtype CR2_NBYTES_Field is HAL.UInt8;
 
    --  I2C control register 2
-   type I2C_CR2_Register is record
+   type CR2_Register is record
       --  Slave address (master mode)
-      SADD           : I2C_CR2_SADD_Field := 16#0#;
+      SADD           : CR2_SADD_Field := 16#0#;
       --  Transfer direction (master mode)
       RD_WRN         : Boolean := False;
       --  10-bit addressing mode (master mode)
@@ -120,7 +120,7 @@ package STM32_SVD.I2C is
       --  NACK generation (slave mode)
       NACK           : Boolean := False;
       --  Number of bytes
-      NBYTES         : I2C_CR2_NBYTES_Field := 16#0#;
+      NBYTES         : CR2_NBYTES_Field := 16#0#;
       --  NBYTES reload mode
       RELOAD         : Boolean := False;
       --  Automatic end mode (master mode)
@@ -133,7 +133,7 @@ package STM32_SVD.I2C is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for I2C_CR2_Register use record
+   for CR2_Register use record
       SADD           at 0 range 0 .. 9;
       RD_WRN         at 0 range 10 .. 10;
       ADD10          at 0 range 11 .. 11;
@@ -148,12 +148,12 @@ package STM32_SVD.I2C is
       Reserved_27_31 at 0 range 27 .. 31;
    end record;
 
-   subtype I2C_OAR1_OA1_Field is HAL.UInt10;
+   subtype OAR1_OA1_Field is HAL.UInt10;
 
    --  I2C own address 1 register
-   type I2C_OAR1_Register is record
+   type OAR1_Register is record
       --  Interface own slave address
-      OA1            : I2C_OAR1_OA1_Field := 16#0#;
+      OA1            : OAR1_OA1_Field := 16#0#;
       --  Own address 1 10-bit mode
       OA1MODE        : Boolean := False;
       --  unspecified
@@ -166,7 +166,7 @@ package STM32_SVD.I2C is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for I2C_OAR1_Register use record
+   for OAR1_Register use record
       OA1            at 0 range 0 .. 9;
       OA1MODE        at 0 range 10 .. 10;
       Reserved_11_14 at 0 range 11 .. 14;
@@ -174,17 +174,17 @@ package STM32_SVD.I2C is
       Reserved_16_31 at 0 range 16 .. 31;
    end record;
 
-   subtype I2C_OAR2_OA2_Field is HAL.UInt7;
-   subtype I2C_OAR2_OA2MSK_Field is HAL.UInt3;
+   subtype OAR2_OA2_Field is HAL.UInt7;
+   subtype OAR2_OA2MSK_Field is HAL.UInt3;
 
    --  I2C own address 2 register
-   type I2C_OAR2_Register is record
+   type OAR2_Register is record
       --  unspecified
       Reserved_0_0   : HAL.Bit := 16#0#;
       --  Interface address
-      OA2            : I2C_OAR2_OA2_Field := 16#0#;
+      OA2            : OAR2_OA2_Field := 16#0#;
       --  Own address 2 masks
-      OA2MSK         : I2C_OAR2_OA2MSK_Field := 16#0#;
+      OA2MSK         : OAR2_OA2MSK_Field := 16#0#;
       --  unspecified
       Reserved_11_14 : HAL.UInt4 := 16#0#;
       --  Own address 2 enable
@@ -195,7 +195,7 @@ package STM32_SVD.I2C is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for I2C_OAR2_Register use record
+   for OAR2_Register use record
       Reserved_0_0   at 0 range 0 .. 0;
       OA2            at 0 range 1 .. 7;
       OA2MSK         at 0 range 8 .. 10;
@@ -204,31 +204,31 @@ package STM32_SVD.I2C is
       Reserved_16_31 at 0 range 16 .. 31;
    end record;
 
-   subtype I2C_TIMINGR_SCLL_Field is HAL.UInt8;
-   subtype I2C_TIMINGR_SCLH_Field is HAL.UInt8;
-   subtype I2C_TIMINGR_SDADEL_Field is HAL.UInt4;
-   subtype I2C_TIMINGR_SCLDEL_Field is HAL.UInt4;
-   subtype I2C_TIMINGR_PRESC_Field is HAL.UInt4;
+   subtype TIMINGR_SCLL_Field is HAL.UInt8;
+   subtype TIMINGR_SCLH_Field is HAL.UInt8;
+   subtype TIMINGR_SDADEL_Field is HAL.UInt4;
+   subtype TIMINGR_SCLDEL_Field is HAL.UInt4;
+   subtype TIMINGR_PRESC_Field is HAL.UInt4;
 
    --  I2C timing register
-   type I2C_TIMINGR_Register is record
+   type TIMINGR_Register is record
       --  SCL low period (master mode)
-      SCLL           : I2C_TIMINGR_SCLL_Field := 16#0#;
+      SCLL           : TIMINGR_SCLL_Field := 16#0#;
       --  SCL high period (master mode)
-      SCLH           : I2C_TIMINGR_SCLH_Field := 16#0#;
+      SCLH           : TIMINGR_SCLH_Field := 16#0#;
       --  Data hold time
-      SDADEL         : I2C_TIMINGR_SDADEL_Field := 16#0#;
+      SDADEL         : TIMINGR_SDADEL_Field := 16#0#;
       --  Data setup time
-      SCLDEL         : I2C_TIMINGR_SCLDEL_Field := 16#0#;
+      SCLDEL         : TIMINGR_SCLDEL_Field := 16#0#;
       --  unspecified
       Reserved_24_27 : HAL.UInt4 := 16#0#;
       --  Timing prescaler
-      PRESC          : I2C_TIMINGR_PRESC_Field := 16#0#;
+      PRESC          : TIMINGR_PRESC_Field := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for I2C_TIMINGR_Register use record
+   for TIMINGR_Register use record
       SCLL           at 0 range 0 .. 7;
       SCLH           at 0 range 8 .. 15;
       SDADEL         at 0 range 16 .. 19;
@@ -237,13 +237,13 @@ package STM32_SVD.I2C is
       PRESC          at 0 range 28 .. 31;
    end record;
 
-   subtype I2C_TIMEOUTR_TIMEOUTA_Field is HAL.UInt12;
-   subtype I2C_TIMEOUTR_TIMEOUTB_Field is HAL.UInt12;
+   subtype TIMEOUTR_TIMEOUTA_Field is HAL.UInt12;
+   subtype TIMEOUTR_TIMEOUTB_Field is HAL.UInt12;
 
    --  I2C timeout register
-   type I2C_TIMEOUTR_Register is record
+   type TIMEOUTR_Register is record
       --  Bus Timeout A
-      TIMEOUTA       : I2C_TIMEOUTR_TIMEOUTA_Field := 16#0#;
+      TIMEOUTA       : TIMEOUTR_TIMEOUTA_Field := 16#0#;
       --  Idle clock timeout detection
       TIDLE          : Boolean := False;
       --  unspecified
@@ -251,7 +251,7 @@ package STM32_SVD.I2C is
       --  Clock timeout enable
       TIMOUTEN       : Boolean := False;
       --  Bus timeout B
-      TIMEOUTB       : I2C_TIMEOUTR_TIMEOUTB_Field := 16#0#;
+      TIMEOUTB       : TIMEOUTR_TIMEOUTB_Field := 16#0#;
       --  unspecified
       Reserved_28_30 : HAL.UInt3 := 16#0#;
       --  Extended clock timeout enable
@@ -260,7 +260,7 @@ package STM32_SVD.I2C is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for I2C_TIMEOUTR_Register use record
+   for TIMEOUTR_Register use record
       TIMEOUTA       at 0 range 0 .. 11;
       TIDLE          at 0 range 12 .. 12;
       Reserved_13_14 at 0 range 13 .. 14;
@@ -270,10 +270,10 @@ package STM32_SVD.I2C is
       TEXTEN         at 0 range 31 .. 31;
    end record;
 
-   subtype I2C_ISR_ADDCODE_Field is HAL.UInt7;
+   subtype ISR_ADDCODE_Field is HAL.UInt7;
 
    --  I2C interrupt and status register
-   type I2C_ISR_Register is record
+   type ISR_Register is record
       --  Transmit data register empty (transmitters)
       TXE            : Boolean := True;
       --  Transmit interrupt status (transmitters)
@@ -309,14 +309,14 @@ package STM32_SVD.I2C is
       --  Read-only. Transfer direction (Slave mode)
       DIR            : Boolean := False;
       --  Read-only. Address match code (Slave mode)
-      ADDCODE        : I2C_ISR_ADDCODE_Field := 16#0#;
+      ADDCODE        : ISR_ADDCODE_Field := 16#0#;
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for I2C_ISR_Register use record
+   for ISR_Register use record
       TXE            at 0 range 0 .. 0;
       TXIS           at 0 range 1 .. 1;
       RXNE           at 0 range 2 .. 2;
@@ -339,7 +339,7 @@ package STM32_SVD.I2C is
    end record;
 
    --  I2C interrupt clear register
-   type I2C_ICR_Register is record
+   type ICR_Register is record
       --  unspecified
       Reserved_0_2   : HAL.UInt3 := 16#0#;
       --  Write-only. Address matched flag clear
@@ -368,7 +368,7 @@ package STM32_SVD.I2C is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for I2C_ICR_Register use record
+   for ICR_Register use record
       Reserved_0_2   at 0 range 0 .. 2;
       ADDRCF         at 0 range 3 .. 3;
       NACKCF         at 0 range 4 .. 4;
@@ -383,53 +383,53 @@ package STM32_SVD.I2C is
       Reserved_14_31 at 0 range 14 .. 31;
    end record;
 
-   subtype I2C_PECR_PEC_Field is HAL.UInt8;
+   subtype PECR_PEC_Field is HAL.UInt8;
 
    --  I2C PEC register
-   type I2C_PECR_Register is record
+   type PECR_Register is record
       --  Read-only. Packet error checking register
-      PEC           : I2C_PECR_PEC_Field;
+      PEC           : PECR_PEC_Field;
       --  unspecified
       Reserved_8_31 : HAL.UInt24;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for I2C_PECR_Register use record
+   for PECR_Register use record
       PEC           at 0 range 0 .. 7;
       Reserved_8_31 at 0 range 8 .. 31;
    end record;
 
-   subtype I2C_RXDR_RXDATA_Field is HAL.UInt8;
+   subtype RXDR_RXDATA_Field is HAL.UInt8;
 
    --  I2C receive data register
-   type I2C_RXDR_Register is record
+   type RXDR_Register is record
       --  Read-only. 8-bit receive data
-      RXDATA        : I2C_RXDR_RXDATA_Field;
+      RXDATA        : RXDR_RXDATA_Field;
       --  unspecified
       Reserved_8_31 : HAL.UInt24;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for I2C_RXDR_Register use record
+   for RXDR_Register use record
       RXDATA        at 0 range 0 .. 7;
       Reserved_8_31 at 0 range 8 .. 31;
    end record;
 
-   subtype I2C_TXDR_TXDATA_Field is HAL.UInt8;
+   subtype TXDR_TXDATA_Field is HAL.UInt8;
 
    --  I2C transmit data register
-   type I2C_TXDR_Register is record
+   type TXDR_Register is record
       --  8-bit transmit data
-      TXDATA        : I2C_TXDR_TXDATA_Field := 16#0#;
+      TXDATA        : TXDR_TXDATA_Field := 16#0#;
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for I2C_TXDR_Register use record
+   for TXDR_Register use record
       TXDATA        at 0 range 0 .. 7;
       Reserved_8_31 at 0 range 8 .. 31;
    end record;
@@ -441,42 +441,42 @@ package STM32_SVD.I2C is
    --  Inter-integrated circuit
    type I2C_Peripheral is record
       --  I2C control register 1
-      I2C_CR1      : aliased I2C_CR1_Register;
+      CR1      : aliased CR1_Register;
       --  I2C control register 2
-      I2C_CR2      : aliased I2C_CR2_Register;
+      CR2      : aliased CR2_Register;
       --  I2C own address 1 register
-      I2C_OAR1     : aliased I2C_OAR1_Register;
+      OAR1     : aliased OAR1_Register;
       --  I2C own address 2 register
-      I2C_OAR2     : aliased I2C_OAR2_Register;
+      OAR2     : aliased OAR2_Register;
       --  I2C timing register
-      I2C_TIMINGR  : aliased I2C_TIMINGR_Register;
+      TIMINGR  : aliased TIMINGR_Register;
       --  I2C timeout register
-      I2C_TIMEOUTR : aliased I2C_TIMEOUTR_Register;
+      TIMEOUTR : aliased TIMEOUTR_Register;
       --  I2C interrupt and status register
-      I2C_ISR      : aliased I2C_ISR_Register;
+      ISR      : aliased ISR_Register;
       --  I2C interrupt clear register
-      I2C_ICR      : aliased I2C_ICR_Register;
+      ICR      : aliased ICR_Register;
       --  I2C PEC register
-      I2C_PECR     : aliased I2C_PECR_Register;
+      PECR     : aliased PECR_Register;
       --  I2C receive data register
-      I2C_RXDR     : aliased I2C_RXDR_Register;
+      RXDR     : aliased RXDR_Register;
       --  I2C transmit data register
-      I2C_TXDR     : aliased I2C_TXDR_Register;
+      TXDR     : aliased TXDR_Register;
    end record
      with Volatile;
 
    for I2C_Peripheral use record
-      I2C_CR1      at 16#0# range 0 .. 31;
-      I2C_CR2      at 16#4# range 0 .. 31;
-      I2C_OAR1     at 16#8# range 0 .. 31;
-      I2C_OAR2     at 16#C# range 0 .. 31;
-      I2C_TIMINGR  at 16#10# range 0 .. 31;
-      I2C_TIMEOUTR at 16#14# range 0 .. 31;
-      I2C_ISR      at 16#18# range 0 .. 31;
-      I2C_ICR      at 16#1C# range 0 .. 31;
-      I2C_PECR     at 16#20# range 0 .. 31;
-      I2C_RXDR     at 16#24# range 0 .. 31;
-      I2C_TXDR     at 16#28# range 0 .. 31;
+      CR1      at 16#0# range 0 .. 31;
+      CR2      at 16#4# range 0 .. 31;
+      OAR1     at 16#8# range 0 .. 31;
+      OAR2     at 16#C# range 0 .. 31;
+      TIMINGR  at 16#10# range 0 .. 31;
+      TIMEOUTR at 16#14# range 0 .. 31;
+      ISR      at 16#18# range 0 .. 31;
+      ICR      at 16#1C# range 0 .. 31;
+      PECR     at 16#20# range 0 .. 31;
+      RXDR     at 16#24# range 0 .. 31;
+      TXDR     at 16#28# range 0 .. 31;
    end record;
 
    --  Inter-integrated circuit

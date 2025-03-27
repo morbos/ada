@@ -14,10 +14,10 @@ package STM32_SVD.PKA is
    -- Registers --
    ---------------
 
-   subtype PKA_CR_MODE_Field is HAL.UInt6;
+   subtype CR_MODE_Field is HAL.UInt6;
 
    --  PKA control register
-   type PKA_CR_Register is record
+   type CR_Register is record
       --  PKA enable.
       EN             : Boolean := False;
       --  start the operation
@@ -25,7 +25,7 @@ package STM32_SVD.PKA is
       --  unspecified
       Reserved_2_7   : HAL.UInt6 := 16#0#;
       --  PKA operation code
-      MODE           : PKA_CR_MODE_Field := 16#0#;
+      MODE           : CR_MODE_Field := 16#0#;
       --  unspecified
       Reserved_14_16 : HAL.UInt3 := 16#0#;
       --  End of operation interrupt enable
@@ -44,7 +44,7 @@ package STM32_SVD.PKA is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PKA_CR_Register use record
+   for CR_Register use record
       EN             at 0 range 0 .. 0;
       START          at 0 range 1 .. 1;
       Reserved_2_7   at 0 range 2 .. 7;
@@ -59,7 +59,7 @@ package STM32_SVD.PKA is
    end record;
 
    --  PKA status register
-   type PKA_SR_Register is record
+   type SR_Register is record
       --  Read-only. PKA initialization OK
       INITOK         : Boolean;
       --  Read-only. Limited mode flag
@@ -84,7 +84,7 @@ package STM32_SVD.PKA is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PKA_SR_Register use record
+   for SR_Register use record
       INITOK         at 0 range 0 .. 0;
       LMF            at 0 range 1 .. 1;
       Reserved_2_15  at 0 range 2 .. 15;
@@ -98,7 +98,7 @@ package STM32_SVD.PKA is
    end record;
 
    --  PKA clear flag register
-   type PKA_CLRFR_Register is record
+   type CLRFR_Register is record
       --  unspecified
       Reserved_0_16  : HAL.UInt17 := 16#0#;
       --  Write-only. Clear PKA End of Operation flag
@@ -117,7 +117,7 @@ package STM32_SVD.PKA is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PKA_CLRFR_Register use record
+   for CLRFR_Register use record
       Reserved_0_16  at 0 range 0 .. 16;
       PROCENDFC      at 0 range 17 .. 17;
       Reserved_18_18 at 0 range 18 .. 18;
@@ -134,18 +134,18 @@ package STM32_SVD.PKA is
    --  Public key accelerator
    type PKA_Peripheral is record
       --  PKA control register
-      PKA_CR    : aliased PKA_CR_Register;
+      CR    : aliased CR_Register;
       --  PKA status register
-      PKA_SR    : aliased PKA_SR_Register;
+      SR    : aliased SR_Register;
       --  PKA clear flag register
-      PKA_CLRFR : aliased PKA_CLRFR_Register;
+      CLRFR : aliased CLRFR_Register;
    end record
      with Volatile;
 
    for PKA_Peripheral use record
-      PKA_CR    at 16#0# range 0 .. 31;
-      PKA_SR    at 16#4# range 0 .. 31;
-      PKA_CLRFR at 16#8# range 0 .. 31;
+      CR    at 16#0# range 0 .. 31;
+      SR    at 16#4# range 0 .. 31;
+      CLRFR at 16#8# range 0 .. 31;
    end record;
 
    --  Public key accelerator

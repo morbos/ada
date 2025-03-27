@@ -16,7 +16,7 @@ package body App is
    procedure App_Start
    is
       Buffer    : SPI_Data_8b (1 .. 4);
-      OurId     : UInt8 := 255;
+      OurId     : UInt8 := 250;
       Crc       : UInt8 := 16#FF#;
    begin
       Gen_Crc8_Table;

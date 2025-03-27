@@ -1,0 +1,11 @@
+x/x 0
+set pagination off
+set logging overwrite on
+set logging file radio.log
+set logging redirect on
+set logging on
+x/1024b 0x20000af8
+set logging off
+
+ruby ~/ruby/loralog2.rb radio.log >radio.txt
+ruby ~/ada/xml/logs2dump.rb -s ~/ada/xml/STM32WL5x_CM4.svd >idx.txt
