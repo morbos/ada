@@ -1,4 +1,4 @@
-SVD2ADA_DIR?=/media/16T/ada/svd2ada
+SVD2ADA_DIR?=/extra1/ada/svd2ada
 CORTEX_DIR=$(PWD)/ARM/cortex_m/src
 STM_DIR=$(PWD)/ARM/STM32/svd
 STM_INTER_DIR=$(PWD)/ARM/STM32/interface
