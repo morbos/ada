@@ -15,6 +15,7 @@ with Peripherals;                  use Peripherals;
 with Hw;                           use Hw;
 with LIS3MDL_I2C;                  use LIS3MDL_I2C;
 with Mag;                          use Mag;
+with Uart;                         use Uart;
 
 use STM32; -- for GPIO_Alternate_Function
 
@@ -38,13 +39,18 @@ is
                                  Interrupt_Rising_Edge);
    end Init_Interrupts;
 begin
+   My_Delay (1_000);
    Initialize_Board;
    Initialize_HW;
+   Turn_Off (Green_LED);
    Init_Interrupts;
    Set_Up_MAG;
    Setup_Mag_Interrupt;
+   Initialize_Uart;
+--   Enable_MCO;
    loop
       Get_Mag_Reading (Got); --  Toss
+      Send_Message (Got (X_Axis)'Image & ASCII.CR & ASCII.LF);
       My_Delay (1_000);
    end loop;
 

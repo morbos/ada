@@ -9,4 +9,6 @@ package Mag is
 
    procedure Get_Mag_Int_Src (Got : out INT_SRC_Reg);
 
+   procedure Check_Threshold;
+
 end Mag;

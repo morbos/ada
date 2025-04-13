@@ -74,6 +74,8 @@ package body Hw is
          Config.Resistors   := Floating;
          Config.Speed       := Speed_50MHz;
          Configure_IO (LIS3MDL_Int_Pin, Config);
+
+
       end Initialize_GPIO;
 
    begin
@@ -84,5 +86,25 @@ package body Hw is
                           );
       Initialize_GPIO;
    end Initialize_HW;
+
+   procedure Enable_MCO
+   is
+      GPIO_Conf       : GPIO_Port_Configuration;
+   begin
+      Enable_Clock (PA8);
+
+      GPIO_Conf.Speed       := Speed_100MHz;
+      GPIO_Conf.Mode        := Mode_AF;
+      GPIO_Conf.Output_Type := Push_Pull;
+      GPIO_Conf.Resistors   := Floating;
+
+      Configure_IO (PA8, GPIO_Conf);
+
+      Configure_Alternate_Function (PA8, GPIO_AF_MCO_0);
+
+      RCC_Periph.CFGR.MCOPRE := 3;
+      RCC_Periph.CFGR.MCOSEL := 1; --  SYSCLK
+
+   end Enable_MCO;
 
 end Hw;

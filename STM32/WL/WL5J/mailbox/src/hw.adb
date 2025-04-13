@@ -41,6 +41,13 @@ package body Hw is
          Config       : GPIO_Port_Configuration;
          RF_SW_Pins   : GPIO_Points := RF_SW_Pin2 & RF_SW_Pin1;
       begin
+         Enable_Clock (LIS3MDL_Int_Pin);
+         Config.Mode        := Mode_In;
+         Config.Output_Type := Push_Pull;
+         Config.Resistors   := Floating;
+         Config.Speed       := High_Speed;
+         Configure_IO (LIS3MDL_Int_Pin, Config);
+
          Enable_Clock (HF_Pin);
          Enable_Clock (RF_SW_Pins);
 
@@ -59,39 +66,50 @@ package body Hw is
          Clear (RF_SW_Pin1);
          Set (RF_SW_Pin2);
 
-         Enable_Clock (LIS3MDL_Power_Pin);
+         Enable_Clock (TCXO_Pin);
+
+         Config.Speed       := High_Speed;
+         Config.Mode        := Mode_Out;
          Config.Output_Type := Push_Pull;
          Config.Resistors   := Floating;
-         Config.Speed       := Low_Speed;
+         Configure_IO (TCXO_Pin, Config);
+
+         Set (TCXO_Pin);
+
+         Enable_Clock (Red_Led_Pin);
+
+         Config.Speed       := High_Speed;
          Config.Mode        := Mode_Out;
-         Configure_IO (LIS3MDL_Power_Pin, Config);
-
-         Clear (LIS3MDL_Power_Pin); --  Start on
-
-         Enable_Clock (LED_Pin);
          Config.Output_Type := Push_Pull;
          Config.Resistors   := Floating;
-         Config.Speed       := Low_Speed;
+         Configure_IO (Red_Led_Pin, Config);
+
+         Enable_Clock (Green_Led_Pin);
+
+         Config.Speed       := High_Speed;
          Config.Mode        := Mode_Out;
-         Configure_IO (LED_Pin, Config);
-
-         Clear (LED_Pin); --  Start off
-
-         Enable_Clock (LED_Gnd_Pin);
          Config.Output_Type := Push_Pull;
          Config.Resistors   := Floating;
-         Config.Speed       := Low_Speed;
+         Configure_IO (Green_Led_Pin, Config);
+
+         Clear (Red_Led_Pin);
+         Clear (Green_Led_Pin);
+
+         Enable_Clock (UART2_TX_Pin);
+
+         Config.Speed       := High_Speed;
          Config.Mode        := Mode_Out;
-         Configure_IO (LED_Gnd_Pin, Config);
-
-         Clear (LED_Gnd_Pin);
-
-         Enable_Clock (LIS3MDL_Pwr_Pin);
          Config.Output_Type := Push_Pull;
          Config.Resistors   := Floating;
-         Config.Speed       := Low_Speed;
-         Config.Mode        := Mode_Out;
-         Configure_IO (LIS3MDL_Pwr_Pin, Config);
+         Configure_IO (UART2_TX_Pin, Config);
+
+         Enable_Clock (UART2_RX_Pin);
+
+         Config.Speed       := High_Speed;
+         Config.Mode        := Mode_In;
+         Config.Output_Type := Push_Pull;
+         Config.Resistors   := Floating;
+         Configure_IO (UART2_RX_Pin, Config);
 
       end Initialize_GPIO;
 
@@ -148,17 +166,29 @@ package body Hw is
 
    end Initialize_HW;
 
-   procedure LED_On
+   procedure Red_LED_On
    is
    begin
-      Set (LED_Pin);
-   end LED_On;
+      Set (Red_Led_Pin);
+   end Red_LED_On;
 
-   procedure LED_Off
+   procedure Red_LED_Off
    is
    begin
-      Clear (LED_Pin);
-   end LED_Off;
+      Clear (Red_Led_Pin);
+   end Red_LED_Off;
+
+   procedure Green_LED_On
+   is
+   begin
+      Set (Green_Led_Pin);
+   end Green_LED_On;
+
+   procedure Green_LED_Off
+   is
+   begin
+      Clear (Green_Led_Pin);
+   end Green_LED_Off;
 
    --   Local decision on how this modules radio
    --   pins are used. Each module vendor is free
@@ -187,16 +217,20 @@ package body Hw is
       end case;
    end RAK_RF_Switch;
 
-   procedure Power_Up_LIS3MDL
+   function Check_ReInit return Boolean
    is
    begin
-      Set (LIS3MDL_Pwr_Pin);
-   end Power_Up_LIS3MDL;
-
-   procedure Power_Down_LIS3MDL
-   is
-   begin
-      Clear (LIS3MDL_Pwr_Pin);
-   end Power_Down_LIS3MDL;
+      Set (UART2_TX_Pin);
+      if Set (UART2_RX_Pin) then
+         Clear (UART2_TX_Pin);
+         if not Set (UART2_RX_Pin) then
+            return True;
+         else
+            return False;
+         end if;
+      else
+         return False;
+      end if;
+   end Check_ReInit;
 
 end Hw;

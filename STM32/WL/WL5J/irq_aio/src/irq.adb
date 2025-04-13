@@ -111,6 +111,7 @@ begin
 --      Open (J) := Open (J) / 5;
 --      Closed (J) := Closed (J) / 5;
 --   end loop;
+   Check_Threshold;
    loop
       --      Get_Mag_Int_Src (Int_Src);
       Get_Mag_Reading (Got);

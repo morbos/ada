@@ -49,7 +49,13 @@ is
    procedure Set_Up_MAG;
    procedure Set_Up_MAG is
    begin
-      Mag.Configure;
+      Mag.Configure
+        ((FS_Range_Sel  => FS_4,
+          Op_Mode_Sel   => Continuous,
+          BDU_Sel       => True,
+          XY_Perf_Sel   => Ultra_Perf,
+          Z_Perf_Sel    => Ultra_Perf,
+          Data_Rate_Sel => Hz_5));
    end Set_Up_MAG;
 
    Got     : Sensor_Data;

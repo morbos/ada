@@ -18,11 +18,11 @@ package Interfaces.STM32.USART is
    -- Registers --
    ---------------
 
-   subtype USART_CR1_FIFO_ENABLED_DEDT_Field is Interfaces.Bit_Types.UInt5;
-   subtype USART_CR1_FIFO_ENABLED_DEAT_Field is Interfaces.Bit_Types.UInt5;
+   subtype CR1_FIFO_ENABLED_DEDT_Field is Interfaces.Bit_Types.UInt5;
+   subtype CR1_FIFO_ENABLED_DEAT_Field is Interfaces.Bit_Types.UInt5;
 
    --  USART control register 1 [alternate]
-   type USART_CR1_FIFO_ENABLED_Register is record
+   type CR1_FIFO_ENABLED_Register is record
       --  USART enable
       UE      : Boolean := False;
       --  USART enable in low-power mode
@@ -56,9 +56,9 @@ package Interfaces.STM32.USART is
       --  Oversampling mode
       OVER8   : Boolean := False;
       --  Driver Enable deassertion time
-      DEDT    : USART_CR1_FIFO_ENABLED_DEDT_Field := 16#0#;
+      DEDT    : CR1_FIFO_ENABLED_DEDT_Field := 16#0#;
       --  Driver Enable assertion time
-      DEAT    : USART_CR1_FIFO_ENABLED_DEAT_Field := 16#0#;
+      DEAT    : CR1_FIFO_ENABLED_DEAT_Field := 16#0#;
       --  Receiver timeout interrupt enable
       RTOIE   : Boolean := False;
       --  End of Block interrupt enable
@@ -75,7 +75,7 @@ package Interfaces.STM32.USART is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for USART_CR1_FIFO_ENABLED_Register use record
+   for CR1_FIFO_ENABLED_Register use record
       UE      at 0 range 0 .. 0;
       UESM    at 0 range 1 .. 1;
       RE      at 0 range 2 .. 2;
@@ -102,11 +102,11 @@ package Interfaces.STM32.USART is
       RXFFIE  at 0 range 31 .. 31;
    end record;
 
-   subtype USART_CR1_FIFO_DISABLED_DEDT_Field is Interfaces.Bit_Types.UInt5;
-   subtype USART_CR1_FIFO_DISABLED_DEAT_Field is Interfaces.Bit_Types.UInt5;
+   subtype CR1_FIFO_DISABLED_DEDT_Field is Interfaces.Bit_Types.UInt5;
+   subtype CR1_FIFO_DISABLED_DEAT_Field is Interfaces.Bit_Types.UInt5;
 
    --  USART control register 1 [alternate]
-   type USART_CR1_FIFO_DISABLED_Register is record
+   type CR1_FIFO_DISABLED_Register is record
       --  USART enable
       UE             : Boolean := False;
       --  USART enable in low-power mode
@@ -140,9 +140,9 @@ package Interfaces.STM32.USART is
       --  Oversampling mode
       OVER8          : Boolean := False;
       --  Driver Enable deassertion time
-      DEDT           : USART_CR1_FIFO_DISABLED_DEDT_Field := 16#0#;
+      DEDT           : CR1_FIFO_DISABLED_DEDT_Field := 16#0#;
       --  Driver Enable assertion time
-      DEAT           : USART_CR1_FIFO_DISABLED_DEAT_Field := 16#0#;
+      DEAT           : CR1_FIFO_DISABLED_DEAT_Field := 16#0#;
       --  Receiver timeout interrupt enable
       RTOIE          : Boolean := False;
       --  End of Block interrupt enable
@@ -157,7 +157,7 @@ package Interfaces.STM32.USART is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for USART_CR1_FIFO_DISABLED_Register use record
+   for CR1_FIFO_DISABLED_Register use record
       UE             at 0 range 0 .. 0;
       UESM           at 0 range 1 .. 1;
       RE             at 0 range 2 .. 2;
@@ -183,12 +183,12 @@ package Interfaces.STM32.USART is
       Reserved_30_31 at 0 range 30 .. 31;
    end record;
 
-   subtype USART_CR2_STOP_Field is Interfaces.Bit_Types.UInt2;
-   subtype USART_CR2_ABRMOD_Field is Interfaces.Bit_Types.UInt2;
-   subtype USART_CR2_ADD_Field is Interfaces.Bit_Types.Byte;
+   subtype CR2_STOP_Field is Interfaces.Bit_Types.UInt2;
+   subtype CR2_ABRMOD_Field is Interfaces.Bit_Types.UInt2;
+   subtype CR2_ADD_Field is Interfaces.Bit_Types.Byte;
 
    --  USART control register 2
-   type USART_CR2_Register is record
+   type CR2_Register is record
       --  Synchronous Slave mode enable
       SLVEN        : Boolean := False;
       --  unspecified
@@ -212,7 +212,7 @@ package Interfaces.STM32.USART is
       --  Clock enable
       CLKEN        : Boolean := False;
       --  stop bits
-      STOP         : USART_CR2_STOP_Field := 16#0#;
+      STOP         : CR2_STOP_Field := 16#0#;
       --  LIN mode enable
       LINEN        : Boolean := False;
       --  Swap TX/RX pins
@@ -228,16 +228,16 @@ package Interfaces.STM32.USART is
       --  Auto baud rate enable
       ABREN        : Boolean := False;
       --  Auto baud rate mode
-      ABRMOD       : USART_CR2_ABRMOD_Field := 16#0#;
+      ABRMOD       : CR2_ABRMOD_Field := 16#0#;
       --  Receiver timeout enable
       RTOEN        : Boolean := False;
       --  Address of the USART node
-      ADD          : USART_CR2_ADD_Field := 16#0#;
+      ADD          : CR2_ADD_Field := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for USART_CR2_Register use record
+   for CR2_Register use record
       SLVEN        at 0 range 0 .. 0;
       Reserved_1_2 at 0 range 1 .. 2;
       DIS_NSS      at 0 range 3 .. 3;
@@ -262,14 +262,14 @@ package Interfaces.STM32.USART is
       ADD          at 0 range 24 .. 31;
    end record;
 
-   subtype USART_CR3_SCARCNT_Field is Interfaces.Bit_Types.UInt3;
+   subtype CR3_SCARCNT_Field is Interfaces.Bit_Types.UInt3;
 
-   --  USART_CR3_WUS array
-   type USART_CR3_WUS_Field_Array is array (0 .. 1) of Boolean
+   --  CR3_WUS array
+   type CR3_WUS_Field_Array is array (0 .. 1) of Boolean
      with Component_Size => 1, Size => 2;
 
-   --  Type definition for USART_CR3_WUS
-   type USART_CR3_WUS_Field
+   --  Type definition for CR3_WUS
+   type CR3_WUS_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -278,21 +278,21 @@ package Interfaces.STM32.USART is
             Val : Interfaces.Bit_Types.UInt2;
          when True =>
             --  WUS as an array
-            Arr : USART_CR3_WUS_Field_Array;
+            Arr : CR3_WUS_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 2;
 
-   for USART_CR3_WUS_Field use record
+   for CR3_WUS_Field use record
       Val at 0 range 0 .. 1;
       Arr at 0 range 0 .. 1;
    end record;
 
-   subtype USART_CR3_RXFTCFG_Field is Interfaces.Bit_Types.UInt3;
-   subtype USART_CR3_TXFTCFG_Field is Interfaces.Bit_Types.UInt3;
+   subtype CR3_RXFTCFG_Field is Interfaces.Bit_Types.UInt3;
+   subtype CR3_TXFTCFG_Field is Interfaces.Bit_Types.UInt3;
 
    --  USART control register 3
-   type USART_CR3_Register is record
+   type CR3_Register is record
       --  Error interrupt enable
       EIE            : Boolean := False;
       --  IrDA mode enable
@@ -328,10 +328,9 @@ package Interfaces.STM32.USART is
       --  unspecified
       Reserved_16_16 : Interfaces.Bit_Types.Bit := 16#0#;
       --  Smartcard auto-retry count
-      SCARCNT        : USART_CR3_SCARCNT_Field := 16#0#;
+      SCARCNT        : CR3_SCARCNT_Field := 16#0#;
       --  Wakeup from low-power mode interrupt flag selection
-      WUS            : USART_CR3_WUS_Field :=
-                        (As_Array => False, Val => 16#0#);
+      WUS            : CR3_WUS_Field := (As_Array => False, Val => 16#0#);
       --  Wakeup from low-power mode interrupt enable
       WUFIE          : Boolean := False;
       --  TXFIFO threshold interrupt enable
@@ -339,16 +338,16 @@ package Interfaces.STM32.USART is
       --  Transmission Complete before guard time, interrupt enable
       TCBGTIE        : Boolean := False;
       --  Receive FIFO threshold configuration
-      RXFTCFG        : USART_CR3_RXFTCFG_Field := 16#0#;
+      RXFTCFG        : CR3_RXFTCFG_Field := 16#0#;
       --  RXFIFO threshold interrupt enable
       RXFTIE         : Boolean := False;
       --  TXFIFO threshold configuration
-      TXFTCFG        : USART_CR3_TXFTCFG_Field := 16#0#;
+      TXFTCFG        : CR3_TXFTCFG_Field := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for USART_CR3_Register use record
+   for CR3_Register use record
       EIE            at 0 range 0 .. 0;
       IREN           at 0 range 1 .. 1;
       IRLP           at 0 range 2 .. 2;
@@ -376,64 +375,64 @@ package Interfaces.STM32.USART is
       TXFTCFG        at 0 range 29 .. 31;
    end record;
 
-   subtype USART_BRR_BRR_Field is Interfaces.Bit_Types.UInt16;
+   subtype BRR_BRR_Field is Interfaces.Bit_Types.UInt16;
 
    --  USART baud rate register
-   type USART_BRR_Register is record
+   type BRR_Register is record
       --  USART baud rate
-      BRR            : USART_BRR_BRR_Field := 16#0#;
+      BRR            : BRR_BRR_Field := 16#0#;
       --  unspecified
       Reserved_16_31 : Interfaces.Bit_Types.UInt16 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for USART_BRR_Register use record
+   for BRR_Register use record
       BRR            at 0 range 0 .. 15;
       Reserved_16_31 at 0 range 16 .. 31;
    end record;
 
-   subtype USART_GTPR_PSC_Field is Interfaces.Bit_Types.Byte;
-   subtype USART_GTPR_GT_Field is Interfaces.Bit_Types.Byte;
+   subtype GTPR_PSC_Field is Interfaces.Bit_Types.Byte;
+   subtype GTPR_GT_Field is Interfaces.Bit_Types.Byte;
 
    --  USART guard time and prescaler register
-   type USART_GTPR_Register is record
+   type GTPR_Register is record
       --  Prescaler value
-      PSC            : USART_GTPR_PSC_Field := 16#0#;
+      PSC            : GTPR_PSC_Field := 16#0#;
       --  Guard time value
-      GT             : USART_GTPR_GT_Field := 16#0#;
+      GT             : GTPR_GT_Field := 16#0#;
       --  unspecified
       Reserved_16_31 : Interfaces.Bit_Types.UInt16 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for USART_GTPR_Register use record
+   for GTPR_Register use record
       PSC            at 0 range 0 .. 7;
       GT             at 0 range 8 .. 15;
       Reserved_16_31 at 0 range 16 .. 31;
    end record;
 
-   subtype USART_RTOR_RTO_Field is Interfaces.Bit_Types.UInt24;
-   subtype USART_RTOR_BLEN_Field is Interfaces.Bit_Types.Byte;
+   subtype RTOR_RTO_Field is Interfaces.Bit_Types.UInt24;
+   subtype RTOR_BLEN_Field is Interfaces.Bit_Types.Byte;
 
    --  USART receiver timeout register
-   type USART_RTOR_Register is record
+   type RTOR_Register is record
       --  Receiver timeout value
-      RTO  : USART_RTOR_RTO_Field := 16#0#;
+      RTO  : RTOR_RTO_Field := 16#0#;
       --  Block Length
-      BLEN : USART_RTOR_BLEN_Field := 16#0#;
+      BLEN : RTOR_BLEN_Field := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for USART_RTOR_Register use record
+   for RTOR_Register use record
       RTO  at 0 range 0 .. 23;
       BLEN at 0 range 24 .. 31;
    end record;
 
    --  USART request register
-   type USART_RQR_Register is record
+   type RQR_Register is record
       --  Write-only. Auto baud rate request
       ABRRQ         : Boolean := False;
       --  Write-only. Send break request
@@ -450,7 +449,7 @@ package Interfaces.STM32.USART is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for USART_RQR_Register use record
+   for RQR_Register use record
       ABRRQ         at 0 range 0 .. 0;
       SBKRQ         at 0 range 1 .. 1;
       MMRQ          at 0 range 2 .. 2;
@@ -460,7 +459,7 @@ package Interfaces.STM32.USART is
    end record;
 
    --  USART interrupt and status register [alternate]
-   type USART_ISR_FIFO_ENABLED_Register is record
+   type ISR_FIFO_ENABLED_Register is record
       --  Read-only. Parity error
       PE             : Boolean;
       --  Read-only. Framing error
@@ -523,7 +522,7 @@ package Interfaces.STM32.USART is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for USART_ISR_FIFO_ENABLED_Register use record
+   for ISR_FIFO_ENABLED_Register use record
       PE             at 0 range 0 .. 0;
       FE             at 0 range 1 .. 1;
       NE             at 0 range 2 .. 2;
@@ -556,7 +555,7 @@ package Interfaces.STM32.USART is
    end record;
 
    --  USART interrupt and status register [alternate]
-   type USART_ISR_FIFO_DISABLED_Register is record
+   type ISR_FIFO_DISABLED_Register is record
       --  Read-only. Parity error
       PE             : Boolean;
       --  Read-only. Framing error
@@ -613,7 +612,7 @@ package Interfaces.STM32.USART is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for USART_ISR_FIFO_DISABLED_Register use record
+   for ISR_FIFO_DISABLED_Register use record
       PE             at 0 range 0 .. 0;
       FE             at 0 range 1 .. 1;
       NE             at 0 range 2 .. 2;
@@ -643,7 +642,7 @@ package Interfaces.STM32.USART is
    end record;
 
    --  USART interrupt flag clear register
-   type USART_ICR_Register is record
+   type ICR_Register is record
       --  Write-only. Parity error clear flag
       PECF           : Boolean := False;
       --  Write-only. Framing error clear flag
@@ -686,7 +685,7 @@ package Interfaces.STM32.USART is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for USART_ICR_Register use record
+   for ICR_Register use record
       PECF           at 0 range 0 .. 0;
       FECF           at 0 range 1 .. 1;
       NECF           at 0 range 2 .. 2;
@@ -708,53 +707,53 @@ package Interfaces.STM32.USART is
       Reserved_21_31 at 0 range 21 .. 31;
    end record;
 
-   subtype USART_RDR_RDR_Field is Interfaces.Bit_Types.UInt9;
+   subtype RDR_RDR_Field is Interfaces.Bit_Types.UInt9;
 
    --  USART receive data register
-   type USART_RDR_Register is record
+   type RDR_Register is record
       --  Read-only. Receive data value
-      RDR           : USART_RDR_RDR_Field;
+      RDR           : RDR_RDR_Field;
       --  unspecified
       Reserved_9_31 : Interfaces.Bit_Types.UInt23;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for USART_RDR_Register use record
+   for RDR_Register use record
       RDR           at 0 range 0 .. 8;
       Reserved_9_31 at 0 range 9 .. 31;
    end record;
 
-   subtype USART_TDR_TDR_Field is Interfaces.Bit_Types.UInt9;
+   subtype TDR_TDR_Field is Interfaces.Bit_Types.UInt9;
 
    --  USART transmit data register
-   type USART_TDR_Register is record
+   type TDR_Register is record
       --  Transmit data value
-      TDR           : USART_TDR_TDR_Field := 16#0#;
+      TDR           : TDR_TDR_Field := 16#0#;
       --  unspecified
       Reserved_9_31 : Interfaces.Bit_Types.UInt23 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for USART_TDR_Register use record
+   for TDR_Register use record
       TDR           at 0 range 0 .. 8;
       Reserved_9_31 at 0 range 9 .. 31;
    end record;
 
-   subtype USART_PRESC_PRESCALER_Field is Interfaces.Bit_Types.UInt4;
+   subtype PRESC_PRESCALER_Field is Interfaces.Bit_Types.UInt4;
 
    --  USART prescaler register
-   type USART_PRESC_Register is record
+   type PRESC_Register is record
       --  Clock prescaler
-      PRESCALER     : USART_PRESC_PRESCALER_Field := 16#0#;
+      PRESCALER     : PRESC_PRESCALER_Field := 16#0#;
       --  unspecified
       Reserved_4_31 : Interfaces.Bit_Types.UInt28 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for USART_PRESC_Register use record
+   for PRESC_Register use record
       PRESCALER     at 0 range 0 .. 3;
       Reserved_4_31 at 0 range 4 .. 31;
    end record;
@@ -772,55 +771,55 @@ package Interfaces.STM32.USART is
      (Discriminent : UART4_Disc := Enabled)
    is record
       --  USART control register 2
-      USART_CR2               : aliased USART_CR2_Register;
+      CR2               : aliased CR2_Register;
       --  USART control register 3
-      USART_CR3               : aliased USART_CR3_Register;
+      CR3               : aliased CR3_Register;
       --  USART baud rate register
-      USART_BRR               : aliased USART_BRR_Register;
+      BRR               : aliased BRR_Register;
       --  USART guard time and prescaler register
-      USART_GTPR              : aliased USART_GTPR_Register;
+      GTPR              : aliased GTPR_Register;
       --  USART receiver timeout register
-      USART_RTOR              : aliased USART_RTOR_Register;
+      RTOR              : aliased RTOR_Register;
       --  USART request register
-      USART_RQR               : aliased USART_RQR_Register;
+      RQR               : aliased RQR_Register;
       --  USART interrupt flag clear register
-      USART_ICR               : aliased USART_ICR_Register;
+      ICR               : aliased ICR_Register;
       --  USART receive data register
-      USART_RDR               : aliased USART_RDR_Register;
+      RDR               : aliased RDR_Register;
       --  USART transmit data register
-      USART_TDR               : aliased USART_TDR_Register;
+      TDR               : aliased TDR_Register;
       --  USART prescaler register
-      USART_PRESC             : aliased USART_PRESC_Register;
+      PRESC             : aliased PRESC_Register;
       case Discriminent is
          when Enabled =>
             --  USART control register 1 [alternate]
-            USART_CR1_FIFO_ENABLED : aliased USART_CR1_FIFO_ENABLED_Register;
+            CR1_FIFO_ENABLED : aliased CR1_FIFO_ENABLED_Register;
             --  USART interrupt and status register [alternate]
-            USART_ISR_FIFO_ENABLED : aliased USART_ISR_FIFO_ENABLED_Register;
+            ISR_FIFO_ENABLED : aliased ISR_FIFO_ENABLED_Register;
          when Disabled =>
             --  USART control register 1 [alternate]
-            USART_CR1_FIFO_DISABLED : aliased USART_CR1_FIFO_DISABLED_Register;
+            CR1_FIFO_DISABLED : aliased CR1_FIFO_DISABLED_Register;
             --  USART interrupt and status register [alternate]
-            USART_ISR_FIFO_DISABLED : aliased USART_ISR_FIFO_DISABLED_Register;
+            ISR_FIFO_DISABLED : aliased ISR_FIFO_DISABLED_Register;
       end case;
    end record
      with Unchecked_Union, Volatile;
 
    for USART_Peripheral use record
-      USART_CR2               at 16#4# range 0 .. 31;
-      USART_CR3               at 16#8# range 0 .. 31;
-      USART_BRR               at 16#C# range 0 .. 31;
-      USART_GTPR              at 16#10# range 0 .. 31;
-      USART_RTOR              at 16#14# range 0 .. 31;
-      USART_RQR               at 16#18# range 0 .. 31;
-      USART_ICR               at 16#20# range 0 .. 31;
-      USART_RDR               at 16#24# range 0 .. 31;
-      USART_TDR               at 16#28# range 0 .. 31;
-      USART_PRESC             at 16#2C# range 0 .. 31;
-      USART_CR1_FIFO_ENABLED  at 16#0# range 0 .. 31;
-      USART_ISR_FIFO_ENABLED  at 16#1C# range 0 .. 31;
-      USART_CR1_FIFO_DISABLED at 16#0# range 0 .. 31;
-      USART_ISR_FIFO_DISABLED at 16#1C# range 0 .. 31;
+      CR2               at 16#4# range 0 .. 31;
+      CR3               at 16#8# range 0 .. 31;
+      BRR               at 16#C# range 0 .. 31;
+      GTPR              at 16#10# range 0 .. 31;
+      RTOR              at 16#14# range 0 .. 31;
+      RQR               at 16#18# range 0 .. 31;
+      ICR               at 16#20# range 0 .. 31;
+      RDR               at 16#24# range 0 .. 31;
+      TDR               at 16#28# range 0 .. 31;
+      PRESC             at 16#2C# range 0 .. 31;
+      CR1_FIFO_ENABLED  at 16#0# range 0 .. 31;
+      ISR_FIFO_ENABLED  at 16#1C# range 0 .. 31;
+      CR1_FIFO_DISABLED at 16#0# range 0 .. 31;
+      ISR_FIFO_DISABLED at 16#1C# range 0 .. 31;
    end record;
 
    --  Universal synchronous/asynchronous receiver transmitter

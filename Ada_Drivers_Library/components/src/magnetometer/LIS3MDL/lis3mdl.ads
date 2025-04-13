@@ -225,6 +225,15 @@ package LIS3MDL is
 
    Sensitivity : constant Sensitivity_Range := (6842.0, 3421.0, 2281.0, 1711.0);
 
+   type Configuration_Data is record
+      FS_Range_Sel  : FS_Range;
+      Op_Mode_Sel   : OpMode_Range;
+      BDU_Sel       : Boolean;
+      XY_Perf_Sel   : Perf_Range;
+      Z_Perf_Sel    : Perf_Range;
+      Data_Rate_Sel : Rate_Range;
+   end record;
+
    type Sensor_Data_Range is (X_Axis, Y_Axis, Z_Axis);
    for Sensor_Data_Range use
      (X_Axis => 0,
@@ -235,7 +244,7 @@ package LIS3MDL is
 
    procedure Soft_Reset (This : in out LIS3MDL_Sensor);
 
-   procedure Configure (This : in out LIS3MDL_Sensor);
+   procedure Configure (This : in out LIS3MDL_Sensor; Config : Configuration_Data);
 
    function Device_Id (This : in out LIS3MDL_Sensor) return UInt8;
    --  Interacts with the device to read a device-class specific identifier
@@ -261,11 +270,15 @@ package LIS3MDL is
 
    procedure Set_Int_Src (This : in out LIS3MDL_Sensor; Src : INT_SRC_Reg);
 
+   function Get_Int_Src (This : in out LIS3MDL_Sensor) return INT_SRC_Reg;
+
    procedure Set_Thresh (This : in out LIS3MDL_Sensor; Thresh : Integer_16);
 
    procedure Set_Int_Enable (This : in out LIS3MDL_Sensor; IntSrc : INT_CONFIG_Reg);
 
    function Int_Set (This : in out LIS3MDL_Sensor) return Boolean;
+
+   procedure Set_Offsets (This : in out LIS3MDL_Sensor; Offsets : Sensor_Data);
 
    procedure Power_Down (This : in out LIS3MDL_Sensor);
 
@@ -273,7 +286,12 @@ package LIS3MDL is
    --  The value expected to be returned from Device_Id
 
    LIS3MDL_AUTO_INC       : constant := 16#80#;
-
+   LIS3MDL_OFF_X_L        : constant := 16#05#;
+   LIS3MDL_OFF_X_H        : constant := 16#06#;
+   LIS3MDL_OFF_Y_L        : constant := 16#07#;
+   LIS3MDL_OFF_Y_H        : constant := 16#08#;
+   LIS3MDL_OFF_Z_L        : constant := 16#09#;
+   LIS3MDL_OFF_Z_H        : constant := 16#0a#;
    LIS3MDL_WHO_AM_I       : constant := 16#0F#;
    LIS3MDL_CTRL_REG1      : constant := 16#20#;
    LIS3MDL_CTRL_REG2      : constant := 16#21#;

@@ -141,15 +141,26 @@ package body LIS3MDL is
       X : UInt8_Array (0 .. 1);
       Y : Integer_16 := Thresh;
       for X'Address use Y'Address;
-      XX : UInt8_Array (0 .. 1);
-      YY : Integer_16 := Thresh;
-      for XX'Address use YY'Address;
    begin
-      Write (This.Port, LIS3MDL_INT_THS_L, X (1));
-      Write (This.Port, LIS3MDL_INT_THS_H, X (0));
-      Read (This.Port, LIS3MDL_INT_THS_L, XX (1));
-      Read (This.Port, LIS3MDL_INT_THS_H, XX (0));
+      Write (This.Port, LIS3MDL_INT_THS_L, X (0));
+      Write (This.Port, LIS3MDL_INT_THS_H, X (1));
    end Set_Thresh;
+
+   function Get_Thresh_Low (This : in out LIS3MDL_Sensor) return UInt8
+   is
+      X : UInt8;
+   begin
+      Read (This.Port, LIS3MDL_INT_THS_L, X);
+      return X;
+   end Get_Thresh_Low;
+
+   function Get_Thresh_High (This : in out LIS3MDL_Sensor) return UInt8
+   is
+      X : UInt8;
+   begin
+      Read (This.Port, LIS3MDL_INT_THS_H, X);
+      return X;
+   end Get_Thresh_High;
 
    procedure Set_Int_Enable (This : in out LIS3MDL_Sensor; IntSrc : INT_CONFIG_Reg)
    is

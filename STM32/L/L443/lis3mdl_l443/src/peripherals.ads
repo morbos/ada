@@ -19,4 +19,8 @@ package Peripherals is
    LIS3MDL_Int_Pin       : GPIO_Point renames PB0;
    Sensor_Port : aliased LIS3MDL_I2C_IO.IO_Port := (LIS3MDL_I2C_Port, LIS3MDL_Address);
 
+   UART1_AF               : constant GPIO_Alternate_Function := GPIO_AF_USART1_7;
+   UART1_RX_Pin           : GPIO_Point renames PA10;
+   UART1_TX_Pin           : GPIO_Point renames PA9;
+
 end Peripherals;

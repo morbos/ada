@@ -87,7 +87,7 @@ package body LIS3MDL is
    begin
       Read (This.Port, LIS3MDL_CTRL_REG4, X);
       Reg.OpModeZ := Choice;
-      Write (This.Port, LIS3MDL_CTRL_REG5, X);
+      Write (This.Port, LIS3MDL_CTRL_REG4, X);
    end Set_Z_Perf;
 
    function Get_Status (This : in out LIS3MDL_Sensor) return Status_Reg
@@ -135,6 +135,16 @@ package body LIS3MDL is
       Write (This.Port, LIS3MDL_INT_SR, X);
    end Set_Int_Src;
 
+   function Get_Int_Src (This : in out LIS3MDL_Sensor) return INT_SRC_Reg
+   is
+      X   : UInt8;
+      Reg : INT_SRC_Reg;
+      for X'Address use Reg'Address;
+   begin
+      Read (This.Port, LIS3MDL_INT_SR, X);
+      return Reg;
+   end Get_Int_Src;
+
    procedure Set_Thresh (This : in out LIS3MDL_Sensor; Thresh : Integer_16)
    is
       X : UInt8_Array (0 .. 1);
@@ -174,7 +184,32 @@ package body LIS3MDL is
       return Reg.INT;
    end Int_Set;
 
-   procedure Configure (This : in out LIS3MDL_Sensor)
+   procedure Set_Offsets (This : in out LIS3MDL_Sensor; Offsets : Sensor_Data)
+   is
+      X : Integer_16;
+      Y : UInt8_Array (0 .. 1);
+      for X'Address use Y'Address;
+   begin
+      X := Offsets (X_Axis);
+      Write (This.Port, LIS3MDL_OFF_X_L, Y (0));
+      Write (This.Port, LIS3MDL_OFF_X_H, Y (1));
+
+      X := Offsets (Y_Axis);
+      Write (This.Port, LIS3MDL_OFF_Y_L, Y (0));
+      Write (This.Port, LIS3MDL_OFF_Y_H, Y (1));
+
+      X := Offsets (Z_Axis);
+      Write (This.Port, LIS3MDL_OFF_Z_L, Y (0));
+      Write (This.Port, LIS3MDL_OFF_Z_H, Y (1));
+   end Set_Offsets;
+
+   procedure Power_Down (This : in out LIS3MDL_Sensor)
+   is
+   begin
+      This.Set_OpMode (Power_Down);
+   end Power_Down;
+
+   procedure Configure (This : in out LIS3MDL_Sensor; Config : Configuration_Data)
    is
       X   : UInt8;
    begin
@@ -182,12 +217,12 @@ package body LIS3MDL is
       if This.Device_Id /= I_Am_LIS3MDL then
          raise Program_Error with "I_Am_LIS3MDL";
       end if;
-      This.Set_Range (FS_4);
-      This.Set_OpMode (Continuous);
-      This.Set_BDU (True);
-      This.Set_XY_Perf (Ultra_Perf);
-      This.Set_Z_Perf (Ultra_Perf);
-      This.Set_DataRate (Hz_5);
+      This.Set_Range (Config.FS_Range_Sel);
+      This.Set_OpMode (Config.Op_Mode_Sel);
+      This.Set_BDU (Config.BDU_Sel);
+      This.Set_XY_Perf (Config.XY_Perf_Sel);
+      This.Set_Z_Perf (Config.Z_Perf_Sel);
+      This.Set_DataRate (Config.Data_Rate_Sel);
 --      Read (This.Port, 16#1b#, X);
 --      X := X or 1; --  Per a Community post to disable SA1 internal pullup
 --      Write (This.Port, 16#1b#, X);

@@ -25,6 +25,20 @@
 	.cpu cortex-m4
 	.thumb
 
+	.thumb_func
+	.globl	dsb
+        .type _stm32_start_common, #function
+dsb:
+	dsb
+	bx	lr
+
+	.thumb_func
+	.globl	isb
+        .type _stm32_start_common, #function
+isb:
+	isb
+	bx	lr
+
 	.text
 	.thumb_func
 	.globl	_stm32_start_common
@@ -57,4 +71,6 @@ _stm32_start_common:
 	.globl secure_code
 secure_code:
 	.word	0
+@	.globl	mpu_init
+@	bl	mpu_init
 	.end

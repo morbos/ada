@@ -263,6 +263,10 @@ package LIS3MDL is
 
    procedure Set_Thresh (This : in out LIS3MDL_Sensor; Thresh : Integer_16);
 
+   function Get_Thresh_Low (This : in out LIS3MDL_Sensor) return UInt8;
+
+   function Get_Thresh_High (This : in out LIS3MDL_Sensor) return UInt8;
+
    procedure Set_Int_Enable (This : in out LIS3MDL_Sensor; IntSrc : INT_CONFIG_Reg);
 
    function Int_Set (This : in out LIS3MDL_Sensor) return Boolean;

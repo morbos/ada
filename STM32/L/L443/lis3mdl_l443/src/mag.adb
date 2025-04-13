@@ -14,16 +14,23 @@ package body Mag is
 
    procedure Set_Up_MAG is
    begin
-      Mag.Configure;
+      Mag.Configure
+        ((FS_Range_Sel  => FS_16,
+          Op_Mode_Sel   => Continuous,
+          BDU_Sel       => True,
+          XY_Perf_Sel   => Low_Power,
+          Z_Perf_Sel    => Low_Power,
+          Data_Rate_Sel => Hz_0_625));
+
    end Set_Up_MAG;
 
    procedure Setup_Mag_Interrupt
    is
       Int_Cfg : INT_CONFIG_Reg;
    begin
-         Mag.Set_Thresh (800);
-         Int_Cfg := (IEN => True, YIEN => True, IEA => True, others => False);
-         Mag.Set_Int_Enable (Int_Cfg);
+      Mag.Set_Thresh (800);
+      Int_Cfg := (IEN => True, XIEN => True, IEA => True, others => False);
+      Mag.Set_Int_Enable (Int_Cfg);
    end Setup_Mag_Interrupt;
 
    procedure Get_Mag_Reading (Got : out Sensor_Data)

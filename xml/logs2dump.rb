@@ -19,6 +19,16 @@ def slurp(f, contents)
   # format is:
   # addr: N dwords up to 4
   f.each_line do |l|
+    if $options[:ide]
+      if l[0] == '='
+        next
+      end
+      l.gsub!(/\\t/,' ')
+      l.gsub!(/\"/,'')
+      l.gsub!(/~/,'')
+      l.gsub!(/\\n/,'')
+      l.chomp!
+    end
     # strip the address
     m = l.match(pat)
     if m && m.size == 2
@@ -148,6 +158,7 @@ $options[:skiplist] = []
 $options[:onlylist] = []
 $options[:logdir] = "."
 $options[:dec] = false
+$options[:ide] = false # IDE dumps have some extra lines + diff formatting
 
 OptionParser.new do |opts|
   opts.banner = "Usage: logs2dump.rb [$options]"
@@ -173,6 +184,10 @@ OptionParser.new do |opts|
 
   opts.on("-D", "--dec", 'dump is dec') do
     $options[:dec] = true
+  end
+
+  opts.on("-I", "--ide", 'dump is from the IDE') do
+    $options[:ide] = true
   end
 
   opts.on_tail("-h", "--help", 'this list') do

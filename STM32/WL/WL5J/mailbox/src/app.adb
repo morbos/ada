@@ -25,24 +25,17 @@ package body App is
       SubGhzRF_Init;
    end Init_Radio;
 
-   procedure App_Start (Stance : Door_Stance)
+   procedure App_Start
    is
       Buffer    : SPI_Data_8b (1 .. 4);
-      OurId     : UInt8 := 4;
+      OurId     : UInt8 := 6;
       Crc       : UInt8 := 16#FF#;
-      Msg       : UInt8;
    begin
-      case Stance is
-         when Open_Stance =>
-            Msg := 4;
-         when Closed_Stance =>
-            Msg := 5;
-      end case;
       Gen_Crc8_Table;
       Init_Radio;
       Buffer (1) := 16#00#; -- To the server
       Buffer (2) := OurId;
-      Buffer (3) := Msg;
+      Buffer (3) := 6; --  Mailbox door
       Update_Crc8 (Crc, Buffer (1 .. 3));
       Buffer (4) := Crc;
       Set_PktLen (UInt8 (Buffer'Last));

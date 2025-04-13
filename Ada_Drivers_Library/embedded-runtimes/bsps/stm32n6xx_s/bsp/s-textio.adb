@@ -53,14 +53,14 @@ package body System.Text_IO is
    -----------------
 
    function Is_Tx_Ready return Boolean is
-     (USART1_Periph.ISR_enabled.TC);
+     (USART1_Periph.ISR_FIFO_ENABLED.TC);
 
    -----------------
    -- Is_Rx_Ready --
    -----------------
 
    function Is_Rx_Ready return Boolean is
-     (USART1_Periph.ISR_enabled.RXFNE);
+     (USART1_Periph.ISR_FIFO_ENABLED.RXFNE);
 
    ---------
    -- Get --

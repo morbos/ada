@@ -4,4 +4,6 @@ package Hw is
 
    procedure Initialize_HW;
 
+   procedure Enable_MCO;
+
 end Hw;

@@ -56,7 +56,8 @@ project Common is
         ("-Wl,--defsym=__stack_size=65536",
          "-Wl,--gc-sections",
          "-Wl,--print-memory-usage",
-	 "-Wl,-Map=xyzzy"
+	 "-Wl,-Map=xyzzy",
+	 "-Wl,mpu.o"
 	 );
    end Linker;
 

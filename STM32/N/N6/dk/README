@@ -1,0 +1,8 @@
+How to dump IDE prepared gdb dumps. Note the -I flag. IDE dumps are different format.
+Ex:
+=cmd-param-changed,param="logging enabled",value="on"
+~"0x46009000:\t0xaaaa5555\t0x0000000f\t0x00000000\t0x00000000\n"
+vs:
+0x46009000:	0xaaaa5555	0x0000000f	0x00000000	0x00000000
+
+~/ada/xml/logs2dump.rb -s ~/ada/xml/STM32N657.svd -xADC1,ADC1_S,ADC2,ADC2_S,ADC12,ADC12_S,ADF,ADF_S,GFXMMU,GFXMMU_S,SYSCFG,SYSCFG_S -I >idx.txt

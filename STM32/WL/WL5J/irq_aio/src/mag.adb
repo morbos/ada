@@ -21,9 +21,9 @@ package body Mag is
    is
       Int_Cfg : INT_CONFIG_Reg;
    begin
-         Mag.Set_Thresh (200);
-         Int_Cfg := (IEN => True, XIEN => True, YIEN => True, ZIEN => True, IEA => True, others => False);
-         --  Int_Cfg := (IEN => True, XIEN => True, IEA => True, others => False);
+         Mag.Set_Thresh (2000);
+--         Int_Cfg := (IEN => True, XIEN => True, YIEN => True, ZIEN => True, IEA => True, others => False);
+         Int_Cfg := (IEN => True, YIEN => True, IEA => True, others => False);
          Mag.Set_Int_Enable (Int_Cfg);
    end Setup_Mag_Interrupt;
 
@@ -38,5 +38,14 @@ package body Mag is
    begin
       Got := Mag.Get_Int_Src;
    end Get_Mag_Int_Src;
+
+   procedure Check_Threshold
+   is
+      X : UInt8;
+      Y : UInt8;
+   begin
+      X := Mag.Get_Thresh_Low;
+      Y := Mag.Get_Thresh_High;
+   end Check_Threshold;
 
 end Mag;

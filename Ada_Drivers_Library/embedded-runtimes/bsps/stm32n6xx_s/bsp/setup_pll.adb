@@ -30,7 +30,7 @@ pragma Suppress (All_Checks);
 
 --  with Interfaces.Bit_Types;       use Interfaces, Interfaces.Bit_Types;
 --  with Interfaces.STM32.Flash;     use Interfaces.STM32.Flash;
---  with Interfaces.STM32.RCC;       use Interfaces.STM32.RCC;
+with Interfaces.STM32.RCC;       use Interfaces.STM32.RCC;
 --  with Interfaces.STM32.PWR;       use Interfaces.STM32.PWR;
 --  with Interfaces.STM32.ICache;    use Interfaces.STM32.ICache;
 --  with Interfaces.STM32.DCACHE;    use Interfaces.STM32.DCACHE;
@@ -51,7 +51,30 @@ procedure Setup_Pll is
 
    procedure Initialize_Clocks is
    begin
-      null;
+      --  Initialize&Enable HSI (64Mhz)
+      --  Set PLL1 src to be HSI
+      --      DIVM1 := 1
+      --      DIVN1 := 25
+      --      PLL_1 := 1
+      --      PLL2_1 := 1
+      --  --> Theoretically, that is PLL1 = 1.6mhz
+      --  Set IC1 to PLL1 src and /2
+      --  Set IC2 to PLL1 src and /4
+      --  Set IC6 to PLL1 src and /2
+      --  Set IC11 to PLL1 src and /8
+      --  Set SYSA to IC1
+      --  Set SYSB to IC2
+      --  Set SYSC to IC6
+      --  Set SYSD to IC11
+      RCC_Periph.RCC_CR.HSION := True; --  At PoR the divider is /1 so 64Mhz
+      loop
+         exit when RCC_Periph.RCC_SR.HSIRDY;
+      end loop;
+      RCC_Periph.RCC_PLL1CFGR1 := (PLL1SEL => 0,
+                                   PLL1DIVM => 4,
+                                   PLL1DIVN => 16#4b#,
+                                   others => <>);
+
    end Initialize_Clocks;
 
    ------------------

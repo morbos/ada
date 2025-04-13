@@ -11,7 +11,7 @@ package App is
 
    procedure Init_Radio;
 
-   procedure App_Start (Stance : Door_Stance);
+   procedure App_Start;
 
    procedure App_Start2 (Orig : UInt32; Sensor : Integer_16);
 

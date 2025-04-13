@@ -7,6 +7,9 @@ with Peripherals;   use Peripherals;
 with Mag;           use Mag;
 with LIS3MDL_I2C;   use LIS3MDL_I2C;
 
+with System.Machine_Code;   use System.Machine_Code;
+
+
 package body Exti is
 
    -------------
@@ -23,6 +26,12 @@ package body Exti is
       begin
          if External_Interrupt_Pending (EXTI_Line_0) then
             Clear_External_Interrupt (EXTI_Line_0);
+            Turn_On (Green_LED);
+            for I in 0 .. 100_000 loop
+               Asm ("nop",
+                    Volatile => True);
+            end loop;
+            Turn_Off (Green_LED);
          end if;
       end EXTI_Handler;
 
