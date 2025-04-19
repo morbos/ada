@@ -594,6 +594,27 @@ package body STM32.SubGhzRF is
       NbPktLengthError := Shift_Left (UInt16 (Reply (6)), 8) or UInt16 (Reply (7));
    end LoRa_Get_Stats;
 
+   procedure LoRa_Get_PacketStatus (RFStatus      : out Subghz_Status;
+                                    RssiPkt       : out UInt8;
+                                    SnrPkt        : out UInt8;
+                                    SignalRssiPkt : out UInt8)
+   is
+      Msg    : SPI_Data_8b (1 .. 1);
+      Reply  : SPI_Data_8b (1 .. 1 + 3);
+      Status : SPI_Status;
+   begin
+      Msg (1) := Opcode_Get_PacketStatus;
+      NSS_Assert;
+      Transmit (SubGhzPhyPort.all, Msg, Status);
+      Receive (SubGhzPhyPort.all, Reply, Status);
+      NSS_Deassert;
+      WaitOnBusy;
+      RFStatus         := Reply (1);
+      RssiPkt          := Reply (2);
+      SnrPkt           := Reply (3);
+      SignalRssiPkt    := Reply (4);
+   end LoRa_Get_PacketStatus;
+
    procedure Reset_Stats
    is
       Msg    : SPI_Data_8b (1 .. 7);

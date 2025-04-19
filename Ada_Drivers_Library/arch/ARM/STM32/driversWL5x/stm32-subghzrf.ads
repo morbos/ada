@@ -625,6 +625,11 @@ package STM32.SubGhzRF is
                              NbPktCrcError : out UInt16;
                              NbPktLengthError : out UInt16);
 
+   procedure LoRa_Get_PacketStatus (RFStatus      : out Subghz_Status;
+                                    RssiPkt       : out UInt8;
+                                    SnrPkt        : out UInt8;
+                                    SignalRssiPkt : out UInt8);
+
    procedure CalibrateImage (LowFreq : UInt8; HighFreq : UInt8);
 
    procedure Reset_Stats;

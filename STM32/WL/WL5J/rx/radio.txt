@@ -1,0 +1,233 @@
+cmd 1d 00004
+"Read_Register()"
+[9, 35]
+[0]
+[2]
+cmd 0d 00018
+"Write_Register()"
+[9, 35, 2]
+cmd 80 00028
+"Set_Standby()"
+[0]
+cmd 0d 00036
+"Write_Register()"
+[9, 17, 32]
+cmd 0d 00048
+"Write_Register()"
+[9, 18, 32]
+cmd 0d 00060
+"Write_Register()"
+[9, 31, 14]
+cmd 96 00072
+"Set_RegulatorMode()"
+[1]
+cmd 8f 00080
+"Set_BufferBaseAddress()"
+[0, 0]
+cmd 95 00090
+"Set_PaConfig()"
+[7, 0, 1, 1]
+cmd 0d 00104
+"Write_Register()"
+[8, 231, 24]
+cmd 8e 00116
+"Set_TxParams()"
+[255, 4]
+cmd 08 00126
+"Cfg_DioIrq()"
+[255, 255, 255, 255, 0, 0, 0, 0]
+cmd 1d 00148
+"Read_Register()"
+[9, 35]
+[0]
+[2]
+cmd 0d 00162
+"Write_Register()"
+[9, 35, 2]
+cmd 84 00174
+"Set_Sleep()"
+[4]
+cmd 08 00182
+"Cfg_DioIrq()"
+[0, 0, 0, 0, 0, 0, 0, 0]
+cmd 1d 00204
+"Read_Register()"
+[8, 226]
+[0]
+[12]
+cmd 0d 00218
+"Write_Register()"
+[8, 226, 12]
+cmd 1d 00230
+"Read_Register()"
+[8, 229]
+[0]
+[32]
+cmd 0d 00244
+"Write_Register()"
+[8, 229, 32]
+cmd 82 00256
+"Set_Rx()"
+[255, 255, 255]
+cmd 1d 00268
+"Read_Register()"
+[8, 25]
+[0]
+[154, 20, 220, 158]
+cmd 80 00286
+"Set_Standby()"
+[0]
+cmd 0d 00294
+"Write_Register()"
+[8, 226, 12]
+cmd 0d 00306
+"Write_Register()"
+[8, 229, 32]
+cmd 98 00318
+"CalibrateImage()"
+[225, 233]
+cmd 86 00328
+"Set_RfFrequency()"
+[57, 48, 0, 0]
+cmd 80 00340
+"Set_Standby()"
+[0]
+cmd 8a 00348
+"Set_PacketType()"
+[1]
+cmd 8b 00356
+"Set_ModulationParams()"
+[7, 4, 1, 0]
+cmd 8c 00370
+"Set_PacketParams()"
+[0, 8, 0, 255, 1, 0]
+cmd 1d 00388
+"Read_Register()"
+[8, 216]
+[0]
+[30]
+cmd 0d 00402
+"Write_Register()"
+[8, 216, 30]
+cmd 95 00414
+"Set_PaConfig()"
+[4, 7, 0, 1]
+cmd 0d 00428
+"Write_Register()"
+[8, 231, 56]
+cmd 8e 00440
+"Set_TxParams()"
+[14, 2]
+cmd 0d 00450
+"Write_Register()"
+[9, 31, 14]
+cmd 9f 00462
+"Set_StopRxTimerOnPreamble()"
+[0]
+cmd 80 00468
+"Set_Standby()"
+[0]
+cmd 8a 00476
+"Set_PacketType()"
+[1]
+cmd 8b 00484
+"Set_ModulationParams()"
+[7, 4, 1, 0]
+cmd 8c 00498
+"Set_PacketParams()"
+[0, 8, 0, 255, 1, 0]
+cmd a0 00516
+"Set_LoRaSymbTimeout()"
+[0]
+cmd 1d 00524
+"Read_Register()"
+[8, 163]
+[0]
+[32]
+cmd 0d 00538
+"Write_Register()"
+[8, 163, 0]
+cmd 1d 00550
+"Read_Register()"
+[7, 54]
+[0]
+[13]
+cmd 0d 00564
+"Write_Register()"
+[7, 54, 13]
+cmd 8c 00576
+"Set_PacketParams()"
+[0, 8, 0, 255, 1, 0]
+cmd 08 00594
+"Cfg_DioIrq()"
+[2, 98, 2, 98, 0, 0, 0, 0]
+cmd 82 00616
+"Set_Rx()"
+[255, 255, 255]
+cmd 1d 00628
+"Read_Register()"
+[9, 35]
+[0]
+[2]
+cmd 0d 00642
+"Write_Register()"
+[9, 35, 2]
+cmd 84 00654
+"Set_Sleep()"
+[4]
+cmd 08 00662
+"Cfg_DioIrq()"
+[2, 1, 2, 1, 0, 0, 0, 0]
+cmd 1d 00684
+"Read_Register()"
+[8, 137]
+[0]
+[36]
+cmd 0d 00698
+"Write_Register()"
+[8, 137, 36]
+cmd 82 00710
+"Set_Rx()"
+[1, 244, 0]
+cmd 12 00720
+"Get_IrqStatus()"
+[166, 2, 0]
+"irq"
+[2, 0]
+cmd 02 00733
+"Clr_IrqStatus()"
+[2, 0]
+cmd 86 00743
+"Set_RfFrequency()"
+[57, 48, 0, 0]
+cmd 08 00757
+"Cfg_DioIrq()"
+[2, 1, 2, 1, 0, 0, 0, 0]
+cmd 8c 00779
+"Set_PacketParams()"
+[0, 8, 0, 64, 1, 0]
+cmd 0e 00795
+"Write_Buffer()"
+[0]
+[80, 73, 78, 71, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]
+cmd 83 00931
+"Set_Tx()"
+[0, 0, 0]
+cmd 12 00941
+"Get_IrqStatus()"
+[172, 0, 1]
+"irq"
+[0, 1]
+cmd 02 00954
+"Clr_IrqStatus()"
+[0, 1]
+cmd 80 00962
+"Set_Standby()"
+[0]
+cmd 84 00970
+"Set_Sleep()"
+[4]
+"lost"
+:out_cmd
+0
+976
