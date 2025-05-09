@@ -23,6 +23,9 @@ package body App is
       Set_RADIO_Switch_Ptr (RAK_RF_Switch'Access);  --  In hw.adb, called by subghzrf
       SubGhzPhy_Init;
       SubGhzRF_Init;
+      Set_TxParams ((Power => 22,
+                     RampTime => Microsecs_40,
+                     others => <>));
    end Init_Radio;
 
    procedure App_Start
