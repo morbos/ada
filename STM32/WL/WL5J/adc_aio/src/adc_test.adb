@@ -109,6 +109,7 @@ procedure Adc_Test is
    Raw : UInt32 := 0;
    Volt : Float := 0.0;
    Config       : GPIO_Port_Configuration;
+--   Board_Constant : constant := 0.97311053;
 begin
    Initialize_Board;
 

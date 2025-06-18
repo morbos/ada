@@ -60,6 +60,25 @@ package body Hw is
          Clear (RF_SW_Pin1);
          Set (RF_SW_Pin2);
 
+         Enable_Clock (Red_Led_Pin);
+
+         Config.Speed       := High_Speed;
+         Config.Mode        := Mode_Out;
+         Config.Output_Type := Push_Pull;
+         Config.Resistors   := Floating;
+         Configure_IO (Red_Led_Pin, Config);
+
+         Enable_Clock (Green_Led_Pin);
+
+         Config.Speed       := High_Speed;
+         Config.Mode        := Mode_Out;
+         Config.Output_Type := Push_Pull;
+         Config.Resistors   := Floating;
+         Configure_IO (Green_Led_Pin, Config);
+
+         Clear (Red_Led_Pin);
+         Clear (Green_Led_Pin);
+
          Enable_Clock (LIS3MDL_Power_Pin);
          Config.Output_Type := Push_Pull;
          Config.Resistors   := Floating;
@@ -123,6 +142,30 @@ package body Hw is
       Initialize_GPIO;
 
    end Initialize_HW;
+
+   procedure Red_LED_On
+   is
+   begin
+      Set (Red_Led_Pin);
+   end Red_LED_On;
+
+   procedure Red_LED_Off
+   is
+   begin
+      Clear (Red_Led_Pin);
+   end Red_LED_Off;
+
+   procedure Green_LED_On
+   is
+   begin
+      Set (Green_Led_Pin);
+   end Green_LED_On;
+
+   procedure Green_LED_Off
+   is
+   begin
+      Clear (Green_Led_Pin);
+   end Green_LED_Off;
 
    --   Local decision on how this modules radio
    --   pins are used. Each module vendor is free

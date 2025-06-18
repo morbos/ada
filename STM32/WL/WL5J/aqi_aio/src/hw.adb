@@ -41,13 +41,6 @@ package body Hw is
          Config       : GPIO_Port_Configuration;
          RF_SW_Pins   : GPIO_Points := RF_SW_Pin2 & RF_SW_Pin1;
       begin
-         Enable_Clock (LIS3MDL_Int_Pin);
-         Config.Mode        := Mode_In;
-         Config.Output_Type := Push_Pull;
-         Config.Resistors   := Floating;
-         Config.Speed       := High_Speed;
-         Configure_IO (LIS3MDL_Int_Pin, Config);
-
          Enable_Clock (HF_Pin);
          Enable_Clock (RF_SW_Pins);
 
@@ -76,24 +69,24 @@ package body Hw is
 
          Set (TCXO_Pin);
 
-         Enable_Clock (Red_Led_Pin);
+--         Enable_Clock (Red_Led_Pin);
 
-         Config.Speed       := High_Speed;
-         Config.Mode        := Mode_Out;
-         Config.Output_Type := Push_Pull;
-         Config.Resistors   := Floating;
-         Configure_IO (Red_Led_Pin, Config);
+--         Config.Speed       := High_Speed;
+--         Config.Mode        := Mode_Out;
+--         Config.Output_Type := Push_Pull;
+--         Config.Resistors   := Floating;
+--         Configure_IO (Red_Led_Pin, Config);
 
-         Enable_Clock (Green_Led_Pin);
+--         Enable_Clock (Green_Led_Pin);
 
-         Config.Speed       := High_Speed;
-         Config.Mode        := Mode_Out;
-         Config.Output_Type := Push_Pull;
-         Config.Resistors   := Floating;
-         Configure_IO (Green_Led_Pin, Config);
-
-         Clear (Red_Led_Pin);
-         Clear (Green_Led_Pin);
+--         Config.Speed       := High_Speed;
+--         Config.Mode        := Mode_Out;
+--         Config.Output_Type := Push_Pull;
+--         Config.Resistors   := Floating;
+--         Configure_IO (Green_Led_Pin, Config);
+--
+--         Clear (Red_Led_Pin);
+--         Clear (Green_Led_Pin);
 
          Enable_Clock (UART2_TX_Pin);
 
@@ -131,20 +124,18 @@ package body Hw is
          Selected_Clock_Speed : constant := 400_000;
          I2C_Points           : constant GPIO_Points := SDA & SCL;
       begin
-         Enable_Clock (SCL);
-         Enable_Clock (SDA);
+         Enable_Clock (I2C_Points);
          Enable_Clock (Port.all);
 
          STM32.Device.Reset (Port.all);
 
-         GPIO_Conf.Speed       := High_Speed;
+         Configure_Alternate_Function (I2C_Points, I2C_AF);
+
+         GPIO_Conf.Speed       := Low_Speed;
          GPIO_Conf.Mode        := Mode_AF;
          GPIO_Conf.Output_Type := Open_Drain;
          GPIO_Conf.Resistors   := Pull_Up;
-         Configure_IO (SCL, GPIO_Conf);
-         Configure_IO (SDA, GPIO_Conf);
-
-         Configure_Alternate_Function (I2C_Points, I2C_AF);
+         Configure_IO (I2C_Points, GPIO_Conf);
 
          STM32.I2C.Configure
            (Port.all,
@@ -157,38 +148,38 @@ package body Hw is
 
       end Initialize_I2C_GPIO;
    begin
-      Initialize_I2C_GPIO (Port   => LIS3MDL_I2C_Port,
-                           SCL    => LIS3MDL_I2C_Clock_Pin,
-                           SDA    => LIS3MDL_I2C_Data_Pin,
-                           I2C_AF => LIS3MDL_I2C_Port_AF
+      Initialize_I2C_GPIO (Port   => LPS22HB_I2C_Port,
+                           SCL    => LPS22HB_I2C_Clock_Pin,
+                           SDA    => LPS22HB_I2C_Data_Pin,
+                           I2C_AF => LPS22HB_I2C_Port_AF
                           );
       Initialize_GPIO;
 
    end Initialize_HW;
 
-   procedure Red_LED_On
-   is
-   begin
-      Set (Red_Led_Pin);
-   end Red_LED_On;
-
-   procedure Red_LED_Off
-   is
-   begin
-      Clear (Red_Led_Pin);
-   end Red_LED_Off;
-
-   procedure Green_LED_On
-   is
-   begin
-      Set (Green_Led_Pin);
-   end Green_LED_On;
-
-   procedure Green_LED_Off
-   is
-   begin
-      Clear (Green_Led_Pin);
-   end Green_LED_Off;
+--   procedure Red_LED_On
+--   is
+--   begin
+--      Set (Red_Led_Pin);
+--   end Red_LED_On;
+--
+--   procedure Red_LED_Off
+--   is
+--   begin
+--      Clear (Red_Led_Pin);
+--   end Red_LED_Off;
+--
+--   procedure Green_LED_On
+--   is
+--   begin
+--      Set (Green_Led_Pin);
+--   end Green_LED_On;
+--
+--   procedure Green_LED_Off
+--   is
+--   begin
+--      Clear (Green_Led_Pin);
+--   end Green_LED_Off;
 
    --   Local decision on how this modules radio
    --   pins are used. Each module vendor is free

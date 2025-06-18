@@ -68,7 +68,7 @@ begin
    Initialize_Board;
    Initialize_HW;
    Init_Interrupts;
-   Set_Up_MAG;
+   Set_Up_MAG (True);
    --  0) Check if we have calibrated if so goto 6), otherwise mark BKP as initialized
    --  1) Cal door open
    --     throw 1st reading away
@@ -111,7 +111,9 @@ begin
 --      Open (J) := Open (J) / 5;
 --      Closed (J) := Closed (J) / 5;
 --   end loop;
-   Check_Threshold;
+   Red_LED_On;
+   Green_LED_On;
+
    loop
       --      Get_Mag_Int_Src (Int_Src);
       Get_Mag_Reading (Got);

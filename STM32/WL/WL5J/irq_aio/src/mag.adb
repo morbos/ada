@@ -12,9 +12,19 @@ package body Mag is
 
    Mag : LIS3MDL_Sensor (Sensor_Port'Access);
 
-   procedure Set_Up_MAG is
+   procedure Set_Up_MAG (First : Boolean) is
    begin
-      Mag.Configure;
+      if Mag.Device_Id /= I_Am_LIS3MDL then
+         raise Program_Error with "I_Am_LIS3MDL";
+      end if;
+      if First then
+         Mag.Set_Range (FS_16);
+         Mag.Set_OpMode (Continuous);
+         Mag.Set_BDU (True);
+         Mag.Set_XY_Perf (Low_Power);
+         Mag.Set_Z_Perf (Low_Power);
+         Mag.Set_DataRate (Hz_0_625);
+      end if;
    end Set_Up_MAG;
 
    procedure Setup_Mag_Interrupt
@@ -38,14 +48,5 @@ package body Mag is
    begin
       Got := Mag.Get_Int_Src;
    end Get_Mag_Int_Src;
-
-   procedure Check_Threshold
-   is
-      X : UInt8;
-      Y : UInt8;
-   begin
-      X := Mag.Get_Thresh_Low;
-      Y := Mag.Get_Thresh_High;
-   end Check_Threshold;
 
 end Mag;

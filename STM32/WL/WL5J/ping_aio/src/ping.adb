@@ -37,7 +37,7 @@ use STM32; -- for GPIO_Alternate_Function
 with Ada.Real_Time;                use Ada.Real_Time;
 
 procedure Ping is
-   B : UInt8 := 0;
+   B : UInt8 := 88;
 begin
    Initialize_Board;
    Initialize_GPIO;
@@ -69,7 +69,7 @@ begin
 --                     PaSel       => HP_PA,
 --                     others => <>));
       App_Start (B);
-      B := B + 1;
+--      B := B + 1;
       My_Delay (5 * 1_000);
    end loop;
 end Ping;

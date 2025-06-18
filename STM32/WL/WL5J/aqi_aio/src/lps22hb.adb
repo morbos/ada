@@ -60,26 +60,8 @@ package body LPS22HB is
       Result8 : UInt8;
    begin
 
---      Write (This.Port, LPS22HB_RES_CONF,  16#01#); --  Low power mode
       Write (This.Port, LPS22HB_CTRL_REG2, 16#50#); --  FIFO on, auto inc
       delay until Clock + Milliseconds (100);
---      Write (This.Port, LPS22HB_CTRL_REG1, 16#5f#); --  3 wire SPI+BDU+LPF, 75hz datarate
---      Write (This.Port, LPS22HB_FIFO_CTRL, 16#20#); --  FIFO Mode
-
-      Write (This.Port, LPS22HB_CTRL_REG1, 16#01#); --  one-shot mode, 3 wire SPI
---      Write (This.Port, LPS22HB_CTRL_REG1, 16#00#); --  one-shot mode
-
---      Write (This.Port, LPS22HB_CTRL_REG1, 16#3b#); --  ODR25hz, 3wire SPI+BDU+LPF
-
---      Read (This.Port, LPS22HB_CTRL_REG2, Value => Result8);
-
---      Write (This.Port, LPS22HB_CTRL_REG2, 16#10#); --  FIFO ena, auto inc, I2C disabled
-
---      Write (This.Port, LPS22HB_CTRL_REG2, 16#50#); --  FIFO ena, auto inc, I2C disabled
-
---      Write (This.Port, LPS22HB_FIFO_CTRL, 16#00#); --  FIFO Mode
---      Write (This.Port, LPS22HB_FIFO_CTRL, 16#40#); --  FIFO Mode
-
    end Configure;
 
    procedure Get_Data (This : in out LPS22HB_Sensor; Pressure : out Float; Temp : out Float)
@@ -89,19 +71,9 @@ package body LPS22HB is
       Result8  : UInt8;
       Raw_Temp : Integer_16;
       Result32 : UInt32;
---      Miss     : UInt32 := 0;
       Dat      : Four_UInt8;
    begin
---      Write (This.Port, LPS22HB_CTRL_REG1, 16#3b#); --  ODR25hz, 3wire SPI+BDU+LPF
---      Read (This.Port, LPS22HB_WHO_AM_I, Value => Result8);
---      Write (This.Port, LPS22HB_CTRL_REG2, 16#19#); -- auto inc, I2C disabled+oneshot
-      Write (This.Port, LPS22HB_CTRL_REG2, 16#19#); --  auto inc, I2C disabled, One-shot
---      loop
---         Read (This.Port, LPS22HB_CTRL_REG2, Value => Result8);
---         exit when (Result8 and 16#1#) = 0;
---         Miss := Miss + 1;
---         exit when (This.Get_Status and 3) /= 0;
---      end loop;
+      Write (This.Port, LPS22HB_CTRL_REG2, 16#18#); --  auto inc, One-shot
       delay until Clock + Milliseconds (100);
       Read_Buffer (This.Port, LPS22HB_PRESS_OUT, Buffer);
       Dat (1) := Buffer (0);
@@ -118,5 +90,30 @@ package body LPS22HB is
 --      Read (This.Port, LPS22HB_TEMP_OUT_L, Value => Result8);
 --      Read (This.Port, LPS22HB_TEMP_OUT_H, Value => Result8);
    end Get_Data;
+
+   procedure Get_Data_Raw (This : in out LPS22HB_Sensor; Pressure : out UInt24; Temp : out UInt16)
+   is
+      Buffer   : Sensor_Data_Buffer (0 .. 4);  --  3 pressure, 2 temp
+      Result   : UInt16 := 0;
+      Result8  : UInt8;
+      Raw_Temp : Integer_16;
+      Result32 : UInt32;
+      Dat      : Four_UInt8;
+   begin
+      Write (This.Port, LPS22HB_CTRL_REG2, 16#11#); --  auto inc, One-shot
+      loop
+         Read (This.Port, LPS22HB_STATUS, Result8);
+         exit when (Result8 and 3) = 3; --  Fix this to be enums
+      end loop;
+      delay until Clock + Milliseconds (100);
+      Read_Buffer (This.Port, LPS22HB_PRESS_OUT, Buffer);
+      Dat (1) := Buffer (0);
+      Dat (2) := Buffer (1);
+      Dat (3) := Buffer (2);
+      Dat (4) := 0;
+      To_UInt32_From_UInt8 (Dat, Result32);
+      Pressure := UInt24 (Result32 and 16#00_FF_FF_FF#);
+      Temp := To_UInt16 (LSB => Buffer (3), MSB => Buffer (4));
+   end Get_Data_Raw;
 
 end LPS22HB;

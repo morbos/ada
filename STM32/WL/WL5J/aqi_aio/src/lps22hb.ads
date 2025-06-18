@@ -78,6 +78,8 @@ package LPS22HB is
 
    procedure Get_Data (This : in out LPS22HB_Sensor; Pressure : out Float; Temp : out Float);
 
+   procedure Get_Data_Raw (This : in out LPS22HB_Sensor; Pressure : out UInt24; Temp : out UInt16);
+
    procedure Configure (This : in out LPS22HB_Sensor);
 
    I_Am_LPS22HB : constant := 16#b1#;

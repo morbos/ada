@@ -14,7 +14,7 @@ package body Uart is
       procedure Init_GPIO;
       procedure Init_GPIO is
          Config : GPIO_Port_Configuration;
-         UART_Points : constant GPIO_Points := UART2_TX_Pin & UART2_RX_Pin;
+         UART_Points : constant GPIO_Points := UART1_TX_Pin & UART1_RX_Pin;
 
       begin
          Enable_Clock (UART_Points);
@@ -24,7 +24,7 @@ package body Uart is
          Config.Speed       := High_Speed;
          Config.Mode        := Mode_AF;
 
-         Configure_IO (UART2_TX_Pin, Config);
+         Configure_IO (UART1_TX_Pin, Config);
 
          Config.Mode        := Mode_In;
          Config.Output_Type := Push_Pull;
@@ -32,9 +32,9 @@ package body Uart is
          Config.Speed       := High_Speed;
          Config.Mode        := Mode_AF;
 
-         Configure_IO (UART2_RX_Pin, Config);
+         Configure_IO (UART1_RX_Pin, Config);
 
-         Configure_Alternate_Function (UART_Points, UART2_AF);
+         Configure_Alternate_Function (UART_Points, UART1_AF);
 
       end Init_GPIO;
 
@@ -45,16 +45,16 @@ package body Uart is
          Int_Divider  : constant Positive := (APB_Clock / (16 * Baudrate)) * 100;
          Frac_Divider : constant Natural := Int_Divider rem 100;
       begin
-         RCC_Periph.APB1ENR1.USART2EN := True;
-         USART2_Periph.BRR.BRR := BRR_BRR_Field_1 (APB_Clock / Baudrate);
-         USART2_Periph.CR1 :=
+         RCC_Periph.APB2ENR.USART1EN := True;
+         USART1_Periph.BRR.BRR := BRR_BRR_Field_1 (APB_Clock / Baudrate);
+         USART1_Periph.CR1 :=
            (UE     => True,
             RE     => True,
             TE     => True,
             FIFOEN => True,
             others => <>);
-         USART2_Periph.CR2 := (others => <>);
-         USART2_Periph.CR3 := (others => <>);
+         USART1_Periph.CR2 := (others => <>);
+         USART1_Periph.CR3 := (others => <>);
       end Init_HW;
    begin
       Init_GPIO;
@@ -64,11 +64,11 @@ package body Uart is
    procedure Send_Char (Char : Character) is
    begin
       loop
-         exit when USART2_Periph.ISR.TXFE;
+         exit when USART1_Periph.ISR.TXFE;
       end loop;
-      USART2_Periph.TDR.TDR := UInt9 (Character'Pos (Char));
+      USART1_Periph.TDR.TDR := UInt9 (Character'Pos (Char));
       loop
-         exit when USART2_Periph.ISR.TXFE;
+         exit when USART1_Periph.ISR.TXFE;
       end loop;
    end Send_Char;
 
