@@ -14,7 +14,7 @@ CC - helps to clarify the package used.
 
 So here we have five subdirs:
 
-F & L & U & WB & WL & N
+F & L & U & WB & WL & N & H
 
 F handles the first generation STM32 parts. Not too much here other
 than some work I do on the BluePill STM32F103C8 its in STM32/F/F103.
