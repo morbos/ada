@@ -1,4 +1,4 @@
-with "Ada_Drivers_Library/boards/stm32wb55x_nucleo.gpr";
+with "Ada_Drivers_Library/boards/weact_wb55.gpr";
 with "Ada_Drivers_Library/boards/common_config.gpr";
 
 project try_wb55x extends "../../common.gpr" is
@@ -13,7 +13,7 @@ project try_wb55x extends "../../common.gpr" is
 
    for Target use "arm-eabi";
 
-   for Runtime ("Ada") use STM32WB55x_Nucleo'Runtime("Ada");
+   for Runtime ("Ada") use WeAct_WB55'Runtime("Ada");
 
    package Builder is
      for Global_Configuration_Pragmas use "gnat.adc";

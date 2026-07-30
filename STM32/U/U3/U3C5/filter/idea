@@ -1,0 +1,17 @@
+type Biquad_Form is (Direct_Form_1, Direct_Form_2);
+
+procedure Run_Biquad_Cascade
+  (Engine : in out HSP_Engine;
+   Form   : Biquad_Form := Direct_Form_1;
+   Input  : in  Float_32_Array;
+   Coeffs : in  Float_32_Array;
+   Output : out Float_32_Array);
+
+type Float_32 is new Float with Size => 32;
+
+for Buffer'Alignment use 4;
+
+Notes:
+
+They allocate backwards from 0x200a0000 each item is copied to these allocated spaces (input
+coeff, etc).

@@ -8,8 +8,8 @@ project Common is
    LOADER : LOADER_Type := external ("LOADER", "ROM");
 
    type RTS_Type is ("ravenscar-sfp", "ravenscar-full");
-   RTS : RTS_Type := External ("RTS", "ravenscar-sfp");
---   RTS : RTS_Type := External ("RTS", "ravenscar-full");
+--   RTS : RTS_Type := External ("RTS", "ravenscar-sfp");
+   RTS : RTS_Type := External ("RTS", "ravenscar-full");
 
    type LCH_Type is ("led", "lcd");
    LCH : LCH_Type := external ("LCH", "led");

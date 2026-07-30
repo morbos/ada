@@ -55,6 +55,7 @@ package body Last_Chance_Handler is
          delay until Clock + Milliseconds (500);
          Turn_Off (LCH_LED);
          delay until Clock + Milliseconds (500);
+         null;
       end loop;
    end Last_Chance_Handler;
 

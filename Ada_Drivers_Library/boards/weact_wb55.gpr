@@ -1,0 +1,27 @@
+aggregate library project WeAct_WB55 is
+
+   Build := external ("BUILD", "Debug");
+
+   type RTS_Type is ("ravenscar-sfp", "ravenscar-full");
+--   RTS : RTS_Type := External ("RTS", "ravenscar-sfp");
+   RTS : RTS_Type := External ("RTS", "ravenscar-full");
+
+   RTS_Base := Project'Project_Dir &
+               "../embedded-runtimes/ravenscar-weactwb55";
+   for Target use "arm-eabi";
+
+   case RTS is
+      when "ravenscar-sfp" =>
+         for Runtime ("Ada") use RTS_Base & "/sfp";
+      when "ravenscar-full" =>
+         for Runtime ("Ada") use RTS_Base & "/full";
+   end case;
+
+   for Project_Path use ("weact_wb55");
+
+   for Project_Files use ("weact_wb55/board.gpr");
+
+   for Library_Dir use "lib/weact_wb55/" & RTS & "/" & Build;
+   for Library_Name use "weact_wb55";
+
+end WeAct_WB55;

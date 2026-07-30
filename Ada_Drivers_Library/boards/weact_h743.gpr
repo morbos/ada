@@ -1,0 +1,27 @@
+aggregate library project WeAct_H743 is
+
+   Build := external ("BUILD", "Debug");
+
+   type RTS_Type is ("ravenscar-sfp", "ravenscar-full");
+--   RTS : RTS_Type := External ("RTS", "ravenscar-sfp");
+   RTS : RTS_Type := External ("RTS", "ravenscar-full");
+
+   RTS_Base := Project'Project_Dir &
+               "../embedded-runtimes/ravenscar-weact-h743";
+   for Target use "arm-eabi";
+
+   case RTS is
+      when "ravenscar-sfp" =>
+         for Runtime ("Ada") use RTS_Base & "/sfp";
+      when "ravenscar-full" =>
+         for Runtime ("Ada") use RTS_Base & "/full";
+   end case;
+
+   for Project_Path use ("weact_h743");
+
+   for Project_Files use ("weact_h743/board.gpr");
+
+   for Library_Dir use "lib/weact_h743/" & RTS & "/" & Build;
+   for Library_Name use "weact_h743";
+
+end WeAct_H743;
