@@ -31,7 +31,7 @@ pragma Suppress (All_Checks);
 --  with Interfaces.Bit_Types;       use Interfaces, Interfaces.Bit_Types;
 with Interfaces.STM32.FLASH;     use Interfaces.STM32.FLASH;
 with Interfaces.STM32.RCC;       use Interfaces.STM32.RCC;
---  with Interfaces.STM32.PWR;       use Interfaces.STM32.PWR;
+with Interfaces.STM32.PWR;       use Interfaces.STM32.PWR;
 
 --  with System.BB.Parameters;       use System.BB.Parameters;
 --  with System.BB.MCU_Parameters;
@@ -64,17 +64,35 @@ procedure Setup_Pll is
       FLASH_Periph.FLASH_ACR.LATENCY := FLASH_Latency;
 
       if MSI_Enabled then
+         RCC_Periph.RCC_ICSCR1 :=
+           (MSISDIV   => 0,
+            MSISSEL   => False,
+            MSIRGSEL  => True,
+            others    => <>);
          RCC_Periph.RCC_AHB1ENR2.PWREN := True;
          RCC_Periph.RCC_CFGR4.BOOSTSEL := 1;
          RCC_Periph.RCC_CFGR4.BOOSTDIV := 4;
-         RCC_Periph.RCC_ICSCR1.MSISSEL := False;
-         RCC_Periph.RCC_ICSCR1.MSIRGSEL := True;
-         RCC_Periph.RCC_ICSCR1.MSISDIV := 0;
          RCC_Periph.RCC_CR.MSISON := True;
-
          loop
             exit when RCC_Periph.RCC_CR.MSISRDY;
          end loop;
+         PWR_Periph.PWR_VOSR.BOOSTEN := True;
+         loop
+            exit when PWR_Periph.PWR_VOSR.BOOSTRDY;
+         end loop;
+         PWR_Periph.PWR_VOSR :=
+           (R1EN => True,
+            R2EN => False,
+            others => <>);
+         loop
+            exit when PWR_Periph.PWR_VOSR.R1EN;
+         end loop;
+         null;
+         loop
+            exit when PWR_Periph.PWR_VOSR.R1RDY;
+         end loop;
+         null;
+         RCC_Periph.RCC_AHB1ENR2.PWREN := False;
       end if;
 
 --      if HSI48_Enabled then
