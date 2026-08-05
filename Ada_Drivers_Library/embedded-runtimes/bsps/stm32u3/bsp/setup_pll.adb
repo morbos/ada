@@ -85,13 +85,8 @@ procedure Setup_Pll is
             R2EN => False,
             others => <>);
          loop
-            exit when PWR_Periph.PWR_VOSR.R1EN;
-         end loop;
-         null;
-         loop
             exit when PWR_Periph.PWR_VOSR.R1RDY;
          end loop;
-         null;
          RCC_Periph.RCC_AHB1ENR2.PWREN := False;
       end if;
 
