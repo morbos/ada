@@ -1,0 +1,28 @@
+type Volatile_UInt16 is new Interfaces.Unsigned_16
+  with Volatile;
+
+type CCR_Access is access all Volatile_UInt16;
+
+procedure Update_CCR (CCR_Addr : System.Address; Value : Interfaces.Unsigned_16) is
+   Reg : Volatile_UInt16 with Address => CCR_Addr;
+begin
+   Reg := Volatile_UInt16 (Value);
+end Update_CCR;
+-- 1. Declare derived or subtype
+   type Volatile_UInt16 is new Interfaces.Unsigned_16;
+
+   -- 2. Apply Volatile aspect via pragma (Pre-Ada 2022 compliant)
+   pragma Volatile (Volatile_UInt16);
+
+   -- 3. Define access type to the volatile target
+   type CCR_Access is access all Volatile_UInt16;
+
+-- 1. Declare a distinct modular 16-bit type (not derived from Unsigned_16)
+   type Volatile_UInt16 is mod 2 ** 16;
+   for Volatile_UInt16'Size use 16;
+
+   -- 2. Apply Volatile aspect
+   pragma Volatile (Volatile_UInt16);
+
+   -- 3. Define access type
+   type CCR_Access is access all Volatile_UInt16;

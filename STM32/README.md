@@ -14,7 +14,7 @@ CC - helps to clarify the package used.
 
 So here we have five subdirs:
 
-F & L & U & WB & WL & N & H
+F & L & U & WB & WL & N & H & C
 
 F handles the first generation STM32 parts. Not too much here other
 than some work I do on the BluePill STM32F103C8 its in STM32/F/F103.
@@ -26,3 +26,8 @@ WB is the Bluetooth controller.
 WL is the LoRa controller
 
 N6 is the AI enabled part. This work is new.
+
+H is new (to me)
+
+C0 is new to me as of mid Aug 26. With a bare bones Ada traffic light project.
+(C011 => 16k flash 6k ram)

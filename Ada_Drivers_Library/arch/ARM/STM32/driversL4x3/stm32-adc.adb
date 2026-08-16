@@ -38,7 +38,6 @@
 --                                                                          --
 --   COPYRIGHT(c) 2014 STMicroelectronics                                   --
 ------------------------------------------------------------------------------
-
 with STM32_SVD.ADC; use STM32_SVD.ADC;
 
 package body STM32.ADC is
