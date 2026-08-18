@@ -3,6 +3,7 @@ with SysTick;                  use SysTick;
 with Utils;                    use Utils;
 with Prng;                     use Prng;
 with HW;                       use HW;
+with Lights;                   use Lights;
 with STM32_SVD.RCC;            use STM32_SVD.RCC;
 with System.Machine_Code;      use System.Machine_Code;
 
@@ -19,6 +20,7 @@ begin
    Init_TIM1_PWM;
    SysTick_Init;
    Seed_Prng_From_Vref_Lsb_C011;
+   InitComplete := True;
    loop
       Wfi;
    end loop;

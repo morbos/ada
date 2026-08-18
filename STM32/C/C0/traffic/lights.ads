@@ -5,9 +5,10 @@ with System;
 
 package Lights is
    --  Counter Prescaler value
-   PrescalerValue      : UInt32 := 0;
-   StateStartTime      : UInt32 := 0;
-   CurrentHoldDuration : UInt32 := 0;
+   PrescalerValue      : UInt32   := 0;
+   StateStartTime      : UInt32   := 0;
+   CurrentHoldDuration : UInt32   := 0;
+   InitComplete        : Boolean  := False;
 
    type LightState is
      (STATE_RED, STATE_RED_AMBER, STATE_GREEN, STATE_AMBER);

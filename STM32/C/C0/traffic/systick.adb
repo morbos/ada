@@ -15,7 +15,9 @@ package body SysTick is
    procedure SysTick_Handler is
    begin
       Ticks := Ticks + 1;
-      Process;
-      Process_Fade_Worklist;
+      if InitComplete then
+         Process;
+         Process_Fade_Worklist;
+      end if;
    end SysTick_Handler;
 end SysTick;
