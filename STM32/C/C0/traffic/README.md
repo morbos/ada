@@ -11,7 +11,7 @@ The first part of my project is to replace the FW with a more
 realistic traffic light seq. Here we choose the UK lights,
 particularly those from the pre-LED days. Those had a rather nice fade
 as the filament cooled. UK lights are quite different from US lights
-in that they got Red to Red&Amber then Green. The transition is 2
+in that they go from Red to Red&Amber then Green. The transition is 2
 seconds precisely. The transition from green to red through amber is
 precisely 3 seconds.
 

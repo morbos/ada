@@ -15,6 +15,9 @@ package Lights is
 
    CurrentState : LightState := STATE_RED_AMBER;
 
+   type Stance is
+     (ON, OFF);
+
    MAX_FADE_JOBS    : constant   := 4;
    GAMMA_TABLE_SIZE : constant   := 32;
 
@@ -59,7 +62,7 @@ package Lights is
    procedure Process_Fade_Worklist;
 
    --  Helper to set LED duty cycle with fade
-   procedure SetLight (Chan : UInt8; State : Boolean; Max : UInt8);
+   procedure SetLight (Chan : UInt8; Posture : Stance; Max : UInt8);
    --  Generate a random duration between min_minutes and max_minutes
    function GetRandomHoldMs (Min_Minutes : UInt32; Max_Minutes : UInt32) return UInt32;
 

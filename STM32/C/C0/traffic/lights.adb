@@ -103,9 +103,9 @@ package body Lights is
    end Process_Fade_Worklist;
 
    --  Helper to set LED duty cycle with fade
-   procedure SetLight (Chan : UInt8; State : Boolean; Max : UInt8) is
+   procedure SetLight (Chan : UInt8; Posture : Stance; Max : UInt8) is
    begin
-      if State then
+      if Posture = ON then
          if not Add_Fade_Job (Chan, 0, Max, FADE_ON_MS) then
             null; --  ? what to do
          end if;
@@ -137,31 +137,29 @@ package body Lights is
          case CurrentState is
             when STATE_RED =>
                --  Transition to RED + AMBER (Fixed 2 seconds)
-               SetLight (AMBER_CHAN, True, AMBER_MAX);
+               SetLight (AMBER_CHAN, ON, AMBER_MAX);
 
                CurrentState := STATE_RED_AMBER;
                CurrentHoldDuration := 2000; --  Fixed 2s
-
             when STATE_RED_AMBER =>
-               --  Transition to GREEN (Random 2 to 4 minutes)
-               SetLight (RED_CHAN, False, RED_MAX);
-               SetLight (AMBER_CHAN, False, AMBER_MAX);
-               SetLight (GREEN_CHAN, True, GREEN_MAX);
+               --  Transition to GREEN (Random 1 to 2 minutes)
+               SetLight (RED_CHAN, OFF, RED_MAX);
+               SetLight (AMBER_CHAN, OFF, AMBER_MAX);
+               SetLight (GREEN_CHAN, ON, GREEN_MAX);
 
                CurrentState := STATE_GREEN;
                CurrentHoldDuration := GetRandomHoldMs (1, 2);
-
             when STATE_GREEN =>
                --  Transition to AMBER (Fixed 3 seconds)
-               SetLight (GREEN_CHAN, False, GREEN_MAX);
-               SetLight (AMBER_CHAN, True, AMBER_MAX);
+               SetLight (GREEN_CHAN, OFF, GREEN_MAX);
+               SetLight (AMBER_CHAN, ON, AMBER_MAX);
 
                CurrentState := STATE_AMBER;
                CurrentHoldDuration := 3000; --  Fixed 3s
             when STATE_AMBER =>
-               --  Transition back to RED (Random 2 to 4 minutes)
-               SetLight (AMBER_CHAN, False, AMBER_MAX);
-               SetLight (RED_CHAN, True, RED_MAX);
+               --  Transition back to RED (Random 1 to 2 minutes)
+               SetLight (AMBER_CHAN, OFF, AMBER_MAX);
+               SetLight (RED_CHAN, ON, RED_MAX);
 
                CurrentState := STATE_RED;
                CurrentHoldDuration := GetRandomHoldMs (1, 2);
