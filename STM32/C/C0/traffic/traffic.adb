@@ -1,4 +1,3 @@
-with HAL;                      use HAL;
 with SysTick;                  use SysTick;
 with Utils;                    use Utils;
 with Prng;                     use Prng;

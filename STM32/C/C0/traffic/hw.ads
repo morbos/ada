@@ -1,6 +1,5 @@
 with HAL;                    use HAL;
-with Interfaces;             use Interfaces;
-with System;                 use System;
+with System;
 
 package HW is
 

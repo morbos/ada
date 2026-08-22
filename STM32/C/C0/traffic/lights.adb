@@ -1,7 +1,7 @@
 with Interfaces;             use Interfaces;
 with Prng;                   use Prng;
 with HW;                     use HW;
-with STM32_SVD.RCC;          use STM32_SVD.RCC;
+with SysTick;                use SysTick;
 with STM32_SVD.TIM;          use STM32_SVD.TIM;
 
 with System;                 use System;
@@ -68,7 +68,6 @@ package body Lights is
 
 
    procedure Process_Fade_Worklist is
-      CCR : System.Address;
    begin
       for I in 1 .. MAX_FADE_JOBS loop
          if Jobs (I).Active then
@@ -80,11 +79,12 @@ package body Lights is
                Jobs (I).Active := False;
             else
                declare
-                  Span : Integer_32 := Integer_32 (Jobs (I).End_Idx) - Integer_32 (Jobs (I).Start_Idx);
-                  Dur  : Integer_32 := Integer_32 (Jobs (I).Duration_Ms);
-                  Num  : Integer_32 := Span * Integer_32 (Jobs (I).Elapsed_Ms);
+                  Span : constant Integer_32 := Integer_32 (Jobs (I).End_Idx) - Integer_32 (Jobs (I).Start_Idx);
+                  Dur  : constant Integer_32 := Integer_32 (Jobs (I).Duration_Ms);
+                  Num  : constant Integer_32 := Span * Integer_32 (Jobs (I).Elapsed_Ms);
                   --  Add signed half-step rounding: +dur/2 for positive, -dur/2 for negative
-                  Rounded_Offset : Integer_32 := (if Num > 0 then (Num + (Dur / 2)) / Dur else (Num - (Dur / 2)) / Dur);
+                  Rounded_Offset : constant Integer_32 := (if Num > 0 then
+                    (Num + (Dur / 2)) / Dur else (Num - (Dur / 2)) / Dur);
                   Current_Idx : Integer_32 := Integer_32 (Jobs (I).Start_Idx) + Rounded_Offset;
                begin
                   --  Safety clamp bounds to  (0, GAMMA_TABLE_SIZE - 1)
@@ -120,10 +120,10 @@ package body Lights is
    function GetRandomHoldMs (Min_Minutes : UInt32; Max_Minutes : UInt32) return UInt32
    is
       --  1. Convert minutes to seconds
-      Min_Sec      : UInt32 := Min_Minutes * 60;
-      Max_Sec      : UInt32 := Max_Minutes * 60;
+      Min_Sec      : constant UInt32 := Min_Minutes * 60;
+      Max_Sec      : constant UInt32 := Max_Minutes * 60;
       --  2. Pick random second value between min and max
-      Selected_Sec : UInt32 := Min_Sec + (Fast_Rand mod (Max_Sec - Min_Sec + 1));
+      Selected_Sec : constant UInt32 := Min_Sec + (Fast_Rand mod (Max_Sec - Min_Sec + 1));
    begin
       --  3. Convert seconds to milliseconds
       return Selected_Sec * 1000;
@@ -163,8 +163,6 @@ package body Lights is
 
                CurrentState := STATE_RED;
                CurrentHoldDuration := GetRandomHoldMs (1, 2);
-            when others =>
-               null;
          end case;
       end if;
    end Process;

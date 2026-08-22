@@ -1,5 +1,4 @@
 with HAL;      use HAL;
-with SysTick;  use SysTick;
 
 with System;
 
