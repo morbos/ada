@@ -2,7 +2,7 @@
 .SUFFIXES: .S .ada .o
 
 OBJS = handler.o traffic.o systick.o prng.o utils.o lights.o hw.o
-OPT = -O0
+OPT = -O2
 
 %.o: %.S
 	arm-eabi-gcc -c $<

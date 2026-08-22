@@ -16,7 +16,7 @@ begin
    end loop;
    --  This is a synthetic delay to allow a debug connection
    --  in case the later FW to come bricks the debugger
-   for I in 0 .. 16#100000# loop
+   for I in 0 .. 16#400000# loop
       Asm ("nop", Volatile => True);
    end loop;
    Init_GPIO;

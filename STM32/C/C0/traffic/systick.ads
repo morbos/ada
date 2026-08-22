@@ -1,6 +1,7 @@
 with HAL;      use HAL;
 package SysTick is
-   Ticks : UInt32 := 0;
+   Ticks : UInt32 := 0
+     with Volatile;
    procedure SysTick_Init;
    procedure SysTick_Handler with
      Export => True,
