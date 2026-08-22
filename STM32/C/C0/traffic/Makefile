@@ -6,8 +6,8 @@ DEPS      = $(APP_UNITS:=.d)
 CC        = arm-eabi-gcc
 CFLAGS    = -x ada -gnatA -mlittle-endian -msoft-float -mcpu=cortex-m0plus \
             -mthumb -g -O2 -gnata -fcallgraph-info=su -gnatQ -gnatw.X \
-            -gnatwa -gnatwe -gnaty3aAbcefhiklM120nOprstu \
-            -gnaty -gnatyO -gnatyM120 -ffunction-sections -fdata-sections \
+            -gnatwe \
+            -gnaty -gnatyu -gnatyO -gnatyM120 -ffunction-sections -fdata-sections \
             -gnatec=gnat.adc
 
 LDFLAGS   = -nolibc -nostartfiles -mlittle-endian -msoft-float \

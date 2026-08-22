@@ -66,7 +66,6 @@ package body Lights is
       return False; --  Worklist full
    end Add_Fade_Job;
 
-
    procedure Process_Fade_Worklist is
    begin
       for I in 1 .. MAX_FADE_JOBS loop
