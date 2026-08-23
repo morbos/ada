@@ -1,9 +1,10 @@
-MAIN      = traffic
-APP_UNITS = traffic systick prng utils lights hw
+MAIN      = i2c
+APP_UNITS = i2c systick utils hw
 OBJS      = handler.o $(APP_UNITS:=.o)
 DEPS      = $(APP_UNITS:=.d)
 
 CC        = arm-eabi-gcc
+ADAFLAGS  += -fno-unwind-tables -fno-asynchronous-unwind-tables
 CFLAGS    = -x ada -gnatA -mlittle-endian -msoft-float -mcpu=cortex-m0plus \
             -mthumb -g -O2 -gnata -fcallgraph-info=su -gnatQ -gnatw.X \
             -gnatwe \

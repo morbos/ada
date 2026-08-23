@@ -2,6 +2,7 @@ with HAL;                    use HAL;
 with System;
 
 package HW is
+   pragma Suppress (Elaboration_Check);
 
    --  1. Declare a distinct modular 16-bit type (not derived from Unsigned_16)
    type Volatile_UInt16 is mod 2 ** 16;

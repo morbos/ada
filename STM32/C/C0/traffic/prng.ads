@@ -2,6 +2,8 @@ with HAL;                      use HAL;
 
 package Prng is
 
+   pragma Suppress (Elaboration_Check);
+
    Prng_State : UInt32 := 16#A5A5A5A5# --  Default non-zero fallback
      with Volatile;
 

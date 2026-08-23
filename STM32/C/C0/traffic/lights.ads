@@ -3,6 +3,7 @@ with HAL;      use HAL;
 with System;
 
 package Lights is
+   pragma Suppress (Elaboration_Check);
    --  Counter Prescaler value
    PrescalerValue      : UInt32   := 0;
    StateStartTime      : UInt32   := 0;
