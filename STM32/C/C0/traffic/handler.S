@@ -51,10 +51,6 @@ __vectors0:
 	.word	hang        /* 14 */
 	.word	SysTick_Handler  /* 15 */
 
-	.globl	local_id
-local_id:
-	.word	0xfacefeed  /* ID to be filled in */
-
 	.text
 
 	.thumb_func
@@ -67,20 +63,6 @@ _start_rom:
 	ldr	r0,=__data_start
 	ldr	r1,=__data_words
 	ldr	r2,=__data_load
-	cmp	r1,#0
-	beq	1f
-0:	ldr	r4,[r2]
-	adds	r2,r2,#4
-	str	r4,[r0]
-	adds	r0,r0,#4
-	subs	r1,r1,#1
-	bne	0b
-1:
-	/* Copy .ccmdata */
-	ldr	r0,=__ccmdata_start
-	ldr	r0,=__ccmdata_words
-	ldr	r2,=__ccmdata_load
-	@	cbz	r1,1f
 	cmp	r1,#0
 	beq	1f
 0:	ldr	r4,[r2]
@@ -150,13 +132,13 @@ No_Access     = 0
 Full_Access   = 0x3
 Read_Only     = 0b110
 
+	@ MPU reg's
 	ldr	r1,=0xe000ed98
 	ldr	r3,=0xe000ed9c
 	ldr	r4,=0xe000eda0
 	ldr	r5,=0xe000ed94
 	@ Region 0 - No access the entire SoC (low pri)
         movs    r2, #0
-
 	str	r2,[r1]  	@ region index0
 	ldr	r2,=0x00000000
 	str	r2,[r3]	        @ region base 0x00000000
@@ -164,7 +146,7 @@ Read_Only     = 0b110
 	str	r2,[r4]
 
 	@ Region 1 - flash
-        movs     r2, #1
+        movs    r2, #1
 	str	r2,[r1]	         @ region index1
 	ldr	r2,=0x08000000
 	str	r2,[r3]	@ region base 0x08000000
@@ -188,9 +170,9 @@ Read_Only     = 0b110
         ldr     r2,=(Full_Access << 24) | Device_Space | (Region_512M << 1) | Region_Enable
 	str	r2,[r4]
 
-	@ Region 5 - Device
-        movs     r2, #5
-	str	r2,[r1]	@ region index5
+	@ Region 4 - Device
+        movs     r2, #4
+	str	r2,[r1]	@ region index4
 	ldr	r2,=0xe0000000
 	str	r2,[r3]
         ldr     r2,=(Full_Access << 24) | Device_Space | (Region_64K << 1) | Region_Enable
@@ -210,8 +192,6 @@ Read_Only     = 0b110
 	.thumb_func
 hang:
 	b	hang
-0:
-	b	0b
 
 	.thumb_func
 hf:
@@ -230,44 +210,50 @@ crash:
 	b	0b
 
 	.globl	_exit
+	.type	_exit, %function
 _exit:
 	b	_exit
-	.globl	unwind_phase2_forced
-unwind_phase2_forced:
-	b	unwind_phase2_forced
+
 	.globl memcpy
+	.type memcpy, %function
 memcpy:
 	b	memcpy
+
 	.globl abort
+	.type abort, %function
 abort:
 	b	abort
-	.thumb_func
+
 	.globl __gnat_rcheck_CE_Index_Check
+	.type __gnat_rcheck_CE_Index_Check, %function
 __gnat_rcheck_CE_Index_Check:
 	b __gnat_rcheck_CE_Index_Check
-	.thumb_func
+
 	.globl __gnat_rcheck_PE_Misaligned_Address_Value
+	.type __gnat_rcheck_PE_Misaligned_Address_Value, %function
 __gnat_rcheck_PE_Misaligned_Address_Value:
         b __gnat_rcheck_PE_Misaligned_Address_Value
-	.thumb_func
+
 	.globl __gnat_rcheck_CE_Range_Check
+	.type __gnat_rcheck_CE_Range_Check, %function
 __gnat_rcheck_CE_Range_Check:
 	b __gnat_rcheck_CE_Range_Check
-	.thumb_func
+
 	.globl __gnat_rcheck_CE_Divide_By_Zero
+	.type __gnat_rcheck_CE_Divide_By_Zero, %function
 __gnat_rcheck_CE_Divide_By_Zero:
 	b __gnat_rcheck_CE_Divide_By_Zero
-	.thumb_func
+
 	.globl __gnat_rcheck_CE_Overflow_Check
+	.type __gnat_rcheck_CE_Overflow_Check, %function
 __gnat_rcheck_CE_Overflow_Check:
 	b __gnat_rcheck_CE_Overflow_Check
-	.thumb_func
+
 	.globl __gnat_rcheck_CE_Invalid_Data
+	.type __gnat_rcheck_CE_Invalid_Data, %function
 __gnat_rcheck_CE_Invalid_Data:
 	b __gnat_rcheck_CE_Invalid_Data
-@	.globl __gnat_rcheck_PE_Access_Before_Elaboration
-@__gnat_rcheck_PE_Access_Before_Elaboration:
-@	b __gnat_rcheck_PE_Access_Before_Elaboration
+
 	.global __aeabi_unwind_cpp_pr0
         .type __aeabi_unwind_cpp_pr0, %function
 __aeabi_unwind_cpp_pr0:

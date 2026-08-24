@@ -4,7 +4,7 @@ with HW;                       use HW;
 with STM32_SVD.RCC;            use STM32_SVD.RCC;
 with System.Machine_Code;      use System.Machine_Code;
 
-procedure I2C is
+procedure ADC is
 begin
    --  Enable the HSI 12Mhz default clock
    RCC_Periph.RCC_CR.HSION := True;
@@ -21,4 +21,4 @@ begin
    loop
       Wfi;
    end loop;
-end I2C;
+end ADC;

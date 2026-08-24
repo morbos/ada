@@ -1,5 +1,5 @@
-MAIN      = i2c
-APP_UNITS = i2c systick utils hw
+MAIN      = adc
+APP_UNITS = adc systick utils hw
 OBJS      = handler.o $(APP_UNITS:=.o)
 DEPS      = $(APP_UNITS:=.d)
 
