@@ -9,7 +9,7 @@ with System;                 use System;
 package body Lights is
 
    --  Add or update a fade job in the Worklist
-   function Add_Fade_Job (Chan        : UInt8;
+   function Add_Fade_Job (Chan        : Channels;
                           Start_Idx   : UInt8;
                           End_Idx     : UInt8;
                           Duration_Ms : UInt32) return Boolean
@@ -23,10 +23,6 @@ package body Lights is
             CCR := TIM1_Periph.TIM1_CCR3'Address;
          when GREEN_CHAN =>
             CCR := TIM1_Periph.TIM1_CCR4'Address;
-         when others =>
-            loop
-               null;
-            end loop;
       end case;
 
       if Duration_Ms = 0 then
@@ -102,9 +98,9 @@ package body Lights is
    end Process_Fade_Worklist;
 
    --  Helper to set LED duty cycle with fade
-   procedure SetLight (Chan : UInt8; Posture : Stance; Max : UInt8) is
+   procedure SetLight (Chan : Channels; Pose : Stance; Max : UInt8) is
    begin
-      if Posture = ON then
+      if Pose = ON then
          if not Add_Fade_Job (Chan, 0, Max, FADE_ON_MS) then
             null; --  ? what to do
          end if;

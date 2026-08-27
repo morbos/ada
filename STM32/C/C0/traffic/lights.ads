@@ -24,9 +24,9 @@ package Lights is
    FADE_OFF_MS      : constant   := 512;
    FADE_ON_MS       : constant   := 256;
 
-   RED_CHAN         : constant   := 1;
-   AMBER_CHAN       : constant   := 2;
-   GREEN_CHAN       : constant   := 4;
+   type Channels is (RED_CHAN, AMBER_CHAN, GREEN_CHAN);
+   for Channels use (RED_CHAN => 1, AMBER_CHAN => 2, GREEN_CHAN => 4);
+
    RED_MAX          : constant   := 31;
    AMBER_MAX        : constant   := 31;
    GREEN_MAX        : constant   := 10;
@@ -55,14 +55,14 @@ package Lights is
    type Worklist_Type is array (1 .. MAX_FADE_JOBS) of FadeJob;
    Jobs : Worklist_Type;
 
-   function Add_Fade_Job (Chan        : UInt8;
+   function Add_Fade_Job (Chan        : Channels;
                           Start_Idx   : UInt8;
                           End_Idx     : UInt8;
                           Duration_Ms : UInt32) return Boolean;
    procedure Process_Fade_Worklist;
 
    --  Helper to set LED duty cycle with fade
-   procedure SetLight (Chan : UInt8; Posture : Stance; Max : UInt8);
+   procedure SetLight (Chan : Channels; Pose : Stance; Max : UInt8);
    --  Generate a random duration between min_minutes and max_minutes
    function GetRandomHoldMs (Min_Minutes : UInt32; Max_Minutes : UInt32) return UInt32;
 
