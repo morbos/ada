@@ -121,8 +121,7 @@ package body Lights is
       Selected_Sec : constant UInt32 := Min_Sec + (Fast_Rand mod (Max_Sec - Min_Sec + 1));
    begin
       --  3. Convert seconds to milliseconds
-      --      return Selected_Sec * 1000;
-      return 10_000;
+      return Selected_Sec * 1000;
    end GetRandomHoldMs;
 
    procedure Process is

@@ -7,7 +7,8 @@ package body HW is
 
    procedure Init_GPIO is
    begin
-      null;
+      RCC_Periph.RCC_IOPENR.GPIOAEN := True;
+
    end Init_GPIO;
 
 end HW;
