@@ -156,3 +156,7 @@ fault:
 	ldr	r0,[r0,#0x24]   /* System Handler ctl state reg */
 fault_spin:
 	b fault_spin
+	.thumb_func
+	.globl __gnat_tasking_runtime_initialize
+__gnat_tasking_runtime_initialize:
+	bx	r14

@@ -39,7 +39,7 @@ with STM32.SPI;           use STM32.SPI;
 use STM32;
 
 package Peripherals is
-   Acc_SPI_Port        : constant access SPI_Port := SPI_1'Access;
+   Acc_SPI_Port        : SPI_Port renames SPI_1;
    Acc_SPI_Port_AF     : constant GPIO_Alternate_Function := GPIO_AF_SPI1_5;
    Acc_SPI_Clock_Pin   : GPIO_Point renames PA5;
    Acc_SPI_Miso_Pin    : GPIO_Point renames PA6; --  Mag & Acc/G on same pin(!)

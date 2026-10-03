@@ -210,3 +210,7 @@ usage:
 	nop
 	nop
 	b	usage
+	.thumb_func
+	.globl __gnat_tasking_runtime_initialize
+__gnat_tasking_runtime_initialize:
+	bx	r14

@@ -69,7 +69,6 @@ package body LSM6DSM is
    is
       Buffer      : Sensor_Data_Buffer (0 .. 11); --  3 axes * 2
       Data        : AccGyro_Readings;
-      for Data'Alignment use 1;
       for Data'Address use Buffer'Address;
       Fs          : UInt8;
       Sensitivity : Integer;

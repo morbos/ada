@@ -487,8 +487,9 @@ private
    record
       Container : Vector_Access;
       Index     : Index_Type'Base;
-   end record
-     with Disable_Controlled => not T_Check;
+   end record;
+--   end record
+--     with Disable_Controlled => not T_Check;
 
    overriding procedure Finalize (Object : in out Iterator);
 

@@ -835,7 +835,7 @@ private
      AY : Integer_16;
      AZ : Integer_16;
    end record
-     with Pack;
+     with Pack, Alignment => 1;
 
    Acc_Sensitivity_List : constant array (0 .. 3) of Integer :=
      (61,  --  FS @2g

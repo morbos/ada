@@ -10,14 +10,14 @@ use STM32;
 
 package Peripherals is
 
-   LIS3MDL_I2C_Port      : constant access I2C_Port := I2C_1'Access;
+   LIS3MDL_I2C_Port      : I2C_Port renames I2C_1;
    LIS3MDL_I2C_Port_AF   : constant GPIO_Alternate_Function := GPIO_AF_I2C1_4;
 
    LIS3MDL_Address       : constant HAL.I2C.I2C_Address := 16#3c#;
    LIS3MDL_I2C_Clock_Pin : GPIO_Point renames PB6;
    LIS3MDL_I2C_Data_Pin  : GPIO_Point renames PB7;
    LIS3MDL_Int_Pin       : GPIO_Point renames PB0;
-   Sensor_Port : aliased LIS3MDL_I2C_IO.IO_Port := (LIS3MDL_I2C_Port, LIS3MDL_Address);
+   Sensor_Port : aliased LIS3MDL_I2C_IO.IO_Port := (LIS3MDL_I2C_Port'Access, LIS3MDL_Address);
 
    UART1_AF               : constant GPIO_Alternate_Function := GPIO_AF_USART1_7;
    UART1_RX_Pin           : GPIO_Point renames PA10;

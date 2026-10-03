@@ -31,7 +31,7 @@ is
       Temp1    : Integer_16;
       Temp2    : Integer_16;
    end record
-     with Pack;
+     with Pack, Alignment => 1;
 
    type AccGyroMag_Data is record
       TimeVal  : UInt16;
@@ -45,7 +45,7 @@ is
       My : Integer_16;
       Mz : Integer_16;
    end record
-     with Pack;
+     with Pack, Alignment => 1;
 
    type GG_Data is record
       TimeVal  : UInt16;
@@ -54,7 +54,7 @@ is
       Current  : Integer_16;
       Stat     : UInt8;
    end record
-     with Pack;
+     with Pack, Alignment => 1;
 
    procedure Initialize_Sensors;
    procedure Initialize_DFSDM;

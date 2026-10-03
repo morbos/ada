@@ -29,7 +29,7 @@ package Lights is
 
    RED_MAX          : constant   := 31;
    AMBER_MAX        : constant   := 31;
-   GREEN_MAX        : constant   := 10;
+   GREEN_MAX        : constant   := 20;
 
    Gamma_1024_Table : constant UInt16_Array :=
      (

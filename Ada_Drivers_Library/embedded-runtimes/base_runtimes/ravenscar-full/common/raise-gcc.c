@@ -53,7 +53,7 @@
 #ifdef __cplusplus
 # include <cstdlib>
 #else
-typedef char bool;
+//typedef char bool;
 # define true 1
 # define false 0
 #endif

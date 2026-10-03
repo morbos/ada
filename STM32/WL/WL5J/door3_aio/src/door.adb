@@ -68,6 +68,10 @@ is
 begin
    Initialize_Board;
    Initialize_HW;
+--   Init_Radio;
+--   loop
+--      null;
+--   end loop;
    My_Delay (1_000); --  1 second
    Set_Up_MAG;
    Enable (STM32.Device.RTC);

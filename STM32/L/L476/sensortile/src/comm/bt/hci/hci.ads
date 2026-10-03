@@ -50,7 +50,8 @@ package Hci is
       Evt  : UInt8;
       Plen : UInt8;
    end record
-     with Pack;
+     with Pack, Alignment => 1;
+
    HCI_EVENT_HDR_SIZE         : constant UInt8 := 16#02#;
 
    EVT_CMD_COMPLETE_CODE      : constant UInt8 := 16#0E#;
@@ -58,7 +59,7 @@ package Hci is
       Ncmd   : UInt8;
       Opcode : Opcode_Type;
    end record
-     with Pack;
+     with Pack, Alignment => 1;
 
    EVT_CMD_COMPLETE_SIZE      : constant UInt8 := 16#03#;
 
@@ -68,7 +69,8 @@ package Hci is
       Ncmd   : UInt8;
       Opcode : Opcode_Type;
    end record
-     with Pack;
+     with Pack, Alignment => 1;
+
    EVT_CMD_STATUS_SIZE        : constant UInt8 := 16#04#;
 
    EVT_HARDWARE_ERROR_CODE    : constant UInt8 := 16#10#;

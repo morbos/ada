@@ -101,7 +101,7 @@ package body System.Libm_Double is
      (X         : Long_Float;
       Reduced_X : out Long_Float;
       P         : out Integer)
-     with Post => abs (Reduced_X) < 0.044;
+     with Post => abs Reduced_X < 0.044;
 
    function Reduce_1_16 (X : Long_Float) return Long_Float
      with Post => abs (X - Reduce_1_16'Result) <= 0.0625;
@@ -134,7 +134,7 @@ package body System.Libm_Double is
    --  The result should be correctly rounded
 
    procedure Reduce_Ln_2    (X : in out Long_Float; N : out Integer)
-     with Pre  => abs (X) <= Long_Float'Ceiling
+     with Pre  => abs X <= Long_Float'Ceiling
        (Long_Float'Pred (709.78271_28337_79350_29149_8) * Inv_Ln_2);
    --  @llr Reduce_Ln_2 Long_Float
    --  The following is postcondition doesn't hold. Suspicious "=" ???
@@ -145,7 +145,7 @@ package body System.Libm_Double is
 
    procedure Reduce_Half_Pi (X : in out Long_Float; Q : out Quadrant)
      with Pre  => X >= 0.0,
-          Post => abs (X) <= Max_Red_Trig_Arg;
+          Post => abs X <= Max_Red_Trig_Arg;
    --  @llr Reduce_Half_Pi Long_Float
    --  The following functions reduce a positive X into the range
    --  -(Pi/4 + E) .. Pi/4 + E, with E a small fraction of Pi.
@@ -439,7 +439,7 @@ package body System.Libm_Double is
 
       --  Math based implementation using Hart constants
 
-      Y      : LF := abs (X);
+      Y      : LF := abs X;
       Q      : Quadrant;
       Result : LF;
 
@@ -463,7 +463,7 @@ package body System.Libm_Double is
 
       --  Cody and Waite implementation (page 217)
 
-      Y : constant LF := abs (X);
+      Y : constant LF := abs X;
 
       --  Because the overflow threshold for cosh(X) is beyond the overflow
       --  threshold for exp(X), it appears natural to reformulate the
@@ -530,7 +530,7 @@ package body System.Libm_Double is
 
    begin
 
-      if abs (Y) < 2.0**(-LF'Machine_Mantissa - 1) then
+      if abs Y < 2.0**(-LF'Machine_Mantissa - 1) then
          return 1.0;
       end if;
 
@@ -882,7 +882,7 @@ package body System.Libm_Double is
 
       --  Cody and Waite implementation (page 239)
 
-      F      : constant LF := abs (X);
+      F      : constant LF := abs X;
       Xbig   : constant := Ln_2 * LF (1 + LF'Machine_Mantissa);
       LN_3_2 : constant := 0.54930_61443_34054_84570;
       Result : LF;

@@ -454,8 +454,9 @@ private
      Map_Iterator_Interfaces.Forward_Iterator with
    record
       Container : Map_Access;
-   end record
-     with Disable_Controlled => not T_Check;
+   end record;
+--   end record
+--     with Disable_Controlled => not T_Check;
 
    overriding procedure Finalize (Object : in out Iterator);
 

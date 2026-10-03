@@ -11,7 +11,7 @@ package Bluenrg_Gatt_Aci is
       Status : UInt8;
       Handle : UInt16;
    end record
-     with Pack;
+     with Pack, Alignment => 1;
 
    GATT_ADD_SERV_RP_SIZE : constant UInt8 := 3;
 
@@ -20,7 +20,7 @@ package Bluenrg_Gatt_Aci is
       Status : UInt8;
       Handle : UInt16;
    end record
-     with Pack;
+     with Pack, Alignment => 1;
    GATT_ADD_CHAR_RP_SIZE : constant UInt8 := 3;
 
    EVT_BLUE_GATT_ATTRIBUTE_MODIFIED_CODE  :  constant UInt16 :=  16#0C01#;
@@ -30,7 +30,7 @@ package Bluenrg_Gatt_Aci is
       Data_Length : UInt8;
       Offset      : UInt16;
    end record
-     with Pack;
+     with Pack, Alignment => 1;
    EVT_BLUE_GATT_ATTRIBUTE_MODIFIED_SIZE  :  constant UInt8 :=  7;
 
    EVT_BLUE_GATT_READ_PERMIT_REQ  : constant UInt16 :=  16#0C14#;
@@ -40,7 +40,7 @@ package Bluenrg_Gatt_Aci is
       Data_Length : UInt8;
       Offset : UInt16;
    end record
-     with Pack;
+     with Pack, Alignment => 1;
 
    EVT_BLUE_GATT_NOTIFICATION_CODE   : constant UInt16 := 16#0C0F#;
    type Evt_Gatt_Attr_Notification is record
@@ -48,7 +48,7 @@ package Bluenrg_Gatt_Aci is
       Event_Data_Length : UInt8;     --  Length of following data.
       Attr_Handle       : UInt16;    --  The handle of the attribute.
    end record
-     with Pack;
+     with Pack, Alignment => 1;
    EVT_BLUE_GATT_NOTIFICATION_SIZE   : constant UInt8 := 5;
 
    EVT_BLUE_GATT_DISC_READ_CHAR_BY_UUID_RESP_CODE : constant UInt16 := 16#0C12#;

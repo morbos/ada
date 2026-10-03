@@ -325,7 +325,7 @@ package body System.Generic_C_Math_Interface is
          --  1.0 < abs X <= 2.0. One of X + 1.0 and X - 1.0 is exact, the
          --  other has error 0 or Epsilon.
 
-         return 0.5 * (C_Log (abs (X + 1.0)) - C_Log (abs (X - 1.0)));
+         return 0.5 * (C_Log (abs X + 1.0) - C_Log (abs X - 1.0));
       end if;
    end Arccoth;
 
@@ -548,8 +548,8 @@ package body System.Generic_C_Math_Interface is
 
    function Arctanh (X : Float_Type'Base) return Float_Type'Base is
    begin
-      if not (abs (X) < 1.0) then
-         if abs (X) = 1.0 then
+      if not (abs X < 1.0) then
+         if abs X = 1.0 then
             raise Constraint_Error;
          else
             raise Argument_Error;

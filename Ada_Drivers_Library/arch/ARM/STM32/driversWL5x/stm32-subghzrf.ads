@@ -475,7 +475,7 @@ package STM32.SubGhzRF is
    Step : constant Float := Xtal / Float (2 ** 25);
 
    type Frequency is delta Step range 137.0E6 .. 1020.0E6
-     with Size => 32;
+     with Size => 32, Alignment => 1;
 
    for Frequency'Small use Step;
 
@@ -515,7 +515,7 @@ package STM32.SubGhzRF is
       Timeout          : Boolean;
       Unused           : UInt6;
    end record
-     with Size => 16;
+     with Size => 16, Alignment => 1;
 
    for Irq_Status use record
       TxDone            at 0 range 0 .. 0;

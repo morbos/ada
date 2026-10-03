@@ -29,7 +29,7 @@ package Bluenrg_Hal_Aci is
       En_High_Power : UInt8;
       Pa_Level      : UInt8;
    end record
-     with Pack;
+     with Pack, Alignment => 1;
    HAL_SET_TX_POWER_LEVEL_CP_SIZE : constant UInt8 := 2;
 
    OCF_HAL_WRITE_CONFIG_DATA   : constant UInt10 := 16#00C#;

@@ -115,7 +115,7 @@ package System.Libm is
 
       function Approx_Atan (X : T) return T
         with Pre  => abs X <= Exact (Sqrt_3),
-             Post => abs (Approx_Atan'Result) <= Exact (Half_Pi) and then
+             Post => abs Approx_Atan'Result <= Exact (Half_Pi) and then
                 Maximum_Relative_Error (Approx_Atan'Result) <= 2.0 * Epsilon;
       --  @llr Approx_Atan
       --  The Approx_Atan approximates the mathematical inverse tangent on
@@ -125,8 +125,8 @@ package System.Libm is
       --  The approximation MRE is XXX T'Model_Epsilon
 
       function Approx_Cos (X : T) return T
-         with Pre  => abs (X) <= Exact (Max_Red_Trig_Arg),
-              Post => abs (Approx_Cos'Result) <= Exact (1.0)
+         with Pre  => abs X <= Exact (Max_Red_Trig_Arg),
+              Post => abs Approx_Cos'Result <= Exact (1.0)
                          and then Maximum_Relative_Error (Approx_Cos'Result)
                                      <= 2.0 * Epsilon;
       --  @llr Approx_Cos
@@ -137,7 +137,7 @@ package System.Libm is
       --  The approximation MRE is XXX T'Model_Epsilon
 
       function Approx_Exp (X : T) return T
-        with Pre  => abs (X) <= Exact (Ln_2 / 2.0),
+        with Pre  => abs X <= Exact (Ln_2 / 2.0),
              Post => Exact (0.0) <= Approx_Exp'Result and then
                 Maximum_Relative_Error (Approx_Exp'Result) <= 2.0 * Epsilon;
       --  @llr Approx_Exp
@@ -148,7 +148,7 @@ package System.Libm is
       --  The approximation MRE is XXX T'Model_Epsilon
 
       function Approx_Exp2 (X : T) return T
-        with Pre  => abs (X) <= Exact (Ln_2 / 2.0),
+        with Pre  => abs X <= Exact (Ln_2 / 2.0),
              Post => Exact (0.0) <= Approx_Exp2'Result and then
                 Maximum_Relative_Error (Approx_Exp2'Result) <= 2.0 * Epsilon;
       --  @llr Approx_Exp2
@@ -227,7 +227,7 @@ package System.Libm is
 
       function Approx_Tanh (X : T) return T
         with Pre  => Exact (0.0) <= X and then X <= Exact (Ln_3 / 2.0),
-             Post => abs (Approx_Tanh'Result) <= Exact (Half_Pi)
+             Post => abs Approx_Tanh'Result <= Exact (Half_Pi)
                      and then Maximum_Relative_Error (Approx_Tanh'Result)
                                  <= 2.0 * Epsilon;
       --  @llr Approx_Tanh

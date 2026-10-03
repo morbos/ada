@@ -21,7 +21,7 @@ package Peripherals is
    Red_Led_Pin            : GPIO_Point renames PA15;
    Green_Led_Pin          : GPIO_Point renames PA1;
 
-   LIS3MDL_I2C_Port      : constant access I2C_Port := I2C_2'Access;
+   LIS3MDL_I2C_Port      : constant HAL.I2C.Any_I2C_Port := I2C_2'Access;
    LIS3MDL_I2C_Port_AF   : constant GPIO_Alternate_Function := GPIO_AF_I2C2_4;
 
    LIS3MDL_Address       : constant HAL.I2C.I2C_Address := 16#3c#;

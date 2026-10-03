@@ -84,8 +84,9 @@ package Ada.Containers.Helpers is
       type Reference_Control_Type is
          new Finalization.Controlled with record
             T_Counts : Tamper_Counts_Access;
-         end record
-           with Disable_Controlled => not T_Check;
+      end record;
+--         end record
+--           with Disable_Controlled => not T_Check;
 
       overriding procedure Adjust (Control : in out Reference_Control_Type);
       pragma Inline (Adjust);
@@ -134,14 +135,16 @@ package Ada.Containers.Helpers is
       --  BOTH Busy and Lock, thus prohibiting tampering with cursors.
 
       type With_Busy (T_Counts : not null access Tamper_Counts) is
-        new Finalization.Limited_Controlled with null record
-          with Disable_Controlled => not T_Check;
+        new Finalization.Limited_Controlled with null record;
+      --        new Finalization.Limited_Controlled with null record
+      --          with Disable_Controlled => not T_Check;
       overriding procedure Initialize (Busy : in out With_Busy);
       overriding procedure Finalize (Busy : in out With_Busy);
 
       type With_Lock (T_Counts : not null access Tamper_Counts) is
-        new Finalization.Limited_Controlled with null record
-          with Disable_Controlled => not T_Check;
+        new Finalization.Limited_Controlled with null record;
+--        new Finalization.Limited_Controlled with null record
+--          with Disable_Controlled => not T_Check;
       overriding procedure Initialize (Lock : in out With_Lock);
       overriding procedure Finalize (Lock : in out With_Lock);
 

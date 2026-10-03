@@ -237,7 +237,6 @@ package body Bluenrg_Gap_Aci is
       for Status'Address use StatBuf'Address;
       Cp      : Gap_Create_Connection_Cp;
       CpBuf   : aliased DataBuffT;
-      for Cp'Alignment use 1;
       for Cp'Address use CpBuf'Address;
    begin
       Cp.ScanInterval        := ScanInterval;
@@ -282,7 +281,6 @@ package body Bluenrg_Gap_Aci is
       for Status'Address use StatBuf'Address;
       Cp      : Gap_Start_General_Discovery_Proc_Cp;
       CpBuf   : aliased DataBuffT;
-      for Cp'Alignment use 1;
       for Cp'Address use CpBuf'Address;
    begin
       Cp.ScanInterval        := ScanInterval;
@@ -327,7 +325,6 @@ package body Bluenrg_Gap_Aci is
       for Status'Address use StatBuf'Address;
       Cp      : Gap_Start_Name_Discovery_Proc_Cp;
       CpBuf   : aliased DataBuffT;
-      for Cp'Alignment use 1;
       for Cp'Address use CpBuf'Address;
    begin
       Cp.ScanInterval        := ScanInterval;

@@ -983,8 +983,8 @@ package body Ada.Containers.Indefinite_Vectors is
             while Source.Last >= Index_Type'First loop
                pragma Assert
                  (Source.Last <= Index_Type'First
-                   or else not (Is_Less (SA (Source.Last),
-                                         SA (Source.Last - 1))));
+                   or else not Is_Less (SA (Source.Last),
+                                         SA (Source.Last - 1)));
 
                if I < Index_Type'First then
                   declare
@@ -1001,7 +1001,7 @@ package body Ada.Containers.Indefinite_Vectors is
 
                pragma Assert
                  (I <= Index_Type'First
-                    or else not (Is_Less (TA (I), TA (I - 1))));
+                    or else not Is_Less (TA (I), TA (I - 1)));
 
                declare
                   Src : Element_Access renames SA (Source.Last);

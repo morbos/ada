@@ -28,7 +28,7 @@ pragma Suppress (All_Checks);
 
 --  with Ada.Unchecked_Conversion;
 
-with Interfaces.Bit_Types;       use Interfaces, Interfaces.Bit_Types;
+with Interfaces.Bit_Types;       use Interfaces.Bit_Types;
 with Interfaces.STM32.Flash;     use Interfaces.STM32.Flash;
 with Interfaces.STM32.RCC;       use Interfaces.STM32.RCC;
 with Interfaces.STM32.PWR;       use Interfaces.STM32.PWR;

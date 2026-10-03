@@ -47,6 +47,7 @@ package Ada.Strings.Unbounded is
    function Length (Source : Unbounded_String) return Natural;
 
    type String_Access is access all String;
+   pragma Universal_Aliasing (String_Access);
 
    procedure Free (X : in out String_Access);
 

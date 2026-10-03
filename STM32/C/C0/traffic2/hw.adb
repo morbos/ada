@@ -71,8 +71,12 @@ package body HW is
 
    procedure Init_GPIO is
    begin
-      RCC_Periph.RCC_IOPENR.GPIOAEN := True;
-      RCC_Periph.RCC_IOPENR.GPIOBEN := True;
+      RCC_Periph.RCC_IOPENR :=
+        (GPIOAEN => True,
+         GPIOBEN => True,
+         others  => <>
+        );
+
       ------------------------------------------------------------------
       --  Port A Configuration: PA8 (TIM1_CH1) & PA2 (TIM1_CH2)
       ------------------------------------------------------------------

@@ -47,7 +47,7 @@ package body System.BB.Threads is
    use System.BB.CPU_Primitives;
    use System.BB.Board_Support.Multiprocessors;
    use System.BB.Time;
-   use Board_Support;
+--   use Board_Support;
 
    use type System.Storage_Elements.Storage_Offset;
 

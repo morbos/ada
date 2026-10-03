@@ -69,7 +69,7 @@ package STC3115 is
       Empty   : UInt8_Array (1 .. 5);  -- 10-14
       CRC8    : UInt8;
    end record
-     with Pack;
+     with Pack, Alignment => 1;
 
    OCVTAB_SIZE : constant := 16;  --  OCVTAB size of STC3115 in bytes
 

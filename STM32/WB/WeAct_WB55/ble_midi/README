@@ -1,0 +1,43 @@
+generic
+   with procedure On_Connect (Handle : Connection_Handle);
+   with procedure On_Gatt_Write (Char_UUID : UUID; Data : HAL.UInt8_Array);
+   -- or formal subprogram access types if dynamic registration is truly needed
+package STM32WB55.BLE_Transport is ...
+
+
+generic
+   -- Profile-specific parameters
+   Service_UUID        : Ble_UUID;
+   Char_UUID           : Ble_UUID;
+   Max_Payload_Length  : Positive := 5; -- e.g., 5 bytes for standard 3-byte BLE MIDI
+
+   -- Application hooks
+   with procedure On_Data_Received (Data : HAL.UInt8_Array);
+   with procedure On_Notification_State_Changed (Enabled : Boolean) is null;
+   with procedure On_Connected is null;
+   with procedure On_Disconnected is null;
+
+package WB55.BLE_Profile_Generic is
+
+   procedure Initialize;
+
+   -- Send data (e.g. MIDI note on/off with timestamps) via notification
+   procedure Send_Notification (Data : HAL.UInt8_Array);
+
+   -- Called by your existing dual-core event loop when an ACI event arrives
+   procedure Handle_GATT_Event (Event : in GATT_Event_Record);
+
+   function Is_Notification_Enabled return Boolean;
+
+end WB55.BLE_Profile_Generic;
+For BLE MIDI specifically, your application instantiation just
+supplies the standard BLE-MIDI UUIDs
+(03B80E5A-EDE8-4B33-AAB5-12873215F78A service,
+7772E5DB-3868-4112-A1A9-F2669D106BF3 characteristic) and a procedure
+to decode received MIDI bytes. Your MIDI driver then focuses purely on
+parsing the 13-bit millisecond header and timestamped event bytes,
+while the generic manages the ACI attribute handles and notify flow.
+
+Are you planning to drive the notifications via a dedicated Ada task
+waiting on a MIDI queue, or directly off whatever generates the
+events?

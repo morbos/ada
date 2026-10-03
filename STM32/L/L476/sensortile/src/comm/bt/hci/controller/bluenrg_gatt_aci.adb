@@ -39,7 +39,6 @@ package body Bluenrg_Gatt_Aci is
       for Status'Address use StatBuf'Address;
       Cr      : Gap_Update_Char_Rec;
       Buffer  : aliased DataBuffT;
-      for Cr'Alignment use 1;
       for Cr'Address use Buffer'Address;
       Idx     : UInt8;
    begin
@@ -86,7 +85,6 @@ package body Bluenrg_Gatt_Aci is
       for RqBuff'Address use Rq'Address;
       Resp     : Gatt_Add_Serv_Rp;
       RespBuf  : aliased DataBuffT;
-      for Resp'Alignment use 1;
       for Resp'Address use RespBuf'Address;
       Uuid_Len : UInt8;
       Idx      : UInt8 := 1;

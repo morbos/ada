@@ -4,6 +4,8 @@ with Logcmd;        use Logcmd;
 with Ada.Real_Time; use Ada.Real_Time;
 with STM32_SVD.USART;         use STM32_SVD.USART;
 
+pragma Warnings (Off, "*overlay changes scalar storage order*");
+
 package body STM32.SubGhzRF is
 --   procedure SubGhzRF_RegRead (Addr : UInt16; Value : out UInt8)
 --   is
@@ -153,7 +155,7 @@ package body STM32.SubGhzRF is
       Status : SPI_Status;
       Reply  : SPI_Data_8b (1 .. 4);
       LValue : UInt32;
-      for LValue'Alignment use 1;
+--      for LValue'Alignment use 1;
       for LValue'Address use Reply'Address;
    begin
       LReg.Opcode := Opcode_Read_Register;
@@ -238,9 +240,9 @@ package body STM32.SubGhzRF is
       Status     : SPI_Status;
    begin
       LTxParams.Opcode := Opcode_Set_TxParams;
-      if (Pa_Power_Choice = LP_PA) and (TxParams.Power in -17 .. 14) then
+      if (Pa_Power_Choice = LP_PA) and then Integer (TxParams.Power) not in -17 .. 14 then
          raise Program_Error with "LP power out of range";
-      elsif Pa_Power_Choice = HP_PA and TxParams.Power in -9 .. 14 then
+      elsif Pa_Power_Choice = HP_PA and then Integer (TxParams.Power) not in -9 .. 14 then
          raise Program_Error with "HP power out of range";
       end if;
       CheckDeviceReady;
@@ -307,7 +309,7 @@ package body STM32.SubGhzRF is
       LX : UInt24 := X;
       B : UInt8_Array (1 .. 4);
       for LX'Address use B'Address;
-      for LX'Alignment use 1;
+--      for LX'Alignment use 1;
    begin
       B := (B (4), B (3), B (2), B (1));
       X := LX;
@@ -318,7 +320,7 @@ package body STM32.SubGhzRF is
       LX : UInt32 := X;
       B : UInt8_Array (1 .. 4);
       for LX'Address use B'Address;
-      for LX'Alignment use 1;
+--      for LX'Alignment use 1;
    begin
       B := (B (4), B (3), B (2), B (1));
       X := LX;
@@ -375,7 +377,6 @@ package body STM32.SubGhzRF is
       Status : SPI_Status;
       LF     : aliased Frequency := Freq.F;
       for LF'Address use Tmp (1)'Address;
-      for LF'Alignment use 1;
    begin
       Msg (1) := Opcode_Set_RfFrequency;
       --  Trouble swapping this one... (tried in the record type)
@@ -407,7 +408,7 @@ package body STM32.SubGhzRF is
       Status   : SPI_Status;
       LTimeout : aliased UInt32 := UInt32 (Timeout);
       for LTimeout'Address use Tmp (1)'Address;
-      for LTimeout'Alignment use 1;
+--      for LTimeout'Alignment use 1;
    begin
       RADIO_Mode_Current (RADIO_SWITCH_RX);
       Msg (1) := Opcode_Set_Rx;
@@ -428,7 +429,7 @@ package body STM32.SubGhzRF is
       Status   : SPI_Status;
       LTimeout : aliased UInt32 := UInt32 (Timeout);
       for LTimeout'Address use Tmp (1)'Address;
-      for LTimeout'Alignment use 1;
+--      for LTimeout'Alignment use 1;
    begin
       RADIO_Mode_Current (RADIO_SWITCH_RFO);
       Msg (1) := Opcode_Set_Tx;
@@ -449,7 +450,7 @@ package body STM32.SubGhzRF is
       Tmp      : SPI_Data_8b (1 .. 4);
       LTimeout : aliased UInt32 := UInt32 (Timeout);
       for LTimeout'Address use Tmp (1)'Address;
-      for LTimeout'Alignment use 1;
+--      for LTimeout'Alignment use 1;
    begin
       Msg := (Opcode_Set_CadParams, NSyms'Enum_Rep, Peak, Min, ExitMode, Tmp (3), Tmp (2), Tmp (1));
       CheckDeviceReady;
@@ -483,7 +484,7 @@ package body STM32.SubGhzRF is
       Status    : SPI_Status;
       Irqstatus : Irq_Status;
       for Irqstatus'Address use Reply (2)'Address;
-      for Irqstatus'Alignment use 1;
+--      for Irqstatus'Alignment use 1;
       Tmp       : UInt8;
    begin
       Msg (1) := Opcode_Get_IrqStatus;
@@ -700,7 +701,7 @@ package body STM32.SubGhzRF is
                      PaSel       => LP_PA,
                      others => <>));
       Write_Register ((Address => 16#08e7#, Value => 24, others => <>));
-      Set_TxParams ((Power => 255,
+      Set_TxParams ((Power => 0,
                      RampTime => Microsecs_200,
                      others => <>));
       Cfg_DioIrq ((Irq_Mask => 16#ffff#,

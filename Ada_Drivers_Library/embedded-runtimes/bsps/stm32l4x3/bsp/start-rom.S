@@ -187,3 +187,7 @@ Read_Only     = 0b110
 	bl	_exit
 
 hang:   b .
+	.thumb_func
+	.globl __gnat_tasking_runtime_initialize
+__gnat_tasking_runtime_initialize:
+	bx	r14

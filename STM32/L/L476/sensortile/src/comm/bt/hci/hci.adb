@@ -218,7 +218,6 @@ package body Hci is
             Buff       : DataBuffT := HciReadPacket.Elem.DataBuff;
             for Hci_Hdr'Address use Buff'Address;
             Event_Pckt : Hci_Event_Pckt;
-            for Event_Pckt'Alignment use 1;
             for Event_Pckt'Address use Buff (1 + Integer (HCI_HDR_SIZE))'Address;
             Len        : UInt8 :=
               HciReadPacket.Elem.Data_Len - (1 + HCI_EVENT_HDR_SIZE);
@@ -229,7 +228,6 @@ package body Hci is
                   when EVT_CMD_STATUS_CODE =>
                      declare
                         Cs : Evt_Cmd_Status;
-                        for Cs'Alignment use 1;
                         for Cs'Address use
                           Buff (1 + Integer (HCI_HDR_SIZE + HCI_EVENT_HDR_SIZE))'Address;
                      begin

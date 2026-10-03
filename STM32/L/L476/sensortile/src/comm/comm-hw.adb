@@ -79,7 +79,7 @@ package body Comm.Hw is
       BLE     : BlueNRG_Radio   (BlueNRG_Port'Access);
    begin
       Initialize_BlueNRG_Hardware
-        (Port   => BlueNRG_SPI_Port,
+        (Port   => BlueNRG_SPI_Port'Access,
          SPI_AF => BlueNRG_SPI_Port_AF,
          SCL    => BlueNRG_SPI_Clock_Pin,
          MOSI   => BlueNRG_SPI_Mosi_Pin,

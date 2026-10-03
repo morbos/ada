@@ -126,9 +126,9 @@ is
    procedure Reset_I2C
    is
    begin
-      Reset_Port_State (PCM1774_I2C_Port.all);
+      --    Reset_Port_State (PCM1774_I2C_Port.all);
       STM32.I2C.Configure
-        (PCM1774_I2C_Port.all,
+        (PCM1774_I2C_Port,
          (Clock_Speed              => Selected_I2C_Clock_Speed,
           Addressing_Mode          => Addressing_Mode_7bit,
           General_Call_Enabled     => False,
@@ -183,7 +183,7 @@ is
    is
    begin
       Initialize_Sensor_Hardware
-        (Port            => Sensors_SPI_Port,
+        (Port            => Sensors_SPI_Port'Access,
          SPI_AF          => Sensors_SPI_Port_AF,
          SCL             => Sensors_SPI_Clock_Pin,
          MOSI            => Sensors_SPI_Mosi_Pin);
@@ -197,7 +197,7 @@ is
          Resistor => Floating);
 
       Initialize_I2C
-        (Port            => HTS221_I2C_Port,
+        (Port            => HTS221_I2C_Port'Access,
          I2C_AF          => HTS221_I2C_Port_AF,
          SCL             => HTS221_I2C_Clock_Pin,
          SDA             => HTS221_I2C_Data_Pin);

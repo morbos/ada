@@ -60,15 +60,12 @@ package body LoRa_Base is
          Pkt : aliased LoRa_Packet := TxBuffer;
          LHdr : aliased LoRa_Header := X.Elem.Hdr;
          for LHdr'Address use Pkt'Address;
-         for LHdr'Alignment use 1;
          LCmd : aliased LoRa_CmdHeader := X.Elem.Cmd;
          for LCmd'Address use Pkt ((LoRa_Header'Size / 8)  + 1)'Address;
-         for LCmd'Alignment use 1;
          CmdLen : Integer := LoRa_CmdHeader'Size / 8;
          Len : Integer := HdrLen + CmdLen;
          LNotify : aliased Notify8 := X.Elem.Payload;
          for LNotify'Address use Pkt (((LoRa_CmdHeader'Size + LoRa_Header'Size) / 8)  + 1)'Address;
-         for LNotify'Alignment use 1;
          NotifyLen : Integer := Notify8'Size / 8;
          Result : Boolean;
       begin

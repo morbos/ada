@@ -7,7 +7,6 @@ package body STC3115 is
    RD : RAMData_T;
    Buff : UInt8_Array (1 .. RAM_SIZE);
    Regs : UInt8_Array (1 .. 64);
-   for RD'Alignment use 1;
    for RD'Address use Buff'Address;
    Config : ConfigData_T;
    Crc8_Table : UInt8_Array (0 .. 255);
@@ -27,7 +26,6 @@ package body STC3115 is
    is
       Result : UInt16;
       Buff   : UInt8_Array (1 .. 2);
-      for Result'Alignment use 1;
       for Result'Address use Buff'Address;
    begin
       --  read REG_MODE and REG_CTRL
@@ -73,7 +71,6 @@ package body STC3115 is
       for Tmp_OCVOffset'Address use Buff'Address;
       Buff16 : UInt8_Array (1 .. 2);
       Data16 : UInt16;
-      for Data16'Alignment use 1;
       for Data16'Address use Buff16'Address;
    begin
       --  set GG_RUN=0 before changing algo parameters
@@ -122,7 +119,6 @@ package body STC3115 is
       Buff16 : UInt8_Array (1 .. 2);
       Data16 : UInt16
         with Volatile;
-      for Data16'Alignment use 1;
       for Data16'Address use Buff16'Address;
       Res8 : UInt8;
    begin
@@ -243,7 +239,6 @@ package body STC3115 is
       Res : Integer_16;
       Value  : UInt16;
       Buff   : UInt8_Array (1 .. 2);
-      for Value'Alignment use 1;
       for Value'Address use Buff'Address;
    begin
       Res := This.Status;
@@ -367,7 +362,6 @@ package body STC3115 is
       Res    : Integer_16;
       Tmp    : UInt16;
       Buff   : UInt8_Array (1 .. 2);
-      for Tmp'Alignment use 1;
       for Tmp'Address use Buff'Address;
    begin
       Res := This.Status;

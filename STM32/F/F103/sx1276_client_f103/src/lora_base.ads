@@ -20,20 +20,20 @@ package LoRa_Base is
       To    : UInt8;
       From  : UInt8;
    end record
-     with Pack, Size => 16;
+     with Pack, Size => 16, Alignment => 1;
 
    type LoRa_CmdHeader is record
       Cmd    : UInt8;
       SeqNum : UInt4;
       Retry  : UInt4;
    end record
-     with Pack, Size => 16;
+     with Pack, Size => 16, Alignment => 1;
 
    type Notify8 is record
       Mask  : UInt8;
       Value : UInt8;
    end record
-     with Size => 16;
+     with Pack, Size => 16, Alignment => 1;
 
    type Worklist_Entry is record
       Timestamp : Time;

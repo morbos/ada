@@ -28,15 +28,17 @@ package body App is
    procedure App_Start (Stance : Door_Stance)
    is
       Buffer    : SPI_Data_8b (1 .. 4);
-      OurId     : UInt8 := 4;
+      OurId     : UInt8 := 33; --  4;
       Crc       : UInt8 := 16#FF#;
       Msg       : UInt8;
    begin
       case Stance is
          when Open_Stance =>
-            Msg := 4;
+            --            Msg := 4;
+            Msg := 20;
          when Closed_Stance =>
-            Msg := 5;
+            --            Msg := 5;
+            Msg := 21;
       end case;
       Gen_Crc8_Table;
       Init_Radio;

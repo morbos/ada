@@ -151,7 +151,7 @@ package body Hw is
 
       end Initialize_I2C_GPIO;
    begin
-      Initialize_I2C_GPIO (Port   => LIS3MDL_I2C_Port,
+      Initialize_I2C_GPIO (Port   => LIS3MDL_I2C_Port'Access,
                            SCL    => LIS3MDL_I2C_Clock_Pin,
                            SDA    => LIS3MDL_I2C_Data_Pin,
                            I2C_AF => LIS3MDL_I2C_Port_AF

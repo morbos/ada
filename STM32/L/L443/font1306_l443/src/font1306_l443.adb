@@ -17,7 +17,7 @@ with Ada.Text_IO;     use Ada.Text_IO;
 
 procedure Font1306_L443 is
 
-   Display : SSD1306_SPI_Screen (Port => Selected_SPI_Port,
+   Display : SSD1306_SPI_Screen (Port => SPI_1'Access,
                                  Buffer_Size_In_Byte => (128 * 64) / 8,
                                  Width => 128,
                                  Height => 64,

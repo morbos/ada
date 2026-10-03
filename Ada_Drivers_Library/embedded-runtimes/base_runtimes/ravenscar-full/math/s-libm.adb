@@ -611,7 +611,7 @@ package body System.Libm is
 
       --  Cody and Waite implementation (page 174)
 
-      Y      : T := abs (X);
+      Y      : T := abs X;
       G      : T;
       Result : T;
 
@@ -667,7 +667,7 @@ package body System.Libm is
             return T'Copy_Sign (0.0, Y);
          end if;
 
-      elsif Y = 0.0 and then abs (X) > 0.0 then
+      elsif Y = 0.0 and then abs X > 0.0 then
 
          --    Atan2 (+-0, x)      = +-Pi,        if x < 0
          --    Atan2 (+-0, x)      = +-0,         if x > 0
@@ -685,8 +685,8 @@ package body System.Libm is
 
          return T'Copy_Sign (Half_Pi, Y);
 
-      elsif abs (Y) > 0.0 and then abs (Y) <= T'Last
-        and then abs (X) = Infinity
+      elsif abs Y > 0.0 and then abs Y <= T'Last
+        and then abs X = Infinity
       then
 
          --    Atan2 (+-y, -INF)   = +-Pi,        if y > 0 and y is finite
@@ -699,14 +699,14 @@ package body System.Libm is
             Result := T'Copy_Sign (0.0, Y);
          end if;
 
-      elsif abs (X) <= T'Last and then abs (Y) = Infinity then
+      elsif abs X <= T'Last and then abs Y = Infinity then
 
          --    Atan2 (+-INF, x)    = +-0.5 * Pi,  if x is finite
          --      (tightly approximated)
 
          Result := T'Copy_Sign (Half_Pi, Y);
 
-      elsif abs (X) = Infinity and then abs (Y) = Infinity then
+      elsif abs X = Infinity and then abs Y = Infinity then
 
          --    Atan2 (+-INF, -INF) = +-0.75 * Pi (tightly approximated)
          --    Atan2 (+-INF, +INF) = +-0.25 * Pi (tightly approximated)
@@ -720,11 +720,11 @@ package body System.Libm is
       else
          --  Be careful not to divide Y/X until we know it won't overflow
 
-         if abs (Y) > abs (X) then
-            F := abs (X / Y);
+         if abs Y > abs X then
+            F := abs X / Y;
             N := 2;
          else
-            F := abs (Y / X);
+            F := abs Y / X;
             N := 0;
          end if;
 
@@ -800,25 +800,25 @@ package body System.Libm is
             end if;
          end if;
 
-      elsif abs (Right) > T'Last and then Left = -1.0 then
+      elsif abs Right > T'Last and then Left = -1.0 then
          Result := 1.0;
 
       elsif Left < 0.0
         and then Left >= T'First
-        and then abs (Right) <= T'Last
+        and then abs Right <= T'Last
         and then Right /= T'Rounding (Right)
       then
          Result := 0.0 / (Left - Left); -- NaN
 
       elsif Right < T'First then
-         if abs (Left) < 1.0 then
+         if abs Left < 1.0 then
             Result := -Right; -- Infinity
          else
             Result := 0.0; --  Cases where Left=+-1 are dealt with above
          end if;
 
       elsif Right > T'Last then
-         if abs (Left) < 1.0 then
+         if abs Left < 1.0 then
             Result := 0.0;
          else
             Result := Right;

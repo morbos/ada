@@ -67,6 +67,8 @@ package STM32.I2C is
    type I2C_Port (Periph : not null access Internal_I2C_Port) is
       new HAL.I2C.I2C_Port with private;
 
+   type Any_STM32_I2C_Port is access all STM32.I2C.I2C_Port;
+
    function Port_Enabled (This : I2C_Port) return Boolean
      with Inline;
 

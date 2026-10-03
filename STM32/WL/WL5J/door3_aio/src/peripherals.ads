@@ -14,14 +14,14 @@ package Peripherals is
    RF_SW_Pin1             : GPIO_Point renames PB8;
    RF_SW_Pin2             : GPIO_Point renames PC13;
 
-   LIS3MDL_I2C_Port      : constant access I2C_Port := I2C_2'Access;
+   LIS3MDL_I2C_Port      : I2C_Port renames I2C_2;
    LIS3MDL_I2C_Port_AF   : constant GPIO_Alternate_Function := GPIO_AF_I2C2_4;
 
    LIS3MDL_Address       : constant HAL.I2C.I2C_Address := 16#3c#;
    LIS3MDL_I2C_Clock_Pin : GPIO_Point renames PA12;
    LIS3MDL_I2C_Data_Pin  : GPIO_Point renames PA11;
 
-   Sensor_Port : aliased LIS3MDL_I2C_IO.IO_Port := (LIS3MDL_I2C_Port, LIS3MDL_Address);
+   Sensor_Port : aliased LIS3MDL_I2C_IO.IO_Port := (I2C_2'Access, LIS3MDL_Address);
 
    TCXO_Pin               : GPIO_Point renames PB0;
 

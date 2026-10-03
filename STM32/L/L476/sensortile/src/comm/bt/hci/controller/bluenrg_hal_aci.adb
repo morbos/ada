@@ -9,7 +9,6 @@ package body Bluenrg_Hal_Aci is
       for RqBuff'Address use Rq'Address;
       Cp      : Hal_Set_Tx_Power_Level_Cp;
       CpBuf   : aliased DataBuffT;
-      for Cp'Alignment use 1;
       for Cp'Address use CpBuf'Address;
       Status  : BLE_Status_Code;
       StatBuf : aliased DataBuffT;

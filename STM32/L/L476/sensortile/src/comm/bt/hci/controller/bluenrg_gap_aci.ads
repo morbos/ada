@@ -22,7 +22,7 @@ package Bluenrg_Gap_Aci is
       Fixed_Pin               : UInt32;
       Bonding_Mode            : UInt8;
    end record
-     with Pack;
+     with Pack, Alignment => 1;
    GAP_SET_AUTH_REQUIREMENT_CP_SIZE : constant UInt8 := 26;
 
    OCF_GAP_CREATE_CONNECTION       : constant UInt10 := 16#09C#;
@@ -39,7 +39,8 @@ package Bluenrg_Gap_Aci is
       Min_Conn_Length     : UInt16;
       Max_Conn_Length     : UInt16;
    end record
-     with Pack;
+     with Pack, Alignment => 1;
+
    GAP_CREATE_CONNECTION_CP_SIZE : constant UInt8 := 24;
 
    OCF_GAP_START_GENERAL_DISCOVERY_PROC : constant UInt10 := 16#097#;
@@ -49,7 +50,7 @@ package Bluenrg_Gap_Aci is
       Own_Address_Type : UInt8;
       FilterDuplicates : UInt8;
    end record
-     with Pack;
+     with Pack, Alignment => 1;
    GAP_START_GENERAL_DISCOVERY_PROC_CP_SIZE : constant UInt8 := 6;
 
 
@@ -67,7 +68,7 @@ package Bluenrg_Gap_Aci is
       Min_Conn_Length     : UInt16;
       Max_Conn_Length     : UInt16;
    end record
-     with Pack;
+     with Pack, Alignment => 1;
    GAP_START_NAME_DISCOVERY_PROC_CP_SIZE : constant UInt8 := 24;
 
    OCF_GAP_TERMINATE_GAP_PROCEDURE    : constant UInt10 := 16#09D#;

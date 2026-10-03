@@ -201,7 +201,6 @@ package body Comm.Run is
       for Evt'Address use
         Buff (1 + Integer (Offset))'Address;
       Agm : Sensors.AccGyroMag_Data;
-      for Agm'Alignment use 1;
       for Agm'Address use
         Buff (1 + Integer (Offset + EVT_BLUE_GATT_NOTIFICATION_SIZE))'Address;
    begin
@@ -341,7 +340,6 @@ package body Comm.Run is
                  HCI_EVENT_HDR_SIZE +
                  EVT_BLUE_ACI_SIZE;
                Blue_Evt : Evt_Blue_Aci;
-               for Blue_Evt'Alignment use 1;
                for Blue_Evt'Address use
                  Buff (1 + Integer (HCI_HDR_SIZE + HCI_EVENT_HDR_SIZE))'Address;
             begin

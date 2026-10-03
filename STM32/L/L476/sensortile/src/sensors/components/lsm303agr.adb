@@ -122,7 +122,6 @@ package body LSM303AGR is
    is
       Buffer : Sensor_Data_Buffer (0 .. 5); --  3 axes
       Data   : Mag_Readings;
-      for Data'Alignment use 1;
       for Data'Address use Buffer'Address;
       Fx     : Float;
       Fy     : Float;

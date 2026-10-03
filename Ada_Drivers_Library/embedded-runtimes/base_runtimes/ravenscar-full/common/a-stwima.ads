@@ -167,6 +167,7 @@ private
    --  is necessary to prevent storage leaks.
 
    type Wide_Character_Ranges_Access is access all Wide_Character_Ranges;
+   pragma Universal_Aliasing (Wide_Character_Ranges_Access);
 
    type Wide_Character_Set is new AF.Controlled with record
       Set : Wide_Character_Ranges_Access;

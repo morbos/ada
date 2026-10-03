@@ -17,7 +17,7 @@ with Ada.Text_IO;     use Ada.Text_IO;
 procedure Lis3dsh_l443
 is
    Accelerometer : Three_Axis_Accelerometer_SPI
-     (Port        => Acc_SPI_Port,
+     (Port        => Acc_SPI_Port'Access,
       Chip_Select => Acc_CS_Pin'Access);
 
    ------------------------------
@@ -36,9 +36,9 @@ is
       procedure Init_SPI is
          Config : SPI_Configuration;
       begin
-         Enable_Clock (Acc_SPI_Port.all);
-         Enable (Acc_SPI_Port.all);
-         STM32.Device.Reset (Acc_SPI_Port.all);
+         Enable_Clock (Acc_SPI_Port);
+         Enable (Acc_SPI_Port);
+         STM32.Device.Reset (Acc_SPI_Port);
 
          Config.Mode := Master;
          Config.Baud_Rate_Prescaler := BRP_32;
@@ -51,9 +51,9 @@ is
          Config.Data_Size := HAL.SPI.Data_Size_8b;
          Config.Fifo_Level := True;
 
-         Disable (Acc_SPI_Port.all);
-         Configure (Acc_SPI_Port.all, Config);
-         Enable (Acc_SPI_Port.all);
+         Disable (Acc_SPI_Port);
+         Configure (Acc_SPI_Port, Config);
+         Enable (Acc_SPI_Port);
 
       end Init_SPI;
 

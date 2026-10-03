@@ -1,0 +1,169 @@
+pragma Ada_2012;
+
+with STM32_SVD.I2C; use STM32_SVD.I2C;
+
+package body I2C_Driver is
+
+   TIMEOUT_LIMIT : constant := 100_000;
+
+   procedure Initialize is
+   begin
+      --  Ensure peripheral is disabled before configuring timing registers
+      I2C1_Periph.I2C_CR1.PE := False;
+
+      --  Standard Mode (100 kHz) with 12 MHz HSI Clock:
+      --  PRESC = 2, SCLDEL = 4, SDADEL = 2, SCLH = 15, SCLL = 19
+      --  Raw TIMINGR value: 16#2042_0F13#
+      I2C1_Periph.I2C_TIMINGR :=
+        (PRESC          => 16#2#,
+         SCLDEL         => 16#4#,
+         SDADEL         => 16#2#,
+         SCLH           => 16#0F#,
+         SCLL           => 16#13#,
+         Reserved_24_27 => 0);
+
+      --  Turn on peripheral
+      I2C1_Periph.I2C_CR1.PE := True;
+   end Initialize;
+
+   function Write_Register
+     (Device_Addr : UInt7;
+      Register    : UInt8;
+      Data        : UInt8) return Status
+   is
+      Timeout_Count : Natural := TIMEOUT_LIMIT;
+   begin
+      --  1. Ensure bus is free
+      while I2C1_Periph.I2C_ISR.BUSY loop
+         Timeout_Count := Timeout_Count - 1;
+         if Timeout_Count = 0 then
+            return Busy;
+         end if;
+      end loop;
+
+      I2C1_Periph.I2C_TXDR.TXDATA := Register;
+
+      --  2. Master Transmitter: 2 bytes (Register pointer + Data), AUTOEND enabled
+      --  In 7-bit addressing, SADD[7:1] holds the address, SADD[0] = 0
+      I2C1_Periph.I2C_CR2 :=
+        (SADD           => UInt10 (Device_Addr) * 2,
+         RD_WRN         => False,
+         ADD10          => False,
+         HEAD10R        => False,
+         START          => True,
+         STOP           => False,
+         NACK           => False,
+         NBYTES         => 2,
+         RELOAD         => False,
+         AUTOEND        => True,
+         PECBYTE        => False,
+         Reserved_27_31 => 0);
+
+      --  3. Transmit register index
+      while not I2C1_Periph.I2C_ISR.TXIS loop
+         if I2C1_Periph.I2C_ISR.NACKF then
+            I2C1_Periph.I2C_ICR.NACKCF := True;
+            return Nack_Received;
+         end if;
+      end loop;
+
+      --  4. Transmit payload byte
+      while not I2C1_Periph.I2C_ISR.TXIS loop
+         if I2C1_Periph.I2C_ISR.NACKF then
+            I2C1_Periph.I2C_ICR.NACKCF := True;
+            return Nack_Received;
+         end if;
+      end loop;
+      I2C1_Periph.I2C_TXDR.TXDATA := Data;
+
+      --  5. Wait for hardware to detect the automatic STOP
+      while not I2C1_Periph.I2C_ISR.STOPF loop
+         null;
+      end loop;
+      I2C1_Periph.I2C_ICR.STOPCF := True;
+
+      return Ok;
+   end Write_Register;
+
+   function Read_Register
+     (Device_Addr : UInt7;
+      Register    : UInt8;
+      Data        : out UInt8) return Status
+   is
+      Timeout_Count : Natural := TIMEOUT_LIMIT;
+   begin
+      Data := 0;
+
+      --  1. Ensure bus is free
+      while I2C1_Periph.I2C_ISR.BUSY loop
+         Timeout_Count := Timeout_Count - 1;
+         if Timeout_Count = 0 then
+            return Busy;
+         end if;
+      end loop;
+
+      --  2. Phase 1: Write Register pointer (AUTOEND = False for Repeated Start)
+      I2C1_Periph.I2C_CR2 :=
+        (SADD           => UInt10 (Device_Addr) * 2,
+         RD_WRN         => False,
+         ADD10          => False,
+         HEAD10R        => False,
+         START          => True,
+         STOP           => False,
+         NACK           => False,
+         NBYTES         => 1,
+         RELOAD         => False,
+         AUTOEND        => False,
+         PECBYTE        => False,
+         Reserved_27_31 => 0);
+
+      while not I2C1_Periph.I2C_ISR.TXIS loop
+         if I2C1_Periph.I2C_ISR.NACKF then
+            I2C1_Periph.I2C_ICR.NACKCF := True;
+            return Nack_Received;
+         end if;
+      end loop;
+      I2C1_Periph.I2C_TXDR.TXDATA := Register;
+
+      --  Wait until the register address byte has been transferred
+      while not I2C1_Periph.I2C_ISR.TC loop
+         if I2C1_Periph.I2C_ISR.NACKF then
+            I2C1_Periph.I2C_ICR.NACKCF := True;
+            return Nack_Received;
+         end if;
+      end loop;
+
+      --  3. Phase 2: Repeated START as Master Receiver, 1 byte, AUTOEND enabled
+      I2C1_Periph.I2C_CR2 :=
+        (SADD           => UInt10 (Device_Addr) * 2,
+         RD_WRN         => True,
+         ADD10          => False,
+         HEAD10R        => False,
+         START          => True,
+         STOP           => False,
+         NACK           => False,
+         NBYTES         => 1,
+         RELOAD         => False,
+         AUTOEND        => True,
+         PECBYTE        => False,
+         Reserved_27_31 => 0);
+
+      --  4. Wait for incoming byte in RXDR
+      while not I2C1_Periph.I2C_ISR.RXNE loop
+         if I2C1_Periph.I2C_ISR.NACKF then
+            I2C1_Periph.I2C_ICR.NACKCF := True;
+            return Nack_Received;
+         end if;
+      end loop;
+      Data := I2C1_Periph.I2C_RXDR.RXDATA;
+
+      --  5. Wait for automatic STOP condition and clear flag
+      while not I2C1_Periph.I2C_ISR.STOPF loop
+         null;
+      end loop;
+      I2C1_Periph.I2C_ICR.STOPCF := True;
+
+      return Ok;
+   end Read_Register;
+
+end I2C_Driver;

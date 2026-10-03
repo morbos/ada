@@ -15,7 +15,7 @@ package Bluenrg_L2Cap_Aci is
       Slave_Latency      : UInt16;
       Timeout_Multiplier : UInt16;
    end record
-     with Pack;
+     with Pack, Alignment => 1;
 
    L2CAP_CONN_PARAM_UPDATE_REQ_CP_SIZE : constant := 10;
 
@@ -30,7 +30,7 @@ package Bluenrg_L2Cap_Aci is
       Slave_Latency      : UInt16;
       Timeout_Mult       : UInt16;
    end record
-     with Pack;
+     with Pack, Alignment => 1;
 
    OCF_L2CAP_CONN_PARAM_UPDATE_RESP : constant UInt10 := 16#182#;
    type L2cap_Conn_Param_Update_Resp_Cp_IDB05A1 is record
@@ -44,7 +44,7 @@ package Bluenrg_L2Cap_Aci is
       Id                    : UInt8;
       Stance                : UInt8;
    end record
-     with Pack;
+     with Pack, Alignment => 1;
 
    type Connection_Parameter_Acceptance is
      (Not_Acceptable,

@@ -378,8 +378,9 @@ private
    record
       Container : List_Access;
       Node      : Node_Access;
-   end record
-     with Disable_Controlled => not T_Check;
+   end record;
+--   end record
+--     with Disable_Controlled => not T_Check;
 
    overriding procedure Finalize (Object : in out Iterator);
 
