@@ -37,7 +37,8 @@ use STM32;
 
 package Peripherals is
 
-   Selected_SPI_Port      : constant access SPI_Port := SPI_1'Access;
+   --   Selected_SPI_Port      : constant access SPI_Port := SPI_1'Access;
+   Selected_SPI_Port      : SPI_Port renames SPI_1;
    Selected_SPI_Clock_Pin : GPIO_Point renames PA5;
    Selected_SPI_Miso_Pin  : GPIO_Point renames PA6;
    Selected_SPI_Mosi_Pin  : GPIO_Point renames PA7;

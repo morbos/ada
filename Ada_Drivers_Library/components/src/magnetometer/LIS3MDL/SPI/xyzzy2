@@ -1,0 +1,99 @@
+package body LIS3MDL_SPI_IO is
+
+   SPI_READ_BIT     : constant UInt8 := 16#80#;
+   SPI_AUTO_INC_BIT : constant UInt8 := 16#40#;
+   SPI_ADDR_MASK    : constant UInt8 := 16#3F#;
+
+   ----------
+   -- Read --
+   ----------
+
+   procedure Read
+     (This     : Any_IO_Port;
+      Register : UInt8;[cite: 2]
+      Value    : out UInt8)[cite: 2]
+   is
+      Header : constant SPI_Data_8b (1 .. 1) :=
+        (1 => SPI_READ_BIT or (Register and SPI_ADDR_MASK));
+      Rx_Buf : SPI_Data_8b (1 .. 1);[cite: 4]
+      Status : SPI_Status;[cite: 4]
+   begin
+      This.CS_Select.all;
+
+      This.Port.Transmit (Header, Status);[cite: 4]
+      if Status = Ok then[cite: 4]
+         This.Port.Receive (Rx_Buf, Status);[cite: 4]
+      end if;
+
+      This.CS_Deselect.all;
+
+      if Status /= Ok then[cite: 4]
+         raise Program_Error with "SPI read error: " & Status'Img;[cite: 4]
+      end if;
+
+      Value := Rx_Buf (1);
+   end Read;
+
+   -----------
+   -- Write --
+   -----------
+
+   procedure Write
+     (This     : Any_IO_Port;
+      Register : UInt8;[cite: 2]
+      Value    : UInt8)[cite: 2]
+   is
+      Payload : constant SPI_Data_8b (1 .. 2) :=
+        (1 => Register and SPI_ADDR_MASK,
+         2 => Value);
+      Status  : SPI_Status;[cite: 4]
+   begin
+      This.CS_Select.all;
+
+      This.Port.Transmit (Payload, Status);[cite: 4]
+
+      This.CS_Deselect.all;
+
+      if Status /= Ok then[cite: 4]
+         raise Program_Error with "SPI write error: " & Status'Img;[cite: 4]
+      end if;
+   end Write;
+
+   -----------------
+   -- Read_Buffer --
+   -----------------
+
+   procedure Read_Buffer
+     (This     : Any_IO_Port;
+      Register : UInt8;[cite: 2]
+      Value    : out UInt8_Array)[cite: 2]
+   is
+      Header : constant SPI_Data_8b (1 .. 1) :=
+        (1 => SPI_READ_BIT or SPI_AUTO_INC_BIT or (Register and SPI_ADDR_MASK));
+      Status : SPI_Status;[cite: 4]
+      Rx_Buf : SPI_Data_8b (Value'First .. Value'Last);[cite: 4]
+      for Rx_Buf'Address use Value'Address;
+   begin
+      This.CS_Select.all;
+
+      This.Port.Transmit (Header, Status);[cite: 4]
+      if Status = Ok then[cite: 4]
+         This.Port.Receive (Rx_Buf, Status);[cite: 4]
+      end if;
+
+      This.CS_Deselect.all;
+
+      if Status /= Ok then[cite: 4]
+         raise Program_Error with "SPI read buff error: " & Status'Img;[cite: 4]
+      end if;
+   end Read_Buffer;
+
+end LIS3MDL_SPI_IO;
+3. lis3mdl_spi.adsLIS3MDL_SPI can now instantiate LIS3MDL cleanly without generic arguments, exactly mirror-matching lis3mdl_i2c.ads:   Adawith LIS3MDL_SPI_IO; use LIS3MDL_SPI_IO;
+with HAL;            use HAL;[cite: 2]
+with HAL.SPI;        use HAL.SPI;[cite: 4]
+with LIS3MDL;
+
+package LIS3MDL_SPI is new LIS3MDL
+  (IO_Port     => IO_Port,
+   Any_IO_Port => Any_IO_Port);[cite: 6]

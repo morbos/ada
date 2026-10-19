@@ -15,7 +15,9 @@ with Ada.Text_IO;     use Ada.Text_IO;
 
 procedure Lis3dh_f103 is
 
-   Sensor : LIS3DH_Accelerometer (Selected_SPI_Port);
+   --   Sensor : LIS3DH_Accelerometer (Selected_SPI_Port);
+   --   Sensor : LIS3DH_Accelerometer (SPI_1'Access);
+   Sensor : LIS3DH_Accelerometer (Selected_SPI_Port'Access);
 
    procedure Initialize_GPIO
      (Port     : access SPI_Port;
@@ -64,9 +66,9 @@ procedure Lis3dh_f103 is
       Config.Direction := D2Lines_FullDuplex;
       Config.Data_Size := HAL.SPI.Data_Size_8b;
 
-      Disable (Selected_SPI_Port.all);
-      Configure (Selected_SPI_Port.all, Config);
-      Enable (Selected_SPI_Port.all);
+      Disable (Selected_SPI_Port'Access.all);
+      Configure (Selected_SPI_Port'Access.all, Config);
+      Enable (Selected_SPI_Port'Access.all);
 
       GPIO_Conf.Mode        := Mode_Out;
       GPIO_Conf.Output_Type := Push_Pull;
@@ -80,7 +82,7 @@ procedure Lis3dh_f103 is
    Result   : Cell6;
    Result_G : LIS3DH_G_Data;
 begin
-   Initialize_GPIO (Port => Selected_SPI_Port,
+   Initialize_GPIO (Port => Selected_SPI_Port'Access,
                    SCL   => Selected_SPI_Clock_Pin,
                    MISO  => Selected_SPI_Miso_Pin,
                    MOSI  => Selected_SPI_Mosi_Pin,

@@ -1,0 +1,6 @@
+My_SPI_IO : aliased LIS3MDL_SPI_IO.IO_Port :=
+  (Port        => My_SPI_Port'Access,
+   CS_Select   => CS_Low'Access,
+   CS_Deselect => CS_High'Access);
+
+Mag : LIS3MDL_SPI.LIS3MDL_Sensor (Port => My_SPI_IO'Access);[cite: 6]

@@ -1,5 +1,3 @@
-with HAL.I2C;                use HAL.I2C;
-
 package body LIS3MDL is
 
    -------------
@@ -102,7 +100,7 @@ package body LIS3MDL is
 
    procedure Read_MAG (This : in out LIS3MDL_Sensor; Data : out Sensor_Data)
    is
-      X : I2C_Data (1 .. 6);
+      X : UInt8_Array (1 .. 6);
       Y : Sensor_Data;
       for X'Address use Y'Address;
       Stat : Status_Reg;

@@ -1,6 +1,5 @@
 with Interfaces; use Interfaces;
 with HAL;        use HAL;
-with HAL.I2C;    use HAL.I2C;
 
 generic
 

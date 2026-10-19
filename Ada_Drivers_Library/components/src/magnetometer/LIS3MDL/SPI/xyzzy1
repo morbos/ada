@@ -1,0 +1,31 @@
+with HAL;     use HAL;[cite: 2]
+with HAL.SPI; use HAL.SPI;[cite: 4]
+
+package LIS3MDL_SPI_IO is
+
+   type CS_Procedure is not null access procedure;
+
+   type IO_Port is tagged record
+      Port        : Any_SPI_Port;[cite: 4]
+      CS_Select   : CS_Procedure;
+      CS_Deselect : CS_Procedure;
+   end record;
+
+   type Any_IO_Port is access all IO_Port'Class;
+
+   procedure Read
+     (This     : Any_IO_Port;
+      Register : UInt8;[cite: 2]
+      Value    : out UInt8);[cite: 2]
+
+   procedure Write
+     (This     : Any_IO_Port;
+      Register : UInt8;[cite: 2]
+      Value    : UInt8);[cite: 2]
+
+   procedure Read_Buffer
+     (This     : Any_IO_Port;
+      Register : UInt8;[cite: 2]
+      Value    : out UInt8_Array);[cite: 2]
+
+end LIS3MDL_SPI_IO;

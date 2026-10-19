@@ -27,7 +27,7 @@ The board as mentioned in traffic is back and went through testing.
 2) USB-C symbol and footprint were wrong. It's a connector vs
 receptacle.
 
-A new board is on the way:
+The traffic2 board has:
 1) Active low LED driver. (This was tested w/rework)
 2) Correct USB-C receptacle symbol and footprint. The Aliexpress one I
 purchased is actually a copy of an Amphenol one.
