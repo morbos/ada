@@ -21,7 +21,7 @@ begin
    SysTick_Init;    --  1ms timer enable
    Seed_Prng_From_Vref_Lsb_C011; --  Fancy low end entropy grab
 --   Enable_I2C;
---   Enable_SPI;
+   Init_SPI;
 --   Initialize;
    --   Mag_Init;
    --   Acc_Init;

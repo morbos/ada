@@ -558,7 +558,6 @@ package body STM32.USARTs is
       Timeout : Natural := 1000)
    is
       Stamp   : Time := Clock;
-      pragma Unreferenced (Status, Timeout);
    begin
       for Elt of Data loop
          loop
@@ -568,7 +567,6 @@ package body STM32.USARTs is
                return;
             end if;
          end loop;
-
          This.Receive (UInt9 (Elt));
       end loop;
       Status := Ok;

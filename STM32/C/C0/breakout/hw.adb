@@ -3,6 +3,7 @@ with STM32_SVD.RCC;            use STM32_SVD.RCC;
 with STM32_SVD.GPIO;           use STM32_SVD.GPIO;
 with STM32_SVD.TIM;            use STM32_SVD.TIM;
 with STM32_SVD.SYSCFG;         use STM32_SVD.SYSCFG;
+with STM32_SVD.SPI;            use STM32_SVD.SPI;
 
 package body HW is
 
@@ -46,6 +47,45 @@ package body HW is
       GPIOB_Periph.GPIOB_AFRL.Arr (6)  := 10; --  AF10
 
    end Init_GPIO;
+
+   procedure Init_SPI
+   is
+--      CR1 : SPI_CR1_Register;
+--      CR2 : SPI_CR2_Register;
+   begin
+      RCC_Periph.RCC_APBENR2.SPI1EN := True;
+      --  1. Ensure SPI is disabled and clear I2S mode
+      SPI1_Periph.SPI_CR1.SPE := False;
+      SPI1_Periph.SPI_I2SCFGR.I2SMOD := False;
+      --  2. Configure SPI_CR2 (Data Size & FIFO Threshold)
+      SPI1_Periph.SPI_CR2 :=
+        (DS    => 16#7#,   --  8-bit data transfers (0111b)
+         FRXTH => True,    -- RXNE generated on 8-bit / 1-byte FIFO reception
+         SSOE  => False,   -- Software NSS control (manual GPIO CS)
+         others => <>);
+
+      --  3. Configure CRC Polynomial (optional, but in your config)
+      STM32_SVD.SPI.SPI1_Periph.SPI_CRCPR := 7;
+
+      --  4. Configure SPI_SPI1_Periph.SPI_CR1
+      SPI1_Periph.SPI_CR1 :=
+        (CPHA     => False,         -- P1Edge (1st clock edge)
+         CPOL     => False,         -- Clock polarity Low
+         MSTR     => True,          -- Master configuration
+         BR       => 2#000#,        -- BRP_0: f_PCLK / 2 => 6Mhz
+         LSBFIRST => False,         -- MSB transmitted first
+         SSI      => True,          -- Internal NSS = High (prevents MODF)
+         SSM      => True,          -- Software slave management enabled
+         RXONLY   => False,         -- Full duplex (2 lines)
+         CRCL     => False,         -- 8-bit CRC
+         CRCNEXT  => False,
+         CRCEN    => False,
+         BIDIOE   => False,
+         BIDIMODE => False,         -- 2-line unidirectional mode
+         SPE      => True,          -- Enable peripheral
+         others   => <>);
+
+   end Init_SPI;
 
    procedure Set_SPI_CS
    is

@@ -1,0 +1,50 @@
+To map that configuration record directly to the raw SPI1_Periph registers using your SVD definitions, here is how each field translates to hardware bits:Register Field TranslationConfig FieldSelected ValueRegister / FieldSVD Bit/ValueNoteModeMasterCR1.MSTRTrueMaster selectionBaud_Rate_PrescalerBRP_32CR1.BR2#100# (16#4#)$f_{\text{PCLK}} / 32$ (000=/2, 001=/4, 010=/8, 011=/16, 100=/32)Clock_PolarityLowCR1.CPOLFalseSCK low when idleClock_PhaseP1EdgeCR1.CPHAFalseFirst clock transition captures dataFirst_BitMSBCR1.LSBFIRSTFalseTransmit MSB firstSlave_ManagementSoftware_ManagedCR1.SSMCR1.SSITrueTrueCrucial: Both must be True. SSM=True enables software control, and SSI=True forces internal NSS high to avoid immediate MODF (Mode Fault) errors in Master mode.DirectionD2Lines_FullDuplexCR1.BIDIMODECR1.RXONLYFalseFalseStandard 2-line unidirectional/full-duplexCRC_Poly7CRCPR16#0007#Hardware polynomial (if CRCEN is ever used)Data_Size8bCR2.DS16#7# (2#0111#)SVD default is already 16#7# (8-bit)Fifo_LevelTrueCR2.FRXTHTrueCrucial for 8-bit: Generates RXNE when FIFO $\ge 1/4$ (8-bit / 1 byte) instead of $1/2$ (16-bit)Bare-Metal Ada Mapping ProcedureBecause SPI_CR1 and SPI_CR2 are Volatile_Full_Access records, construct local image records on the stack and assign them in full 16-bit register writes while the peripheral is disabled (SPE = False).Adaprocedure Init_SPI1 is
+   CR1 : STM32_SVD.SPI.SPI_CR1_Register;
+   CR2 : STM32_SVD.SPI.SPI_CR2_Register;
+begin
+   -- 1. Ensure SPI is disabled and clear I2S mode
+   STM32_SVD.SPI.SPI1_Periph.SPI_CR1.SPE := False;
+   STM32_SVD.SPI.SPI1_Periph.SPI_I2SCFGR.I2SMOD := False;
+
+   -- 2. Configure SPI_CR2 (Data Size & FIFO Threshold)
+   CR2 := STM32_SVD.SPI.SPI1_Periph.SPI_CR2;
+   CR2.DS    := 16#7#;   -- 8-bit data transfers (0111b)
+   CR2.FRXTH := True;    -- RXNE generated on 8-bit / 1-byte FIFO reception
+   CR2.SSOE  := False;   -- Software NSS control (manual GPIO CS)
+   STM32_SVD.SPI.SPI1_Periph.SPI_CR2 := CR2;
+
+   -- 3. Configure CRC Polynomial (optional, but in your config)
+   STM32_SVD.SPI.SPI1_Periph.SPI_CRCPR := 7;
+
+   -- 4. Configure SPI_CR1
+   CR1.CPHA     := False;         -- P1Edge (1st clock edge)
+   CR1.CPOL     := False;         -- Clock polarity Low
+   CR1.MSTR     := True;          -- Master configuration
+   CR1.BR       := 2#100#;        -- BRP_32: f_PCLK / 32
+   CR1.LSBFIRST := False;         -- MSB transmitted first
+   CR1.SSI      := True;          -- Internal NSS = High (prevents MODF)
+   CR1.SSM      := True;          -- Software slave management enabled
+   CR1.RXONLY   := False;         -- Full duplex (2 lines)
+   CR1.CRCL     := False;         -- 8-bit CRC
+   CR1.CRCNEXT  := False;
+   CR1.CRCEN    := False;
+   CR1.BIDIOE   := False;
+   CR1.BIDIMODE := False;         -- 2-line unidirectional mode
+   CR1.SPE      := True;          -- Enable peripheral
+
+   STM32_SVD.SPI.SPI1_Periph.SPI_CR1 := CR1;
+end Init_SPI1;
+Critical Hardware Caveat for 8-bit Writes on STM32C0The SPI_DR register in the C0/G0/F0 families requires byte-sized memory accesses for 8-bit transactions. If you perform a 16-bit halfword write to SPI_DR, the controller automatically treats it as two sequential 8-bit transfers or a 16-bit frame.To write a single 8-bit data byte using your SVD HAL.UInt16 typed SPI_DR:Adaprocedure SPI1_Write_Byte (Data : HAL.UInt8) is
+   -- Overlay an 8-bit access on SPI_DR address to force single-byte bus cycle
+   DR_8b : HAL.UInt8
+     with Import,
+          Volatile,
+          Address => STM32_SVD.SPI.SPI1_Periph.SPI_DR'Address;
+begin
+   -- Wait until TX buffer is empty
+   while not STM32_SVD.SPI.SPI1_Periph.SPI_SR.TXE loop
+      null;
+   end loop;
+
+   DR_8b := Data;
+end SPI1_Write_Byte;

@@ -9,4 +9,6 @@ package HW is
    procedure Set_SPI_CS;
    procedure Clr_SPI_CS;
 
+   procedure Init_SPI;
+
 end HW;
